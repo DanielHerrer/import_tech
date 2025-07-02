@@ -9,7 +9,7 @@ body {
   width: 100%;
   background-color: #000000;
   /* color: #333; */
-  background-image: url(/img/tech-background-vector-vertical.png);
+  background-image: url(../img/tech-background-vector-vertical.png);
   background-size: contain;
   /* background-position: center; */
 }
@@ -94,21 +94,21 @@ body {
 .galeria-grid .div1 {
     grid-column: span 2 / span 2;
     grid-row: span 3 / span 3;
-    background-image: url(/img/img_samsung.jpg);
+    background-image: url(../img/img_samsung.jpg);
 }
 
 .galeria-grid .div2 {
     grid-column: span 3 / span 3;
     grid-row: span 5 / span 5;
     grid-column-start: 3;
-    background-image: url(/img/img_app.jpg);
+    background-image: url(../img/img_app.jpg);
 }
 
 .galeria-grid .div3 {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;
     grid-column-start: 6;
-    background-image: url(/img/img_ipad.jpg);
+    background-image: url(../img/img_ipad.jpg);
     
 }
 
@@ -116,7 +116,7 @@ body {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;
     grid-row-start: 4;
-    background-image: url(/img/img_macbook.jpg);
+    background-image: url(../img/img_macbook.jpg);
 }
 
 .galeria-grid .div5 {
@@ -124,7 +124,7 @@ body {
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 6;
-    background-image: url(/img/img_videogames.jpg);
+    background-image: url(../img/img_videogames.jpg);
 }
 
 .galeria-grid .div6 {
@@ -132,7 +132,7 @@ body {
     grid-row: span 3 / span 3;
     grid-column-start: 6;
     grid-row-start: 5;
-    background-image: url(/img/img_xiaomi.jpg);
+    background-image: url(../img/img_xiaomi.jpg);
 }
 
 .div-detalle {
