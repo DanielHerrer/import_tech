@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: #000000;
+  /* color: #333; */
+  background-image: url(/img/tech-background-vector-vertical.png);
+  background-size: contain;
+  /* background-position: center; */
+}
+
+.body-filter {
+  background-color: rgba(43, 34, 49, 0.85);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #222;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 4em;
+}
+
+.search-bar {
+  width: 40%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  margin: 0;
+}
+
+.nav-links a.activo {
+  background-color: rgb(138, 68, 138);
+  border-radius: 25px;
+  padding: 0.5em 2em;
+}
+
+/* GRID GENERATOR */
+
+.galeria {
+  padding: 1.5em 15em;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 0.75rem;
+    border-radius: 10px;
+    /* border: 1px solid rgba(255, 255, 255, 0.75); */
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 0.75em;
+}
+
+.galeria-grid .galeria-div {
+  border-radius: 10px;
+  background-color: #333;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 1.25rem;
+  overflow: hidden;
+}
+
+.galeria-grid .div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    background-image: url(/img/img_samsung.jpg);
+}
+
+.galeria-grid .div2 {
+    grid-column: span 3 / span 3;
+    grid-row: span 5 / span 5;
+    grid-column-start: 3;
+    background-image: url(/img/img_app.jpg);
+}
+
+.galeria-grid .div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 6;
+    background-image: url(/img/img_ipad.jpg);
+    
+}
+
+.galeria-grid .div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-row-start: 4;
+    background-image: url(/img/img_macbook.jpg);
+}
+
+.galeria-grid .div5 {
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 6;
+    background-image: url(/img/img_videogames.jpg);
+}
+
+.galeria-grid .div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 6;
+    grid-row-start: 5;
+    background-image: url(/img/img_xiaomi.jpg);
+}
+
+.div-detalle {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  /* transition: background 0.5s ease; */
+}
+
+.div1 .div-detalle,
+.div2 .div-detalle,
+.div3 .div-detalle {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.div4 .div-detalle,
+.div5 .div-detalle,
+.div6 .div-detalle {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.div-detalle:hover {
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+/* X__ GRID GENERATOR */
+
+.titulo-lineas {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  width: 100%;
+  gap: 1rem; /* espacio entre el texto y las líneas */
+  margin: 0.5em 0;
+}
+
+.titulo-lineas::before,
+.titulo-lineas::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: #fff;
+}
+
+.titulo-lineas span {
+  white-space: nowrap; /* para que no se corte en varias líneas */
+  padding: 0 0.5rem;
+  /* font-weight: bold; */
+}
+
+/* MOTIVOS CARDS */
+.motivos {
+  padding: 1.5em 15em 5em 15em;
+  text-align: center;
+}
+
+.motivos-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1em;
+}
+
+.card-motivo {
+  background-color: #fff;
+  border-radius: 10px;
+  /* height: 20em; */
+  padding: 2em 1.5em 2.5em 1.5em;
+}
+
+.card-icon {
+  font-size: 5.5rem;
+  margin: 0.2em 0 0.4em 0;
+  color: #2f3e68;
+}
+
+/* X__ MOTIVOS CARDS */
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://via.placeholder.com/1600x400') center/cover no-repeat;
+  color: white;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+.categorias {
+  padding: 60px 40px;
+  background-color: white;
+}
+
+.categorias h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.categoria-card {
+  background-color: #eee;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.productos {
+  padding: 60px 40px;
+}
+
+.productos h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.producto-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.imagen-placeholder {
+  width: 100%;
+  height: 150px;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+.footer-col h4 {
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
