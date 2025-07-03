@@ -18,6 +18,8 @@ body {
   background-color: rgba(43, 34, 49, 0.85);
 }
 
+/* NAVEGADOR ____________________________________________________________________ */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -41,11 +43,37 @@ body {
   width: 4em;
 }
 
-.search-bar {
+/* .search-bar {
   width: 40%;
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+} */
+
+.input-busqueda {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-busqueda input {
+  width: 100%;
+
+  /* espacio derecho para el ícono */
+  padding: 7px 35px 7px 10px; 
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-busqueda i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none; /* el ícono no bloquea el clic */
 }
 
 .nav-links a {
@@ -57,10 +85,15 @@ body {
   margin: 0;
 }
 
+.nav-links a:hover {
+  color: #d445ff;
+}
+
 .nav-links a.activo {
-  background-color: rgb(138, 68, 138);
+  background-color: #9245a1;
   border-radius: 25px;
   padding: 0.5em 2em;
+  color: #fff;
 }
 
 /* GRID GENERATOR */
@@ -117,7 +150,7 @@ body {
   /* justify-content: center; */
   padding: 7px 30px;
   width: 50%;
-  background-color: #cd6de0;
+  background-color: #d68fe0;
   color: #fff;
   margin: 2.5em auto;
 
@@ -136,7 +169,7 @@ body {
 
 
 .galeria-div .btn-detalle:hover  {
-  background-color: #db26ff;
+  background-color: #ba4fe4;
   transition: 0.3s ease;
 }
 
@@ -203,8 +236,7 @@ body {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
-
-/* X__ GRID GENERATOR */
+/* TITULOS CON LINEAS _____________________________________________________________ */
 
 .titulo-lineas {
   color: #fff;
@@ -214,7 +246,7 @@ body {
   font-size: 2.5rem;
   width: 100%;
   gap: 1rem; /* espacio entre el texto y las líneas */
-  margin: 0.5em 0;
+  margin: 1.5em 0 0.5em 0;
 }
 
 .titulo-lineas::before,
@@ -231,10 +263,11 @@ body {
   /* font-weight: bold; */
 }
 
-/* MOTIVOS CARDS */
+/* POR QUÉ ELEGIRNOS, MOTIVOS CARDS __________________________________________________________________*/
 .motivos {
   padding: 1.5em 15em 5em 15em;
   text-align: center;
+  margin-bottom: 3em;
 }
 
 .motivos-cards {
@@ -276,14 +309,16 @@ body {
   font-size: 20px;
 }
 
+
+/* CATEGORIAS _________________________________________________________________ */
 .categorias {
-  padding: 60px 40px;
+  padding: 40px 40px;
   background-color: white;
 }
 
 .categorias h2 {
   font-size: 28px;
-  margin-bottom: 30px;
+  margin: 0 0 20px 0;
 }
 
 .categorias-grid {
@@ -300,36 +335,84 @@ body {
   font-weight: 600;
 }
 
+/* PRODUCTOS DESTACADOS _______________________________________________ */
+
 .productos {
-  padding: 60px 40px;
+  padding: 40px 40px 60px 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 0 5em 0;
 }
 
 .productos h2 {
   font-size: 28px;
+  color: #ffffff;
+  margin: 0;
   margin-bottom: 30px;
+  font-weight: lighter;
 }
 
 .productos-grid {
+  padding: 0 1em;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.75em;
 }
 
 .producto-card {
   background-color: white;
   padding: 20px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.imagen-placeholder {
+.img-card {
   width: 100%;
-  height: 150px;
-  background-color: #ddd;
+  height: 12.5rem;
+  /* background-color: #ddd; */
   border-radius: 4px;
   margin-bottom: 10px;
+  object-fit: contain;
 }
+
+.title-card {
+  margin: 0.5em 0;
+  text-align: start;
+  font-weight: lighter;
+}
+
+.btn-card {
+  display: flex;
+  justify-self: end;
+  padding: 7px 25px;
+  border-radius: 15px;
+  border: none;
+  background-color: #dcc3e0;
+  cursor: pointer;
+}
+
+.btn-card:hover  {
+  background-color: #cd7fec;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.productos-ver {
+  display: flex;
+  justify-content: center;
+}
+
+.productos-ver .btn-productos {
+  padding: 15px 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 4em 0 0 0;
+  border: none;
+  border-radius: 5px;
+}
+
+/* FOOTER __________________________________________________________________________ */
 
 .footer {
   background-color: #222;
