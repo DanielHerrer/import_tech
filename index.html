@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home · Import Tech</title>
+    <title>Inicio · Import Tech</title>
     <link rel="stylesheet" href="./css/global.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -19,15 +19,15 @@
                 <img class="logo-img" src="./img/it_logo.png" alt="">
                 <!-- Import Tech -->
             </div>
-            <div class="input-busqueda">
+            <!-- <div class="input-busqueda">
                 <input type="text" placeholder="Buscar productos...">
                 <i class="fas fa-search"></i>
-            </div>
+            </div> -->
             <!-- <input type="text" placeholder="Buscar productos..." class="search-bar" /> -->
             <nav class="nav-links">
-                <a class="activo" href="#">Inicio</a>
-                <a class="" href="#">Productos</a>
-                <a class="" href="#">Contacto</a>
+                <a class="activo" href="index.html">Inicio</a>
+                <a class="" href="./html/productos.html">Productos</a>
+                <a class="" href="./html/contacto.html">Contacto</a>
             </nav>
         </header>
 
@@ -75,30 +75,25 @@
         <div class="titulo-lineas">
             <span>¿POR QUÉ ELEGIRNOS?</span>
         </div>
-        <div class="motivos">
-            <div class="motivos-cards">
+        <section class="motivos">
+            <div class="motivos-div">
                 <div class="card-motivo">
                     <i class="card-icon fa-regular fa-handshake"></i>
-                    <p class="card-p">Contamos con garantía oficial del fabricante. Cada producto cuenta con su
+                    <p class="card-p">Contamos con <b>garantía oficial</b> del fabricante. Cada producto cuenta con su
                         documentación.</p>
                 </div>
                 <div class="card-motivo">
                     <i class="card-icon fa-solid fa-ranking-star"></i>
-                    <p class="card-p">Los mejores precios al día. Aseguramos ofrecer la mejores tarifas del mercado.</p>
+                    <p class="card-p">Los <b>mejores precios</b> al día. Aseguramos ofrecer la mejores tarifas del mercado.</p>
                 </div>
                 <div class="card-motivo">
                     <i class="card-icon fa-solid fa-cart-flatbed"></i>
-                    <p class="card-p">Productos originales, importados, y sellados. Accesorios originales para cada
+                    <p class="card-p">Productos <b>originales</b>, <b>importados</b>, y <b>sellados</b>. Accesorios originales para cada
                         dispositivo.
                     </p>
                 </div>
             </div>
-        </div>
-
-        <!-- <section class="hero">
-            <h1>La mejor tecnología para vos</h1>
-            <p>Productos importados al mejor precio</p>
-        </section> -->
+        </section>
 
         <section class="categorias">
             <h2>Categorías</h2>
@@ -171,10 +166,62 @@
         <div class="titulo-lineas">
             <span>MÉTODOS DE PAGO</span>
         </div>
+        <section class="pagos">
+            <div class="pagos-div">
+                <div class="pagos-1">
+                    <div class="pagos-item">
+                        <div class="item-icon">
+                            <i class="fa-brands fa-bitcoin"></i>
+                        </div>
+                        <p class="item-text">Cryptocurrency</p>
+                    </div>
+                    <div class="pagos-item">
+                        <div class="item-icon">
+                            <i class="fa-solid fa-money-bill-transfer"></i>
+                        </div>
+                        <p class="item-text">Transferencia Bancaria</p>
+                    </div>
+                    <div class="pagos-item">
+                        <div class="item-icon">
+                            <i class="fa-solid fa-money-bills"></i>
+                        </div>
+                        <p class="item-text">Efectivo</p>
+                    </div>
+                </div>
+                <div class="pagos-2">
+                    <div class="pagos-item">
+                        <img class="item-img" src="./img/PayPal_logo.png" alt="Logo PayPal">
+                    </div>
+                    <div class="pagos-item">
+                        <img class="item-img" src="./img/wise_logo.png" alt="Logo Wise">
+                    </div>
+                    <div class="pagos-item">
+                        <img class="item-img" src="./img/payoneer_logo.png" alt="Logo Payoneer">
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div class="titulo-lineas">
             <span>ENVÍOS Y ENTREGAS</span>
         </div>
+        <section class="envios">
+            <div class="envios-div">
+                <div class="card-envio">
+                    <i class="card-icon fa-solid fa-truck-fast"></i>
+                    <p class="card-p">Envíos a todo el país y con tu domicilio usando correo <b>Adreani</b>.</p>
+                </div>
+                <div class="card-envio">
+                    <i class="card-icon fa-solid fa-motorcycle"></i>
+                    <p class="card-p">Hacemos envíos en moto si residis en el área local de <b>GBA</b>.</p>
+                </div>
+                <div class="card-envio">
+                    <i class="card-icon fa-solid fa-shop"></i>
+                    <p class="card-p">Disponemos de nuestras oficinas ubicadas en <b>CABA</b> para retiros.
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <footer class="footer">
             <div class="footer-col">

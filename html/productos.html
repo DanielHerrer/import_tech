@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos · Import Tech</title>
+    <link rel="stylesheet" href="../css/productos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="body-filter">
+        <header class="navbar">
+            <div class="logo">
+                <img class="logo-img" src="../img/it_logo.png" alt="">
+                <!-- Import Tech -->
+            </div>
+            <!-- <div class="input-busqueda">
+                <input type="text" placeholder="Buscar productos...">
+                <i class="fas fa-search"></i>
+            </div> -->
+            <!-- <input type="text" placeholder="Buscar productos..." class="search-bar" /> -->
+            <nav class="nav-links">
+                <a class="" href="../index.html">Inicio</a>
+                <a class="activo" href="productos.html">Productos</a>
+                <a class="" href="contacto.html">Contacto</a>
+            </nav>
+        </header>
+
+        <form class="busqueda" action="" method="GET">
+            <div class="div-busqueda">
+                <select name="categoria" id="categoria">
+                    <option value="">Todas las categorías</option>
+                    <option value="Celular">Celulares</option>
+                    <option value="Tablet">Tablets</option>
+                    <option value="Laptop">Laptops</option>
+                    <option value="Accesorio">Accesorios</option>
+                    <option value="Videojuegos">Videojuegos</option>
+                </select>
+
+                <select name="orden" id="orden">
+                    <option value="">Ordenar por</option>
+                    <option value="precio_asc">Precio: menor a mayor</option>
+                    <option value="precio_desc">Precio: mayor a menor</option>
+                    <option value="fecha_asc">Más antiguos</option>
+                    <option value="fecha_desc">Más nuevos</option>
+                </select>
+
+                <input type="text" name="busqueda" id="texto" placeholder="Buscar producto...">
+            </div>
+
+            <button class="btn-buscar" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <section class="productos">
+            <div class="productos-grid" id="contenedor-productos">
+                <!-- ACA SE AÑADEN LOS PRODUCTOS -->
+                <!-- Ejemplo: -->
+                <!-- <div class="producto-card">
+                    <img class="img-card"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvVSXYZ-FEUx0iv1E8_xwkh6F4lPJkOIwfTw&s"></img>
+                    <h3 class="title-card">Samsung Galaxy A16</h3>
+                    <button class="btn-card">Ver más</button>
+                </div> -->
+            </div>
+        </section>
+
+        <script src="../js/productos.js"></script>
+        <footer class="footer">
+            <div class="footer-col">
+                <h4>Import Tech</h4>
+                <p>Tu tienda de confianza en tecnología.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>info@importtech.com</p>
+                <p>+54 123 456 7890</p>
+            </div>
+            <div class="footer-col">
+                <h4>Redes</h4>
+                <p>Instagram | Facebook</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
