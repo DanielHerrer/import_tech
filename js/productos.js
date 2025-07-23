@@ -82,10 +82,23 @@ function mantenerValoresFormulario() {
     }
 }
 
+function actualizarBotonBuscar() {
+    const btn = document.getElementById("btnBuscar");
 
-// ⬇️ PROCESO PRINCIPAL
+    if (window.innerWidth > 767) {
+        // Solo el ícono
+        btn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+        btn.style.borderRadius = '50%';
+        btn.style.padding = '17px';
+    } else {
+        // Ícono + texto
+        btn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i> Buscar';
+    }
+}
 
+// ⬇️ CARGADO DE PRODUCTOS con FILTRADO por URL
 const params = new URLSearchParams(window.location.search);
+
 const filtros = {
     categoria: params.get("categoria"),
     orden: params.get("orden"),
@@ -98,6 +111,17 @@ cargarProductos().then(productos => {
     mostrarProductos(resultado);
 });
 
+
+// ⬇️ PROCESO PRINCIPAL
 document.addEventListener("DOMContentLoaded", () => {
+
+    // Si el usuario busco con filtros recientemente, que los valores se mantengan para visualizar
     mantenerValoresFormulario();
+
+    // Llamar cuando se carga la página
+    actualizarBotonBuscar();
+
+    // Llamar cuando se cambia el tamaño de la ventana
+    window.addEventListener("resize", actualizarBotonBuscar);
+
 });

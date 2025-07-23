@@ -11,8 +11,13 @@ body {
   background-color: #000000;
   /* color: #333; */
   background-image: url(../img/tech-background-vector-vertical.png);
-  background-size: contain;
-  /* background-position: center; */
+  /* background-size: cover; */
+  background-size: 100% auto;
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* opcional: para efecto de parallax */
+  background-position: center;
+  /* opcional */
 }
 
 .body-filter {

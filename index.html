@@ -20,11 +20,6 @@
                 <img class="logo-img" src="./img/it_logo.png" alt="Logo de Import Tech">
                 <!-- Import Tech -->
             </div>
-            <!-- <div class="input-busqueda">
-                <input type="text" placeholder="Buscar productos...">
-                <i class="fas fa-search"></i>
-            </div> -->
-            <!-- <input type="text" placeholder="Buscar productos..." class="search-bar" /> -->
             <nav class="nav-links">
                 <a class="activo" href="index.html">Inicio</a>
                 <a class="" href="./html/productos.html">Productos</a>
@@ -37,37 +32,37 @@
                 <div class="galeria-div div1">
                     <div class="div-detalle">
                         Samsung
-                        <button class="btn-detalle">Ver más</button>
+                        <a href="./html/productos.html?categoria=Celular&orden=&busqueda=samsung" class="btn-detalle">Ver más</a>
                     </div>
                 </div>
                 <div class="galeria-div div2">
                     <div class="div-detalle">
                         Visita nuestro Catálogo
-                        <button class="btn-detalle">Ver más</button>
+                        <a href="./html/productos.html" class="btn-detalle">Ver más</a>
                     </div>
                 </div>
                 <div class="galeria-div div3">
                     <div class="div-detalle">
                         iPad
-                        <button class="btn-detalle">Ver más</button>
+                        <a href="./html/productos.html?categoria=Tablet&orden=&busqueda=ipad" class="btn-detalle">Ver más</a>
                     </div>
                 </div>
                 <div class="galeria-div div4">
                     <div class="div-detalle">
                         Macbook
-                        <button class="btn-detalle">Ver más</button>
+                        <a href="./html/productos.html?categoria=Laptop&orden=&busqueda=macbook" class="btn-detalle">Ver más</a>
                     </div>
                 </div>
                 <div class="galeria-div div5">
                     <div class="div-detalle">
                         Videojuegos y RA
-                        <button class="btn-detalle">Ver más</button>
+                        <a href="./html/productos.html?categoria=Videojuegos&orden=&busqueda=" class="btn-detalle">Ver más</a>
                     </div>
                 </div>
                 <div class="galeria-div div6">
                     <div class="div-detalle">
                         Xiaomi
-                        <button class="btn-detalle">Ver más</button>
+                        <a href="./html/productos.html?categoria=Celular&orden=&busqueda=xiaomi" class="btn-detalle">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -99,30 +94,30 @@
         <section class="categorias">
             <h2>Categorías</h2>
             <div class="categorias-grid">
-                <div class="categoria-card" style="background-image: url(./img/img_ipad.jpg);">
+                <a href="./html/productos.html?categoria=Tablet&orden=&busqueda=" class="categoria-card" style="background-image: url(./img/img_ipad.jpg);">
                     <div class="categoria-filtro"></div>
                     <div class="categoria-contenido">
                         Tablets
                     </div>
-                </div>
-                <div class="categoria-card" style="background-image: url(./img/img_xiaomi.jpg);">
+                </a>
+                <a href="./html/productos.html?categoria=Celular&orden=&busqueda=" class="categoria-card" style="background-image: url(./img/img_xiaomi.jpg);">
                     <div class="categoria-filtro"></div>
                     <div class="categoria-contenido">
                         Celulares
                     </div>
-                </div>
-                <div class="categoria-card" style="background-image: url(./img/img_macbook.jpg);">
+                </a>
+                <a href="./html/productos.html?categoria=Laptop&orden=&busqueda=" class="categoria-card" style="background-image: url(./img/img_macbook.jpg);">
                     <div class="categoria-filtro"></div>
                     <div class="categoria-contenido">
                         Laptops
                     </div>
-                </div>
-                <div class="categoria-card" style="background-image: url(./img/img_app.jpg);">
+                </a>
+                <a href="./html/productos.html?categoria=Accesorio&orden=&busqueda=" class="categoria-card" style="background-image: url(./img/img_app.jpg);">
                     <div class="categoria-filtro"></div>
                     <div class="categoria-contenido">
                         Accesorios
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -192,33 +187,46 @@
                 <div class="pagos-1">
                     <div class="pagos-item">
                         <div class="item-icon">
-                            <i class="fa-brands fa-bitcoin"></i>
+                            <i class="fa-solid fa-money-bills"></i>
                         </div>
-                        <p class="item-text">Cryptocurrency</p>
+                        <p class="item-text">Efectivo</p>
                     </div>
+                    
                     <div class="pagos-item">
                         <div class="item-icon">
                             <i class="fa-solid fa-money-bill-transfer"></i>
                         </div>
                         <p class="item-text">Transferencia Bancaria</p>
                     </div>
+
                     <div class="pagos-item">
                         <div class="item-icon">
-                            <i class="fa-solid fa-money-bills"></i>
+                            <i class="fa-brands fa-bitcoin"></i>
                         </div>
-                        <p class="item-text">Efectivo</p>
+                        <p class="item-text">Cryptocurrency (USDT)</p>
                     </div>
                 </div>
                 <div class="pagos-2">
                     <div class="pagos-item">
+                        <img class="item-img" src="./img/payoneer_logo.png" alt="Logo Payoneer">
+                    </div>
+
+                    <div class="pagos-item">
                         <img class="item-img" src="./img/PayPal_logo.png" alt="Logo PayPal">
                     </div>
+
+                    <div class="pagos-item">
+                        <img class="item-img" src="./img/skrill_logo.png" alt="Logo Skrill">
+                    </div>
+
+                    <div class="pagos-item">
+                        <img class="item-img" src="./img/zelle_logo.png" alt="Logo Zelle">
+                    </div>
+
                     <div class="pagos-item">
                         <img class="item-img" src="./img/wise_logo.png" alt="Logo Wise">
                     </div>
-                    <div class="pagos-item">
-                        <img class="item-img" src="./img/payoneer_logo.png" alt="Logo Payoneer">
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -230,7 +238,7 @@
             <div class="envios-div">
                 <div class="card-envio">
                     <i class="card-icon fa-solid fa-truck-fast"></i>
-                    <p class="card-p">Envíos a todo el país y con tu domicilio usando correo <b>Adreani</b>.</p>
+                    <p class="card-p">Envíos a todo el país y con tu domicilio usando correo <b>Andreani</b>.</p>
                 </div>
                 <div class="card-envio">
                     <i class="card-icon fa-solid fa-motorcycle"></i>

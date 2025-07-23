@@ -10,6 +10,9 @@
 
 .div-busqueda {
     background-color: #fff;
+    display: flex;
+    gap: 1em;
+
     border-radius: 5px;
     padding: 10px 30px;
     margin: 20px 0;
@@ -31,8 +34,6 @@
 
 #texto {
     border-radius: 3px;
-    margin-left: 1.5em;
-    min-width: 350px;
 
     padding: 2px 5px;
 
@@ -176,10 +177,7 @@
     #texto {
         border-radius: 3px;
 
-        margin-left: 0;
-        min-width:auto;
         width: 100%;
-
         padding: 2px 5px;
 
         /* grid-column-start: 1; */
@@ -314,10 +312,7 @@
     #texto {
         border-radius: 3px;
 
-        margin-left: 0;
-        min-width:auto;
         width: 100%;
-
         padding: 2px 5px;
 
         /* grid-column-start: 1; */
@@ -423,7 +418,7 @@
     /* BUSQUEDA ___________________________________________ */
 
     .busqueda {
-        padding: 2em 1em 2.5em 0;
+        padding: 1em 1em 1.25em 0;
         display: flex;
         /* flex-direction: column; */
         justify-content: center;
@@ -432,7 +427,7 @@
     }
 
     .div-busqueda {
-        border-radius: 0;
+        border-radius: 0 8px 8px 0;
         padding: 1.25em 2em 1em 2em;
         margin: 0 1em 0 0;
         width: 100%;
@@ -460,12 +455,7 @@
     #texto {
         border-radius: 3px;
 
-        margin-left: 0;
-        min-width:auto;
-        /* width: auto; */
-
         padding: 2px 5px;
-
         /* grid-column-start: 1; */
         /* grid-column-end: span 2; */
     }
