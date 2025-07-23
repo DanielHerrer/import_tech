@@ -17,26 +17,35 @@
 
 #categoria {
     border-radius: 3px;
+
     padding: 2px 5px;
+    border: 1px solid #4e4e4e;
 }
 
 #orden {
     border-radius: 3px;
 
     padding: 2px 5px;
+    border: 1px solid #4e4e4e;
 }
 
 #texto {
     border-radius: 3px;
     margin-left: 1.5em;
     min-width: 350px;
+
     padding: 2px 5px;
+
+    border: 1px solid #4e4e4e;
 }
 
 .btn-buscar {
     border-radius: 50%;
     width: 55px;
     height: 55px;
+
+    border: 0;
+
 }
 
 /* MENSAJE SIN PRODUCTOS */
@@ -126,7 +135,6 @@
 /* RESPONSIVE CSS
 -------------------------------------------------------------------------------------------------------------------- */
 
-/* minimo (min-width: 320px) and (max-width: 360px) */
 @media (max-width: 575px) {
     /* BUSQUEDA ___________________________________________ */
 

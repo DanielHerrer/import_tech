@@ -1,4 +1,3 @@
-
 /* GRID GENERATOR */
 
 .galeria {
@@ -137,7 +136,7 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
-/* TITULOS CON LINEAS _____________________________________________________________ */
+/* TITULOS CON LINEAS _____________________________ */
 
 .titulo-lineas {
   color: #fff;
@@ -166,7 +165,7 @@
   /* font-weight: bold; */
 }
 
-/* POR QUÉ ELEGIRNOS, MOTIVOS CARDS __________________________________________________________________*/
+/* POR QUÉ ELEGIRNOS, MOTIVOS CARDS ___________________________*/
 .motivos {
   padding: 1.5em 15em 5em 15em;
   text-align: center;
@@ -193,7 +192,7 @@
   color: #2f3e68;
 }
 
-/* CATEGORIAS _________________________________________________________________ */
+/* CATEGORIAS _______________________________ */
 .categorias {
   padding: 40px 40px;
   background-color: white;
@@ -211,7 +210,7 @@
 }
 
 .categoria-card {
-    position: relative;
+  position: relative;
   background-color: #eee;
   padding: 30px;
   text-align: center;
@@ -231,7 +230,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* negro con opacidad */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* negro con opacidad */
   z-index: 1;
 }
 
@@ -243,7 +243,7 @@
   /* padding: 20px; */
 }
 
-/* PRODUCTOS DESTACADOS _______________________________________________ */
+/* PRODUCTOS DESTACADOS ________________________________ */
 
 .productos {
   padding: 40px 40px 60px 40px;
@@ -329,7 +329,7 @@
   transition: 0.2s;
 }
 
-/* PAGOS _______________________________________________________________________________*/
+/* PAGOS __________________________________________*/
 
 .pagos {
   padding: 2em 12.5em;
@@ -393,7 +393,7 @@
   height: 3.5em;
 }
 
-/* ENVIOS ____________________________________________________________________________ */
+/* ENVIOS _________________________________________ */
 
 .envios {
   padding: 0 0;
@@ -427,13 +427,12 @@
   font-size: 1.1em;
 }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
+/* RESPONSIVE CSS */
+/* ---------------------------------------------------------------------------------------------------- */
 
-/* minimo (min-width: 320px) and (max-width: 360px) */
 @media (max-width: 575px) {
 
-  /* GALERIA GRID ____________________________________________________ */
+  /* GALERIA GRID ________________________ */
   .galeria {
     padding: 1em 1em;
   }
@@ -452,6 +451,18 @@
     /* border: 1px solid rgba(255, 255, 255, 0.75); */
     background-color: rgba(255, 255, 255, 0.35);
     padding: 0.5em;
+  }
+
+  .galeria-div {
+    border-radius: 10px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    font-size: 0.9rem;
+    
+    overflow: hidden;
   }
 
   /* DIVS ---------------------------------------*/
@@ -494,24 +505,24 @@
 
   .galeria-div .div-detalle .btn-detalle {
     padding: 7px 10px;
-    margin: 2.5em auto;
+    margin: 1.9em auto;
 
     border-radius: 25px;
     border: none;
   }
 
-  /* TITULOS CON LINEAS _____________________________________________________________ */
+  /* TITULOS CON LINEAS ________________________________ */
 
   .titulo-lineas {
-    font-size: 1.5rem;
-    gap: 1rem;
+    font-size: 1.75rem;
+    gap: 0.1rem;
     /* espacio entre el texto y las líneas */
     margin: 1em 0 0.5em 0;
   }
 
-  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS __________________________________________________________________*/
+  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS __________________*/
   .motivos {
-    padding: 1.5em 4em 3em 4em;
+    padding: 1.5em 2em 3em 2em;
     text-align: center;
     margin-bottom: 3em;
   }
@@ -525,7 +536,7 @@
 
   .card-motivo {
     border-radius: 10px;
-    padding: 2em 1.5em 2.5em 1.5em;
+    padding: 1em 1.25em 1.75em 1.25em;
   }
 
   .card-icon {
@@ -533,14 +544,14 @@
     margin: 0.2em 0 0.4em 0;
   }
 
-  /* CATEGORIAS _________________________________________________________________ */
+  /* CATEGORIAS _______________________________ */
   .categorias {
     padding: 40px 40px;
     background-color: white;
   }
 
   .categorias h2 {
-    font-size: 28px;
+    font-size: 1.5rem;
     margin: 0 0 20px 0;
   }
 
@@ -557,61 +568,62 @@
     font-weight: 600;
   }
 
-  /* PRODUCTOS DESTACADOS _______________________________________________ */
+  /* PRODUCTOS DESTACADOS _________________________________ */
 
   .productos {
-    padding: 40px 40px 60px 40px;
+    padding: 2em 1.5em 2.5em 1.5em; /* 40px 40px 60px 40px; */
     background-color: rgba(0, 0, 0, 0.3);
     margin: 0 0 5em 0;
   }
 
   .productos h2 {
-    font-size: 28px;
+    font-size: 1.35rem;
     color: #ffffff;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 1.5em;
     font-weight: lighter;
   }
 
   .productos-grid {
-    padding: 0 1em;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1.75em;
+    padding: 0 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
   }
 
   .producto-card {
-    padding: 20px;
+    padding: 20px 20px;
     /* border-radius: 8px; */
   }
 
   .img-card {
-    height: 12.5rem;
+    height: 7rem;
     border-radius: 4px;
     margin-bottom: 10px;
   }
 
   .title-card {
-    margin: 0.5em 0;
+    margin: 1em 0;
+    font-size: 0.55rem;
   }
 
   .btn-card {
     padding: 7px 25px;
     border-radius: 15px;
+    font-size: 0.65rem;
   }
 
+  /* ver todos los productos */
   .productos-ver .btn-productos {
     padding: 15px 50px;
     font-size: 0.75rem;
-    margin: 4em 0 0 0;
+    margin: 3em 0 0 0;
     border-radius: 5px;
-    
-  
   }
 
-  /* PAGOS _______________________________________________________________________________*/
+  /* PAGOS ________________________________*/
 
   .pagos {
-    padding: 2em 1.5em;
+    padding: 1.25em 1em 3em 1em;
   }
 
   .pagos-div {
@@ -678,7 +690,7 @@
     height: 3.5em;
   }
 
-  /* ENVIOS ____________________________________________________________________________ */
+  /* ENVIOS ______________________________ */
 
   .envios {
     padding: 0 0;
@@ -692,13 +704,13 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 0.25em;
-    padding: 1.5em 2.5em 2em 2.5em;
-    margin: 3em 0 5em 0;
+    gap: 0;
+    padding: 0.5em 1em 1.5em 1em;
+    margin: 2em 0 5em 0;
   }
 
   .card-envio {
-    padding: 1.5em;
+    padding: 0.75em 1.5em;
   }
 
   .card-envio .card-icon {
@@ -712,10 +724,11 @@
 
 }
 
-/* ______________________________________________________________________________________________ */
+/* ---------------------------------------------------------------------------------------------------- */
+
 @media (min-width: 576px) and (max-width: 767px) {
 
-  /* GALERIA GRID ____________________________________________________ */
+  /* GALERIA GRID _______________________________________ */
   .galeria {
     padding: 1.6em 1.6em;
   }
@@ -782,7 +795,7 @@
     border: none;
   }
 
-  /* TITULOS CON LINEAS _____________________________________________________________ */
+  /* TITULOS CON LINEAS __________________________________ */
 
   .titulo-lineas {
     font-size: 2.25rem;
@@ -791,7 +804,7 @@
     margin: 1em 0 0.5em 0;
   }
 
-  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS __________________________________________________________________*/
+  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS ___________________*/
   .motivos {
     padding: 1.5em 4em 3em 4em;
     text-align: center;
@@ -815,7 +828,7 @@
     margin: 0.2em 0 0.4em 0;
   }
 
-  /* CATEGORIAS _________________________________________________________________ */
+  /* CATEGORIAS _________________________ */
   .categorias {
     padding: 40px 40px;
     background-color: white;
@@ -839,7 +852,7 @@
     font-weight: 600;
   }
 
-  /* PRODUCTOS DESTACADOS _______________________________________________ */
+  /* PRODUCTOS DESTACADOS __________________________ */
 
   .productos {
     padding: 40px 40px 60px 40px;
@@ -888,7 +901,7 @@
     border-radius: 5px;
   }
 
-  /* PAGOS _______________________________________________________________________________*/
+  /* PAGOS __________________________________*/
 
   .pagos {
     padding: 2em 1.5em;
@@ -958,7 +971,7 @@
     height: 3.5em;
   }
 
-  /* ENVIOS ____________________________________________________________________________ */
+  /* ENVIOS _______________________________________ */
 
   .envios {
     padding: 0 0;
@@ -992,15 +1005,17 @@
 
 }
 
+/* ---------------------------------------------------------------------------------------------------- */
+
 /* Estilos para tablets grandes */
 @media (min-width: 768px) and (max-width: 991px) {
 
-  /* GALERIA GRID ____________________________________________________ */
+  /* GALERIA GRID _______________________________________ */
   .galeria {
     padding: 1.6em 2.25em;
   }
 
-  /* TITULOS CON LINEAS _____________________________________________________________ */
+  /* TITULOS CON LINEAS __________________________________ */
 
   .titulo-lineas {
     font-size: 2.25rem;
@@ -1009,7 +1024,7 @@
     margin: 1em 0 0.5em 0;
   }
 
-  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS __________________________________________________________________*/
+  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS _______________________*/
   .motivos {
     padding: 1.5em 2em 2em 2em;
     text-align: center;
@@ -1033,7 +1048,7 @@
     margin: 0.2em 0 0.4em 0;
   }
 
-  /* CATEGORIAS _________________________________________________________________ */
+  /* CATEGORIAS ______________________________ */
   .categorias {
     padding: 40px 40px;
     background-color: white;
@@ -1057,7 +1072,7 @@
     font-weight: 600;
   }
 
-  /* PRODUCTOS DESTACADOS _______________________________________________ */
+  /* PRODUCTOS DESTACADOS ___________________________ */
 
   .productos {
     padding: 40px 40px 60px 40px;
@@ -1104,11 +1119,11 @@
     font-size: 1rem;
     margin: 4em 0 0 0;
     border-radius: 5px;
-    
-  
+
+
   }
 
-  /* PAGOS _______________________________________________________________________________*/
+  /* PAGOS _____________________________*/
 
   .pagos {
     padding: 2em 2.5em;
@@ -1178,7 +1193,7 @@
     height: 3.5em;
   }
 
-  /* ENVIOS ____________________________________________________________________________ */
+  /* ENVIOS __________________________ */
 
   .envios {
     padding: 0 0;
@@ -1211,6 +1226,8 @@
   }
 
 }
+
+/* ---------------------------------------------------------------------------------------------------- */
 
 /* 6. Escritorio */
 @media (min-width: 992px) {}
