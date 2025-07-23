@@ -312,12 +312,21 @@
 }
 
 .productos-ver .btn-productos {
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
   padding: 15px 50px;
   font-size: 1rem;
   font-weight: bold;
   margin: 4em 0 0 0;
   border: none;
   border-radius: 5px;
+}
+
+.productos-ver .btn-productos:hover {
+  background-color: #d68fe0;
+  color: #fff;
+  transition: 0.2s;
 }
 
 /* PAGOS _______________________________________________________________________________*/
@@ -339,6 +348,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: center;
   justify-content: flex-start;
   gap: 0.3em;
 }
@@ -591,9 +601,11 @@
 
   .productos-ver .btn-productos {
     padding: 15px 50px;
-    font-size: 1rem;
+    font-size: 0.75rem;
     margin: 4em 0 0 0;
     border-radius: 5px;
+    
+  
   }
 
   /* PAGOS _______________________________________________________________________________*/
@@ -617,6 +629,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
+
     justify-content: start;
     gap: 0.3em;
 
@@ -699,10 +713,504 @@
 }
 
 /* ______________________________________________________________________________________________ */
-@media (min-width: 576px) and (max-width: 767px) {}
+@media (min-width: 576px) and (max-width: 767px) {
+
+  /* GALERIA GRID ____________________________________________________ */
+  .galeria {
+    padding: 1.6em 1.6em;
+  }
+
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    /* gap: 8px; */
+
+    /* grid-template-columns: repeat(7, 1fr); */
+    /* grid-template-rows: repeat(7, 1fr); */
+    gap: 0.5rem;
+
+    border-radius: 10px;
+    /* border: 1px solid rgba(255, 255, 255, 0.75); */
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 0.5em;
+  }
+
+  /* DIVS ---------------------------------------*/
+  .galeria-grid .div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+  }
+
+  .galeria-grid .div2 {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+  }
+
+  .galeria-grid .div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 3;
+    grid-row-start: 4;
+  }
+
+  .galeria-grid .div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-row-start: 7;
+  }
+
+  .galeria-grid .div5 {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    grid-row-start: 11;
+  }
+
+  .galeria-grid .div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 8;
+  }
+
+  .galeria-div .div-detalle .btn-detalle {
+    padding: 7px 10px;
+    margin: 2.5em auto;
+
+    border-radius: 25px;
+    border: none;
+  }
+
+  /* TITULOS CON LINEAS _____________________________________________________________ */
+
+  .titulo-lineas {
+    font-size: 2.25rem;
+    gap: 1rem;
+    /* espacio entre el texto y las líneas */
+    margin: 1em 0 0.5em 0;
+  }
+
+  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS __________________________________________________________________*/
+  .motivos {
+    padding: 1.5em 4em 3em 4em;
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  .motivos-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  .card-motivo {
+    border-radius: 10px;
+    padding: 2em 1.5em 2.5em 1.5em;
+  }
+
+  .card-icon {
+    font-size: 6rem;
+    margin: 0.2em 0 0.4em 0;
+  }
+
+  /* CATEGORIAS _________________________________________________________________ */
+  .categorias {
+    padding: 40px 40px;
+    background-color: white;
+  }
+
+  .categorias h2 {
+    font-size: 28px;
+    margin: 0 0 20px 0;
+  }
+
+  .categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .categoria-card {
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  /* PRODUCTOS DESTACADOS _______________________________________________ */
+
+  .productos {
+    padding: 40px 40px 60px 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 0 5em 0;
+  }
+
+  .productos h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: lighter;
+  }
+
+  .productos-grid {
+    padding: 0 1em;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75em;
+  }
+
+  .producto-card {
+    padding: 20px;
+    /* border-radius: 8px; */
+  }
+
+  .img-card {
+    height: 12.5rem;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .title-card {
+    margin: 0.5em 0;
+  }
+
+  .btn-card {
+    padding: 7px 25px;
+    border-radius: 15px;
+  }
+
+  .productos-ver .btn-productos {
+    padding: 15px 50px;
+    font-size: 1rem;
+    margin: 4em 0 0 0;
+    border-radius: 5px;
+  }
+
+  /* PAGOS _______________________________________________________________________________*/
+
+  .pagos {
+    padding: 2em 1.5em;
+  }
+
+  .pagos-div {
+    display: flex;
+    /* flex-direction: column; */
+
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2.5em;
+  }
+
+  .pagos-1 {
+    /* width: 60%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+
+    justify-content: start;
+    gap: 0.3em;
+
+    padding: 1em 2.5em 1em 1em;
+  }
+
+  .pagos-2 {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+
+    /* border-left: 0; */
+
+    border-left: 1px solid #222;
+
+    padding: 2em 2em 2em 2.5em;
+  }
+
+  .pagos-1 .pagos-item {
+    justify-content: start;
+    gap: 2em;
+  }
+
+  .pagos-2 .pagos-item {
+    justify-content: center;
+  }
+
+  .pagos-item .item-icon {
+    width: 4em;
+    display: flex;
+    justify-content: center;
+    /* padding: 0 3em; */
+  }
+
+  .pagos-item .item-icon i {
+    font-size: 3em;
+  }
+
+  .pagos-item .item-text {
+    font-size: 1rem;
+  }
+
+  .pagos-item .item-img {
+    height: 3.5em;
+  }
+
+  /* ENVIOS ____________________________________________________________________________ */
+
+  .envios {
+    padding: 0 0;
+    /* padding: 1.5em 15em 5em 15em; */
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  .envios-div {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 0.25em;
+    padding: 1em 2em 2em 2em;
+    margin: 3em 0 5em 0;
+  }
+
+  .card-envio {
+    padding: 1.5em 0.5em;
+  }
+
+  .card-envio .card-icon {
+    font-size: 6rem;
+    color: #2f3e68;
+  }
+
+  .card-envio .card-p {
+    font-size: 1.1em;
+  }
+
+}
 
 /* Estilos para tablets grandes */
-@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  /* GALERIA GRID ____________________________________________________ */
+  .galeria {
+    padding: 1.6em 2.25em;
+  }
+
+  /* TITULOS CON LINEAS _____________________________________________________________ */
+
+  .titulo-lineas {
+    font-size: 2.25rem;
+    gap: 1rem;
+    /* espacio entre el texto y las líneas */
+    margin: 1em 0 0.5em 0;
+  }
+
+  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS __________________________________________________________________*/
+  .motivos {
+    padding: 1.5em 2em 2em 2em;
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  .motivos-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1em;
+  }
+
+  .card-motivo {
+    border-radius: 10px;
+    padding: 2em 1.5em 2.5em 1.5em;
+  }
+
+  .card-icon {
+    font-size: 6rem;
+    margin: 0.2em 0 0.4em 0;
+  }
+
+  /* CATEGORIAS _________________________________________________________________ */
+  .categorias {
+    padding: 40px 40px;
+    background-color: white;
+  }
+
+  .categorias h2 {
+    font-size: 28px;
+    margin: 0 0 20px 0;
+  }
+
+  .categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .categoria-card {
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  /* PRODUCTOS DESTACADOS _______________________________________________ */
+
+  .productos {
+    padding: 40px 40px 60px 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 0 5em 0;
+  }
+
+  .productos h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: lighter;
+  }
+
+  .productos-grid {
+    padding: 0 1em;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75em;
+  }
+
+  .producto-card {
+    padding: 20px;
+    /* border-radius: 8px; */
+  }
+
+  .img-card {
+    height: 12.5rem;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .title-card {
+    margin: 0.5em 0;
+  }
+
+  .btn-card {
+    padding: 7px 25px;
+    border-radius: 15px;
+  }
+
+  .productos-ver .btn-productos {
+    padding: 15px 50px;
+    font-size: 1rem;
+    margin: 4em 0 0 0;
+    border-radius: 5px;
+    
+  
+  }
+
+  /* PAGOS _______________________________________________________________________________*/
+
+  .pagos {
+    padding: 2em 2.5em;
+  }
+
+  .pagos-div {
+    display: flex;
+    /* flex-direction: column; */
+
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2.5em;
+  }
+
+  .pagos-1 {
+    /* width: 60%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+
+    justify-content: start;
+    gap: 0.3em;
+
+    padding: 1em 2.5em 1em 1.5em;
+  }
+
+  .pagos-2 {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+
+    /* border-left: 0; */
+
+    border-left: 1px solid #222;
+
+    padding: 2em 2.5em 2em 4em;
+  }
+
+  .pagos-1 .pagos-item {
+    justify-content: start;
+    gap: 2em;
+  }
+
+  .pagos-2 .pagos-item {
+    justify-content: center;
+  }
+
+  .pagos-item .item-icon {
+    width: 4em;
+    display: flex;
+    justify-content: center;
+    /* padding: 0 3em; */
+  }
+
+  .pagos-item .item-icon i {
+    font-size: 3em;
+  }
+
+  .pagos-item .item-text {
+    font-size: 1rem;
+  }
+
+  .pagos-item .item-img {
+    height: 3.5em;
+  }
+
+  /* ENVIOS ____________________________________________________________________________ */
+
+  .envios {
+    padding: 0 0;
+    /* padding: 1.5em 15em 5em 15em; */
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  .envios-div {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 0.25em;
+    padding: 1em 2em 2em 2em;
+    margin: 3em 0 5em 0;
+  }
+
+  .card-envio {
+    padding: 1.5em 0.5em;
+  }
+
+  .card-envio .card-icon {
+    font-size: 6rem;
+    color: #2f3e68;
+  }
+
+  .card-envio .card-p {
+    font-size: 1.1em;
+  }
+
+}
 
 /* 6. Escritorio */
 @media (min-width: 992px) {}
