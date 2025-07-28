@@ -13,6 +13,7 @@
   /* border: 1px solid rgba(255, 255, 255, 0.75); */
   background-color: rgba(255, 255, 255, 0.35);
   padding: 0.5em;
+  margin-bottom: 4em;
 }
 
 .galeria-div {
@@ -139,71 +140,17 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
-/* TITULOS CON LINEAS _____________________________ */
 
-.titulo-lineas {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-size: 2.5rem;
-  width: 100%;
-  gap: 1rem;
-  /* espacio entre el texto y las líneas */
-  margin: 1.5em 0 0.5em 0;
-}
-
-.titulo-lineas::before,
-.titulo-lineas::after {
-  content: '';
-  flex: 1;
-  height: 2px;
-  background-color: #fff;
-}
-
-.titulo-lineas span {
-  white-space: nowrap;
-  /* para que no se corte en varias líneas */
-  padding: 0 0.5rem;
-  /* font-weight: bold; */
-}
-
-/* POR QUÉ ELEGIRNOS, MOTIVOS CARDS ___________________________*/
-.motivos {
-  padding: 1.5em 15em 5em 15em;
-  text-align: center;
-  margin-bottom: 3em;
-}
-
-.motivos-div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 1em;
-}
-
-.card-motivo {
-  background-color: #fff;
-  border-radius: 10px;
-  /* height: 20em; */
-  padding: 2em 1.5em 2.5em 1.5em;
-}
-
-.card-icon {
-  font-size: 5.5rem;
-  margin: 0.2em 0 0.4em 0;
-  color: #2f3e68;
-}
 
 /* CATEGORIAS _______________________________ */
 .categorias {
-  padding: 40px 40px;
+  padding: 1.5em 3em 1.75em 3em;
   background-color: white;
 }
 
 .categorias h2 {
-  font-size: 28px;
-  margin: 0 0 20px 0;
+  font-size: 1.25rem;
+  margin: 0 0 0.75em 0;
 }
 
 .categorias-grid {
@@ -257,13 +204,13 @@
 /* PRODUCTOS DESTACADOS ________________________________ */
 
 .productos {
-  padding: 40px 40px 60px 40px;
+  padding: 1.75em 3em 3em 3em;
   background-color: rgba(0, 0, 0, 0.55);
-  margin: 0 0 5em 0;
+  margin: 0 0 3em 0;
 }
 
 .productos h2 {
-  font-size: 28px;
+  font-size: 1.5rem;
   color: #ffffff;
   margin: 0;
   margin-bottom: 30px;
@@ -329,7 +276,7 @@
   padding: 15px 50px;
   font-size: 1rem;
   font-weight: bold;
-  margin: 4em 0 0 0;
+  margin: 3em 0 0 0;
   border: none;
   border-radius: 5px;
 }
@@ -338,6 +285,35 @@
   background-color: #d68fe0;
   color: #fff;
   transition: 0.2s;
+}
+
+/* TITULOS CON LINEAS _____________________________ */
+
+.titulo-lineas {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  width: 100%;
+  gap: 1rem;
+  /* espacio entre el texto y las líneas */
+  margin: 1.5em 0 0.5em 0;
+}
+
+.titulo-lineas::before,
+.titulo-lineas::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: #fff;
+}
+
+.titulo-lineas span {
+  white-space: nowrap;
+  /* para que no se corte en varias líneas */
+  padding: 0 0.5rem;
+  /* font-weight: bold; */
 }
 
 /* PAGOS __________________________________________*/
@@ -350,7 +326,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 4em 4em 4em 2.5em;
 }
 
@@ -375,7 +351,7 @@
   padding: 0 2em 0 5.5em;
 }
 
-.pagos-item {
+.pagos .pagos-item {
   width: 100%;
   display: flex;
   align-items: center;
@@ -383,31 +359,61 @@
   /* gap: 1em; */
 }
 
-.pagos-item .item-icon {
+.pagos .pagos-item .item-icon {
   width: 8em;
   display: flex;
   justify-content: center;
   /* padding: 0 3em; */
+  
 }
 
-.pagos-item .item-icon i {
+.pagos .pagos-item .item-icon i {
   font-size: 3.5em;
   color: #2f3e68;
 }
 
-.pagos-item .item-text {
+.pagos .pagos-item .item-text {
   font-size: 1.4rem;
 }
 
-.pagos-item .item-img {
+.pagos .pagos-item .item-img {
   /* width: 100%; */
   height: 3.5em;
+  border: 1px solid #bbbbbb;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+/* POR QUÉ ELEGIRNOS, MOTIVOS CARDS ___________________________*/
+.motivos {
+  padding: 2em 15em 2em 15em;
+  text-align: center;
+}
+
+.motivos-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 1em;
+}
+
+.card-motivo {
+  background-color: #fff;
+  border-radius: 8px;
+  /* height: 20em; */
+  padding: 2em 1.5em 2.5em 1.5em;
+}
+
+.card-icon {
+  font-size: 5.5rem;
+  margin: 0.2em 0 0.4em 0;
+  color: #2f3e68;
 }
 
 /* ENVIOS _________________________________________ */
 
 .envios {
-  padding: 0 0;
+  padding: 2em 0 5em 0;
   /* padding: 1.5em 15em 5em 15em; */
   text-align: center;
   margin-bottom: 3em;
@@ -420,7 +426,6 @@
   grid-template-rows: repeat(1, 1fr);
   gap: 0.5em;
   padding: 1em 15em 0.5em 15em;
-  margin: 3em 0 5em 0;
 }
 
 .card-envio {
@@ -437,6 +442,8 @@
 .card-envio .card-p {
   font-size: 1.1em;
 }
+
+
 
 /* RESPONSIVE CSS */
 /* ---------------------------------------------------------------------------------------------------- */
