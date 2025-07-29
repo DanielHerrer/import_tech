@@ -117,8 +117,8 @@ body {
 }
 
 .social-buttons .btn .whatsapp{
-  background-color: greenyellow;
-  color: #fff;
+  /* background-color: greenyellow; */
+  /* color: #fff; */
 }
 
 
@@ -178,6 +178,20 @@ body {
   border: 1px solid #bbbbbb;
   border-radius: 3px;
   padding: 1px 3px;
+}
+
+.footer .info {
+  text-align: center;
+}
+
+.footer .link-atencion {
+  color: #cd7fec;
+  text-decoration: none;
+}
+
+.footer .link-creador {
+  color: #fff;
+  /* text-decoration: none; */
 }
 
 /* RESPONSIVE CSS

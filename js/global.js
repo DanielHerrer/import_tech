@@ -40,3 +40,22 @@ scrollTopBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+// Atención al Cliente, mensaje WhatsApp
+
+const numeroWpp = "5491165835895";
+const mensaje = "Hola, quiero hacer un reclamo sobre mi compra.";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const wppLink = document.querySelector(".link-atencion");
+  if (wppLink) {
+    wppLink.href = `https://wa.me/${numeroWpp}?text=${encodeURIComponent(mensaje)}`;
+  }
+
+  // Actualizar año automáticamente
+  const yearElement = document.querySelector(".copyright");
+  if (yearElement) {
+    const year = new Date().getFullYear();
+    yearElement.innerHTML = `Copyright Import Tech · ${year}. Todos los derechos reservados.`;
+  }
+});
