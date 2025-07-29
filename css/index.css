@@ -261,6 +261,7 @@
   border: none;
   background-color: #dcc3e0;
   cursor: pointer;
+  font-size: 0.85rem;
 }
 
 .btn-card:hover {
