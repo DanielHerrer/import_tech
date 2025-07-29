@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch("../data/lista-productosv2.txt");
+    const response = await fetch("./data/lista-productosv2.txt");
     const productos = await response.json();
 
     // Filtrar los que estén activos
