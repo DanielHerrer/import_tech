@@ -140,8 +140,6 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
-
-
 /* CATEGORIAS _______________________________ */
 .categorias {
   padding: 1.5em 3em 1.75em 3em;
@@ -185,7 +183,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   /* negro con opacidad */
   z-index: 1;
-  
+
   transition: 0.1s all;
 }
 
@@ -202,7 +200,6 @@
 }
 
 /* PRODUCTOS DESTACADOS ________________________________ */
-
 .productos {
   padding: 1.75em 3em 3em 3em;
   background-color: rgba(0, 0, 0, 0.55);
@@ -338,6 +335,7 @@
   align-self: center;
   justify-content: flex-start;
   gap: 0.3em;
+  padding: 0 2em 0 2em;
 }
 
 .pagos-2 {
@@ -351,32 +349,29 @@
   padding: 0 2em 0 5.5em;
 }
 
-.pagos .pagos-item {
+.pagos-item {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: start;
-  /* gap: 1em; */
+  gap: 2.5em;
 }
 
-.pagos .pagos-item .item-icon {
-  width: 8em;
+.pagos-item .item-icon {
   display: flex;
   justify-content: center;
-  /* padding: 0 3em; */
-  
 }
 
-.pagos .pagos-item .item-icon i {
-  font-size: 3.5em;
+.pagos-item .item-icon i {
+  font-size: 3rem;
   color: #2f3e68;
 }
 
-.pagos .pagos-item .item-text {
+.pagos-item .item-text {
   font-size: 1.4rem;
 }
 
-.pagos .pagos-item .item-img {
+.pagos-item .item-img {
   /* width: 100%; */
   height: 3.5em;
   border: 1px solid #bbbbbb;
@@ -479,7 +474,7 @@
     color: white;
 
     font-size: 0.9rem;
-    
+
     overflow: hidden;
   }
 
@@ -523,7 +518,7 @@
 
   .galeria-div .div-detalle .btn-detalle {
     padding: 7px 10px;
-    margin: 1.9em auto;
+    margin: 2.75em auto;
 
     border-radius: 25px;
     border: none;
@@ -589,7 +584,8 @@
   /* PRODUCTOS DESTACADOS _________________________________ */
 
   .productos {
-    padding: 2em 1.5em 2.5em 1.5em; /* 40px 40px 60px 40px; */
+    padding: 2em 1.5em 2.5em 1.5em;
+    /* 40px 40px 60px 40px; */
     background-color: rgba(0, 0, 0, 0.3);
     margin: 0 0 5em 0;
   }
@@ -639,7 +635,6 @@
   }
 
   /* PAGOS ________________________________*/
-
   .pagos {
     padding: 1.25em 1em 3em 1em;
   }
@@ -647,9 +642,8 @@
   .pagos-div {
     display: flex;
     flex-direction: column;
-
     justify-content: space-between;
-    background-color: #fff;
+
     border-radius: 15px;
     padding: 2.5em;
   }
@@ -664,7 +658,7 @@
     justify-content: start;
     gap: 0.3em;
 
-    padding: 0 1em 2.5em 1em;
+    padding: 0 0em 2em 0em;
   }
 
   .pagos-2 {
@@ -682,22 +676,15 @@
 
   .pagos-1 .pagos-item {
     justify-content: start;
-    gap: 2em;
+    gap: 1em;
   }
 
   .pagos-2 .pagos-item {
     justify-content: center;
   }
 
-  .pagos-item .item-icon {
-    width: 4em;
-    display: flex;
-    justify-content: center;
-    /* padding: 0 3em; */
-  }
-
   .pagos-item .item-icon i {
-    font-size: 3em;
+    font-size: 2rem;
   }
 
   .pagos-item .item-text {
@@ -748,23 +735,20 @@
 
   /* GALERIA GRID _______________________________________ */
   .galeria {
-    padding: 1.6em 1.6em;
+    padding: 1.5em;
   }
 
   .galeria-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(13, 1fr);
-    /* gap: 8px; */
-
-    /* grid-template-columns: repeat(7, 1fr); */
-    /* grid-template-rows: repeat(7, 1fr); */
-    gap: 0.5rem;
 
     border-radius: 10px;
-    /* border: 1px solid rgba(255, 255, 255, 0.75); */
     background-color: rgba(255, 255, 255, 0.35);
+
+    gap: 0.5rem;
     padding: 0.5em;
+    margin-bottom: 1.5em;
   }
 
   /* DIVS ---------------------------------------*/
@@ -813,48 +797,10 @@
     border: none;
   }
 
-  /* TITULOS CON LINEAS __________________________________ */
-
-  .titulo-lineas {
-    font-size: 2.25rem;
-    gap: 1rem;
-    /* espacio entre el texto y las líneas */
-    margin: 1em 0 0.5em 0;
-  }
-
-  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS ___________________*/
-  .motivos {
-    padding: 1.5em 4em 3em 4em;
-    text-align: center;
-    margin-bottom: 3em;
-  }
-
-  .motivos-div {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1em;
-  }
-
-  .card-motivo {
-    border-radius: 10px;
-    padding: 2em 1.5em 2.5em 1.5em;
-  }
-
-  .card-icon {
-    font-size: 6rem;
-    margin: 0.2em 0 0.4em 0;
-  }
-
-  /* CATEGORIAS _________________________ */
-  .categorias {
-    padding: 40px 40px;
-    background-color: white;
-  }
-
+  /* CATEGORIAS ______________________________ */
   .categorias h2 {
-    font-size: 28px;
-    margin: 0 0 20px 0;
+    font-size: 1.1rem;
+    margin: 0 0 0.75em 0;
   }
 
   .categorias-grid {
@@ -865,30 +811,29 @@
 
   .categoria-card {
     padding: 30px;
-    text-align: center;
     border-radius: 8px;
     font-weight: 600;
   }
 
-  /* PRODUCTOS DESTACADOS __________________________ */
+  .categoria-card .categoria-contenido {
+    font-size: 1.2rem;
+  }
 
+  /* PRODUCTOS DESTACADOS _________________________ */
   .productos {
-    padding: 40px 40px 60px 40px;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin: 0 0 5em 0;
+    padding: 1.75em 3em 3em 3em;
+    margin: 0 0 3em 0;
   }
 
   .productos h2 {
-    font-size: 2rem;
-    color: #ffffff;
+    font-size: 1.25rem;
     margin: 0;
     margin-bottom: 30px;
-    font-weight: lighter;
   }
 
   .productos-grid {
     padding: 0 1em;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.75em;
   }
 
@@ -897,17 +842,18 @@
     /* border-radius: 8px; */
   }
 
-  .img-card {
-    height: 12.5rem;
+  .producto-card .img-card {
+    height: 10rem;
     border-radius: 4px;
     margin-bottom: 10px;
   }
 
-  .title-card {
+  .producto-card .title-card {
     margin: 0.5em 0;
+    font-size: 0.8rem;
   }
 
-  .btn-card {
+  .producto-card .btn-card {
     padding: 7px 25px;
     border-radius: 15px;
   }
@@ -919,8 +865,15 @@
     border-radius: 5px;
   }
 
-  /* PAGOS __________________________________*/
+  /* TITULOS CON LINEAS __________________________________ */
+  .titulo-lineas {
+    font-size: 2.25rem;
+    gap: 1rem;
+    /* espacio entre el texto y las líneas */
+    margin: 1em 0 0.5em 0;
+  }
 
+  /* PAGOS __________________________________*/
   .pagos {
     padding: 2em 1.5em;
   }
@@ -971,10 +924,8 @@
   }
 
   .pagos-item .item-icon {
-    width: 4em;
     display: flex;
     justify-content: center;
-    /* padding: 0 3em; */
   }
 
   .pagos-item .item-icon i {
@@ -989,8 +940,100 @@
     height: 3.5em;
   }
 
-  /* ENVIOS _______________________________________ */
+  /* PAGOS ________________________________*/
 
+  .pagos {
+    padding: 1.25em 1em 3em 1em;
+  }
+
+  .pagos-div {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 2.5em;
+  }
+
+  .pagos-1 {
+    /* width: 60%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+
+    justify-content: start;
+    gap: 0.3em;
+
+    padding: 0 1em 2.25em 1em;
+  }
+
+  .pagos-2 {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.3em;
+
+    border-left: 0;
+
+    border-top: 1px solid #222;
+
+    padding: 2.5em 2em 0 2em;
+  }
+
+  .pagos-1 .pagos-item {
+    justify-content: start;
+    gap: 2em;
+  }
+
+  .pagos-2 .pagos-item {
+    justify-content: center;
+  }
+
+  .pagos-item .item-icon {
+    display: flex;
+    justify-content: center;
+    /* padding: 0 3em; */
+  }
+
+  .pagos-item .item-icon i {
+    font-size: 3.5rem;
+  }
+
+  .pagos-item .item-text {
+    font-size: 1.25rem;
+  }
+
+  .pagos-item .item-img {
+    height: 3.5em;
+  }
+
+  /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS ___________________*/
+  .motivos {
+    padding: 1.5em 4em 3em 4em;
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  .motivos-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  .card-motivo {
+    border-radius: 10px;
+    padding: 2em 1.5em 2.5em 1.5em;
+  }
+
+  .card-icon {
+    font-size: 6rem;
+    margin: 0.2em 0 0.4em 0;
+  }
+
+  /* ENVIOS _______________________________________ */
   .envios {
     padding: 0 0;
     /* padding: 1.5em 15em 5em 15em; */
@@ -1030,16 +1073,155 @@
 
   /* GALERIA GRID _______________________________________ */
   .galeria {
-    padding: 1.6em 2.25em;
+    padding: 1.5em 2.25em;
+  }
+
+  .galeria-grid {
+    gap: 0.5rem;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+  }
+
+  /* CATEGORIAS ______________________________ */
+  .categorias h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.75em 0;
+  }
+
+  .categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .categoria-card {
+    padding: 30px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  .categoria-card .categoria-contenido {
+    font-size: 1.35rem;
+  }
+
+  /* PRODUCTOS DESTACADOS _________________________ */
+  .productos {
+    padding: 1.75em 3em 3em 3em;
+    margin: 0 0 3em 0;
+  }
+
+  .productos h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .productos-grid {
+    padding: 0 1em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75em;
+  }
+
+  .producto-card {
+    padding: 20px;
+    /* border-radius: 8px; */
+  }
+
+  .producto-card .img-card {
+    height: 10rem;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .producto-card .title-card {
+    margin: 0.5em 0;
+    font-size: 0.8rem;
+  }
+
+  .producto-card .btn-card {
+    padding: 7px 25px;
+    border-radius: 15px;
+  }
+
+  .productos-ver .btn-productos {
+    padding: 15px 50px;
+    font-size: 1rem;
+    margin: 4em 0 0 0;
+    border-radius: 5px;
   }
 
   /* TITULOS CON LINEAS __________________________________ */
-
   .titulo-lineas {
     font-size: 2.25rem;
     gap: 1rem;
     /* espacio entre el texto y las líneas */
     margin: 1em 0 0.5em 0;
+  }
+
+  /* PAGOS _____________________________*/
+  .pagos {
+    padding: 2em 2.5em;
+  }
+
+  .pagos-div {
+    display: flex;
+    /* flex-direction: column; */
+
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 2.5em;
+  }
+
+  .pagos-1 {
+    /* width: 60%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+
+    justify-content: start;
+    gap: 0.3em;
+
+    padding: 1em 2.5em 1em 1.5em;
+  }
+
+  .pagos-1 .pagos-item {
+    justify-content: start;
+    gap: 2em;
+  }
+
+  .pagos-2 {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+
+    /* border-left: 0; */
+
+    border-left: 1px solid #222;
+
+    padding: 2em 2.5em 2em 4em;
+  }
+
+  .pagos-2 .pagos-item {
+    justify-content: center;
+  }
+
+  .pagos-item .item-icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pagos-item .item-icon i {
+    font-size: 3em;
+  }
+
+  .pagos-item .item-text {
+    font-size: 1.15rem;
+  }
+
+  .pagos-item .item-img {
+    height: 3.5em;
   }
 
   /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS _______________________*/
@@ -1064,151 +1246,6 @@
   .card-icon {
     font-size: 6rem;
     margin: 0.2em 0 0.4em 0;
-  }
-
-  /* CATEGORIAS ______________________________ */
-  .categorias {
-    padding: 40px 40px;
-    background-color: white;
-  }
-
-  .categorias h2 {
-    font-size: 28px;
-    margin: 0 0 20px 0;
-  }
-
-  .categorias-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .categoria-card {
-    padding: 30px;
-    text-align: center;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-
-  /* PRODUCTOS DESTACADOS ___________________________ */
-
-  .productos {
-    padding: 40px 40px 60px 40px;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin: 0 0 5em 0;
-  }
-
-  .productos h2 {
-    font-size: 2rem;
-    color: #ffffff;
-    margin: 0;
-    margin-bottom: 30px;
-    font-weight: lighter;
-  }
-
-  .productos-grid {
-    padding: 0 1em;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.75em;
-  }
-
-  .producto-card {
-    padding: 20px;
-    /* border-radius: 8px; */
-  }
-
-  .img-card {
-    height: 12.5rem;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-
-  .title-card {
-    margin: 0.5em 0;
-  }
-
-  .btn-card {
-    padding: 7px 25px;
-    border-radius: 15px;
-  }
-
-  .productos-ver .btn-productos {
-    padding: 15px 50px;
-    font-size: 1rem;
-    margin: 4em 0 0 0;
-    border-radius: 5px;
-
-
-  }
-
-  /* PAGOS _____________________________*/
-
-  .pagos {
-    padding: 2em 2.5em;
-  }
-
-  .pagos-div {
-    display: flex;
-    /* flex-direction: column; */
-
-    justify-content: space-between;
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 2.5em;
-  }
-
-  .pagos-1 {
-    /* width: 60%; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-
-    justify-content: start;
-    gap: 0.3em;
-
-    padding: 1em 2.5em 1em 1.5em;
-  }
-
-  .pagos-2 {
-    /* width: 100%; */
-    display: flex;
-    flex-direction: column;
-    gap: 0.3em;
-
-    /* border-left: 0; */
-
-    border-left: 1px solid #222;
-
-    padding: 2em 2.5em 2em 4em;
-  }
-
-  .pagos-1 .pagos-item {
-    justify-content: start;
-    gap: 2em;
-  }
-
-  .pagos-2 .pagos-item {
-    justify-content: center;
-  }
-
-  .pagos-item .item-icon {
-    width: 4em;
-    display: flex;
-    justify-content: center;
-    /* padding: 0 3em; */
-  }
-
-  .pagos-item .item-icon i {
-    font-size: 3em;
-  }
-
-  .pagos-item .item-text {
-    font-size: 1rem;
-  }
-
-  .pagos-item .item-img {
-    height: 3.5em;
   }
 
   /* ENVIOS __________________________ */
