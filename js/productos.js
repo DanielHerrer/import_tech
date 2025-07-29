@@ -1,11 +1,13 @@
 async function cargarProductos() {
-    const res = await fetch("../data/lista-productos.txt"); // o .json si preferís
+    const res = await fetch("../data/lista-productosv2.txt"); // o .json si preferís
     const productos = await res.json();
+    // Filtrar los que estén activos
+    const productosActivos = productos.filter(p => p.activo === true);
 
     // Asegurarte de que están ordenados por fecha (Mas reciente a Mas antiguo)
-    productos.sort((a, b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+    productosActivos.sort((a, b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
 
-    return productos;
+    return productosActivos;
 }
 
 function mostrarProductos(productos) {
@@ -26,9 +28,9 @@ function mostrarProductos(productos) {
         const div = document.createElement("div");
         div.className = "producto-card";
         div.innerHTML = `
-      <img class="img-card" src="${prod.imagen}" alt="${prod.nombre}">
+      <img class="img-card" src="${prod.imagenes[0]}" alt="${prod.nombre}">
       <h3 class="title-card">${prod.nombre}</h3>
-      <a href="productos.html?id=${prod.id}" class="btn-card">Ver más</a>
+      <a href="detalles.html?id=${prod.id}" class="btn-card">Ver más</a>
     `;
         contenedor.appendChild(div);
     });
