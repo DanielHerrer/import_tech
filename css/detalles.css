@@ -308,10 +308,16 @@
 }
 
 .title-card {
-  margin: 0.5em 0;
   text-align: start;
   font-weight: lighter;
+  font-size: 0.7rem;
+  margin-top: 0.25em;
+}
+
+.subtitle-card {
   font-size: 0.6rem;
+  text-align: start;
+  margin-bottom: 0.25em;
 }
 
 .btn-card {
