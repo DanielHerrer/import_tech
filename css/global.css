@@ -45,6 +45,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 15px;
+
+  cursor: pointer;
 }
 
 .logo-img {

@@ -1,7 +1,74 @@
+// LOGICA DE global.js
+
+
+//   TEXTO PARPADEANTE, pestaña inactiva
+
+let intervalId;
+const mensajes = ["¡Volvé!", "No te lo pierdas.."];
+let index = 0;
+let tituloProducto = null;
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        // Usuario cambió de pestaña
+        intervalId = setInterval(() => {
+            document.title = mensajes[index];
+            index = (index + 1) % mensajes.length;
+        }, 500); // cambia cada 1 segundo
+    } else {
+        // Usuario volvió
+        clearInterval(intervalId);
+        document.title = tituloProducto; // restauramos el título
+    }
+});
+
+// SOCIAL BUTTONS
+
+// Mostrar el botón "arriba" solo cuando el usuario está cerca del fondo
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 750) {
+        scrollTopBtn.style.display = "flex";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+});
+
+// Al hacer clic, vuelve al header
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+// Atención al Cliente, mensaje WhatsApp
+
+const numeroWpp = "5491165835895";
+const mensaje = "Hola, quiero hacer un reclamo sobre mi compra.";
+
+document.addEventListener("DOMContentLoaded", () => {
+    const wppLink = document.querySelector(".link-atencion");
+    if (wppLink) {
+        wppLink.href = `https://wa.me/${numeroWpp}?text=${encodeURIComponent(mensaje)}`;
+    }
+
+    // Actualizar año automáticamente
+    const yearElement = document.querySelector(".copyright");
+    if (yearElement) {
+        const year = new Date().getFullYear();
+        yearElement.innerHTML = `Copyright Import Tech · ${year}. Todos los derechos reservados.`;
+    }
+});
+
 // ZOOM IMAGEN PRINCIPAL siga el puntero
 const img1 = document.querySelector(".img-1");
 const mainImg = img1.querySelector("img");
 
+// --------------------------
+// DESKTOP: con el mouse
+// --------------------------
 img1.addEventListener("mousemove", e => {
     const rect = img1.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -15,7 +82,38 @@ img1.addEventListener("mouseleave", () => {
     mainImg.style.transform = "scale(1)";
 });
 
-// DOMContentLoaded
+// --------------------------
+// MOBILE: con touch
+// --------------------------
+let zoomActivo = false;
+
+img1.addEventListener("touchstart", e => {
+    e.preventDefault(); // evita scroll accidental
+    zoomActivo = !zoomActivo; // toggle zoom
+    if (zoomActivo) {
+        const touch = e.touches[0];
+        const rect = img1.getBoundingClientRect();
+        const x = ((touch.clientX - rect.left) / rect.width) * 100;
+        const y = ((touch.clientY - rect.top) / rect.height) * 100;
+        mainImg.style.transformOrigin = `${x}% ${y}%`;
+        mainImg.style.transform = "scale(2)";
+    } else {
+        mainImg.style.transformOrigin = "center";
+        mainImg.style.transform = "scale(1)";
+    }
+});
+
+// opcional: mover el zoom con el dedo si está activo
+img1.addEventListener("touchmove", e => {
+    if (!zoomActivo) return;
+    const touch = e.touches[0];
+    const rect = img1.getBoundingClientRect();
+    const x = ((touch.clientX - rect.left) / rect.width) * 100;
+    const y = ((touch.clientY - rect.top) / rect.height) * 100;
+    mainImg.style.transformOrigin = `${x}% ${y}%`;
+});
+
+// DOMContentLoaded __________________________________________________________________________________________________
 
 document.addEventListener("DOMContentLoaded", async () => {
 
@@ -111,7 +209,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
         // 7. Actualizar el título de la pestaña
-        document.title = `${producto.nombre} · Import Tech`;
+        tituloProducto = `${producto.nombre} · Import Tech`;
+        document.title = tituloProducto;
 
     } catch (error) {
         console.error("Error cargando productos:", error);

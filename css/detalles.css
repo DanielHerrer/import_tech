@@ -108,7 +108,7 @@
 /* DESCRIPCION DEL PRODUCTO ________________________________ */
 
 .producto .descripcion {
-  padding: 1.5em 3em 0 3em;
+  padding: 0.6em 3em 1em 3em;
 }
 
 .title-producto {
@@ -126,13 +126,22 @@
   font-size: 1rem;
   color: #929292;
   margin-bottom: 1.5em;
+
+  border-top: 1px solid #929292;
+  padding-top: 0.75em;
 }
 
 /* COLORES del producto ________________________________ */
 
 .colores {
-  margin: 0 3em 3em 3em;
-  border-top: 1px solid #979797;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+
+  padding: 0.75em 0 0.75em 0;
+  margin: 0 3em;
+  border-bottom: 1px solid #979797;
 }
 
 .title-colores {
@@ -140,7 +149,6 @@
   font-size: 1.15rem;
   margin: 0.5em 0;
 }
-
 
 .div-colores {
   width: fit-content;
@@ -158,8 +166,8 @@
 }
 
 .color {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: 1px solid rgb(54, 54, 54);
 }
@@ -425,10 +433,22 @@
     grid-column-start: 4;
   }
 
-  /* DESCRIPCION DEL PRODUCTO ________________________________ */
+  /* COLORES del producto ________________________________ */
+  .colores {
+    padding: 0.75em 0 0.75em 0;
+    margin: 0 1.5em;
+    border-bottom: 1px solid #979797;
+  }
 
+  .title-colores {
+    color: #4d4d4d;
+    font-size: 1.15rem;
+    margin: 0.5em 0;
+  }
+
+  /* DESCRIPCION DEL PRODUCTO ________________________________ */
   .producto .descripcion {
-    padding: 1.5em 1.5em 0 1.5em;
+    padding: 0.75em 1.5em 0 1.5em;
   }
 
   .title-producto {
@@ -438,19 +458,12 @@
 
   .subtitle-producto {
     font-size: 1rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
   }
 
   .description-producto {
     font-size: 0.75rem;
     margin-bottom: 1.5em;
-  }
-
-  /* COLORES del producto ________________________________ */
-
-  .colores {
-    margin: 0 1.5em;
-    border-top: 1px solid #979797;
   }
 
   /* PAGOS ________________________________ */
@@ -531,32 +544,38 @@
     border-radius: 0;
   }
 
-  /* DESCRIPCION DEL PRODUCTO ________________________________ */
+  /* COLORES del producto ________________________________ */
+  .colores {
+    padding: 0.75em 0 0.75em 0;
+    margin: 0 1.5em;
+    border-bottom: 1px solid #979797;
+  }
 
+  .title-colores {
+    color: #4d4d4d;
+    font-size: 1.15rem;
+    margin: 0.5em 0;
+  }
+
+  /* DESCRIPCION DEL PRODUCTO ________________________________ */
   .producto .descripcion {
-    padding: 1.5em 1.5em 0 1.5em;
+    padding: 0.8em 1.5em 0 1.5em;
   }
 
   .title-producto {
     font-size: 1.4rem;
+
     margin-bottom: 0.1em;
   }
 
   .subtitle-producto {
     font-size: 1rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
   }
 
   .description-producto {
     font-size: 0.75rem;
     margin-bottom: 1.5em;
-  }
-
-  /* COLORES del producto ________________________________ */
-
-  .colores {
-    margin: 0 1.5em;
-    border-top: 1px solid #979797;
   }
 
   /* PAGOS ________________________________ */
@@ -636,20 +655,35 @@
     border-radius: 0 0.35em 0.35em 0;
   }
 
+  /* COLORES del producto ________________________________ */
+
+  .colores {
+    padding: 0.75em 0 0.75em 0;
+    margin: 0 3em;
+    border-bottom: 1px solid #979797;
+  }
+
+  .title-colores {
+    color: #4d4d4d;
+    font-size: 1.15rem;
+    margin: 0.5em 0;
+  }
+
   /* DESCRIPCION DEL PRODUCTO ________________________________ */
 
   .producto .descripcion {
-    padding: 1.5em 3em 0 3em;
+    padding: 0.5em 3em 1.25em 3em;
   }
 
   .title-producto {
     font-size: 1.4rem;
+
     margin-bottom: 0.1em;
   }
 
   .subtitle-producto {
     font-size: 1rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
   }
 
   .description-producto {
@@ -657,12 +691,7 @@
     margin-bottom: 1.5em;
   }
 
-  /* COLORES del producto ________________________________ */
 
-  .colores {
-    margin: 0 3em 3em 3em;
-    border-top: 1px solid #979797;
-  }
 
   /* PAGOS ________________________________ */
 
