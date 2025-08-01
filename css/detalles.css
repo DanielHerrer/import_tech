@@ -231,6 +231,8 @@
 .pagos-1 .pagos-item {
   display: flex;
   gap: 1rem;
+  color: #444444;
+
 }
 
 .pagos-1 .pagos-item .item-icon {
