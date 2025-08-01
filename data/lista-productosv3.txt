@@ -1,0 +1,232 @@
+[
+  {
+    "id": "1",
+    "nombre": "IPhone 16",
+    "categoria": "Celular",
+    "marca": "Apple",
+    "fecha_publicacion": "2025-07-17T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Standard",
+        "imagenes": [
+          "https://bworldsolutions.co.ke/wp-content/uploads/2025/06/Valenta-Trend-Coque-iPhone-16-Pro-Max-MagSafe-Coque-arriere-Rigide-Noir-7-588768.jpg",
+          "https://http2.mlstatic.com/D_NQ_NP_893557-MLU79115488779_092024-O.webp",
+          "https://www.imagineonline.store/cdn/shop/files/iPhone_16_Pro_Max_Desert_Titanium_PDP_Image_Position_1__en-IN_6313d2b8-ef64-40f0-b60a-d77be47fd058.jpg?v=1727250893",
+          "https://pisces.bbystatic.com/image2/BestBuy_US/dam/REF-1652362-cym-iphone16_DER-e52e0832-5b97-4800-81ed-bb54b02db4f8.jpg"
+        ],
+        "descripcion": "iPhone 16 Pro con diseño de titanio y pantalla Super Retina XDR de 6.3 pulgadas. Chip A18 Pro optimizado para juegos y fotografía. Autonomía de hasta 33 horas y carga rápida con MagSafe y USB-C.",
+        "colores": [["#000", "Negro"]]
+      },
+      {
+        "nombre_version": "Pro",
+        "imagenes": [
+          "https://bworldsolutions.co.ke/wp-content/uploads/2025/06/Valenta-Trend-Coque-iPhone-16-Pro-Max-MagSafe-Coque-arriere-Rigide-Noir-7-588768.jpg",
+          "https://http2.mlstatic.com/D_NQ_NP_893557-MLU79115488779_092024-O.webp",
+          "https://www.imagineonline.store/cdn/shop/files/iPhone_16_Pro_Max_Desert_Titanium_PDP_Image_Position_1__en-IN_6313d2b8-ef64-40f0-b60a-d77be47fd058.jpg?v=1727250893",
+          "https://pisces.bbystatic.com/image2/BestBuy_US/dam/REF-1652362-cym-iphone16_DER-e52e0832-5b97-4800-81ed-bb54b02db4f8.jpg"
+        ],
+        "descripcion": "Versión exclusiva con acabado Titanium y resistencia mejorada. Incluye cámara Fusion de 48 MP con grabación en 4K Dolby Vision a 120 cps.",
+        "colores": [["#444", "Plateado"], ["#e4c17f", "Dorado"]]
+      },
+      {
+        "nombre_version": "Pro Max",
+        "imagenes": [
+          "https://bworldsolutions.co.ke/wp-content/uploads/2025/06/Valenta-Trend-Coque-iPhone-16-Pro-Max-MagSafe-Coque-arriere-Rigide-Noir-7-588768.jpg",
+          "https://http2.mlstatic.com/D_NQ_NP_893557-MLU79115488779_092024-O.webp",
+          "https://www.imagineonline.store/cdn/shop/files/iPhone_16_Pro_Max_Desert_Titanium_PDP_Image_Position_1__en-IN_6313d2b8-ef64-40f0-b60a-d77be47fd058.jpg?v=1727250893",
+          "https://pisces.bbystatic.com/image2/BestBuy_US/dam/REF-1652362-cym-iphone16_DER-e52e0832-5b97-4800-81ed-bb54b02db4f8.jpg"
+        ],
+        "descripcion": "Versión exclusiva con acabado Titanium y resistencia mejorada. Incluye cámara Fusion de 48 MP con grabación en 4K Dolby Vision a 120 cps.",
+        "colores": [["#444", "Plateado"], ["#e4c17f", "Dorado"]]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "nombre": "Macbook Pro 2020",
+    "categoria": "Laptop",
+    "marca": "Apple",
+    "fecha_publicacion": "2025-07-16T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "2020 M1 13'",
+        "imagenes": [
+          "https://images-na.ssl-images-amazon.com/images/I/71TPda7cwUL._AC_SL1500_.jpg",
+          "https://i.blogs.es/bbbcac/macbookpro7/1366_2000.jpg",
+          "https://www.australiancomputertraders.com.au/assets/full/APPLEMBP2020M1-1-R-b.jpg?20240520173249",
+          "https://laptopmedia.com/wp-content/uploads/2021/01/applemacbookpro13late2020featured.jpg"
+        ],
+        "descripcion": "MacBook Pro con chip M1, pantalla Retina y almacenamiento SSD de 512 GB. Perfecto para multitarea y productividad diaria. Pantalla de 13 pulgadas.",
+        "colores": [["#000", "Negro"], ["#aabbcc", "Gris"]]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "nombre": "Playstation 5 1TB Slim",
+    "categoria": "Videojuegos",
+    "marca": "Sony",
+    "fecha_publicacion": "2025-07-15T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Digital Edition",
+        "imagenes": [
+          "https://images-na.ssl-images-amazon.com/images/I/619BkvKW35L._AC_SL1500_.jpg",
+          "https://arsonyb2c.vtexassets.com/arquivos/ids/366579/Imagen-03_2000-x-2000-px.jpg.jpg?v=638854123612470000",
+          "https://acdn-us.mitiendanube.com/stores/004/495/694/products/diseno-sin-titulo-f19628a9814e7725fa17159607225295-1024-1024.png",
+          "https://twister.com.ar/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-31-at-09.16.23.jpeg.webp"
+        ],
+        "descripcion": "PS5 Slim Digital Edition sin unidad de disco, con SSD de 1TB y compatibilidad con más de 4000 juegos de PS4.",
+        "colores": [["#000", "Negro"], ["#aabbcc", "Blanco"]]
+      },
+      {
+        "nombre_version": "Blu-ray Edition",
+        "imagenes": [
+          "https://images-na.ssl-images-amazon.com/images/I/619BkvKW35L._AC_SL1500_.jpg",
+          "https://arsonyb2c.vtexassets.com/arquivos/ids/366579/Imagen-03_2000-x-2000-px.jpg.jpg?v=638854123612470000",
+          "https://acdn-us.mitiendanube.com/stores/004/495/694/products/diseno-sin-titulo-f19628a9814e7725fa17159607225295-1024-1024.png",
+          "https://twister.com.ar/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-31-at-09.16.23.jpeg.webp"
+        ],
+        "descripcion": "Versión con unidad Blu-ray Ultra HD, ideal para coleccionistas y quienes prefieren juegos físicos.",
+        "colores": [["#000", "Negro"], ["#aabbcc", "Blanco"]]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "nombre": "Apple Watch Series 10",
+    "categoria": "Accesorio",
+    "marca": "Apple",
+    "fecha_publicacion": "2025-07-14T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Sport",
+        "imagenes": [
+          "https://tyumen.istudio-shop.ru/upload/dev2fun.imagecompress/webp/iblock/f7b/xgpo0c6ubq8okg3n1jjmukbtj38rr8ef.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_705101-MLA79076068992_092024-O.webp",
+          "https://www.istudiosg.com/cdn/shop/files/Apple_Watch_Series_10_42mm_LTE_Gold_Titanium_Sport_Band_Starlight_PDP_Image_Position_1__GBEN_a7ac6d48-6fdc-4819-92b8-422a486a57d3.jpg?v=1727183033&width=1445",
+          ""
+        ],
+        "descripcion": "Apple Watch Series 10 Sport con batería de hasta 18 horas y modos deportivos optimizados.",
+        "colores": [["#000", "Negro"], ["#aabbcc", "Plateado"], ["#e2be7c", "Dorado"]]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "nombre": "iPad 2022 64GB 9 Series",
+    "categoria": "Tablet",
+    "marca": "Apple",
+    "fecha_publicacion": "2025-07-13T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "WiFi",
+        "imagenes": [
+          "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-ipad-wifi-spacegray-2022?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=UU5TTGZRRWtzNjBjQkVGdlI4eDE0a2ZwT043a3IzQml1MmNJZDYvbTdFNndNd3VBeE01aHVoRDJMZG9nOTdLcUNBd3lOUFpnTTVCeDVDYzlNNEhMcFNvWWh1d0p3dGNBQnUwejIvMW40YVlwd2hVckg1V2N4RENNcXJjWlduOHU",
+          "https://lidernotebooks.com.ar/wp-content/uploads/2025/04/Apple-iPad-10.9-64gb-Pink-2022-MPQ33LLA_0004_1003_193881933_result.jpg",
+          "https://http2.mlstatic.com/D_939161-MLA74295262408_022024-O.jpg",
+          "https://i.blogs.es/b5496e/ipad-1/650_1200.jpeg"
+        ],
+        "descripcion": "iPad 2022 WiFi con pantalla Retina de 10.2 pulgadas y chip A13 Bionic para estudio y entretenimiento.",
+        "colores": [["#000", "Negro"], ["#aabbcc", "Gris"], ["#e9585f", "Rosa"]]
+      },
+      {
+        "nombre_version": "WiFi + Celular",
+        "imagenes": [
+          "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/refurb-ipad-wifi-spacegray-2022?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=UU5TTGZRRWtzNjBjQkVGdlI4eDE0a2ZwT043a3IzQml1MmNJZDYvbTdFNndNd3VBeE01aHVoRDJMZG9nOTdLcUNBd3lOUFpnTTVCeDVDYzlNNEhMcFNvWWh1d0p3dGNBQnUwejIvMW40YVlwd2hVckg1V2N4RENNcXJjWlduOHU",
+          "https://lidernotebooks.com.ar/wp-content/uploads/2025/04/Apple-iPad-10.9-64gb-Pink-2022-MPQ33LLA_0004_1003_193881933_result.jpg",
+          "https://http2.mlstatic.com/D_939161-MLA74295262408_022024-O.jpg",
+          "https://i.blogs.es/b5496e/ipad-1/650_1200.jpeg"
+        ],
+        "descripcion": "Versión con conectividad celular para estar siempre conectado sin depender de WiFi.",
+        "colores": [["#000", "Negro"], ["#aabbcc", "Gris"], ["#e9585f", "Rosa"]]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "nombre": "Xiaomi Readmi Note 11",
+    "categoria": "Celular",
+    "marca": "Xiaomi",
+    "fecha_publicacion": "2025-07-12T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "64GB",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_907639-MLA52131412062_102022-O.webp",
+          "https://http2.mlstatic.com/D_Q_NP_723360-MLA52140415844_102022-O.webp",
+          "https://jumboargentina.vtexassets.com/arquivos/ids/719411/Celular-Smartphone-Xiaomi-Redmi-Note-11-Negro-9-924890.jpg?v=637987881785370000",
+          "https://i02.appmifile.com/911_operator_sg/12/01/2022/abd6c5c2c992f432718f19bdb8879643.jpg"
+        ],
+        "descripcion": "Xiaomi Redmi Note 11 con 64GB de almacenamiento y batería de 5000mAh con carga rápida de 33W.",
+        "colores": [["#000", "Negro"], ["#aabbcc", "Plateado"], ["#b7f7e4", "Aqua"]]
+      },
+      {
+        "nombre_version": "128GB",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_907639-MLA52131412062_102022-O.webp",
+          "https://http2.mlstatic.com/D_Q_NP_723360-MLA52140415844_102022-O.webp",
+          "https://jumboargentina.vtexassets.com/arquivos/ids/719411/Celular-Smartphone-Xiaomi-Redmi-Note-11-Negro-9-924890.jpg?v=637987881785370000",
+          "https://i02.appmifile.com/911_operator_sg/12/01/2022/abd6c5c2c992f432718f19bdb8879643.jpg"
+        ],
+        "descripcion": "Versión ampliada con 128GB de almacenamiento, ideal para juegos, fotos y aplicaciones pesadas.",
+        "colores": [["#000", "Negro"], ["#aabbcc", "Plateado"], ["#b7f7e4", "Aqua"]]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "nombre": "Oculus Meta Quest 2",
+    "categoria": "Videojuegos",
+    "marca": "Meta",
+    "fecha_publicacion": "2025-07-11T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "256GB",
+        "imagenes": [
+          "https://m.media-amazon.com/images/I/51pdPTbbjzL._SL1130_.jpg",
+          "https://i5.walmartimages.com/seo/Meta-Oculus-Quest-2-64GB-Advanced-All-In-One-Virtual-Reality-Headset_16a9974e-a5b0-4cad-a98e-730148409bef.3e8858a1d3beb01ff2fbc79a880beedf.jpeg",
+          "https://comprarmag.com/wp-content/uploads/2023/02/Image-1.jpg",
+          ""
+        ],
+        "descripcion": "Oculus Meta Quest 2. Versión con 256GB de almacenamiento, ideal para quienes buscan instalar más juegos y apps sin preocuparse por el espacio.",
+        "colores": [["#fff", "Blanco"]]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "nombre": "Samsung Galaxy A16",
+    "categoria": "Celular",
+    "marca": "Samsung",
+    "fecha_publicacion": "2025-07-10T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "A16 4G",
+        "imagenes": [
+          "https://m.media-amazon.com/images/I/61lzvL4tAqL.jpg",
+          "https://i.blogs.es/fc5336/samsung-galaxy-a16/840_560.jpeg"
+        ],
+        "descripcion": "Galaxy A16 con 4GB de RAM y 128GB de almacenamiento, ideal para uso diario con conectividad 5G.",
+        "colores": [["#000", "Negro"], ["#fff", "Blanco"]]
+      },
+      {
+        "nombre_version": "A16 5G",
+        "imagenes": [
+          "https://riiing.com.ar/wp-content/uploads/2024/12/Img1_A16-5G_Blue-Black-2400x2400-1-1024x1024.jpg",
+          "https://tiendaonline.movistar.com.ar/media/catalog/product/cache/1d01ed3f1ecf95fcf479279f9ae509ad/s/a/samsung-a16-lightgreen-img-1.png"
+        ],
+        "descripcion": "Versión mejorada con 6GB de RAM, mayor fluidez en multitarea y juegos exigentes.",
+        "colores": [["#000", "Negro"], ["#aabbcc", "Plateado"], ["#fff", "Blanco"]]
+      }
+    ]
+  }
+]

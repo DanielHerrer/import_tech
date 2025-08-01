@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch("./data/lista-productosv2.txt");
+    const response = await fetch("./data/lista-productosv3.txt");
     const productos = await response.json();
 
     // Filtrar los que estén activos
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       card.innerHTML = `
         <div class="producto-img">
-          <img class="img-card" src="${prod.imagenes[0] || 'placeholder.jpg'}" alt="${prod.nombre}">
+          <img class="img-card" src="${prod.versiones[0].imagenes[0] || 'placeholder.jpg'}" alt="${prod.nombre}">
         </div>
         <div class="producto-info">
           <h3 class="title-card">${prod.nombre}</h3>

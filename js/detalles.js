@@ -1,122 +1,57 @@
 // LOGICA DE global.js
 
+// DOMContentLoaded __________________________________________________________________________________________________
+document.addEventListener("DOMContentLoaded", async () => {
 
-//   TEXTO PARPADEANTE, pestaña inactiva
+    const img1 = document.querySelector(".img-1");
+    const mainImg = img1.querySelector("img");
 
-let intervalId;
-const mensajes = ["¡Volvé!", "No te lo pierdas.."];
-let index = 0;
-let tituloProducto = null;
-
-document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-        // Usuario cambió de pestaña
-        intervalId = setInterval(() => {
-            document.title = mensajes[index];
-            index = (index + 1) % mensajes.length;
-        }, 500); // cambia cada 1 segundo
-    } else {
-        // Usuario volvió
-        clearInterval(intervalId);
-        document.title = tituloProducto; // restauramos el título
-    }
-});
-
-// SOCIAL BUTTONS
-
-// Mostrar el botón "arriba" solo cuando el usuario está cerca del fondo
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 750) {
-        scrollTopBtn.style.display = "flex";
-    } else {
-        scrollTopBtn.style.display = "none";
-    }
-});
-
-// Al hacer clic, vuelve al header
-scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+    // ZOOM IMAGEN PRINCIPAL siga el puntero
+    // --------------------------
+    // DESKTOP: con el mouse
+    img1.addEventListener("mousemove", e => {
+        const rect = img1.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        mainImg.style.transformOrigin = `${x}% ${y}%`;
+        mainImg.style.transform = "scale(2)";
     });
-});
 
-// Atención al Cliente, mensaje WhatsApp
+    img1.addEventListener("mouseleave", () => {
+        mainImg.style.transformOrigin = "center";
+        mainImg.style.transform = "scale(1)";
+    });
 
-const numeroWpp = "5491165835895";
-const mensaje = "Hola, quiero hacer un reclamo sobre mi compra.";
+    // --------------------------
+    // MOBILE: con touch
+    let zoomActivo = false;
 
-document.addEventListener("DOMContentLoaded", () => {
-    const wppLink = document.querySelector(".link-atencion");
-    if (wppLink) {
-        wppLink.href = `https://wa.me/${numeroWpp}?text=${encodeURIComponent(mensaje)}`;
-    }
+    img1.addEventListener("touchstart", e => {
+        e.preventDefault();
+        zoomActivo = !zoomActivo;
+        if (zoomActivo) {
+            const touch = e.touches[0];
+            const rect = img1.getBoundingClientRect();
+            const x = ((touch.clientX - rect.left) / rect.width) * 100;
+            const y = ((touch.clientY - rect.top) / rect.height) * 100;
+            mainImg.style.transformOrigin = `${x}% ${y}%`;
+            mainImg.style.transform = "scale(2)";
+        } else {
+            mainImg.style.transformOrigin = "center";
+            mainImg.style.transform = "scale(1)";
+        }
+    });
 
-    // Actualizar año automáticamente
-    const yearElement = document.querySelector(".copyright");
-    if (yearElement) {
-        const year = new Date().getFullYear();
-        yearElement.innerHTML = `Copyright Import Tech · ${year}. Todos los derechos reservados.`;
-    }
-});
-
-// ZOOM IMAGEN PRINCIPAL siga el puntero
-const img1 = document.querySelector(".img-1");
-const mainImg = img1.querySelector("img");
-
-// --------------------------
-// DESKTOP: con el mouse
-// --------------------------
-img1.addEventListener("mousemove", e => {
-    const rect = img1.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    mainImg.style.transformOrigin = `${x}% ${y}%`;
-    mainImg.style.transform = "scale(2)";
-});
-
-img1.addEventListener("mouseleave", () => {
-    mainImg.style.transformOrigin = "center";
-    mainImg.style.transform = "scale(1)";
-});
-
-// --------------------------
-// MOBILE: con touch
-// --------------------------
-let zoomActivo = false;
-
-img1.addEventListener("touchstart", e => {
-    e.preventDefault(); // evita scroll accidental
-    zoomActivo = !zoomActivo; // toggle zoom
-    if (zoomActivo) {
+    img1.addEventListener("touchmove", e => {
+        if (!zoomActivo) return;
         const touch = e.touches[0];
         const rect = img1.getBoundingClientRect();
         const x = ((touch.clientX - rect.left) / rect.width) * 100;
         const y = ((touch.clientY - rect.top) / rect.height) * 100;
         mainImg.style.transformOrigin = `${x}% ${y}%`;
-        mainImg.style.transform = "scale(2)";
-    } else {
-        mainImg.style.transformOrigin = "center";
-        mainImg.style.transform = "scale(1)";
-    }
-});
+    });
 
-// opcional: mover el zoom con el dedo si está activo
-img1.addEventListener("touchmove", e => {
-    if (!zoomActivo) return;
-    const touch = e.touches[0];
-    const rect = img1.getBoundingClientRect();
-    const x = ((touch.clientX - rect.left) / rect.width) * 100;
-    const y = ((touch.clientY - rect.top) / rect.height) * 100;
-    mainImg.style.transformOrigin = `${x}% ${y}%`;
-});
-
-// DOMContentLoaded __________________________________________________________________________________________________
-
-document.addEventListener("DOMContentLoaded", async () => {
-
+    // ____________________________________________________________________________________________________________
     // 1. Obtener el id de la URL
     const params = new URLSearchParams(window.location.search);
     const productId = params.get("id");
@@ -128,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // BUSCAR PRODUCTO por ID
     try {
         // 2. Cargar el archivo productos.txt (debe estar en el mismo servidor)
-        const response = await fetch("../data/lista-productosv2.txt");
+        const response = await fetch("../data/lista-productosv3.txt");
         const productos = await response.json();
 
         // 3. Buscar el producto por id
@@ -139,119 +74,127 @@ document.addEventListener("DOMContentLoaded", async () => {
             return;
         }
 
-        // 4. Actualizar imagen principal
-        const mainImg = document.querySelector(".img-1 img");
-        if (producto.imagenes[0]) {
-            mainImg.src = producto.imagenes[0];
+        // Función que actualiza la vista según la versión seleccionada
+        function mostrarVersion(version) {
+
+            // --- Imagen principal
+            const mainImg = document.querySelector(".img-1 img");
+            if (version.imagenes[0]) {
+                mainImg.src = version.imagenes[0];
+            }
+
+            // --- Sub-imágenes
+            const imgsContainer = document.querySelector(".imgs");
+            imgsContainer.querySelectorAll(".sub-img").forEach(el => el.remove());
+            version.imagenes.slice(0, 4).forEach((url, i) => {
+                if (!url) return;
+                const thumbDiv = document.createElement("div");
+                thumbDiv.className = `img-${i + 2} sub-img`;
+                const img = document.createElement("img");
+                img.src = url;
+                thumbDiv.appendChild(img);
+
+                // evento de click en cada miniatura
+                thumbDiv.addEventListener("click", () => {
+                    mainImg.src = img.src;
+                });
+
+                imgsContainer.appendChild(thumbDiv);
+            });
+
+            // --- Descripción
+            document.querySelector(".description-producto").textContent = version.descripcion;
+
+            // --- Colores
+            const coloresDiv = document.querySelector(".div-colores");
+            coloresDiv.innerHTML = "";
+            version.colores.forEach(([hex, nombre]) => {
+                const colorDiv = document.createElement("div");
+                colorDiv.classList.add("color");
+                colorDiv.style.background = hex;
+                colorDiv.title = nombre;
+                coloresDiv.appendChild(colorDiv);
+            });
+
+            // --- Tags
+            const tags = document.querySelector(".tags");
+            tags.innerHTML = ""; // limpiar antes de renderizar
+
+            // Stock
+            const tagStock = document.createElement("div");
+            tagStock.classList.add("tag");
+            if (producto.activo) {
+                tagStock.innerText = "En stock";
+                tagStock.style.background = "#75b5ff";
+                tagStock.style.color = "#073972";
+            } else {
+                tagStock.innerText = "Sin stock";
+                tagStock.style.background = "#ff7575";
+                tagStock.style.color = "#720707";
+            }
+            tags.appendChild(tagStock);
+
+            // Colores (solo si hay 2 o más)
+            if (version.colores.length > 1) {
+                const tagColores = document.createElement("div");
+                tagColores.classList.add("tag");
+                tagColores.innerText = "Varios colores";
+                tagColores.style.background = "#97ff94";
+                tagColores.style.color = "#0c3b06";
+                tags.appendChild(tagColores);
+            }
         }
 
-        // --- Generar dinámicamente las sub-imgs
-        const imgsContainer = document.querySelector(".imgs");
-
-        // --- Eliminar cualquier sub-img existente
-        imgsContainer.querySelectorAll(".sub-img").forEach(el => el.remove());
-
-        // --- Recorrer imágenes (máx. 4)
-        producto.imagenes.slice(0, 4).forEach((url, i) => {
-            if (!url) return; // ignorar vacías
-
-            if (i === 0) {
-                // la primera ya la usamos en img-1, pero también queremos un sub-img
-                const thumbDiv = document.createElement("div");
-                thumbDiv.className = `img-${i + 2} sub-img`;
-                const img = document.createElement("img");
-                img.src = url;
-                thumbDiv.appendChild(img);
-                imgsContainer.appendChild(thumbDiv);
-            } else {
-                // siguientes imágenes
-                const thumbDiv = document.createElement("div");
-                thumbDiv.className = `img-${i + 2} sub-img`;
-                const img = document.createElement("img");
-                img.src = url;
-                thumbDiv.appendChild(img);
-                imgsContainer.appendChild(thumbDiv);
-            }
-        });
-
-        // --- Selecciona la imagen principal (la que está dentro del div .img-1).
-        const mainImagen = document.querySelector(".img-1 img");
-        // ---Selecciona todas las imágenes miniatura (img) que están dentro de los divs con clase .sub-img.
-        const thumbs = document.querySelectorAll(".sub-img img");
-
-        producto.imagenes.slice(0, 4).forEach((url, i) => {
-            if (!url) return; // si la url está vacía, la salteamos
-
-            if (i === 0) {
-                // Primera imagen → se usa en grande y también en la primera miniatura
-                mainImagen.src = url;
-                if (thumbs[0]) thumbs[0].src = url;
-            } else {
-                // Las demás imágenes → van a thumbs[1], thumbs[2], thumbs[3]
-                if (thumbs[i]) thumbs[i].src = url;
-            }
-        });
-
-        // 5. Actualizar descripción y textos
+        // 1. Datos generales del producto
         document.querySelector(".title-producto").textContent = producto.nombre;
         document.querySelector(".subtitle-producto").textContent = `${producto.marca} · ${producto.categoria}`;
-        document.querySelector(".description-producto").textContent = producto.descripcion;
+        document.title = `${producto.nombre} · Import Tech`;
+        window.tituloProducto = document.title;
 
-        // 6. Actualizar colores
-        const coloresDiv = document.querySelector(".div-colores");
-        coloresDiv.innerHTML = ""; // limpiar lo que había
-        producto.colores.forEach(([hex, nombre]) => {
-            const colorDiv = document.createElement("div");
-            colorDiv.classList.add("color");
-            colorDiv.style.background = hex;
-            colorDiv.title = nombre;
-            coloresDiv.appendChild(colorDiv);
+        // 2. Renderizar versiones
+        const versionesDiv = document.querySelector(".div-versiones");
+        versionesDiv.innerHTML = ""; // limpiar previas
+
+        producto.versiones.forEach((version, index) => {
+            const versionDiv = document.createElement("div");
+            versionDiv.classList.add("version");
+            if (index === 0) versionDiv.classList.add("v-on"); // primera versión default
+            versionDiv.textContent = version.nombre_version;
+            versionDiv.title = version.nombre_version;
+
+            versionDiv.addEventListener("click", () => {
+                // Quitar v-on de todas
+                versionesDiv.querySelectorAll(".version").forEach(v => v.classList.remove("v-on"));
+                // Poner v-on a la seleccionada
+                versionDiv.classList.add("v-on");
+                // Mostrar la versión elegida
+                mostrarVersion(version);
+            });
+
+            versionesDiv.appendChild(versionDiv);
         });
 
-        // 7. Actualizar el título de la pestaña
-        tituloProducto = `${producto.nombre} · Import Tech`;
-        document.title = tituloProducto;
-
-        // 8. Actualizar TAGS
-        const tags = document.querySelector(".tags");
-        tags.innerHTML = ""; // limpiar lo que había
-
-        if (producto.activo) {
-            const tag = document.createElement("div");
-            tag.classList.add("tag");
-            tag.innerText = "En stock";
-            tag.style.background = "#75b5ff";
-            tag.style.color = "#073972";
-            tags.appendChild(tag);
-        } else {
-            const tag = document.createElement("div");
-            tag.classList.add("tag");
-            tag.innerText = "Sin stock";
-            tag.style.background = "#ff7575";
-            tag.style.color = "#720707";
-            tags.appendChild(tag);
+        // 3. Mostrar por defecto la primera versión
+        if (producto.versiones.length > 0) {
+            mostrarVersion(producto.versiones[0]);
         }
 
-        // Verificar si hay más de un color
-        if (producto.colores && producto.colores.length > 1) { // si es array
-            // if (producto.colores && producto.colores.size > 1) { // si es Set
-            const tag = document.createElement("div");
-            tag.classList.add("tag");
-            tag.innerText = "Varios colores";
-            tag.style.background = "#97ff94";
-            tag.style.color = "#0c3b06";
-            tags.appendChild(tag);
-        }
-
-
+        // 4. Botón de Comprar
+        document.getElementById("btn-comprar").addEventListener("click", () => {
+            const phoneNumber = "5491165835895";
+            const versionSeleccionada = document.querySelector(".div-versiones .v-on").textContent;
+            const message = `¡Hola!\nQuisiera realizar una orden de compra.\n*Producto: ${producto.nombre}*.\n*Versión: ${versionSeleccionada}*.\nPor favor, necesito más detalles.`;
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+        });
 
     } catch (error) {
         console.error("Error cargando productos:", error);
     }
 
-    // BUSCAR PRODUCTOS para PRODUCTOS RELACIONADOS
+    // PRODUCTOS RELACIONADOS ----------------------------------------------------------------------------
     try {
-        const response = await fetch("../data/lista-productosv2.txt");
+        const response = await fetch("../data/lista-productosv3.txt");
         const productos = await response.json();
 
         // Buscar relacionados y Ordenar por fecha_publicacion (más reciente primero)
@@ -288,7 +231,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             card.classList.add("producto-card");
 
             card.innerHTML = `
-                <img class="img-card" src="${prod.imagenes[0] || 'placeholder.jpg'}" alt="${prod.nombre}"></img>
+                <img class="img-card" src="${prod.versiones[0].imagenes[0] || 'placeholder.jpg'}" alt="${prod.nombre}"></img>
                 
                 <div class="producto-info">
                     <h3 class="title-card">${prod.nombre}</h3>
@@ -303,32 +246,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
 
             contenedor.appendChild(card);
-        });
-
-        // ACTUALIZAR IMAGEN PRINCIPAL, haciendo click en sub imagenes
-        const mainImg = document.querySelector(".img-1 img");
-        const thumbs = document.querySelectorAll(".sub-img");
-
-        thumbs.forEach(thumb => {
-            thumb.addEventListener("click", () => {
-                const img = thumb.querySelector("img"); // obtiene la imagen dentro del div
-                mainImg.src = img.src;
-            });
-        });
-
-        // BOTON DE COMPRAR ---------------------------------------------------------------------
-        document.getElementById("btn-comprar").addEventListener("click", () => {
-            // Número de WhatsApp destino sin signos, espacios ni símbolos.
-            const phoneNumber = "5491165835895";
-
-            // Mensaje con la orden de compra armada
-            const message = `¡Hola!\nQuisiera realizar una orden de compra.\n*Producto: ${producto.nombre}*.\nPor favor, necesito más detalles.`;
-
-            // URL codificada para WhatsApp
-            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-            // Abrir WhatsApp en nueva pestaña o ventana
-            window.open(url, "_blank");
         });
 
     } catch (error) {

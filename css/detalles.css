@@ -30,6 +30,26 @@
   gap: 0em;
 }
 
+/* TITULO _________________________________________ */
+
+.producto .titulo {
+  padding: 0.5em 3em 0.5em 1.5em;
+  border-bottom: 1px solid #979797;
+  margin: 0;
+}
+
+.title-producto {
+  font-size: 1.8rem;
+  margin-bottom: 0.1em;
+}
+
+.subtitle-producto {
+  font-size: 1.15rem;
+  color: #666666;
+  margin-bottom: 0;
+}
+
+
 /* IMAGEN PRINCIPAL _____________________________ */
 
 .imgs .img-1 {
@@ -105,32 +125,6 @@
   grid-row-start: 4;
 }
 
-/* DESCRIPCION DEL PRODUCTO ________________________________ */
-
-.producto .descripcion {
-  padding: 0.6em 3em 1em 3em;
-}
-
-.title-producto {
-  font-size: 2rem;
-  margin-bottom: 0.1em;
-}
-
-.subtitle-producto {
-  font-size: 1.35rem;
-  color: #666666;
-  margin-bottom: 0.5em;
-}
-
-.description-producto {
-  font-size: 1rem;
-  color: #929292;
-  margin-bottom: 1.5em;
-
-  border-top: 1px solid #929292;
-  padding-top: 0.75em;
-}
-
 /* COLORES del producto ________________________________ */
 
 .colores {
@@ -139,14 +133,14 @@
   align-items: center;
   gap: 1em;
 
-  padding: 0.75em 0 0.75em 0;
+  padding: 0.65em 0 0.5em 0;
   margin: 0 3em;
   border-bottom: 1px solid #979797;
 }
 
 .title-colores {
   color: #4d4d4d;
-  font-size: 1.15rem;
+  font-size: 1rem;
   margin: 0.5em 0;
 }
 
@@ -171,6 +165,69 @@
   border-radius: 50%;
   border: 1px solid rgb(54, 54, 54);
 }
+
+/* VERSIONES _________________________________________________ */
+
+.versiones {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+
+  padding: 0.65em 0 0.5em 0;
+  margin: 0 3em;
+  border-bottom: 1px solid #979797;
+}
+
+.title-versiones {
+  color: #4d4d4d;
+  font-size: 1.1rem;
+  margin: 0.5em 0;
+}
+
+.div-versiones {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 5em; */
+
+  padding: 7px;
+}
+
+.version {
+  padding: 5px 25px;
+  border-radius: 6px;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.version:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.v-on {
+  font-weight: bolder;
+  border: 1px solid black;
+}
+
+/* DESCRIPCION DEL PRODUCTO ________________________________ */
+.producto .descripcion {
+  padding: 0.6em 3em 1em 3em;
+}
+
+.description-producto {
+  font-size: 1rem;
+  color: #929292;
+  margin-bottom: 1.5em;
+
+  /* border-top: 1px solid #929292; */
+  padding-top: 0.75em;
+}
+
+
 
 
 /* PAGOS - COMPRAR ________________________________ */
@@ -251,7 +308,7 @@
   gap: 0.25em;
   justify-content: center;
 
-  padding: 1.4em 3em;
+  padding: 1.4em 1.5em;
   border-top: 1px solid #979797;
 
 }
@@ -410,15 +467,31 @@
     border-radius: 0;
   }
 
-  .producto .imgs {
+  /* TITULO _________________________________________ */
 
+  .producto .titulo {
+    padding: 0.5em 3em 0.5em 1.5em;
+    border-bottom: 1px solid #979797;
+    margin: 0;
+  }
+
+  .title-producto {
+    font-size: 1.4rem;
+    margin-bottom: 0.1em;
+  }
+
+  .subtitle-producto {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  /* IMAGEN PRINCIPAL _____________________________ */
+  .producto .imgs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 0em;
   }
-
-  /* IMAGEN PRINCIPAL _____________________________ */
 
   .imgs .img-1 {
     grid-column: span 4 / span 4;
@@ -478,14 +551,14 @@
 
   /* COLORES del producto ________________________________ */
   .colores {
-    padding: 0.75em 0 0.75em 0;
+    padding: 0.75em 0;
     margin: 0 1.5em;
     border-bottom: 1px solid #979797;
   }
 
   .title-colores {
     color: #4d4d4d;
-    font-size: 1rem;
+    font-size: 0.75rem;
     margin: 0.5em 0;
   }
 
@@ -494,19 +567,29 @@
     height: 20px;
   }
 
+  /* VERSIONES _________________________________________________ */
+
+  .versiones {
+    gap: 1em;
+
+    padding: 0.25em 0;
+    margin: 0 1.5em;
+  }
+
+  .title-versiones {
+    font-size: 0.85rem;
+    margin: 0.5em 0;
+  }
+
+  .div-versiones {
+    width: 100%;
+
+    padding: 7px;
+  }
+
   /* DESCRIPCION DEL PRODUCTO ________________________________ */
   .producto .descripcion {
     padding: 0.75em 1.5em 0 1.5em;
-  }
-
-  .title-producto {
-    font-size: 1.4rem;
-    margin-bottom: 0.1em;
-  }
-
-  .subtitle-producto {
-    font-size: 1rem;
-    margin-bottom: 0.75em;
   }
 
   .description-producto {
@@ -518,7 +601,7 @@
 
   .pagos {
     width: 100%;
-    padding: 1.5em;
+    padding: 0 1.5em 1.5em 1.5em;
     border-radius: 0;
   }
 
@@ -592,6 +675,25 @@
     border-radius: 0;
   }
 
+  /* TITULO _________________________________________ */
+
+  .producto .titulo {
+    padding: 0.5em 3em 0.5em 1.5em;
+    border-bottom: 1px solid #979797;
+    margin: 0;
+  }
+
+  .title-producto {
+    font-size: 1.4rem;
+    margin-bottom: 0.1em;
+  }
+
+  .subtitle-producto {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 0;
+  }
+
   /* COLORES del producto ________________________________ */
   .colores {
     padding: 0.75em 0 0.75em 0;
@@ -601,24 +703,33 @@
 
   .title-colores {
     color: #4d4d4d;
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin: 0.5em 0;
+  }
+
+  /* VERSIONES _________________________________________________ */
+
+  .versiones {
+    gap: 1em;
+
+    padding: 0.25em 0;
+    margin: 0 1.5em;
+  }
+
+  .title-versiones {
+    font-size: 1.1rem;
+    margin: 0.5em 0;
+  }
+
+  .div-versiones {
+    width: 100%;
+
+    padding: 7px;
   }
 
   /* DESCRIPCION DEL PRODUCTO ________________________________ */
   .producto .descripcion {
     padding: 0.8em 1.5em 0 1.5em;
-  }
-
-  .title-producto {
-    font-size: 1.4rem;
-
-    margin-bottom: 0.1em;
-  }
-
-  .subtitle-producto {
-    font-size: 1rem;
-    margin-bottom: 0.75em;
   }
 
   .description-producto {
@@ -630,7 +741,7 @@
 
   .pagos {
     width: 100%;
-    padding: 1.5em;
+    padding: 0 1.5em 1.5em 1.5em;
     border-radius: 0;
   }
 
@@ -703,35 +814,63 @@
     border-radius: 0 0.35em 0.35em 0;
   }
 
-  /* COLORES del producto ________________________________ */
+  /* TITULO _________________________________________ */
 
-  .colores {
-    padding: 0.75em 0 0.75em 0;
-    margin: 0 3em;
+  .producto .titulo {
+    padding: 0.5em 3em 0.5em 1.5em;
     border-bottom: 1px solid #979797;
-  }
-
-  .title-colores {
-    color: #4d4d4d;
-    font-size: 1.15rem;
-    margin: 0.5em 0;
-  }
-
-  /* DESCRIPCION DEL PRODUCTO ________________________________ */
-
-  .producto .descripcion {
-    padding: 0.5em 3em 1.25em 3em;
+    margin: 0;
   }
 
   .title-producto {
     font-size: 1.4rem;
-
     margin-bottom: 0.1em;
   }
 
   .subtitle-producto {
     font-size: 1rem;
-    margin-bottom: 0.75em;
+    color: #666666;
+    margin-bottom: 0;
+  }
+
+  /* COLORES del producto ________________________________ */
+
+  .colores {
+    padding: 0.75em 0 0.75em 0;
+    margin: 0 2em;
+    border-bottom: 1px solid #979797;
+  }
+
+  .title-colores {
+    color: #4d4d4d;
+    font-size: 1rem;
+    margin: 0.5em 0;
+  }
+
+  /* VERSIONES _________________________________________________ */
+
+  .versiones {
+    gap: 1em;
+
+    padding: 0.25em 0;
+    margin: 0 2em;
+  }
+
+  .title-versiones {
+    font-size: 1.1rem;
+    margin: 0.5em 0;
+  }
+
+  .div-versiones {
+    width: 100%;
+
+    padding: 7px;
+  }
+
+  /* DESCRIPCION DEL PRODUCTO ________________________________ */
+
+  .producto .descripcion {
+    padding: 0.5em 2em 1.25em 2em;
   }
 
   .description-producto {
@@ -745,7 +884,7 @@
 
   .pagos {
     width: 37.5%;
-    padding: 1.5em;
+    padding: 0.75em;
     border-radius: 0.35em 0 0 0.35em;
   }
 

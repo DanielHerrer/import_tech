@@ -2,13 +2,14 @@
 //   TEXTO PARPADEANTE, pestaña inactiva
 
 let intervalId;
-const originalTitle = document.title; // Guardamos el título real
+let originalTitle = window.tituloProducto; // Guardamos el título real
 const mensajes = ["¡Volvé!", "No te lo pierdas.."];
 let index = 0;
 
 document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
         // Usuario cambió de pestaña
+        originalTitle = document.title; // GUARDA el título actual ANTES de reemplazarlo
         intervalId = setInterval(() => {
             document.title = mensajes[index];
             index = (index + 1) % mensajes.length;
@@ -16,7 +17,7 @@ document.addEventListener("visibilitychange", () => {
     } else {
         // Usuario volvió
         clearInterval(intervalId);
-        document.title = originalTitle; // restauramos el título
+        document.title = window.tituloProducto || originalTitle; // restauramos el título
     }
 });
 

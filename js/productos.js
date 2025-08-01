@@ -1,5 +1,5 @@
 async function cargarProductos() {
-    const res = await fetch("../data/lista-productosv2.txt"); // o .json si preferís
+    const res = await fetch("../data/lista-productosv3.txt"); // o .json si preferís
     const productos = await res.json();
     // Filtrar los que estén activos
     const productosActivos = productos.filter(p => p.activo === true);
@@ -14,6 +14,7 @@ function mostrarProductos(productos) {
     let contenedor = document.getElementById("contenedor-productos");
     contenedor.innerHTML = "";
 
+    // Si no hay productos para mostrar
     if (productos.length === 0) {
         contenedor = document.querySelector(".productos");
 
@@ -27,11 +28,22 @@ function mostrarProductos(productos) {
     productos.forEach(prod => {
         const div = document.createElement("div");
         div.className = "producto-card";
+
         div.innerHTML = `
-            <img class="img-card" src="${prod.imagenes[0]}" alt="${prod.nombre}">
+            <img class="img-card" src="${prod.versiones[0].imagenes[0]}" alt="${prod.nombre}">
             <h3 class="title-card">${prod.nombre}</h3>
             <a href="detalles.html?id=${prod.id}" class="btn-card">Ver más</a>
         `;
+
+        // Agregar badge si hay varias versiones
+        if (prod.versiones.length > 1) {
+            const badge = document.createElement("div");
+            badge.classList.add('producto-versiones');
+            badge.textContent = "Varias versiones";
+
+            // div.style.position = "relative"; // para que el badge quede dentro del div
+            div.appendChild(badge);
+        }
 
         // Hacer clickeable todo el div
         div.addEventListener("click", () => {
@@ -47,7 +59,6 @@ function filtrarProductos(productos, { categoria, busqueda }) {
         const coincideCategoria = !categoria || p.categoria === categoria;
         const coincideBusqueda = !busqueda || (
             p.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
-            p.descripcion.toLowerCase().includes(busqueda.toLowerCase()) ||
             p.marca.toLowerCase().includes(busqueda.toLowerCase())
         );
         return coincideCategoria && coincideBusqueda;
