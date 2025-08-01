@@ -28,10 +28,16 @@ function mostrarProductos(productos) {
         const div = document.createElement("div");
         div.className = "producto-card";
         div.innerHTML = `
-      <img class="img-card" src="${prod.imagenes[0]}" alt="${prod.nombre}">
-      <h3 class="title-card">${prod.nombre}</h3>
-      <a href="detalles.html?id=${prod.id}" class="btn-card">Ver más</a>
-    `;
+            <img class="img-card" src="${prod.imagenes[0]}" alt="${prod.nombre}">
+            <h3 class="title-card">${prod.nombre}</h3>
+            <a href="detalles.html?id=${prod.id}" class="btn-card">Ver más</a>
+        `;
+
+        // Hacer clickeable todo el div
+        div.addEventListener("click", () => {
+            window.location.href = `detalles.html?id=${prod.id}`;
+        });
+
         contenedor.appendChild(div);
     });
 }

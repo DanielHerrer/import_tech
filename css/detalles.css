@@ -189,7 +189,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.5em;
-  padding: 0 0 1em 0 ;
+  padding: 0 0 1em 0;
   font-size: 0.75rem;
   font-weight: bolder;
 }
@@ -339,6 +339,14 @@
   /* border-radius: 8px; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+
+.producto-card:hover {
+  transform: scale(1.02);
+  /* se agranda un 5% */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
 }
 
 .img-card {
@@ -477,8 +485,13 @@
 
   .title-colores {
     color: #4d4d4d;
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin: 0.5em 0;
+  }
+
+  .color {
+    width: 20px;
+    height: 20px;
   }
 
   /* DESCRIPCION DEL PRODUCTO ________________________________ */

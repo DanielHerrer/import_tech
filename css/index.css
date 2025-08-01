@@ -137,11 +137,9 @@
 .div4 .div-detalle,
 .div5 .div-detalle,
 .div6 .div-detalle {
-  background: linear-gradient(
-    to top, 
-    rgba(0, 0, 0, 0.8), 
-    rgba(0, 0, 0, 0)
-    );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0));
 }
 
 /* CATEGORIAS _________________________________________________ */
@@ -232,6 +230,14 @@
   /* border-radius: 8px; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+
+.producto-card:hover {
+  transform: scale(1.03);
+  /* se agranda un 5% */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
 }
 
 .img-card {
@@ -549,7 +555,7 @@
 
   /* POR QUÉ ELEGIRNOS, MOTIVOS CARDS __________________*/
   .motivos {
-    padding: 1.5em 5em 3em 5em;
+    padding: 1.5em 3em 3em 3em;
     text-align: center;
     margin-bottom: 3em;
   }
@@ -636,7 +642,7 @@
     margin-top: 1em;
     font-size: 0.55rem;
   }
-  
+
   .producto-card .subtitle-card {
     margin-bottom: 1em;
     font-size: 0.5rem;
@@ -873,7 +879,7 @@
     margin-top: 0.5em;
     font-size: 0.65rem;
   }
-  
+
   .producto-card .subtitle-card {
     margin-bottom: 1em;
     font-size: 0.55rem;
@@ -1097,7 +1103,7 @@
     margin-top: 0.5em;
     font-size: 0.75rem;
   }
-  
+
   .producto-card .subtitle-card {
     margin-bottom: 1em;
     font-size: 0.6rem;
