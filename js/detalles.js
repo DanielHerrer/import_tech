@@ -212,6 +212,39 @@ document.addEventListener("DOMContentLoaded", async () => {
         tituloProducto = `${producto.nombre} · Import Tech`;
         document.title = tituloProducto;
 
+        // 8. Actualizar TAGS
+        const tags = document.querySelector(".tags");
+        tags.innerHTML = ""; // limpiar lo que había
+
+        if (producto.activo) {
+            const tag = document.createElement("div");
+            tag.classList.add("tag");
+            tag.innerText = "En stock";
+            tag.style.background = "#75b5ff";
+            tag.style.color = "#073972";
+            tags.appendChild(tag);
+        } else {
+            const tag = document.createElement("div");
+            tag.classList.add("tag");
+            tag.innerText = "Sin stock";
+            tag.style.background = "#ff7575";
+            tag.style.color = "#720707";
+            tags.appendChild(tag);
+        }
+
+        // Verificar si hay más de un color
+        if (producto.colores && producto.colores.length > 1) { // si es array
+            // if (producto.colores && producto.colores.size > 1) { // si es Set
+            const tag = document.createElement("div");
+            tag.classList.add("tag");
+            tag.innerText = "Varios colores";
+            tag.style.background = "#97ff94";
+            tag.style.color = "#0c3b06";
+            tags.appendChild(tag);
+        }
+
+
+
     } catch (error) {
         console.error("Error cargando productos:", error);
     }
