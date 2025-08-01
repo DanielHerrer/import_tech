@@ -1,0 +1,13 @@
+.contacto {
+    padding: 3em 0;
+    margin: 4em 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.div-formulario {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 0 5em;
+    padding: 3em;
+}
