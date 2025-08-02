@@ -33,7 +33,7 @@ body {
 .body-filter {
   background:
     url("../img/dusty_grunge_pattern_white.png"),
-    rgba(43, 34, 49, 0.7);
+    rgba(43, 34, 49, 0.4);
   background-blend-mode: overlay;
   /* overlay, multiply, screen, soft-light */
 }
@@ -326,13 +326,13 @@ body {
   }
 
   /* Botón de cerrar */
-.close-btn {
-  top: 4px;
-  right: 5px;
-  font-size: 10px;
-  padding: 0 3px 1px 3px;
-  border-radius: 3px;
-}
+  .close-btn {
+    top: 4px;
+    right: 5px;
+    font-size: 10px;
+    padding: 0 3px 1px 3px;
+    border-radius: 3px;
+  }
 
   /* FOOTER ____________________________________________________ */
   .footer {

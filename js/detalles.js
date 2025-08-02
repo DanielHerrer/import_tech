@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const mainImg = img1.querySelector("img");
 
     // ZOOM IMAGEN PRINCIPAL siga el puntero
-    // --------------------------
-    // DESKTOP: con el mouse
+    
+    // --------- DESKTOP (mouse) ----------
     img1.addEventListener("mousemove", e => {
         const rect = img1.getBoundingClientRect();
         const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -22,34 +22,46 @@ document.addEventListener("DOMContentLoaded", async () => {
         mainImg.style.transform = "scale(1)";
     });
 
-    // --------------------------
-    // MOBILE: con touch
-    let zoomActivo = false;
-
+    // --------- MOBILE (pinch con 2 dedos) ----------
     img1.addEventListener("touchstart", e => {
-        e.preventDefault();
-        zoomActivo = !zoomActivo;
-        if (zoomActivo) {
-            const touch = e.touches[0];
+        if (e.touches.length === 2) {
+            e.preventDefault();
+            initialDistance = getDistance(e.touches[0], e.touches[1]);
+        }
+    }, { passive: false });
+
+    img1.addEventListener("touchmove", e => {
+        if (e.touches.length === 2) {
+            e.preventDefault();
+            const newDistance = getDistance(e.touches[0], e.touches[1]);
+
+            // calcular escala según la diferencia
+            const scaleChange = newDistance / initialDistance;
+            currentScale = Math.min(Math.max(1, scaleChange), 3); // entre 1x y 3x
+
+            // punto medio de los dos dedos
             const rect = img1.getBoundingClientRect();
-            const x = ((touch.clientX - rect.left) / rect.width) * 100;
-            const y = ((touch.clientY - rect.top) / rect.height) * 100;
-            mainImg.style.transformOrigin = `${x}% ${y}%`;
-            mainImg.style.transform = "scale(2)";
-        } else {
+            const midX = ((e.touches[0].clientX + e.touches[1].clientX) / 2 - rect.left) / rect.width * 100;
+            const midY = ((e.touches[0].clientY + e.touches[1].clientY) / 2 - rect.top) / rect.height * 100;
+
+            mainImg.style.transformOrigin = `${midX}% ${midY}%`;
+            mainImg.style.transform = `scale(${currentScale})`;
+        }
+    }, { passive: false });
+
+    img1.addEventListener("touchend", e => {
+        if (e.touches.length < 2) {
             mainImg.style.transformOrigin = "center";
             mainImg.style.transform = "scale(1)";
         }
     });
 
-    img1.addEventListener("touchmove", e => {
-        if (!zoomActivo) return;
-        const touch = e.touches[0];
-        const rect = img1.getBoundingClientRect();
-        const x = ((touch.clientX - rect.left) / rect.width) * 100;
-        const y = ((touch.clientY - rect.top) / rect.height) * 100;
-        mainImg.style.transformOrigin = `${x}% ${y}%`;
-    });
+    // función para calcular distancia entre dos dedos
+    function getDistance(touch1, touch2) {
+        const dx = touch1.clientX - touch2.clientX;
+        const dy = touch1.clientY - touch2.clientY;
+        return Math.hypot(dx, dy);
+    }
 
     // ____________________________________________________________________________________________________________
     // 1. Obtener el id de la URL
