@@ -52,52 +52,50 @@
 
         <!-- ___________________________________________________________________ -->
 
-        <section class="contacto">
-            <div class="div-contacto">
-                <div class="div-info">
-                    <h1 class="info-title">Contacto</h1>
-                    <p class="info">Hola, gracias por visitar nuestra pagina, cualquier consulta contáctanos!</p>
-                    <p class="info">WhatsApp: +54 11 123456789</p>
-                    <p class="info">import_tech@gmail.com</p>
-                    <p class="info">Argentina, Buenos Aires, Calle 123</p>
+        <section class="div-contacto">
+            <div class="div-info">
+                <h1 class="info-title">Contacto</h1>
+                <p class="info">Hola, gracias por visitar nuestra pagina, cualquier consulta contáctanos!</p>
+                <p class="info">WhatsApp: +54 9 11 65835895</p>
+                <p class="info">import_tech@gmail.com</p>
+                <p class="info">Argentina, Buenos Aires, Calle 123</p>
 
-                    <div class="info-redes">
-                        <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </a>
+                <div class="info-redes">
+                    <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+                <h4>Import Tech · BA</h4>
+                <p>Tu tienda de confianza en tecnología.</p>
+            </div>
+
+            <div class="div-formulario">
+                <form id="contactForm" class="formulario" onsubmit="enviarWhatsApp(event)" method="POST">
+                    <div class="input">
+                        <label for="nombre">Nombre*</label>
+                        <input type="text" id="nombre" name="nombre" required>
                     </div>
-                    <h4>Import Tech · BA</h4>
-                    <p>Tu tienda de confianza en tecnología.</p>
-                </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="input">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="[0-9+ ]+">
+                    </div>
+                    <div class="input">
+                        <label for="mensaje">Mensaje*</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
 
-                <div class="div-formulario">
-                    <form id="contactForm" class="formulario" action="tu_script_backend.php" method="POST">
-                        <div class="input">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="input">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="input">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" pattern="[0-9+ ]+" required>
-                        </div>
-                        <div class="input">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                        </div>
+                    <!-- Google reCAPTCHA -->
+                    <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
 
-                        <!-- Google reCAPTCHA -->
-                        <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
-
-                        <button type="submit" class="btn-formulario">Enviar</button>
-                    </form>
-                </div>
+                    <button type="submit" class="btn-formulario">Enviar</button>
+                </form>
             </div>
         </section>
 
