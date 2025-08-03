@@ -41,7 +41,8 @@
             <button id="scrollTopBtn" class="btn top">
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
-            <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer" class="btn instagram">
+            <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer"
+                class="btn instagram">
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
             </a>
             <a href="https://wa.me/5491165835895" target="_blank" rel="noopener noreferrer" class="btn whatsapp">
@@ -52,9 +53,51 @@
         <!-- ___________________________________________________________________ -->
 
         <section class="contacto">
-            <div class="div-formulario">
-                <!-- <h1>Calificanos!</h1>
-                <button>Acceder</button> -->
+            <div class="div-contacto">
+                <div class="div-info">
+                    <h1 class="info-title">Contacto</h1>
+                    <p class="info">Hola, gracias por visitar nuestra pagina, cualquier consulta contáctanos!</p>
+                    <p class="info">WhatsApp: +54 11 123456789</p>
+                    <p class="info">import_tech@gmail.com</p>
+                    <p class="info">Argentina, Buenos Aires, Calle 123</p>
+
+                    <div class="info-redes">
+                        <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <h4>Import Tech · BA</h4>
+                    <p>Tu tienda de confianza en tecnología.</p>
+                </div>
+
+                <div class="div-formulario">
+                    <form id="contactForm" class="formulario" action="tu_script_backend.php" method="POST">
+                        <div class="input">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" pattern="[0-9+ ]+" required>
+                        </div>
+                        <div class="input">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+
+                        <!-- Google reCAPTCHA -->
+                        <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
+
+                        <button type="submit" class="btn-formulario">Enviar</button>
+                    </form>
+                </div>
             </div>
         </section>
 
@@ -107,9 +150,11 @@
             </div>
             <div class="footer-row row-2">
                 <div class="footer-col info">
-                    <p class="atencion">Defensa de las y los consumidores. Para reclamos <a href="" class="link-atencion" target="_blank" rel="noopener noreferrer">ingresá acá</a>.</p>
+                    <p class="atencion">Defensa de las y los consumidores. Para reclamos <a href=""
+                            class="link-atencion" target="_blank" rel="noopener noreferrer">ingresá acá</a>.</p>
                     <p class="copyright">Copyright Import Tech · 2025. Todos los derechos reservados.</p>
-                    <p>Creado por <a href="https://danielherrer.github.io/me" class="link-creador" target="_blank" rel="noopener noreferrer">Daniel Herrera</a>.</p>
+                    <p>Creado por <a href="https://danielherrer.github.io/me" class="link-creador" target="_blank"
+                            rel="noopener noreferrer">Daniel Herrera</a>.</p>
                 </div>
             </div>
         </footer>
@@ -117,6 +162,8 @@
 
     <script src="../js/global.js"></script>
     <script src="../js/contacto.js"></script>
+    <!-- Script de reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>

@@ -27,7 +27,7 @@ document.addEventListener("visibilitychange", () => {
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 750) {
+    if (window.scrollY > 500) { // aparece después de bajar 300px
         scrollTopBtn.style.display = "flex";
     } else {
         scrollTopBtn.style.display = "none";
@@ -80,19 +80,18 @@ if (rutaActual.endsWith("index.html")) {
     // Estamos en otra página
     imgModal.src = "../img/banner_3.png";
 }
-overlay.style.display = "block";
 
 // Función para saber si ya se mostró hoy
-// function yaSeMostroHoy() {
-//     const hoy = new Date().toDateString();
-//     return localStorage.getItem("popupFecha") === hoy;
-// }
+function yaSeMostroHoy() {
+    const hoy = new Date().toDateString();
+    return localStorage.getItem("popupFecha") === hoy;
+}
 
 // Mostrar si no se mostró hoy
-// if (!yaSeMostroHoy()) {
-//     overlay.style.display = "block";
-//     localStorage.setItem("popupFecha", new Date().toDateString());
-// }
+if (!yaSeMostroHoy()) {
+    overlay.style.display = "block";
+    localStorage.setItem("popupFecha", new Date().toDateString());
+}
 
 // Cerrar modal
 closeBtn.addEventListener("click", () => {

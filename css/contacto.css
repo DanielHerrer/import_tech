@@ -1,13 +1,204 @@
 .contacto {
-    padding: 3em 0;
-    margin: 4em 0;
+    padding: 1.5em 0;
+    margin: 2em 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.div-formulario {
+.div-contacto {
     background-color: #fff;
     display: flex;
     justify-content: center;
-    margin: 0 5em;
+    margin: 0;
     padding: 3em;
 }
+
+.div-info {
+    padding: 2em 5em;
+}
+
+.div-info .info-title {
+    margin-bottom: 0.5em;
+    font-size: 1.5rem;
+}
+
+.div-info .info {
+    margin-bottom: 0.5em;
+    font-size: 1.1rem;
+}
+
+.info-redes {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    padding: 0.5em 0;
+}
+
+.info-redes a {
+    color: #000;
+    font-size: 2em;
+}
+
+.info-redes a:hover {
+    color: #7700ff;
+}
+
+.div-formulario {
+    padding: 1em 5em;
+    border-left: 1px solid #979797;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.formulario .input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input label {
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+}
+
+.input input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #979797;
+}
+
+.input textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #979797;
+    resize: none;
+}
+
+.btn-formulario {
+    background-color: #b574d3;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.btn-formulario:hover {
+    background-color: #e8b6ff;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE CSS*/
+/*-------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 575px) {
+
+    .contacto {
+        padding: 1em 0;
+        margin: 1.25em 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+
+    .div-contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin: 0;
+        padding: 1em;
+    }
+
+    .div-info {
+        padding: 0.5em 1.25em 1em 1.25em;
+    }
+
+    .div-info .info {
+        margin-bottom: 0.5em;
+        font-size: 1.1rem;
+    }
+
+    .div-formulario {
+        padding: 1.25em 1.25em 1em 1.25em;
+        border-left: 0;
+        border-top: 1px solid #979797;
+    }
+
+}
+
+/*-------------------------------------------------------------------------------------------------------------------- */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .contacto {
+        padding: 1em 0;
+        margin: 1.25em 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+
+    .div-contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin: 0;
+        padding: 2em;
+    }
+
+    .div-info {
+        padding: 1em 2em 2em 2em;
+    }
+
+    .div-info .info {
+        margin-bottom: 0.5em;
+        font-size: 1.1rem;
+    }
+
+    .div-formulario {
+        padding: 2em 1em 1em 1em;
+        border-left: 0;
+        border-top: 1px solid #979797;
+    }
+
+}
+
+/*-------------------------------------------------------------------------------------------------------------------- */
+/* Estilos para tablets grandes */
+@media (min-width: 768px) and (max-width: 991px) {
+    .div-contacto {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 2em;
+    }
+
+    .div-info {
+        padding: 2em 2em 2em 0;
+    }
+
+    .div-info .info {
+        margin-bottom: 0.5em;
+        font-size: 1.1rem;
+    }
+
+    .div-formulario {
+        padding: 1em 0 1em 2em;
+        border-left: 1px solid #979797;
+    }
+
+}
+
+/*-------------------------------------------------------------------------------------------------------------------- */
+/* 6. Escritorio */
+@media (min-width: 992px) {}

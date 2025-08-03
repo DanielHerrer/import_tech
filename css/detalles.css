@@ -33,14 +33,14 @@
 /* TITULO _________________________________________ */
 
 .producto .titulo {
-  padding: 0.5em 3em 0.5em 1.5em;
+  padding: 0.75em 1.5em 0.75em 1.5em;
   border-bottom: 1px solid #979797;
   margin: 0;
 }
 
 .title-producto {
   font-size: 1.8rem;
-  margin-bottom: 0.1em;
+  margin-bottom: 0;
 }
 
 .subtitle-producto {
@@ -64,6 +64,26 @@
   margin-bottom: 0;
   overflow: hidden;
   cursor: zoom-in;
+
+  position: relative;
+}
+
+.img-1 .lupa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+
+  width: 50px;
+  height: 50px;
+  /* padding: 10px; */
+  font-size: 0.75rem;
+  border-radius: 99px;
+  z-index: 10;
 }
 
 .imgs .img-1 img {
@@ -478,6 +498,12 @@
     margin: 0;
   }
 
+  .producto .titulo {
+    padding: 0.75em 1em 0.75em 1em;
+    border-bottom: 1px solid #979797;
+    margin: 0;
+  }
+
   .title-producto {
     font-size: 1.4rem;
     margin-bottom: 0.1em;
@@ -686,7 +712,7 @@
   /* TITULO _________________________________________ */
 
   .producto .titulo {
-    padding: 0.5em 3em 0.5em 1.5em;
+    padding: 0.75em 1.5em 0.75em 1.5em;
     border-bottom: 1px solid #979797;
     margin: 0;
   }
@@ -828,9 +854,8 @@
   }
 
   /* TITULO _________________________________________ */
-
   .producto .titulo {
-    padding: 0.5em 3em 0.5em 1.5em;
+    padding: 0.75em 1.5em 0.75em 1em;
     border-bottom: 1px solid #979797;
     margin: 0;
   }
