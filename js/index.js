@@ -45,6 +45,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
       `;
 
+      // Agregar badge si hay varias versiones
+      if (prod.versiones.length > 1) {
+        const badge = document.createElement("div");
+        badge.classList.add('producto-versiones');
+        badge.textContent = "Varias versiones";
+
+        // div.style.position = "relative"; // para que el badge quede dentro del div
+        card.appendChild(badge);
+      }
+
       // Al hacer clic → ir a la página de detalles
       card.addEventListener("click", () => {
         window.location.href = `./html/detalles.html?id=${prod.id}`;
