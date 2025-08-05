@@ -620,10 +620,10 @@
 
   /* TODAS las <img> de .sub-img */
   .imgs .sub-img {
-    width: 5rem;
-    height: 5rem;
+    width: 4.75rem;
+    height: 4.75rem;
     margin: 10px auto;
-    padding: 0.25em;
+    padding: 0.1em;
   }
 
   .imgs .sub-img img {
