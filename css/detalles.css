@@ -620,9 +620,9 @@
 
   /* TODAS las <img> de .sub-img */
   .imgs .sub-img {
-    width: 5.75rem;
-    height: 5.75rem;
-    margin: 0 auto;
+    width: 5rem;
+    height: 5rem;
+    margin: 10px auto;
     padding: 0.25em;
   }
 
