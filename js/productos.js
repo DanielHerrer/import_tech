@@ -1,5 +1,5 @@
 async function cargarProductos() {
-    const res = await fetch("../data/lista-productosv3.txt"); // o .json si preferís
+    const res = await fetch("../data/lista-productosv3.json"); // o .json si preferís
     const productos = await res.json();
     // Filtrar los que estén activos
     const productosActivos = productos.filter(p => p.activo === true);
@@ -57,13 +57,20 @@ function mostrarProductos(productos) {
 function filtrarProductos(productos, { categoria, busqueda }) {
     return productos.filter(p => {
         const coincideCategoria = !categoria || p.categoria === categoria;
+
         const coincideBusqueda = !busqueda || (
             p.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
-            p.marca.toLowerCase().includes(busqueda.toLowerCase())
+            p.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
+            (p.versiones && p.versiones.some(v =>
+                (v.nombre_version && v.nombre_version.toLowerCase().includes(busqueda.toLowerCase())) ||
+                (v.descripcion && v.descripcion.toLowerCase().includes(busqueda.toLowerCase()))
+            ))
         );
+
         return coincideCategoria && coincideBusqueda;
     });
 }
+
 
 function ordenarProductos(productos, orden) {
     switch (orden) {

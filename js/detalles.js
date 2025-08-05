@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const mainImg = img1.querySelector("img");
 
     // ZOOM IMAGEN PRINCIPAL siga el puntero
-    
+
     // --------- DESKTOP (mouse) ----------
     img1.addEventListener("mousemove", e => {
         const rect = img1.getBoundingClientRect();
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // BUSCAR PRODUCTO por ID
     try {
         // 2. Cargar el archivo productos.txt (debe estar en el mismo servidor)
-        const response = await fetch("../data/lista-productosv3.txt");
+        const response = await fetch("../data/lista-productosv3.json");
         const productos = await response.json();
 
         // 3. Buscar el producto por id
@@ -88,6 +88,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Función que actualiza la vista según la versión seleccionada
         function mostrarVersion(version) {
+
+            // 1. Datos generales del producto
+            document.querySelector(".title-producto").textContent = producto.nombre + " " + version.nombre_version;
+            document.querySelector(".subtitle-producto").textContent = `${producto.marca} · ${producto.categoria}`;
+            document.title = `${producto.nombre + " " + version.nombre_version} · Import Tech`;
+            window.tituloProducto = document.title;
 
             // --- Imagen principal
             const mainImg = document.querySelector(".img-1 img");
@@ -115,7 +121,24 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
 
             // --- Descripción
-            document.querySelector(".description-producto").textContent = version.descripcion;
+            let descripcion = version.descripcion.replace(/\n/g, "<br>");
+            const descContainer = document.querySelector(".descripcion");
+            const descP = document.querySelector(".description-producto");
+            const toggleBtn = document.querySelector(".toggle-descripcion");
+
+            descP.innerHTML = descripcion;
+
+            // Reset estado
+            descContainer.classList.remove("expandida");
+            toggleBtn.textContent = "Ver descripción completa 🡣";
+
+            // Detectar click para expandir
+            toggleBtn.onclick = () => {
+                const expandida = descContainer.classList.toggle("expandida");
+                toggleBtn.textContent = expandida
+                    ? "Ver menos 🡡"
+                    : "Ver descripción completa 🡣";
+            };
 
             // --- Colores
             const coloresDiv = document.querySelector(".div-colores");
@@ -155,13 +178,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                 tagColores.style.color = "#0c3b06";
                 tags.appendChild(tagColores);
             }
+
+
         }
 
         // 1. Datos generales del producto
-        document.querySelector(".title-producto").textContent = producto.nombre;
-        document.querySelector(".subtitle-producto").textContent = `${producto.marca} · ${producto.categoria}`;
-        document.title = `${producto.nombre} · Import Tech`;
-        window.tituloProducto = document.title;
+        // document.querySelector(".title-producto").textContent = producto.nombre;
+        // document.querySelector(".subtitle-producto").textContent = `${producto.marca} · ${producto.categoria}`;
+        // document.title = `${producto.nombre} · Import Tech`;
+        // window.tituloProducto = document.title;
 
         // 2. Renderizar versiones
         const versionesDiv = document.querySelector(".div-versiones");
@@ -200,15 +225,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             window.open(url, "_blank");
         });
 
-    } catch (error) {
-        console.error("Error cargando productos:", error);
-    }
 
-    // PRODUCTOS RELACIONADOS ----------------------------------------------------------------------------
-    try {
-        const response = await fetch("../data/lista-productosv3.txt");
-        const productos = await response.json();
 
+        // PRODUCTOS RELACIONADOS ----------------------------------------------------------------------------
         // Buscar relacionados y Ordenar por fecha_publicacion (más reciente primero)
         const productosRelacionados = productos.filter(p =>
             (p.marca === producto.marca || p.categoria === producto.categoria) && // misma marca o misma categoría
@@ -252,6 +271,17 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </div>
             `;
 
+            // Agregar badge si hay varias versiones
+            if (prod.versiones.length > 1) {
+                const badge = document.createElement("div");
+                badge.classList.add('producto-versiones');
+                badge.textContent = "Varias versiones";
+
+                // card.style.position = "relative"; // para que el badge quede dentro del div
+                card.appendChild(badge);
+            }
+
+
             // Al hacer clic → ir a la página de detalles
             card.addEventListener("click", () => {
                 window.location.href = `./detalles.html?id=${prod.id}`;
@@ -260,7 +290,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             contenedor.appendChild(card);
         });
 
+
+
     } catch (error) {
-        console.error("Error cargando productos destacados:", error);
+        console.error("Error cargando productos:", error);
     }
+
+    // Esperar a que la página cargue por completo (incluye imágenes)
+    document.getElementById("producto").style.display = "block";
 });
