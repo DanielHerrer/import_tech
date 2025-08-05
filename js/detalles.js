@@ -130,14 +130,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             // Reset estado
             descContainer.classList.remove("expandida");
-            toggleBtn.textContent = "Ver descripción completa 🡣";
+            toggleBtn.innerHTML = `Ver descripción completa <i class="fa-regular fa-square-caret-down"></i>`;
 
             // Detectar click para expandir
             toggleBtn.onclick = () => {
                 const expandida = descContainer.classList.toggle("expandida");
-                toggleBtn.textContent = expandida
-                    ? "Ver menos 🡡"
-                    : "Ver descripción completa 🡣";
+                toggleBtn.innerHTML = expandida
+                    ? `Ver menos <i class="fa-regular fa-square-caret-up"></i>`
+                    : `Ver descripción completa <i class="fa-regular fa-square-caret-down"></i>`;
             };
 
             // --- Colores

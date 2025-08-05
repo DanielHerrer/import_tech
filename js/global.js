@@ -67,7 +67,7 @@ const closeBtn = document.getElementById("closeBtn");
 
 // ACTUALIZAR TITULO
 const titleModal = document.querySelector(".title-modal");
-titleModal.innerHTML = "<b>Novedades</b> · Promociones y Ofertas <b>todos los días</b>. 😄";
+titleModal.innerHTML = "<b>Novedades</b> · Promos y ofertas <b>todos</b> los días. 😄";
 // ACTUALIZAR IMAGEN PRINCIPAL
 const imgModal = document.querySelector(".modal img");
 // Obtengo la ruta actual (sin dominio)
