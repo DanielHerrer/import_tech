@@ -220,12 +220,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("btn-comprar").addEventListener("click", () => {
             const phoneNumber = "5491165835895";
             const versionSeleccionada = document.querySelector(".div-versiones .v-on").textContent;
-            const message = `¡Hola!\nQuisiera realizar una orden de compra.\n*Producto: ${producto.nombre}*.\n*Versión: ${versionSeleccionada}*.\nPor favor, necesito más detalles.`;
+            const message = `¡Hola!\nQuisiera realizar una orden de compra.\n*${producto.nombre} ${versionSeleccionada}*.\nPor favor, necesito más detalles.`;
             const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(url, "_blank");
         });
-
-
 
         // PRODUCTOS RELACIONADOS ----------------------------------------------------------------------------
         // Buscar relacionados y Ordenar por fecha_publicacion (más reciente primero)
