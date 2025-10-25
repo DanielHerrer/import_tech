@@ -1,5 +1,6 @@
 async function cargarProductos() {
-    const res = await fetch("../data/lista-productosv3.json"); // o .json si preferís
+    // const res = await fetch("../data/lista-productosv3.json");
+    const res = await fetch("../data/lista-productosv3.json?v=" + new Date().getTime());
     const productos = await res.json();
     // Filtrar los que estén activos
     const productosActivos = productos.filter(p => p.activo === true);
