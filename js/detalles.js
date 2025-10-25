@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // BUSCAR PRODUCTO por ID
     try {
         // 2. Cargar el archivo productos.txt (debe estar en el mismo servidor)
-        const response = await fetch("../data/lista-productosv3.json?v=2");
+        const response = await fetch("./data/productos_v4.json");
         const productos = await response.json();
 
         // 3. Buscar el producto por id

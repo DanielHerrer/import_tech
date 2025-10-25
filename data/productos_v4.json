@@ -1,0 +1,458 @@
+[
+  {
+    "id": "1",
+    "nombre": "IPhone 16",
+    "categoria": "Celular",
+    "marca": "Apple",
+    "fecha_publicacion": "2025-07-17T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Pro Max (256GB)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_893557-MLU79115488779_092024-O.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_779610-MLU79115272055_092024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_635600-MLU78878295680_092024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_804524-MLU78878295688_092024-F.webp"
+        ],
+        "descripcion": "iPhone 16 Pro Max. Imponente diseño de titanio. Control de la Cámara. 4K Dolby Vision a 120 cps. Y el chip A18 Pro.\n\n• IMPONENTE DISEÑO DE TITANIO — El iPhone 16 Pro tiene un diseño de titanio resistente y ligero con una pantalla Super Retina XDR más grande, de 6.3 pulgadas.¹ Es increíblemente duradero gracias al Ceramic Shield de última generación, que es dos veces más resistente que cualquier vidrio de smartphone.\n• CONTROL DE LA CÁMARA — Con esta nueva funcionalidad podrás acceder fácilmente a las herramientas de la cámara, como el zoom o la profundidad de campo, para que no se te escape ni un momento.\n• CAPTURAS SOÑADAS — La cámara Fusion de 48 MP te permite grabar en 4K Dolby Vision a 120 cps para llevar tus videos a otro nivel. Y con la cámara ultra gran angular de 48 MP, tus fotos macro y panorámicas van a tener un nivel de detalle sorprendente.\n• ESTILOS FOTOGRÁFICOS — La nueva generación de Estilos Fotográficos te da más libertad creativa para que cada foto tenga tu toque personal. Y gracias a los avances en nuestro procesamiento de imágenes, ahora puedes revertir cualquier estilo en cualquier momento.\n• LA POTENCIA DEL CHIP A18 PRO — Este chip es el genio detrás de Apple Intelligence, gracias a su Neural Engine más rápido, su CPU y su GPU mejorados, y un gran salto en el ancho de banda de memoria. También te permite disfrutar funcionalidades avanzadas de foto y video, y juegos AAA.\n• UN SALTO ENORME EN BATERÍA — El iPhone 16 Pro es tan potente y eficiente que puede ofrecerte hasta 33 horas de reproducción de video.² Acopla un cargador MagSafe para obtener una carga inalámbrica más rápida o carga a través de la entrada USB-C.³\n• PERSONALIZA TU IPHONE — Con iOS 18 puedes cambiar el color de los íconos de la pantalla de inicio a tu gusto. Encuentra tus tomas favoritas en un flash en la rediseñada app Fotos. Y agrega divertidos efectos animados a cualquier palabra, frase o emoji en iMessage.⁴\n• FUNCIONALIDADES ESENCIALES DE SEGURIDAD — Con Detección de Choques, el iPhone puede detectar si sufres un accidente grave de auto y pedir ayuda cuando tú no puedes.⁵\n\nAviso legal\n1 Las pantallas tienen las esquinas redondeadas. Si se mide en forma de rectángulo, la pantalla tiene 6.12 pulgadas (iPhone 16), 6.69 pulgadas (iPhone 16 Plus), 6.27 pulgadas (iPhone 16 Pro) o 6.86 pulgadas (iPhone 16 Pro Max) en diagonal. El área real de visualización es menor.\n2 La duración de la batería varía según el uso y la configuración. Para obtener más información, visita apple.com/la/batteries/.\n3 Los accesorios se venden por separado.\n4 Algunas funcionalidades podrían no estar disponibles en todos los países o áreas.\n5 El iPhone 16 y el iPhone 16 Pro pueden detectar si sufres un accidente de auto grave y pedir ayuda. Requiere conexión celular o llamadas por Wi-Fi.",
+        "colores": [
+          [
+            "#fff",
+            "Blanco"
+          ],
+          [
+            "#f7c98e",
+            "Arena"
+          ],
+          [
+            "#dddddd",
+            "Plateado"
+          ],
+          [
+            "#000",
+            "Negro"
+          ]
+        ]
+      },
+      {
+        "nombre_version": "Pro (128GB)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_939427-MLU79132024637_092024-F.jpg",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_890376-MLU79132251745_092024-F.jpg",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_604464-MLU78894756056_092024-F.jpg",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_958759-MLU79132024679_092024-F.jpg"
+        ],
+        "descripcion": "iPhone 16 Pro. Imponente diseño de titanio. Control de la Cámara. 4K Dolby Vision a 120 cps. Y el chip A18 Pro.\n\n• IMPONENTE DISEÑO DE TITANIO — El iPhone 16 Pro tiene un diseño de titanio resistente y ligero con una pantalla Super Retina XDR más grande, de 6.3 pulgadas.¹ Es increíblemente duradero gracias al Ceramic Shield de última generación, que es dos veces más resistente que cualquier vidrio de smartphone.\n• CONTROL DE LA CÁMARA — Con esta nueva funcionalidad podrás acceder fácilmente a las herramientas de la cámara, como el zoom o la profundidad de campo, para que no se te escape ni un momento.\n• CAPTURAS SOÑADAS — La cámara Fusion de 48 MP te permite grabar en 4K Dolby Vision a 120 cps para llevar tus videos a otro nivel. Y con la cámara ultra gran angular de 48 MP, tus fotos macro y panorámicas van a tener un nivel de detalle sorprendente.\n• ESTILOS FOTOGRÁFICOS — La nueva generación de Estilos Fotográficos te da más libertad creativa para que cada foto tenga tu toque personal. Y gracias a los avances en nuestro procesamiento de imágenes, ahora puedes revertir cualquier estilo en cualquier momento.\n• LA POTENCIA DEL CHIP A18 PRO — Este chip es el genio detrás de Apple Intelligence, gracias a su Neural Engine más rápido, su CPU y su GPU mejorados, y un gran salto en el ancho de banda de memoria. También te permite disfrutar funcionalidades avanzadas de foto y video, y juegos AAA.\n• UN SALTO ENORME EN BATERÍA — El iPhone 16 Pro es tan potente y eficiente que puede ofrecerte hasta 33 horas de reproducción de video.² Acopla un cargador MagSafe para obtener una carga inalámbrica más rápida o carga a través de la entrada USB-C.³\n• PERSONALIZA TU IPHONE — Con iOS 18 puedes cambiar el color de los íconos de la pantalla de inicio a tu gusto. Encuentra tus tomas favoritas en un flash en la rediseñada app Fotos. Y agrega divertidos efectos animados a cualquier palabra, frase o emoji en iMessage.⁴\n• FUNCIONALIDADES ESENCIALES DE SEGURIDAD — Con Detección de Choques, el iPhone puede detectar si sufres un accidente grave de auto y pedir ayuda cuando tú no puedes.⁵\n\nAviso legal\n1 Las pantallas tienen las esquinas redondeadas. Si se mide en forma de rectángulo, la pantalla tiene 6.12 pulgadas (iPhone 16), 6.69 pulgadas (iPhone 16 Plus), 6.27 pulgadas (iPhone 16 Pro) o 6.86 pulgadas (iPhone 16 Pro Max) en diagonal. El área real de visualización es menor.\n2 La duración de la batería varía según el uso y la configuración. Para obtener más información, visita apple.com/la/batteries/.\n3 Los accesorios se venden por separado.\n4 Algunas funcionalidades podrían no estar disponibles en todos los países o áreas.\n5 El iPhone 16 y el iPhone 16 Pro pueden detectar si sufres un accidente de auto grave y pedir ayuda. Requiere conexión celular o llamadas por Wi-Fi.",
+        "colores": [
+          [
+            "#fff",
+            "Blanco"
+          ],
+          [
+            "#dddddd",
+            "Plateado"
+          ],
+          [
+            "#000",
+            "Negro"
+          ]
+        ]
+      },
+      {
+        "nombre_version": "Común (128GB)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_975004-MLU78878972160_092024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_891831-MLU79130295417_092024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_673901-MLU78878969398_092024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_903901-MLU79116568669_092024-F.webp"
+        ],
+        "descripcion": "iPhone 16. Con Control de la Cámara. Cámara Fusion de 48 MP. Cinco colores espectaculares. Y el chip A18.\n\n• CONTROL DE LA CÁMARA — Con esta nueva funcionalidad podrás acceder fácilmente a las herramientas de la cámara, como el zoom o la profundidad de campo, para que no se te escape ni un momento.\n• CAPTURAS MÁS AMPLIAS Y DETALLADAS — La mejorada cámara ultra gran angular con autoenfoque te permite capturar videos y fotos macro con un asombroso nivel de detalle y nitidez. Usa la cámara Fusion de 48 MP para tomar fotos increíbles de alta resolución y haz zoom con la cámara teleobjetivo de calidad óptica de 2x.\n• ESTILOS FOTOGRÁFICOS — La nueva generación de Estilos Fotográficos te da más libertad creativa para que cada foto tenga tu sello personal. Y ahora puedes revertir cualquier estilo que hayas elegido, en cualquier momento. ¿Cambiaste de idea? No pasa nada.\n• CHIP A18 SUPERPODEROSO — El chip A18 es dos generaciones más avanzado que el chip A16 Bionic del iPhone 15. Es el motor detrás de Apple Intelligence y te permite disfrutar funcionalidades de foto y video avanzadas y juegos del más alto nivel con gran eficiencia.\n• MAYOR DURACIÓN DE LA BATERÍA — El iPhone 16 se complementa a la perfección con el chip A18, y juntos logran un gran salto en la duración de la batería: hasta 22 horas de reproducción de video.¹ Acopla un cargador MagSafe para obtener una carga inalámbrica más rápida o carga a través del puerto USB-C.²\n• DISEÑADO PARA DURAR — El iPhone 16 tiene un resistente diseño de aluminio de grado aeroespacial con una pantalla Super Retina XDR de 6,1 pulgadas.³ Es increíblemente duradero gracias al Ceramic Shield de última generación, que es dos veces más resistente que cualquier vidrio de smartphone.\n• BOTÓN DE ACCIÓN — Un atajo a tus funcionalidades favoritas. Mantenlo presionado para encender la linterna, grabar una nota de voz, activar el modo Silencio y más.\n• PERSONALIZA TU IPHONE — Con iOS 18 puedes cambiar el color de los íconos de la pantalla de inicio a tu gusto. Encuentra tus tomas favoritas en un flash en la rediseñada app Fotos. Y agrega divertidos efectos animados a cualquier palabra, frase o emoji en iMessage.⁴\n• FUNCIONALIDADES ESENCIALES DE SEGURIDAD — Con Detección de Choques, el iPhone puede detectar si sufres un accidente automovilístico grave y pedir ayuda cuando tú no puedes.⁵\n\nAviso legal\n1 Las pantallas tienen las esquinas redondeadas. Si se mide en forma de rectángulo, la pantalla tiene 6.12 pulgadas (iPhone 16), 6.69 pulgadas (iPhone 16 Plus), 6.27 pulgadas (iPhone 16 Pro) o 6.86 pulgadas (iPhone 16 Pro Max) en diagonal. El área real de visualización es menor.\n2 La duración de la batería varía según el uso y la configuración. Para obtener más información, visita apple.com/la/batteries/.\n3 Los accesorios se venden por separado.\n4 Algunas funcionalidades podrían no estar disponibles en todos los países o áreas.\n5 El iPhone 16 y el iPhone 16 Pro pueden detectar si sufres un accidente de auto grave y pedir ayuda. Requiere conexión celular o llamadas por Wi-Fi.",
+        "colores": [
+          [
+            "#fff",
+            "Blanco"
+          ],
+          [
+            "#ff8eaa",
+            "Rosa"
+          ],
+          [
+            "#5ff3c2",
+            "Verde azulado"
+          ],
+          [
+            "#5496f8",
+            "Azul"
+          ],
+          [
+            "#000",
+            "Negro"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "nombre": "MacBook Air",
+    "categoria": "Laptop",
+    "marca": "Apple",
+    "fecha_publicacion": "2025-07-16T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "2020 M1",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_648428-MLA46516517286_062021-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_916376-MLU75179797734_032024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_883365-MLA46516504417_062021-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_961511-MLA46516517289_062021-F.webp"
+        ],
+        "descripcion": "La notebook más delgada y ligera de Apple viene con los superpoderes del chip M1. Termina todos tus proyectos mucho más rápido con el CPU de 8 núcleos y disfruta como nunca antes de apps y juegos con gráficos avanzados gracias al GPU de hasta 8 núcleos. Además, el Neural Engine de 16 núcleos se encarga de acelerar todos los procesos de aprendizaje automático. Todo en un diseño silencioso sin ventilador que te ofrece la mayor duración de batería en una MacBook Air: hasta 18 horas. (1) Portátil como siempre, más poderosa que nunca.\n\nAvisos Legales\nNo todos los recursos y configuraciones están disponibles en todos los países.\n1- La duración de la batería varía según el uso y la configuración.\n2- Comparado con la generación anterior.\n3- El tamaño de la pantalla se mide en diagonal.\n\nAviso legal\n• La duración de la batería depende del uso que se le dé al producto.",
+        "colores": [
+          [
+            "#dddddd",
+            "Plateado"
+          ],
+          [
+            "#f7c98e",
+            "Oro"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "nombre": "Playstation 5",
+    "categoria": "Videojuegos",
+    "marca": "Sony",
+    "fecha_publicacion": "2025-07-15T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Pro (2TB)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_964137-MLA84543634008_052025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_658471-MLA84543644290_052025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_831197-MLA84543751492_052025-F.webp"
+        ],
+        "descripcion": "• Contenido del paquete:\nConsola PlayStation 5.\n1 Controlador inalámbrico.\n2 Pies de apoyo horizontales.\nCable HDMI.\nCable de alimentación.\nCable USB-C.\nManual de usuario.\n\nLa consola PlayStation 5 Pro Edición Digital redefine la experiencia de juego en casa. Con un potente SSD de 2 TB, disfrutarás de tiempos de carga ultrarrápidos y un amplio espacio para tus juegos favoritos. Su diseño elegante y moderno se adapta perfectamente a cualquier configuración de entretenimiento, mientras que los dos pies de soporte horizontal garantizan estabilidad y estilo.\nEl control inalámbrico DualSense proporciona una inmersión sin precedentes gracias a su tecnología háptica y retroalimentación adaptativa. Con conectividad Bluetooth, USB y Wi-Fi, podrás disfrutar de una experiencia de juego fluida y conectada. La consola es compatible con una amplia gama de títulos y ofrece gráficos impresionantes que te sumergirán en mundos vibrantes y detallados.\nDiseñada para jugadores exigentes, la PlayStation 5 Pro es ideal para quienes buscan lo mejor en rendimiento y calidad. Su capacidad de batería de 2650 mAh asegura largas sesiones de juego sin interrupciones. Con esta consola, cada partida se convierte en una experiencia única y emocionante, perfecta para disfrutar solo o en compañía.\n\nAviso legal\n• La duración de la batería de los controles depende del uso que se le dé al producto.",
+        "colores": [
+          [
+            "#fff",
+            "Blanco"
+          ]
+        ]
+      },
+      {
+        "nombre_version": "Slim (1TB)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_632952-MLU75142678850_032024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_796836-MLU75288563219_032024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_877286-MLU75142698480_032024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_937038-MLU75288563107_032024-F.webp"
+        ],
+        "descripcion": "• Contenido del paquete:\nConsola PlayStation 5.\n1 Controlador inalámbrico.\n2 Pies de apoyo horizontales.\nCable HDMI.\nCable de alimentación.\nCable USB-C.\nManual de usuario.\n\nLa consola Sony PlayStation 5 Slim Digital de 1TB CFI-2015 en blanco ofrece un rendimiento excepcional en un diseño delgado y elegante. Con un procesador x86-64 basado en AMD Ryzen Zen 2 de 8 núcleos/16 hilos y una frecuencia máxima de hasta 3.5 GHz, garantiza una experiencia de juego fluida y rápida. Los gráficos de AMD Radeon RDNA 2 y la memoria RAM de 16GB GDDR6 ofrecen imágenes impresionantes y una jugabilidad inmersiva. Con una capacidad de almacenamiento de 1TB SSD y un ancho de banda de lectura de 5.5 GB/s, tienes espacio más que suficiente para tus juegos y aplicaciones favoritas. La interfaz incluye 2x USB-C, 1x USB-A y 1x HDMI para una conectividad versátil, mientras que la conectividad Wi-Fi y Bluetooth te permite jugar en línea y conectarte con otros dispositivos. Con audio Tempest 3D AudioTech y una resolución máxima de 8K 4320p, experimentarás un sonido envolvente y una calidad visual excepcional. Además, la frecuencia de actualización alta de 120 Hz (120 fps) asegura una experiencia de juego suave y sin problemas.\n\nAviso legal\n• La duración de la batería de los controles depende del uso que se le dé al producto.",
+        "colores": [
+          [
+            "#fff",
+            "Blanco"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "nombre": "Apple Watch Series",
+    "categoria": "Accesorio",
+    "marca": "Apple",
+    "fecha_publicacion": "2025-07-14T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "10 + Cell",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_912464-CBT82416431997_022025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_979356-CBT82416431995_022025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_603539-CBT82416431999_022025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_806475-CBT82416432005_022025-F.webp"
+        ],
+        "descripcion": "El Apple Watch Series 10 GPS + Cell 42mm es el compañero ideal para quienes buscan un estilo de vida activo y conectado. Con su elegante caja de aluminio y una pantalla de 42 mm, este smartwatch combina funcionalidad y diseño moderno, adaptándose a cualquier ocasión, ya sea en el gimnasio o en una reunión de trabajo.\n\nEquipado con tecnología GPS y conectividad celular, podrás recibir notificaciones, realizar llamadas y enviar mensajes sin necesidad de llevar tu teléfono contigo. Su resistencia al agua hasta 50 metros te permite disfrutar de actividades acuáticas sin preocupaciones, mientras que su conectividad Wi-Fi y Bluetooth asegura que estés siempre en contacto.\n\nLa correa Sport Band, diseñada para mayor comodidad y transpirabilidad, se ajusta perfectamente a tu muñeca, permitiéndote moverte con libertad. Además, con el sistema operativo watchOS, tendrás acceso a una amplia gama de aplicaciones y funciones que mejorarán tu experiencia diaria.\n\nYa sea que desees monitorear tu actividad física, controlar tu salud o simplemente mantenerte conectado, el Apple Watch Series 10 es la herramienta perfecta para lograr tus objetivos. No dejes pasar la oportunidad de llevar tu estilo de vida al siguiente nivel con este smartwatch de última generación.",
+        "colores": [
+          [
+            "#000",
+            "Negro"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "nombre": "iPad 11",
+    "categoria": "Tablet",
+    "marca": "Apple",
+    "fecha_publicacion": "2025-07-13T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Pro (256GB)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_682761-MLA79825166865_102024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_621677-MLA79825226091_102024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_603206-MLA79825186371_102024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_925423-MLA79825216209_102024-F.webp"
+        ],
+        "descripcion": "💻 iPad Pro – Para arquitectos, diseñadores y profesionales que trabajan remoto. Puede reemplazar tu notebook con un rendimiento increíble.\n\nEl nuevo iPad Pro es increíblemente delgado y viene con el descomunal rendimiento del chip M4 de Apple, una revolucionaria pantalla Ultra Retina XDR y conexiones Wi-Fi 6E1 y LTE ultrarrápidas.2 Combínalo con el Apple Pencil Pro y el Magic Keyboard para multiplicar tus posibilidades a la hora de trabajar y crear.\n\n• PANTALLA ULTRA RETINA XDR DE 11 PULGADAS—La pantalla Ultra Retina XDR ofrece un brillo y un contraste extremos, una increíble precisión de color y avanzadas funcionalidades como ProMotion, amplia gama de colores P3 y True Tone.3 Además, los modelos de 1 TB y 2 TB se pueden configurar con vidrio nano texturizado.\n• RENDIMIENTO Y ALMACENAMIENTO—El CPU de hasta 10 núcleos del chip M4 tiene un rendimiento fuera de serie y el GPU de 10 núcleos se encarga de que los gráficos vayan a toda velocidad. Y como la batería te aguanta el ritmo todo el día, podrás hacer todo lo que te imagines y más.4 Configúralo con hasta 2 TB de almacenamiento para guardar apps, videos 4K y otros archivos gigantes.5\n• IPADOS+APPS—iPad OS hace que el iPad sea más productivo, intuitivo y versátil. Te permite ejecutar varias apps a la vez, usar el Apple Pencil para escribir en cualquier campo de texto con la funcionalidad Escribir a Mano, y editar y compartir fotos. Puedes conectar un monitor externo y trabajar en varias tareas a la vez con el Organizador Visual, que te deja superponer apps y cambiar el tamaño de las ventanas. Las apps esenciales de Apple, como Safari, Mensajes y Keynote, ya vienen instaladas en el iPad Pro, y hay más de un millón de apps disponibles en el App Store.\n• APPLE PENCIL Y MAGIC KEYBOARD PARA EL IPAD PRO—El Apple Pencil Pro convierte el iPad Pro en un gran lienzo para dar rienda suelta a tu creatividad y en el mejor dispositivo del mundo para tomar notas. El iPad Pro también es compatible con el Apple Pencil (USB-C). El Magic Keyboard para el iPad Pro tiene un diseño delgado y ligero, y un trackpad de vidrio integrado con respuesta háptica. Te permite escribir cómodamente y a la vez protege el iPad. Los accesorios se venden por separado.\n• CÁMARAS AVANZADAS—El iPad Pro viene con una cámara frontal ultra gran angular de 12 M Pen horizontal con Encuadre Centrado para hacer videollamadas y para tomarte selfies increíbles con el modo Retrato. La cámara trasera gran angular de 12 MP con flash True Tone adaptativo es genial para tomar fotos y grabar videos ProRes 4K. Los cuatro micrófonos con calidad de estudio y el sistema de sonido de cuatro bocinas permiten disfrutar una altísima calidad de audio. Y las experiencias con realidad aumentada van un paso más allá gracias al escáner LiDAR, que es capaz de crear un mapa de profundidad de cualquier espacio.\n• CONEXIÓN—Con la rápida conexión Wi-Fi 6E puedes transferir fotos, documentos y archivos de video pesados a toda velocidad.1 Y si no hay Wi-Fi cerca, la conexión LTE te ofrece total flexibilidad para seguir en contacto dondequiera que estés.2 También puedes conectar monitores externos, discos duros y mucho más con el puerto USB-C compatible con Thunderbolt/USB 4.\n• DESBLOQUEA CON FACE ID—Con tan sólo una mirada, puedes desbloquear tu iPad Pro e iniciar sesión en apps y mucho más.",
+        "colores": [
+          [
+            "#000",
+            "Negro"
+          ]
+        ]
+      },
+      {
+        "nombre_version": "Air (256GB)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_701195-MLA85649136553_062025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_872675-MLA85648999945_062025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_959120-MLA83305695726_042025-F.webp",
+          ""
+        ],
+        "descripcion": "⚡ iPad Air – Más potencia para apps y programas exigentes. Ideal si necesitás algo intermedio entre estudio y trabajo.\n\nEste producto combina la potencia y la capacidad de una computadora con la versatilidad y facilidad de uso que solo un iPad puede brindar. Realizar varias tareas a la vez, como editar documentos mientras buscás información en internet o sacarte una selfie, es sumamente sencillo. Como si esto fuera poco, también ofrece la posibilidad de descargar desde la App Store cientos de aplicaciones creadas para pintar, dibujar, escuchar música y ¡mucho más!\n\nAviso legal\n• La duración de la batería depende del uso que se le dé al producto.",
+        "colores": [
+          [
+            "#dddddd",
+            "Plateado"
+          ]
+        ]
+      },
+      {
+        "nombre_version": "A16 (128GB)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_890391-MLA83780089508_042025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_931483-MLA84074110275_042025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_712828-MLA83780195514_042025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_810792-MLA84073953463_042025-F.webp"
+        ],
+        "descripcion": "✅ iPad 16 – Perfecta para estudiantes o uso familiar: tomar notas, ver Netflix, YouTube y redes.\n\nInspírate, exprésate, diviértete con el iPad. Su poderoso chip A16 te brindan rendimiento para agilizar todo lo que hagas. Disfruta de la potente pantalla Liquid Retina de 11” y exprésate sin límites. Toma notas, usa varias apps al mismo tiempo con total fluidez. Además, con accesorios diseñados para el iPad, tus posibilidades se multiplican. Consíguelo ahora!\n\nAviso legal\n• La duración de la batería depende del uso que se le dé al producto.",
+        "colores": [
+          [
+            "#dddddd",
+            "Plateado"
+          ],
+          [
+            "#5496f8",
+            "Azul"
+          ],
+          [
+            "#e9585f",
+            "Rosa"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "nombre": "Xiaomi Redmi Note 14",
+    "categoria": "Celular",
+    "marca": "Xiaomi",
+    "fecha_publicacion": "2025-07-12T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "5G",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_645357-MLA82768506028_032025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_887603-MLA82768525106_032025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_652118-MLA83056323333_032025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_731318-MLA83056294023_032025-F.webp"
+        ],
+        "descripcion": "📱 Pantalla AMOLED 120Hz que se ve increíble\n📷 Cámara de alto nivel para fotos que impactan\n🚀 Conectividad 5G para navegar, jugar o trabajar sin límites\n🔋 Batería de larga duración + carga rápida\n✨ Diseño premium y súper liviano\n\nEl poder de la inteligencia artificial captura la cámara de 108 MP de la edicióncon estabilización óptica para vídeos y fotos. Aprovecha las funciones de inteligencia artificial para ampliar tus fotos o eliminar objetos y personas no deseados.\n\nBatería de alta capacidad y batería de carga ultrarrápidade 5110 mAh y carga turbo de 45 W, puedes mantener tu smartphone encendido durante más tiempo y recargarlo rápidamente.\n\nRendimiento superior para realizar múltiples tareas y navegar con 5GEl potente procesador MediaTek Dimensity 7025-Ultra 5G garantiza una experiencia de usuario fluida y con gran capacidad de respuesta, ya sea jugando o navegando.\n\nDiseño elegante resistente a los arañazos y arañazos cotidianosLa protección Corning Gorilla Glass 5 hace que el Redmi Note 14 5G sea más resistente y pueda usarse durante mucho más tiempo.",
+        "colores": [
+          [
+            "#5ff3c2",
+            "Verde azulado"
+          ]
+        ]
+      },
+      {
+        "nombre_version": "Pro 5G",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_998758-MLA82742617859_022025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_648082-MLA81873454364_012025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_753933-MLA81873454384_012025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_833140-MLA81873519244_012025-F.webp"
+        ],
+        "descripcion": "📱 Pantalla ultra fluida + diseño premium\n⚡ 8GB de RAM + 256GB de memoria interna\n📸 Cámara de alto nivel\n📶 5G real, rápido y potente\n\nFotografía profesional en tu bolsillo\nDescubrí infinitas posibilidades para tus fotos con las 3 cámaras principales de tu equipo. Poné a prueba tu creatividad y jugá con la iluminación, diferentes planos y efectos para obtener grandes resultados.\n\nAdemás, el dispositivo cuenta con cámara frontal de 16 Mpx para que puedas sacarte divertidas selfies o hacer videollamadas.\n\nExperiencia visual increíble\nMirá tus series y películas favoritas con la mejor definición a través de su pantalla AMOLED de 6.67'. Disfrutá de colores brillantes y detalles precisos en todos tus contenidos.\n\nCapacidad y eficiencia\nCon su potente procesador y memoria RAM de 8 GB tu equipo alcanzará un alto rendimiento con gran velocidad de transmisión de contenidos y ejecutará múltiples aplicaciones a la vez sin demoras.\n\nDesbloqueo facial y dactilar\nMáxima seguridad para que solo vos puedas acceder al equipo. Podrás elegir entre el sensor de huella dactilar para habilitar el teléfono en un toque, o el reconocimiento facial que permite un desbloqueo hasta un 30% más rápido.\n\nBatería de duración superior\n¡Desenchufate! Con la súper batería de 5000 mAh tendrás energía por mucho más tiempo para jugar, ver series o trabajar sin necesidad de realizar recargas.",
+        "colores": [
+          [
+            "#72c9ba",
+            "Verde marino"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "nombre": "Oculus Meta Quest",
+    "categoria": "Videojuegos",
+    "marca": "Meta",
+    "fecha_publicacion": "2025-07-11T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "3 (512gb)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_885602-MLU78345007736_082024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_637171-MLU78575626961_082024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_804644-MLU76621532997_052024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_655588-MLA76084367095_042024-F.webp"
+        ],
+        "descripcion": "🎮 Con el Meta Quest 3 podés moverte, entrenar, pintar en 3D, explorar, crear y vivir experiencias que una pantalla común nunca te podría mostrar.\n\nExperimenta experiencias extraordinarias con un auricular de realidad mixta que transforma tu hogar en un emocionante patio de recreo, donde los elementos virtuales se mezclan con tu entorno real.\nEs la Quest más potente hasta ahora, con un rendimiento de siguiente nivel con más del doble de potencia de procesamiento gráfico de Quest 2.\nExperimenta más inmersión con imágenes deslumbrantes con la pantalla infinita 4K+ (un salto de casi 30% en resolución de Quest 2) y un rico audio 3D con claridad de sonido mejorada, rendimiento de graves y un rango de volumen 40% más alto que Quest 3.\nAlcanza y toca mundos virtuales con los controladores Touch Plus que te brindan precisión ajustada, sensaciones realistas e interacciones más intuitivas. Incluso puedes navegar sin controladores con Direct Touch que sigue tus gestos, por lo que puedes usar solo tus manos para encontrar tu camino.\nExplora la mejor biblioteca del mundo de más de 500 aplicaciones inmersivas y encuentra tu contenido favorito en juegos, fitness, bienestar, entretenimiento, experiencias sociales y más.\nAccede a todos los juegos y aplicaciones que ya tienes y amas en la biblioteca Meta Quest con compatibilidad con versiones anteriores, ahora con los gráficos más inmersivos a velocidades increíblemente rápidas.\nJuega lo que amas durante más tiempo con la máxima comodidad. Personaliza tu ajuste con personalización adicional y un perfil más delgado rediseñado en comparación con Quest 2.\nTodos en la familia son seguros para explorar con características de privacidad y herramientas de supervisión. Meta Quest es para mayores de 13 años.",
+        "colores": [
+          [
+            "#fff",
+            "Blanco"
+          ]
+        ]
+      },
+      {
+        "nombre_version": "3s (256gb)",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_987042-MLA80776130939_112024-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_864380-MLA80100039488_102024-F.webp",
+          "",
+          ""
+        ],
+        "descripcion": "🎯 ¿Querés algo más económico, pero igual de mágico?\nConocé el nuevo Meta Quest 3S, una versión más accesible, ideal para empezar a explorar el mundo VR.\n🔍 Ultra liviano, súper potente y a un precio mucho más accesible\n🎬 Mirá pelis, jugá, navegá en redes ¡y viví la experiencia completa en realidad virtual!\n\nEl diseño delgado y liviano incluye una interfaz facial integrada y correas ajustables para garantizar comodidad durante sesiones largas, sin importar tu estilo de cabello o forma de cabeza. Para quienes usan gafas, el visor incluye un separador de gafas preinstalado que se puede retirar si es necesario.\nEl Quest 3S es un visor completamente inalámbrico que ofrece libertad total de movimiento. Puedes descargar y ejecutar aplicaciones y juegos a través del sistema de menús integrado y tu red Wi-Fi doméstica. Todo lo que descargues e instales se almacena en el visor, que en este modelo cuenta con 256GB de almacenamiento.\n\nCaracterísticas adicionales:\nHasta 2.5 horas de duración de batería.\nLentes Fresnel con ajuste de distancia interaxial (IAD) de 3 posiciones.\nPrueba de 3 meses de Meta Quest+, un servicio de suscripción con un catálogo de juegos.\nDisfruta de dos títulos seleccionados cada mes durante la prueba de Meta Quest+.\nCampo de visión de 96 x 90.",
+        "colores": [
+          [
+            "#fff",
+            "Blanco"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "nombre": "Samsung Galaxy S25",
+    "categoria": "Celular",
+    "marca": "Samsung",
+    "fecha_publicacion": "2025-07-10T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Ultra",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_743730-MLA81917630206_012025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_943482-MLA81917630210_012025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_971678-MLA81917630220_012025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_999912-MLA81917630296_012025-F.webp"
+        ],
+        "descripcion": "📸 Cámara de 200MP\n⚡ Fluidez extrema y rendimiento sin límites\n💾 512GB reales de almacenamiento\n🖥️ Pantalla AMOLED 120Hz, colores que impactan\n✏️ Compatible con S-Pen\n\nCapacidad y eficiencia\nCon su potente procesador y memoria RAM de 12 GB tu equipo alcanzará un alto rendimiento con gran velocidad de transmisión de contenidos y ejecutará múltiples aplicaciones a la vez sin demoras.\n\nCapacidad de almacenamiento ilimitada\nOlvídate de borrar. Con su memoria interna de 512 GB podrás descargar todos los archivos y aplicaciones que necesites, guardar fotos y almacenar tus películas, series y videos favoritos para reproducirlos cuando quieras.",
+        "colores": [
+          [
+            "#fff",
+            "Blanco"
+          ],
+          [
+            "#000",
+            "Negro"
+          ],
+          [
+            "#dddddd",
+            "Plateado"
+          ]
+        ]
+      },
+      {
+        "nombre_version": "Plus",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_675793-MLA82187633779_012025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_835398-MLA81907219028_012025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_927600-MLA82187633799_012025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_919203-MLA81907219096_012025-F.webp"
+        ],
+        "descripcion": "📦 Caja sellada, producto original\n📸 Cámara de alto nivel, fluidez total\n⚡ Batería duradera\n💾 Memoria amplia y pantalla AMOLED 120Hz\n💥 Rendimiento real para el día a día (y más)\n\nCapacidad y eficiencia\nCon su potente procesador y memoria RAM de 12 GB tu equipo alcanzará un alto rendimiento con gran velocidad de transmisión de contenidos y ejecutará múltiples aplicaciones a la vez sin demoras.\n\nCapacidad de almacenamiento ilimitada\nOlvídate de borrar. Con su memoria interna de 256 GB podrás descargar todos los archivos y aplicaciones que necesites, guardar fotos y almacenar tus películas, series y videos favoritos para reproducirlos cuando quieras.",
+        "colores": [
+          [
+            "#fff",
+            "Blanco"
+          ],
+          [
+            "#35455c",
+            "Azul Marino"
+          ],
+          [
+            "#dddddd",
+            "Plateado"
+          ],
+          [
+            "#000",
+            "Negro"
+          ]
+        ]
+      }
+      
+    ]
+  },
+  {
+    "id": "9",
+    "nombre": "Nintendo Switch",
+    "categoria": "Videojuegos",
+    "marca": "Nintendo",
+    "fecha_publicacion": "2025-05-10T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "2",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_966867-MLA83975543167_042025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_740436-MLA83975503983_042025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_988274-MLA83682184596_042025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_868413-MLA83975503995_042025-F.webp"
+        ],
+        "descripcion": "🔥 Pantalla más grande y más nítida\n🎮 Modo portátil o TV, con gráficos 4K y 60FPS\n🧲 Nuevos Joy-Con magnéticos, más cómodos y precisos\n🚀 Procesador mejorado = más velocidad, más juegos, más diversión\n\nComienza tu siguiente aventura de juego con la consola Nintendo Switch 2, ¡está llena de mejoras y divertidas maneras de conectarte con otros para que jueguen todos juntos!\n\nDescubre Nintendo Switch 2\nTus juegos cobrarán vida en la deslumbrante pantalla 1080p de 7.9 pulgadas (20.06 cm) que resalta la potencia de procesamiento y el rendimiento gráfico de la consola. La base actualizada también respalda la reproducción de imágenes en resolución de hasta 4K y velocidad de fotogramas de hasta 120 fps en juegos y pantallas de televisión* compatibles.\nLos controles Joy-Con 2 reimaginados encajan en su lugar mediante conectores magnéticos, y cada control puede utilizarse como un mouse en juegos compatibles. Además, puedes seguir disfrutando tu colección actual de juegos de Nintendo Switch compatibles.\n\nCon GameChat, podrás permanecer en contacto con tus amigos y familiares\nUna vez que hayas configurado GameChat, oprime el botón C en el Joy-Con 2 derecho para iniciar la función. Es una manera sencilla de charlar con tus amigos, compartir tu pantalla de juego y conectarte por medio del chat de video con una cámara USB-C compatible (se vende por separado).\nNintendo Switch 2 también cuenta con un micrófono integrado que elimina el ruido a tu alrededor para una experiencia con mayor claridad de audio. Es como si todos estuvieran en el mismo lugar... sin importar realmente dónde estén.\n\nPeriodo de acceso libre a GameChat\nPara utilizar GameChat, se requerirá una suscripción a Nintendo Switch Online solo a partir del 31 de marzo de 2026. Después, se requerirá una suscripción a Nintendo Switch Online para utilizar GameChat.\n\nAdquiere accesorios para juegos exclusivos y más\nNintendo Switch 2 es el hogar exclusivo de juegos como Mario Kart World, Donkey Kong Bananza y más.\n\nPara disfrutar aún mejores experiencias y más contenido, puedes adquirir paquetes de mejora para juegos de Nintendo Switch ¡como The Legend of Zelda: Tears of the Kingdom, Super Mario Party Jamboree y Kirby and the Forgotten Land!\n\nCaracterísticas:\n•La siguiente evolución de la consola Nintendo Switch\n•Una consola, tres modos de juego: portátil, semiportátil y modo TV\n•Una vívida pantalla LCD táctil de mayor tamaño (7.9 pulgadas, 20.06 cm) compatible con HDR y hasta 120 fps\n•Una base que respalda la resolución 4K cuando esté conectada a una televisión* compatible\n•GameChat, una función que te permite usar el chat de voz, compartir tu pantalla de juego y comunicarte por chat de video mientras juegas\n•256 GB de almacenamiento interno (del cual una porción se reserva para los requerimientos del sistema) que se puede expandir mediante tarjetas de almacenamiento microSD Express (se venden por separado)\n•Nintendo Switch 2 reproduce juegos de Nintendo Switch en formato físico y digital\n•Controles Joy-Con 2 que se acoplan magnéticamente y ahora facilitan el control por mouse\n•Juego multijugador en la misma consola, juego local con usuarios cercanos y multijugador en línea\n\nIncluye:\n• Consola Nintendo Switch 2\n• Joy-Con 2 (L) azul claro\n• Joy-Con 2 (R) rojo claro\n• Adaptador de corriente de Nintendo Switch 2\n• Cable USB-C de carga\n• Base de Nintendo Switch 2\n• Armazón para controles Joy-Con 2\n• Dos (2) correas del control Joy-Con 2\n• Cable HDMI™ de ultra alta velocidad\n\nAviso legal\n• La duración de la batería depende del uso que se le dé al producto.",
+        "colores": [
+          [
+            "#000",
+            "Negro"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "nombre": "Samsung Galaxy S24",
+    "categoria": "Celular",
+    "marca": "Samsung",
+    "fecha_publicacion": "2025-06-11T18:40:00Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "FE",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_995710-MLA86800937934_072025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_798019-MLA86800454624_072025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_802591-MLA86800613132_072025-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_853152-MLA81052433185_112024-F.webp"
+        ],
+        "descripcion": "📱 Pantalla AMOLED brillante y fluida\n⚡ Procesador potente y 8GB de RAM\n💾 256GB de almacenamiento real\n📸 Cámaras versátiles + modo noche profesional\n🖤 Color Graphite, sobrio y moderno\n\nSamsung Galaxy S24 Fe 8/256 Gb 5G\n- Equipo libre para todas las compañías\n- Redes: GSM | HSPA | LTE | 5G\n- Pantalla: AMOLED dinámico 2X, 120 Hz, HDR10+, 1900 nits (pico) | Tamaño: 6,7 pulgadas, 110,2 cm2 ( ~88,0 % de relación pantalla-cuerpo)\n- Sistema operativo: Android 14, One UI 6.1\n- Procesador: Exynos 2400e (4 nm)\n- Memoria RAM: 8 GB\n- Memoria ROM: 256 GB\n- Cámara principal: 50 MP, f/1.8, 24 mm (gran angular), PDAF de doble píxel, OIS | 8 MP, f/2.4, 75 mm (telefoto), PDAF, OIS, zoom óptico 3x | 12 MP, f/2.2, 123° (ultra gran angular)\n- Cámara frontal: 10 MP, f/2,4, 26 mm (ancho)\n- Conectividad: Wi-Fi 802.11 a/b/g/n/ac/6 | Bluetooth 5.0\n- Sensores: Huella dactilar (debajo de la pantalla, óptica), acelerómetro, giroscopio, brújula\n- GPS: Sí, con A-GPS, GLONASS, GALILEO, BDS\n- USB: USB Type-C 3.2\n- Batería: Li-Ion 4700 mAh, 25 W con cable\n- Medidas: 16.2 x 7.73 x 0.8 cm | Peso: 213 gr",
+        "colores": [
+          [
+            "#000",
+            "Negro"
+          ]
+        ]
+      }
+    ]
+  }
+]
