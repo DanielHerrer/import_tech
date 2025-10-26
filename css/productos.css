@@ -50,10 +50,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s;
 }
 
 .btn-buscar:hover {
     cursor: pointer;
+    background-color: #cf55ff;
+    box-shadow: 0 0 10px rgba(239, 118, 255, 0.75);
+    color: #ffffff;
 }
 
 /* MENSAJE SIN PRODUCTOS */
