@@ -5,22 +5,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../img/it_logo2.png">
-    <title>Detalles · Import Tech</title>
+
+    <!-- SEO básico -->
+    <title>Detalles · Import Tech BA | Venta de Tecnología en Argentina</title>
+    <meta name="description" content="Detalles del producto en Import Tech BA — tu tienda de confianza en tecnología. Métodos de pago seguros, envíos a todo el país y atención personalizada.">
+    <meta name="keywords" content="Import Tech BA, tecnología, computación, accesorios, ventas online, envío nacional, CABA">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://www.importechba.com.ar/html/detalles.html">
+
+    <!-- Open Graph (mejora previews en redes) -->
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:type" content="product" />
+    <meta property="og:title" content="Detalles · Import Tech BA" />
+    <meta property="og:description" content="Detalles del producto en Import Tech BA — Tu tienda de confianza en tecnología." />
+    <meta property="og:url" content="https://www.importechba.com.ar/html/detalles.html" />
+    <meta property="og:site_name" content="Import Tech BA" />
+    <meta property="og:image" content="https://www.importechba.com.ar/img/og-image.png" />
+    <meta property="og:image:alt" content="Import Tech BA - Tecnología y accesorios" />
+    <meta property="og:image:width" content="726" />
+    <meta property="og:image:height" content="726" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Detalles · Import Tech BA">
+    <meta name="twitter:description" content="Detalles del producto en Import Tech BA — tu tienda de confianza en tecnología.">
+    <meta name="twitter:image" content="https://www.importechba.com.ar/img/og-image.png">
+
+    <!-- Performance / fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/detalles.css?v=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Structured data base (se completará con JS) -->
+    <script type="application/ld+json" id="product-jsonld">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Producto · Import Tech BA",
+      "image": [
+        "https://www.importechba.com.ar/img/og-image.png"
+      ],
+      "description": "Descripción breve del producto.",
+      "sku": "",
+      "mpn": "",
+      "brand": {
+        "@type": "Brand",
+        "name": "Import Tech BA"
+      }
+    }
+    </script>
+
+    <style>
+      /* Pequeño estilo inline solo para que breadcrumb no rompa el diseño. No cambia tu CSS. */
+      .breadcrumb { font-size: 0.95rem; margin-bottom: 0.6rem; }
+      .breadcrumb a { text-decoration: none; color: inherit; }
+    </style>
 </head>
 
 <body>
     <div class="body-filter">
-        <header class="navbar">
-            <a class="logo" href="../index.html">
-                <img class="logo-img" src="../img/it_logo.png" alt="Logo de Import Tech">
+        <header class="navbar" role="banner">
+            <a class="logo" href="../index.html" aria-label="Import Tech BA - Inicio">
+                <img class="logo-img" src="../img/it_logo.png" alt="Logo de Import Tech BA">
             </a>
-            <nav class="nav-links">
+            <nav class="nav-links" role="navigation" aria-label="Navegación principal">
                 <a class="" href="../index.html">Inicio</a>
                 <a class="" href="productos.html">Productos</a>
                 <a class="" href="contacto.html">Contacto</a>
@@ -28,227 +82,191 @@
         </header>
 
         <!-- Overlay + Modal -->
-        <div class="overlay" id="overlay">
-            <div class="modal">
-                <span class="close-btn" id="closeBtn">&times;</span>
-                <p class="title-modal"></p>
-                <img src="." alt="Noticia">
+        <div class="overlay" id="overlay" hidden>
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <button class="close-btn" id="closeBtn" aria-label="Cerrar">&times;</button>
+                <p id="modal-title" class="title-modal"></p>
+                <img src="." alt="Imagen del producto en modal">
             </div>
         </div>
 
         <!-- Botonera flotante -->
-        <div class="social-buttons">
-            <button id="scrollTopBtn" class="btn top">
+        <div class="social-buttons" aria-hidden="false">
+            <button id="scrollTopBtn" class="btn top" title="Ir arriba" aria-label="Ir arriba">
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
             <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer"
-                class="btn instagram">
+                class="btn instagram" aria-label="Instagram de Import Tech BA">
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
             </a>
-            <a href="https://wa.me/5491165835895" target="_blank" rel="noopener noreferrer" class="btn whatsapp">
+            <a href="https://wa.me/5491165835895" target="_blank" rel="noopener noreferrer" class="btn whatsapp"
+                aria-label="Contactar por WhatsApp">
                 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
             </a>
         </div>
 
-        <section class="detalles">
-            <div id="producto" class="producto">
-                <div class="titulo">
-                    <h1 class="title-producto"></h1>
-                    <h2 class="subtitle-producto"></h2>
-                </div>
-                <div class="imgs">
-                    <div class="img-1">
-                        <div class="lupa">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+        <!-- Breadcrumb (mejora SEO y experiencia)
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb-list">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-item">
+                    <a itemprop="item" href="https://www.importechba.com.ar/"><span itemprop="name">Inicio</span></a>
+                    <meta itemprop="position" content="1" />
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-item">
+                    <a itemprop="item" href="https://www.importechba.com.ar/html/productos.html"><span itemprop="name">Productos</span></a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                <li aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumb-item">
+                    <span itemprop="name">Detalle</span>
+                    <meta itemprop="position" content="3" />
+                </li>
+            </ol>
+        </nav> -->
+
+        <!-- MAIN: donde va el contenido principal (importante para accesibilidad/SEO) -->
+        <main id="main-content" role="main">
+            <section class="detalles" aria-labelledby="producto-title">
+                <!-- Artículo producto -->
+                <article id="producto" class="producto" itemscope itemtype="https://schema.org/Product" aria-labelledby="producto-title">
+                    <meta itemprop="brand" content="Import Tech BA" />
+                    <div class="titulo">
+                        <h1 id="producto-title" class="title-producto" itemprop="name">Cargando título...</h1>
+                        <h2 class="subtitle-producto" itemprop="alternateName">Cargando subtítulo...</h2>
+                    </div>
+
+                    <div class="imgs" itemprop="image" aria-hidden="false">
+                        <div class="img-1">
+                            <div class="lupa" aria-hidden="true">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <img id="img-main" src="" alt="Imagen principal del producto" />
                         </div>
-                        <img src="" alt="">
-                    </div>
-                    <div class="img-2 sub-img">
-                        <img src="" alt="">
-                    </div>
-                </div>
-                <div class="colores">
-                    <h5 class="title-colores">Colores disponibles:</h5>
-                    <div class="div-colores">
-                        <div class="color c-1" title=""></div>
-                    </div>
-                </div>
-                <div class="versiones">
-                    <h5 class="title-versiones">Versiones:</h5>
-                    <div class="div-versiones">
-                    </div>
-                </div>
-                <div class="descripcion">
-                    <p class="description-producto"></p>
-                    <span class="toggle-descripcion">Ver descripción completa</span>
-                </div>
-            </div>
-
-            <div class="pagos">
-
-                <div class="tags">
-                </div>
-
-                <h3 class="title-pagos">Métodos de pago</h3>
-                <div class="pagos-1">
-
-                    <div class="pagos-item">
-                        <div class="item-icon">
-                            <i class="fa-solid fa-building-columns"></i>
+                        <div class="img-2 sub-img">
+                            <img id="img-sub" src="" alt="Imagen secundaria del producto" />
                         </div>
-                        <p class="item-text"><b>Transferencia Bancaria</b></p>
                     </div>
 
-                    <div class="pagos-item">
-                        <div class="item-icon">
-                            <i class="fa-brands fa-bitcoin"></i>
+                    <div class="colores">
+                        <h5 class="title-colores">Colores disponibles:</h5>
+                        <div class="div-colores" id="colores-list">
+                            <div class="color c-1" title="" role="listitem" aria-label="Color disponible"></div>
                         </div>
-                        <p class="item-text"><b>Cryptocurrency (USDT)</b></p>
                     </div>
 
-                    <div class="pagos-item">
-                        <div class="item-icon">
-                            <i class="fa-solid fa-money-bills"></i>
+                    <div class="versiones">
+                        <h5 class="title-versiones">Versiones:</h5>
+                        <div class="div-versiones" id="versiones-list" role="list" aria-label="Versiones disponibles">
+                            <!-- versiones inyectadas por JS -->
                         </div>
-                        <p class="item-text"><b>Efectivo Pesos / Dolares</b></p>
                     </div>
+
+                    <div class="descripcion">
+                        <p class="description-producto" itemprop="description">Cargando descripción...</p>
+                        <button class="toggle-descripcion" aria-expanded="false">Ver descripción completa</button>
+                    </div>
+                </article>
+
+                <!-- Aside / compra (ofertas) - semántica con aside -->
+                <aside class="pagos" role="complementary" aria-labelledby="metodos-pago-title">
+                    <div class="tags" id="tags-area" aria-hidden="true"></div>
+
+                    <h3 id="metodos-pago-title" class="title-pagos">Métodos de pago</h3>
+                    <div class="pagos-1">
+                        <!-- lista de metodos de pago -->
+                        <div class="pagos-item" role="listitem">
+                            <div class="item-icon"><i class="fa-solid fa-building-columns"></i></div>
+                            <p class="item-text"><b>Transferencia Bancaria</b></p>
+                        </div>
+
+                        <div class="pagos-item" role="listitem">
+                            <div class="item-icon"><i class="fa-brands fa-bitcoin"></i></div>
+                            <p class="item-text"><b>Cryptocurrency (USDT)</b></p>
+                        </div>
+
+                        <div class="pagos-item" role="listitem">
+                            <div class="item-icon"><i class="fa-solid fa-money-bills"></i></div>
+                            <p class="item-text"><b>Efectivo Pesos / Dólares</b></p>
+                        </div>
+                    </div>
+
+                    <div class="pagos-2" aria-hidden="false">
+                        <div class="pagos-item"><img class="item-img" src="../img/logos/payoneer_logo.png" alt="Logo Payoneer"></div>
+                        <div class="pagos-item"><img class="item-img" src="../img/logos/PayPal_logo.png" alt="Logo PayPal"></div>
+                        <div class="pagos-item"><img class="item-img" src="../img/logos/skrill_logo.png" alt="Logo Skrill"></div>
+                        <div class="pagos-item"><img class="item-img" src="../img/logos/zelle_logo.png" alt="Logo Zelle"></div>
+                        <div class="pagos-item"><img class="item-img" src="../img/logos/wise_logo.png" alt="Logo Wise"></div>
+                    </div>
+
+                    <h3 class="title-entrega">Entrega del producto</h3>
+                    <div class="pagos-1">
+                        <div class="pagos-item">
+                            <div class="item-icon"><i class="card-icon fa-solid fa-truck-fast"></i></div>
+                            <p class="item-text">Envíos a todo el país: <b>Correo Argentino / Andreani</b>.</p>
+                        </div>
+                        <div class="pagos-item">
+                            <div class="item-icon"><i class="card-icon fa-solid fa-motorcycle"></i></div>
+                            <p class="item-text">Delivery privado en área local: <b>CABA / GBA</b>.</p>
+                        </div>
+                        <div class="pagos-item">
+                            <div class="item-icon"><i class="card-icon fa-solid fa-shop"></i></div>
+                            <p class="item-text">Oficinas ubicadas en <b>CABA</b> para retiros.</p>
+                        </div>
+                    </div>
+
+                    <div class="comprar">
+                        <button id="btn-comprar" aria-label="Comprar por WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar
+                        </button>
+                        <p class="info-comprar">*Todas las compras realizadas en la web, redirigen a una orden del pedido.</p>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="productos" aria-labelledby="relacionados-title">
+                <h2 id="relacionados-title">Productos Relacionados</h2>
+                <div class="productos-grid" id="contenedor-productos" role="list" aria-live="polite" aria-label="Productos relacionados">
+                    <!-- LISTA DE PRODUCTOS RELACIONADOS -->
                 </div>
-                <div class="pagos-2">
-                    <div class="pagos-item">
-                        <img class="item-img" src="../img/logos/payoneer_logo.png" alt="Logo Payoneer">
-                    </div>
+            </section>
+        </main>
 
-                    <div class="pagos-item">
-                        <img class="item-img" src="../img/logos/PayPal_logo.png" alt="Logo PayPal">
-                    </div>
-
-                    <div class="pagos-item">
-                        <img class="item-img" src="../img/logos/skrill_logo.png" alt="Logo Skrill">
-                    </div>
-
-                    <div class="pagos-item">
-                        <img class="item-img" src="../img/logos/zelle_logo.png" alt="Logo Zelle">
-                    </div>
-
-                    <div class="pagos-item">
-                        <img class="item-img" src="../img/logos/wise_logo.png" alt="Logo Wise">
-                    </div>
-                </div>
-
-                <h3 class="title-entrega">Entrega del producto</h3>
-                <div class="pagos-1">
-                    <div class="pagos-item">
-                        <div class="item-icon">
-                            <i class="card-icon fa-solid fa-truck-fast"></i>
-                        </div>
-                        <p class="item-text">Envíos a todo el país: <b>Correo Argentino / Andreani</b>.</p>
-                    </div>
-                    <div class="pagos-item">
-                        <div class="item-icon">
-                            <i class="card-icon fa-solid fa-motorcycle"></i>
-                        </div>
-                        <p class="item-text">Delivery privado en área local: <b>CABA / GBA</b>.</p>
-                    </div>
-                    <div class="pagos-item">
-                        <div class="item-icon">
-                            <i class="card-icon fa-solid fa-shop"></i>
-                        </div>
-                        <p class="item-text">Oficinas ubicadas en <b>CABA</b> para retiros.</p>
-                    </div>
-                </div>
-
-
-
-                <div class="comprar">
-                    <button id="btn-comprar">
-                        <i class="fa-brands fa-whatsapp"></i> Comprar
-                    </button>
-                    <p class="info-comprar">*Todas las compras realizadas en la web, redirigen a una orden del pedido.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="productos">
-            <h2>Productos Relacionados</h2>
-
-            <div class="productos-grid">
-
-            </div>
-        </section>
-
-        <footer class="footer">
+        <footer class="footer" role="contentinfo">
             <div class="footer-row row-1">
                 <div class="footer-col col-1">
                     <div class="footer-redes">
-                        <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <!--<a href="" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </a>-->
                     </div>
                     <h4>Import Tech · BA</h4>
                     <p>Tu tienda de confianza en tecnología.</p>
                 </div>
+
                 <div class="footer-col col-2">
                     <h4>Medios de pago</h4>
                     <div class="footer-items">
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/payoneer_logo.png" alt="Logo Payoneer">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/PayPal_logo.png" alt="Logo PayPal">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/skrill_logo.png" alt="Logo Skrill">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/zelle_logo.png" alt="Logo Zelle">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/wise_logo.png" alt="Logo Wise">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/transfBancaria_logo.png" alt="Logo Transferencia Bancaria">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/usdt_logo.png" alt="Logo USDT">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/usd_logo.png" alt="Logo USD">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/ars_logo.png" alt="Logo ARS">
-                        </div>
-                        
+                        <div class="item"><img class="item-img" src="../img/logos/payoneer_logo.png" alt="Logo Payoneer"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/PayPal_logo.png" alt="Logo PayPal"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/skrill_logo.png" alt="Logo Skrill"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/zelle_logo.png" alt="Logo Zelle"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/wise_logo.png" alt="Logo Wise"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/transfBancaria_logo.png" alt="Logo Transferencia Bancaria"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/usdt_logo.png" alt="Logo USDT"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/usd_logo.png" alt="Logo USD"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/ars_logo.png" alt="Logo ARS"></div>
                     </div>
                 </div>
+
                 <div class="footer-col col-3">
                     <h4>Medios de envío</h4>
                     <div class="footer-items">
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/correoArgentino_logo.png" alt="Logo Correo Argentino">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/andreani_logo.png" alt="Logo Andreani">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/delivery_logo.png" alt="Logo Delivery">
-                        </div>
+                        <div class="item"><img class="item-img" src="../img/logos/correoArgentino_logo.png" alt="Logo Correo Argentino"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/andreani_logo.png" alt="Logo Andreani"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/delivery_logo.png" alt="Logo Delivery"></div>
                     </div>
                 </div>
             </div>
+
             <div class="footer-row row-2">
                 <div class="footer-col info">
                     <p class="atencion">Defensa de las y los consumidores. Para reclamos <a href=""
@@ -260,6 +278,18 @@
             </div>
         </footer>
     </div>
+
+    <!-- Noscript: contenido mínimo para crawlers que no ejecuten JS -->
+    <noscript>
+      <style>
+        /* evitar colapsos visuales cuando JS está desactivado */
+        .productos-grid::after { content: " "; display:block; padding:8px; color:#666; }
+      </style>
+      <div style="padding:12px; background:#fff8db; border-left:4px solid #f0c040;">
+        <strong>Atención:</strong> Para ver detalles completos activa JavaScript. Import Tech BA optimiza la vista con
+        contenido dinámico.
+      </div>
+    </noscript>
 
     <script src="../js/detalles.js?v=2"></script>
     <script src="../js/global.js"></script>

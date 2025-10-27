@@ -71,11 +71,13 @@
 }
 
 /* PRODUCTOS _______________________________________________ */
+.container {
+    background-color: #fff;
+    margin: 0 0 10em 0;
+    padding: 40px 40px 60px 40px;
+}
 
 .productos {
-    padding: 40px 40px 60px 40px;
-    background-color: #fff;
-    margin: 0 0 13em 0;
 }
 
 .productos-grid {

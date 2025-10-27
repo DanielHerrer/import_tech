@@ -1,58 +1,99 @@
+
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./img/it_logo2.png">
-    <link rel="icon" type="image/png" href="../img/it_logo2.png">
-    <title>Productos · Import Tech</title>
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/productos.css?v=3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../img/it_logo2.png"> <!-- TÍTULO Y DESCRIPCIÓN (importante para SEO) -->
+    
+    <title>Productos · Import Tech BA | Venta de Tecnología en Argentina</title>
+    
+    <meta name="description"
+        content="Import Tech BA — Tienda de tecnología en Argentina. Encuentra celulares, tablets, laptops y accesorios. Envíos a todo el país y atención por WhatsApp." />
+    <meta name="keywords"
+        content="Import Tech BA, tecnología Argentina, celulares, tablets, laptops, accesorios tecnológicos" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Import Tech BA" />
+    <meta http-equiv="content-language" content="es-AR" /> <!-- CANONICAL -->
+    <link rel="canonical" href="https://www.importechba.com.ar/html/productos.html" />
+    <!-- Hreflang para Argentina / Español -->
+    <link rel="alternate" href="https://www.importechba.com.ar/html/productos.html" hreflang="es-AR" />
+    <!-- PRECONNECT / FONT (mejora rendimiento) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Open Graph (Facebook/WhatsApp/Telegram previews) -->
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Productos · Import Tech BA — Tecnología y Accesorios" />
+    <meta property="og:description"
+        content="Import Tech BA — Encuentra celulares, tablets, laptops y accesorios. Envíos a todo el país. Atención por WhatsApp." />
+    <meta property="og:url" content="https://www.importechba.com.ar/html/productos.html" />
+    <meta property="og:site_name" content="Import Tech BA" />
+    <meta property="og:image" content="https://www.importechba.com.ar/img/og-image.png" />
+    <meta property="og:image:alt" content="Import Tech BA — Productos tecnológicos" />
+    <meta property="og:image:width" content="726" />
+    <meta property="og:image:height" content="726" />
+    <meta property="og:image:type" content="image/png" /> <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Productos · Import Tech BA" />
+    <meta name="twitter:description"
+        content="Import Tech BA — Encuentra celulares, tablets, laptops y accesorios. Envíos a todo el país." />
+    <meta name="twitter:image" content="https://www.importechba.com.ar/img/og-image.png" />
+    <!-- Estilos y librerías externas (no alteradas) -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/productos.css?v=5" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- JSON-LD (Organization + Website + SearchAction + Breadcrumbs): ayuda a Google a entender tu sitio -->
+    <script
+        type="application/ld+json"> { "@context": "https://schema.org", "@graph": [ { "@type": "Organization", "@id": "https://www.importechba.com.ar/#organization", "name": "Import Tech BA", "url": "https://www.importechba.com.ar/", "logo": "https://www.importechba.com.ar/img/og-image.png", "sameAs": [ "https://www.instagram.com/importech.ba", "https://wa.me/5491165835895" ] }, { "@type": "WebSite", "@id": "https://www.importechba.com.ar/#website", "url": "https://www.importechba.com.ar/", "name": "Import Tech BA", "potentialAction": { "@type": "SearchAction", "target": "https://www.importechba.com.ar/html/productos.html?busqueda={search_term_string}", "query-input": "required name=search_term_string" } }, { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.importechba.com.ar/index.html" }, { "@type": "ListItem", "position": 2, "name": "Productos", "item": "https://www.importechba.com.ar/html/productos.html" } ] } ] } </script>
 </head>
 
 <body>
-    <div class="body-filter">
-        <header class="navbar">
-            <a class="logo" href="../index.html">
-                <img class="logo-img" src="../img/it_logo.png" alt="Logo de Import Tech">
-            </a>
-            <nav class="nav-links">
-                <a class="" href="../index.html">Inicio</a>
-                <a class="activo" href="productos.html">Productos</a>
-                <a class="" href="contacto.html">Contacto</a>
+    <div class="body-filter"> <!-- HEADER: accesible y semántico -->
+        <header class="navbar" role="banner"> <a class="logo" href="../index.html"
+                aria-label="Ir al inicio - Import Tech BA"> <img class="logo-img" src="../img/it_logo.png"
+                    alt="Logo Import Tech BA"> </a>
+            <nav class="nav-links" role="navigation" aria-label="Menú principal">
+                <a href="../index.html">Inicio</a>
+                <a class="activo" href="productos.html" aria-current="page">Productos</a>
+                <a href="contacto.html">Contacto</a>
             </nav>
         </header>
 
-        <!-- Overlay + Modal -->
-        <div class="overlay" id="overlay">
-            <div class="modal">
-                <span class="close-btn" id="closeBtn">&times;</span>
+        <!-- Overlay + Modal (sin cambios funcionales, accesible) -->
+        <div class="overlay" id="overlay" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-label="Visor de producto">
+                <button class="close-btn" id="closeBtn" aria-label="Cerrar">&times;</button>
                 <p class="title-modal"></p>
-                <img src="." alt="Noticia">
+                <img src="." alt="">
             </div>
         </div>
 
         <!-- Botonera flotante -->
-        <div class="social-buttons">
-            <button id="scrollTopBtn" class="btn top">
-                <i class="fa-solid fa-arrow-up"></i>
+        <div class="social-buttons" aria-hidden="false">
+            <button id="scrollTopBtn" class="btn top" aria-label="Ir arriba">
+                <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
             </button>
-            <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer" class="btn instagram">
+            <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer"
+                class="btn instagram" aria-label="Instagram">
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
             </a>
-            <a href="https://wa.me/5491165835895" target="_blank" rel="noopener noreferrer" class="btn whatsapp">
+            <a href="https://wa.me/5491165835895" target="_blank" rel="noopener noreferrer" class="btn whatsapp"
+                aria-label="WhatsApp">
                 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
             </a>
         </div>
 
-        <form class="busqueda" action="" method="GET">
+        <!-- BÚSQUEDA: usa GET para que las consultas sean indexables y compartibles -->
+        <form class="busqueda" action="" method="GET" role="search" aria-label="Buscar productos">
             <div class="div-busqueda">
-                <select name="categoria" id="categoria">
+                <label for="categoria" class="sr-only">Categoría</label>
+                <select name="categoria" id="categoria" aria-label="Seleccionar categoría">
                     <option value="">Todas las categorías</option>
                     <option value="Celular">Celulares</option>
                     <option value="Tablet">Tablets</option>
@@ -61,122 +102,120 @@
                     <option value="Videojuegos">Videojuegos</option>
                 </select>
 
-                <select name="orden" id="orden">
+                <label for="orden" class="sr-only">Ordenar por</label>
+                <select name="orden" id="orden" aria-label="Ordenar resultados">
                     <option value="">Ordenar por</option>
-                    <!-- <option value="precio_asc">Precio: menor a mayor</option> -->
-                    <!-- <option value="precio_desc">Precio: mayor a menor</option> -->
                     <option value="fecha_asc">Más antiguos</option>
                     <option value="fecha_desc">Más nuevos</option>
                 </select>
 
-                <input type="text" name="busqueda" id="texto" placeholder="Buscar producto...">
+                <label for="texto" class="sr-only">Texto de búsqueda</label>
+                <input type="text" name="busqueda" id="texto" placeholder="Buscar producto..."
+                    aria-label="Buscar producto">
             </div>
 
-            <button id="btnBuscar" class="btn-buscar" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <button id="btnBuscar" class="btn-buscar" type="submit" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             </button>
         </form>
 
-        <section class="productos">
-            <div class="productos-grid" id="contenedor-productos">
-                <!-- ACA SE AÑADEN LOS PRODUCTOS -->
-                <!-- Ejemplo: -->
-                <!-- <div class="producto-card">
-                    <img class="img-card"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvVSXYZ-FEUx0iv1E8_xwkh6F4lPJkOIwfTw&s"></img>
-                    <h3 class="title-card">Samsung Galaxy A16</h3>
-                    <button class="btn-card">Ver más</button>
-                </div> -->
-            </div>
-        </section>
+        <!-- MAIN: contenedor semántico principal -->
+        <main id="main" role="main" aria-labelledby="productos-heading">
+            <div class="container">
+                <!--  <h1 id="productos-heading">Productos - Import Tech BA</h1>
 
-        <script src="../js/productos.js"></script>
-        <footer class="footer">
+                Breadcrumb visible para usuarios y buscadores (puedes ocultarlo con CSS si ya tienes otro breadcrumb)
+                <nav aria-label="Breadcrumb" class="breadcrumb">
+                    <ul style="display: flex; gap: 2em; margin-left: 2em;">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li aria-current="page">Productos</li>
+                    </ul>
+                </nav> -->
+
+                <!-- SECTION de productos -->
+                <section class="productos" aria-label="Listado de productos">
+                    <!-- Contenedor con role=list para accesibilidad; los items que inyectes por JS deberían ser role=listitem -->
+                    <div class="productos-grid" id="contenedor-productos" role="list" aria-live="polite">
+                        <!-- ACA SE AÑADEN LOS PRODUCTOS dinámicamente desde productos.js -->
+                    </div>
+
+                    <!-- Mensaje que se muestra cuando no hay resultados; manejalo desde JS
+                    <div id="sin-resultados" class="sin-resultados" aria-hidden="true" style="display:none;">
+                        <p>No se encontraron productos que coincidan con tu búsqueda.</p>
+                    </div> -->
+                </section>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer" role="contentinfo">
             <div class="footer-row row-1">
                 <div class="footer-col col-1">
                     <div class="footer-redes">
-                        <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer"
+                            aria-label="Import Tech BA en Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                         </a>
-                        <!--<a href="" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </a>-->
                     </div>
                     <h4>Import Tech · BA</h4>
                     <p>Tu tienda de confianza en tecnología.</p>
                 </div>
+
                 <div class="footer-col col-2">
                     <h4>Medios de pago</h4>
                     <div class="footer-items">
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/payoneer_logo.png" alt="Logo Payoneer">
+                        <div class="item"><img class="item-img" src="../img/logos/payoneer_logo.png" alt="Payoneer">
                         </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/PayPal_logo.png" alt="Logo PayPal">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/skrill_logo.png" alt="Logo Skrill">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/zelle_logo.png" alt="Logo Zelle">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/wise_logo.png" alt="Logo Wise">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/transfBancaria_logo.png" alt="Logo Transferencia Bancaria">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/usdt_logo.png" alt="Logo USDT">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/usd_logo.png" alt="Logo USD">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/ars_logo.png" alt="Logo ARS">
-                        </div>
-                        
+                        <div class="item"><img class="item-img" src="../img/logos/PayPal_logo.png" alt="PayPal"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/skrill_logo.png" alt="Skrill"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/zelle_logo.png" alt="Zelle"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/wise_logo.png" alt="Wise"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/transfBancaria_logo.png"
+                                alt="Transferencia bancaria"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/usdt_logo.png" alt="USDT"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/usd_logo.png" alt="USD"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/ars_logo.png" alt="ARS"></div>
                     </div>
                 </div>
+
                 <div class="footer-col col-3">
                     <h4>Medios de envío</h4>
                     <div class="footer-items">
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/correoArgentino_logo.png" alt="Logo Correo Argentino">
+                        <div class="item"><img class="item-img" src="../img/logos/correoArgentino_logo.png"
+                                alt="Correo Argentino"></div>
+                        <div class="item"><img class="item-img" src="../img/logos/andreani_logo.png" alt="Andreani">
                         </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/andreani_logo.png" alt="Logo Andreani">
-                        </div>
-
-                        <div class="item">
-                            <img class="item-img" src="../img/logos/delivery_logo.png" alt="Logo Delivery">
+                        <div class="item"><img class="item-img" src="../img/logos/delivery_logo.png" alt="Delivery">
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="footer-row row-2">
                 <div class="footer-col info">
                     <p class="atencion">Defensa de las y los consumidores. Para reclamos <a href=""
                             class="link-atencion" target="_blank" rel="noopener noreferrer">ingresá acá</a>.</p>
-                    <p class="copyright">Copyright Import Tech · 2025. Todos los derechos reservados.</p>
+                    <p class="copyright">Copyright Import Tech BA · 2025. Todos los derechos reservados.</p>
                     <p>Creado por <a href="https://danielherrer.github.io/me" class="link-creador" target="_blank"
                             rel="noopener noreferrer">Daniel Herrera</a>.</p>
                 </div>
             </div>
         </footer>
-    </div>
 
-    <script src="../js/global.js"></script>
-    <script src="../js/productos.js?v=4"></script>
+        <!-- Noscript: mensaje útil para rastreadores y usuarios sin JS -->
+        <noscript>
+            <div class="noscript-warning">
+                <p>Algunos contenidos (productos) requieren JavaScript. Si no ves resultados, activa JavaScript o
+                    contactanos por WhatsApp.</p>
+                <p><a href="https://wa.me/5491165835895" target="_blank" rel="noopener noreferrer">Contactar por
+                        WhatsApp</a></p>
+            </div>
+        </noscript>
+
+        <!-- SCRIPTS -->
+        <script src="../js/productos.js?v=4" defer></script>
+        <script src="../js/global.js" defer></script>
+    </div>
 </body>
 
 </html>

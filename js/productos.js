@@ -28,30 +28,44 @@ function mostrarProductos(productos) {
     productos.forEach(prod => {
         const div = document.createElement("div");
         div.className = "producto-card";
+        div.setAttribute("role", "listitem");
+        div.setAttribute("itemscope", "");
+        div.setAttribute("itemtype", "https://schema.org/Product");
 
         div.innerHTML = `
-            <img class="img-card" src="${prod.versiones[0].imagenes[0]}" alt="${prod.nombre}">
-            <h3 class="title-card">${prod.nombre}</h3>
-            <a href="detalles.html?id=${prod.id}" class="btn-card">Ver más</a>
-        `;
+        <img class="img-card" src="${prod.versiones[0].imagenes[0]}" alt="${prod.nombre}" itemprop="image">
+        <h3 class="title-card" itemprop="name">${prod.nombre}</h3>
+        <a href="detalles.html?id=${prod.id}" class="btn-card" itemprop="url">Ver más</a>
+    `;
 
-        // Agregar badge si hay varias versiones
+        // Si el producto tiene precio:
+        // if (prod.precio) {
+        //     const price = document.createElement("span");
+        //     price.setAttribute("itemprop", "offers");
+        //     price.setAttribute("itemscope", "");
+        //     price.setAttribute("itemtype", "https://schema.org/Offer");
+        //     price.innerHTML = `
+        //         <meta itemprop="priceCurrency" content="ARS">
+        //         <span itemprop="price">${prod.precio}</span>
+        //     `;
+        //     div.appendChild(price);
+        // }
+
         if (prod.versiones.length > 1) {
             const badge = document.createElement("div");
             badge.classList.add('producto-versiones');
             badge.textContent = "Varias versiones";
-
-            // div.style.position = "relative"; // para que el badge quede dentro del div
             div.appendChild(badge);
         }
 
-        // Hacer clickeable todo el div
         div.addEventListener("click", () => {
             window.location.href = `detalles.html?id=${prod.id}`;
         });
 
         contenedor.appendChild(div);
     });
+
+
 }
 
 function filtrarProductos(productos, { categoria, busqueda }) {

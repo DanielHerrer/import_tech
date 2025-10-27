@@ -20,6 +20,10 @@
     font-size: 1.1rem;
 }
 
+address {
+    margin: 1.5em 0;
+}
+
 .info-redes {
     width: 100%;
     display: flex;

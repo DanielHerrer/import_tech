@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             // 1. Datos generales del producto
             document.querySelector(".title-producto").textContent = producto.nombre + " " + version.nombre_version;
             document.querySelector(".subtitle-producto").textContent = `${producto.marca} · ${producto.categoria}`;
-            document.title = `${producto.nombre + " " + version.nombre_version} · Import Tech`;
+            document.title = `${producto.nombre + " " + version.nombre_version} · Import Tech BA | Venta de Tecnología en Argentina`;
             window.tituloProducto = document.title;
 
             // --- Imagen principal
@@ -146,6 +146,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             version.colores.forEach(([hex, nombre]) => {
                 const colorDiv = document.createElement("div");
                 colorDiv.classList.add("color");
+                colorDiv.setAttribute("role", "listitem");
+                colorDiv.ariaLabel = "Color disponible";
                 colorDiv.style.background = hex;
                 colorDiv.title = nombre;
                 coloresDiv.appendChild(colorDiv);
@@ -179,6 +181,41 @@ document.addEventListener("DOMContentLoaded", async () => {
                 tags.appendChild(tagColores);
             }
 
+            // --------------------- completar JSON-LD
+            // 1) completar JSON-LD
+            function updateProductJsonLd(product) {
+                try {
+                    const node = document.getElementById('product-jsonld');
+                    if (!node) return;
+                    const base = JSON.parse(node.textContent);
+                    if (product.nombre && version.nombre_version) base.name = product.nombre+" "+version.nombre_version;
+                    if (version.descripcion) base.description = version.descripcion;
+                    if (version.imagenes && version.imagenes.length) base.image = version.imagenes;
+
+                    // Reemplazamos el script en el DOM para que los bots cojan la versión actualizada
+                    node.textContent = JSON.stringify(base, null, 2);
+                } catch (e) {
+                    // no bloquear ejecución
+                    console.warn('No se pudo actualizar JSON-LD del producto', e);
+                }
+            }
+
+            // 2) Observador: 
+            const observer = new MutationObserver((mutations) => {
+                try {
+                    if (producto) updateProductJsonLd(producto);
+                } catch (e) { }
+            });
+
+            // arranca el observer sobre el contenedor para detectar inyecciones dinámicas
+            const grid = document.getElementById('contenedor-productos');
+            if (grid) observer.observe(grid, { childList: true, subtree: false });
+            // Intento inicial de llenar JSON-LD si los datos ya están presentes tras detalles.js
+            try {
+                if (producto) updateProductJsonLd(producto);
+            } catch (e) { 
+                console.log("Error en JSON-LD: "+e);
+            }
 
         }
 
@@ -225,6 +262,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             window.open(url, "_blank");
         });
 
+
         // PRODUCTOS RELACIONADOS ----------------------------------------------------------------------------
         // Buscar relacionados y Ordenar por fecha_publicacion (más reciente primero)
         const productosRelacionados = productos.filter(p =>
@@ -258,6 +296,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         destacados.forEach(prod => {
             const card = document.createElement("div");
             card.classList.add("producto-card");
+            card.setAttribute("role", "listitem");
 
             card.innerHTML = `
                 <img class="img-card" src="${prod.versiones[0].imagenes[0] || 'placeholder.jpg'}" alt="${prod.nombre}"></img>

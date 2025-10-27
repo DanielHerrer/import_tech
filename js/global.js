@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const yearElement = document.querySelector(".copyright");
     if (yearElement) {
         const year = new Date().getFullYear();
-        yearElement.innerHTML = `Copyright Import Tech · ${year}. Todos los derechos reservados.`;
+        yearElement.innerHTML = `Copyright Import Tech BA · ${year}. Todos los derechos reservados.`;
     }
 });
 

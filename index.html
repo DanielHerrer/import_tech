@@ -4,255 +4,356 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Basic SEO -->
+    <title>Inicio · Import Tech BA | Venta de Tecnología en Argentina</title>
+    
+    <meta name="description"
+        content="Import Tech · Tienda de tecnología en Argentina. Celulares, laptops, tablets y accesorios originales con garantía oficial, envíos a todo el país y múltiples métodos de pago." />
+    <meta name="keywords" content="import tech, tecnología, celulares, laptops, tablets, accesorios, Argentina, compra online" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.importechba.com.ar/index.html" />
+    <link rel="alternate" hreflang="es-AR" href="https://www.importechba.com.ar/index.html" />
+
+    <!-- Performance: preload font (si tu font Google lo permite) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+        as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./img/it_logo2.png">
-    <title>Inicio · Import Tech</title>
+
+    <!-- Social / Open Graph -->
+    <meta property="og:site_name" content="Import Tech BA" />
+    <meta property="og:title" content="Import Tech BA · Tu tienda de tecnología en Argentina" />
+    <meta property="og:description"
+        content="Celulares, laptops, tablets y accesorios originales con garantía oficial. Envíos a todo el país." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.importechba.com.ar/index.html" />
+    <!-- image para OG : -->
+    <meta property="og:image" content="https://www.importechba.com.ar/img/og-image.png" />
+    <meta property="og:image:alt" content="Import Tech BA - Tecnología y accesorios" />
+    <meta property="og:image:width" content="726" />
+    <meta property="og:image:height" content="726" />
+    <meta property="og:locale" content="es_AR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Import Tech BA · Tu tienda de tecnología en Argentina" />
+    <meta name="twitter:description"
+        content="Celulares, laptops, tablets y accesorios originales con garantía oficial. Envíos a todo el país." />
+    <meta name="twitter:image" content="https://www.importechba.com.ar/img/og-image.jpg" />
+
+    <!-- Sitemap (ayuda a los crawlers) -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- Structured Data (WebSite + Organization + LocalBusiness minimal) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.importechba.com.ar/#website",
+          "url": "https://www.importechba.com.ar/",
+          "name": "Import Tech BA",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.importechba.com.ar/html/productos.html?busqueda={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.importechba.com.ar/#org",
+          "name": "Import Tech BA",
+          "url": "https://www.importechba.com.ar/",
+          "logo": "https://www.importechba.com.ar/img/it_logo.png",
+          "sameAs": [
+            "https://www.instagram.com/importech.ba",
+            "https://wa.me/5491165835895"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Import Tech BA",
+          "image": "https://www.importechba.com.ar/img/it_logo.png",
+          "description": "Tienda de tecnología en Argentina. Envíos a todo el país.",
+          "url": "https://www.importechba.com.ar/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AR"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Stylesheets (sin cambios) -->
     <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/index.css?v=2" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css?v=3" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- meta de compatibilidad y móvil -->
+    <meta name="theme-color" content="#0a0a0a" />
 </head>
 
 <body>
     <div class="body-filter">
-        <header class="navbar">
-            <a class="logo" href="index.html">
+        <header class="navbar" role="banner">
+            <a class="logo" href="index.html" aria-label="Import Tech - Inicio">
                 <img class="logo-img" src="./img/it_logo.png" alt="Logo de Import Tech">
                 <!-- Import Tech -->
             </a>
-            <nav class="nav-links">
-                <a class="activo" href="index.html">Inicio</a>
-                <a class="" href="./html/productos.html">Productos</a>
-                <a class="" href="./html/contacto.html">Contacto</a>
+            <nav class="nav-links" role="navigation" aria-label="Menu principal">
+                <a class="activo" href="index.html" aria-current="page">Inicio</a>
+                <a href="./html/productos.html">Productos</a>
+                <a href="./html/contacto.html">Contacto</a>
             </nav>
         </header>
 
         <!-- Overlay + Modal -->
-        <div class="overlay" id="overlay">
-            <div class="modal">
-                <span class="close-btn" id="closeBtn">&times;</span>
-                <p class="title-modal"></p>
+        <div class="overlay" id="overlay" aria-hidden="true">
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <button class="close-btn" id="closeBtn" aria-label="Cerrar">&times;</button>
+                <p id="modal-title" class="title-modal"></p>
                 <img src="." alt="Noticia">
             </div>
         </div>
 
         <!-- Botonera flotante -->
-        <div class="social-buttons">
-            <button id="scrollTopBtn" class="btn top">
+        <div class="social-buttons" aria-hidden="false">
+            <button id="scrollTopBtn" class="btn top" aria-label="Subir arriba">
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
             <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer"
-                class="btn instagram">
+                class="btn instagram" aria-label="Instagram Import Tech">
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
             </a>
-            <a href="https://wa.me/5491165835895" target="_blank" rel="noopener noreferrer" class="btn whatsapp">
+            <a href="https://wa.me/5491165835895" target="_blank" rel="noopener noreferrer" class="btn whatsapp"
+                aria-label="WhatsApp Import Tech">
                 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
             </a>
         </div>
 
-        <div class="galeria">
-            <div class="galeria-grid">
-                <div class="galeria-div div1">
-                    <div class="div-detalle">
-                        Samsung
-                        <a href="./html/productos.html?categoria=Celular&orden=&busqueda=samsung"
-                            class="btn-detalle">Ver más</a>
-                    </div>
-                </div>
-                <div class="galeria-div div2">
-                    <div class="div-detalle">
-                        Visita nuestro Catálogo
-                        <a href="./html/productos.html" class="btn-detalle">Ver más</a>
-                    </div>
-                </div>
-                <div class="galeria-div div3">
-                    <div class="div-detalle">
-                        iPad
-                        <a href="./html/productos.html?categoria=Tablet&orden=&busqueda=ipad" class="btn-detalle">Ver
-                            más</a>
-                    </div>
-                </div>
-                <div class="galeria-div div4">
-                    <div class="div-detalle">
-                        Macbook
-                        <a href="./html/productos.html?categoria=Laptop&orden=&busqueda=macbook" class="btn-detalle">Ver
-                            más</a>
-                    </div>
-                </div>
-                <div class="galeria-div div5">
-                    <div class="div-detalle">
-                        Videojuegos y RA
-                        <a href="./html/productos.html?categoria=Videojuegos&orden=&busqueda=" class="btn-detalle">Ver
-                            más</a>
-                    </div>
-                </div>
-                <div class="galeria-div div6">
-                    <div class="div-detalle">
-                        iPhone
-                        <a href="./html/productos.html?categoria=Celular&orden=&busqueda=iphone" class="btn-detalle">Ver
-                            más</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- === SEO: main semantic wrapper === -->
+        <main id="main" role="main" aria-labelledby="main-title">
+            <!-- h1 importante para SEO, escondido visualmente para no romper tu layout -->
+            <h1 id="main-title" style="position:absolute;clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;border:0;margin:0;padding:0;">
+                Import Tech - Tienda de tecnología en Argentina | Celulares, Laptops, Tablets y Accesorios
+            </h1>
 
-
-
-        <section class="categorias">
-            <h2>Categorías</h2>
-            <div class="categorias-grid">
-                <a href="./html/productos.html?categoria=Tablet&orden=&busqueda=" class="categoria-card"
-                    style="background-image: url(./img/img_ipad.jpg);">
-                    <div class="categoria-filtro"></div>
-                    <div class="categoria-contenido">
-                        Tablets
-                    </div>
-                </a>
-                <a href="./html/productos.html?categoria=Celular&orden=&busqueda=" class="categoria-card"
-                    style="background-image: url(./img/img_xiaomi.jpg);">
-                    <div class="categoria-filtro"></div>
-                    <div class="categoria-contenido">
-                        Celulares
-                    </div>
-                </a>
-                <a href="./html/productos.html?categoria=Laptop&orden=&busqueda=" class="categoria-card"
-                    style="background-image: url(./img/img_macbook.jpg);">
-                    <div class="categoria-filtro"></div>
-                    <div class="categoria-contenido">
-                        Laptops
-                    </div>
-                </a>
-                <a href="./html/productos.html?categoria=Accesorio&orden=&busqueda=" class="categoria-card"
-                    style="background-image: url(./img/img_app.jpg);">
-                    <div class="categoria-filtro"></div>
-                    <div class="categoria-contenido">
-                        Accesorios
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section class="productos">
-            <h2>Productos Destacados</h2>
-
-            <div class="productos-grid">
-
-            </div>
-            <div class="productos-ver">
-                <a href="./html/productos.html" class="btn-productos">Ver todos los productos</a>
-            </div>
-        </section>
-
-        <div class="titulo-lineas">
-            <span>MÉTODOS DE PAGO</span>
-        </div>
-        <section class="pagos">
-            <div class="pagos-div">
-                <div class="pagos-1">
-                    <div class="pagos-item">
-                        <div class="item-icon">
-                            <i class="fa-solid fa-building-columns"></i>
+            <div class="galeria" role="region" aria-label="Galería de destacados">
+                <div class="galeria-grid">
+                    <div class="galeria-div div1">
+                        <div class="div-detalle">
+                            Samsung
+                            <a href="./html/productos.html?categoria=Celular&orden=&busqueda=samsung"
+                                class="btn-detalle">Ver más</a>
                         </div>
-                        <p class="item-text">Transferencia Bancaria</p>
                     </div>
-                    
-                    <div class="pagos-item">
-                        <div class="item-icon">
-                            <i class="fa-brands fa-bitcoin"></i>
+                    <div class="galeria-div div2">
+                        <div class="div-detalle">
+                            Visita nuestro Catálogo
+                            <a href="./html/productos.html" class="btn-detalle">Ver más</a>
                         </div>
-                        <p class="item-text">Cryptocurrency (USDT)</p>
                     </div>
-
-                    <div class="pagos-item">
-                        <div class="item-icon">
-                            <i class="fa-solid fa-money-bills"></i>
+                    <div class="galeria-div div3">
+                        <div class="div-detalle">
+                            iPad
+                            <a href="./html/productos.html?categoria=Tablet&orden=&busqueda=ipad" class="btn-detalle">Ver
+                                más</a>
                         </div>
-                        <p class="item-text">Efectivo Pesos / Dolares</p>
                     </div>
-                </div>
-                <div class="pagos-2">
-                    <div class="pagos-item">
-                        <img class="item-img" src="./img/logos/payoneer_logo.png" alt="Logo Payoneer">
+                    <div class="galeria-div div4">
+                        <div class="div-detalle">
+                            Macbook
+                            <a href="./html/productos.html?categoria=Laptop&orden=&busqueda=macbook" class="btn-detalle">Ver
+                                más</a>
+                        </div>
                     </div>
-
-                    <div class="pagos-item">
-                        <img class="item-img" src="./img/logos/PayPal_logo.png" alt="Logo PayPal">
+                    <div class="galeria-div div5">
+                        <div class="div-detalle">
+                            Videojuegos y RA
+                            <a href="./html/productos.html?categoria=Videojuegos&orden=&busqueda=" class="btn-detalle">Ver
+                                más</a>
+                        </div>
                     </div>
-
-                    <div class="pagos-item">
-                        <img class="item-img" src="./img/logos/skrill_logo.png" alt="Logo Skrill">
+                    <div class="galeria-div div6">
+                        <div class="div-detalle">
+                            iPhone
+                            <a href="./html/productos.html?categoria=Celular&orden=&busqueda=iphone"
+                                class="btn-detalle">Ver
+                                más</a>
+                        </div>
                     </div>
-
-                    <div class="pagos-item">
-                        <img class="item-img" src="./img/logos/zelle_logo.png" alt="Logo Zelle">
-                    </div>
-
-                    <div class="pagos-item">
-                        <img class="item-img" src="./img/logos/wise_logo.png" alt="Logo Wise">
-                    </div>
-
                 </div>
             </div>
-        </section>
 
+            <section class="categorias" aria-labelledby="categorias-title">
+                <h2 id="categorias-title">Categorías</h2>
+                <div class="categorias-grid">
+                    <a href="./html/productos.html?categoria=Tablet&orden=&busqueda=" class="categoria-card"
+                        style="background-image: url(./img/img_ipad.jpg);">
+                        <div class="categoria-filtro" aria-hidden="true"></div>
+                        <div class="categoria-contenido">
+                            Tablets
+                        </div>
+                    </a>
+                    <a href="./html/productos.html?categoria=Celular&orden=&busqueda=" class="categoria-card"
+                        style="background-image: url(./img/img_xiaomi.jpg);">
+                        <div class="categoria-filtro" aria-hidden="true"></div>
+                        <div class="categoria-contenido">
+                            Celulares
+                        </div>
+                    </a>
+                    <a href="./html/productos.html?categoria=Laptop&orden=&busqueda=" class="categoria-card"
+                        style="background-image: url(./img/img_macbook.jpg);">
+                        <div class="categoria-filtro" aria-hidden="true"></div>
+                        <div class="categoria-contenido">
+                            Laptops
+                        </div>
+                    </a>
+                    <a href="./html/productos.html?categoria=Accesorio&orden=&busqueda=" class="categoria-card"
+                        style="background-image: url(./img/img_app.jpg);">
+                        <div class="categoria-filtro" aria-hidden="true"></div>
+                        <div class="categoria-contenido">
+                            Accesorios
+                        </div>
+                    </a>
+                </div>
+            </section>
 
-        <div class="titulo-lineas">
-            <span>¿POR QUÉ ELEGIRNOS?</span>
-        </div>
-        <section class="motivos">
-            <div class="motivos-div">
-                <div class="card-motivo">
-                    <i class="card-icon fa-regular fa-handshake"></i>
-                    <p class="card-p">Contamos con <b>garantía oficial</b> del fabricante. Cada producto cuenta con su
-                        documentación.</p>
+            <section class="productos" aria-labelledby="productos-title">
+                <h2 id="productos-title">Productos Destacados</h2>
+
+                <div class="productos-grid" id="productos-grid" aria-live="polite">
+                    <!-- Aquí tu JS puede inyectar productos; asegúrate que el contenido inyectado tenga enlaces y alt -->
                 </div>
-                <div class="card-motivo">
-                    <i class="card-icon fa-solid fa-ranking-star"></i>
-                    <p class="card-p">Los <b>mejores precios</b> al día. Aseguramos ofrecer la mejores tarifas del
-                        mercado.</p>
+                <div class="productos-ver">
+                    <a href="./html/productos.html" class="btn-productos">Ver todos los productos</a>
                 </div>
-                <div class="card-motivo">
-                    <i class="card-icon fa-solid fa-cart-flatbed"></i>
-                    <p class="card-p">Productos <b>originales</b>, <b>importados</b>, y <b>sellados</b>. Accesorios
-                        originales para cada
-                        dispositivo.
-                    </p>
-                </div>
+            </section>
+
+            <div class="titulo-lineas" role="separator" aria-hidden="true">
+                <span>MÉTODOS DE PAGO</span>
             </div>
-        </section>
+            <section class="pagos" aria-labelledby="pagos-title">
+                <h2 id="pagos-title" class="sr-only" style="position:absolute;clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;border:0;margin:0;padding:0;">
+                    Métodos de pago
+                </h2>
+                <div class="pagos-div">
+                    <div class="pagos-1">
+                        <div class="pagos-item">
+                            <div class="item-icon">
+                                <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                            </div>
+                            <p class="item-text">Transferencia Bancaria</p>
+                        </div>
 
-        <div class="titulo-lineas">
-            <span>ENVÍOS Y ENTREGAS</span>
-        </div>
-        <section class="envios">
-            <div class="envios-div">
-                <div class="card-envio">
-                    <i class="card-icon fa-solid fa-truck-fast"></i>
-                    <p class="card-p">Envíos a todo el país usando <b>Correo Argentino</b> o <b>Correo Andreani</b>.</p>
+                        <div class="pagos-item">
+                            <div class="item-icon">
+                                <i class="fa-brands fa-bitcoin" aria-hidden="true"></i>
+                            </div>
+                            <p class="item-text">Cryptocurrency (USDT)</p>
+                        </div>
+
+                        <div class="pagos-item">
+                            <div class="item-icon">
+                                <i class="fa-solid fa-money-bills" aria-hidden="true"></i>
+                            </div>
+                            <p class="item-text">Efectivo Pesos / Dolares</p>
+                        </div>
+                    </div>
+                    <div class="pagos-2">
+                        <div class="pagos-item">
+                            <img class="item-img" src="./img/logos/payoneer_logo.png" alt="Logo Payoneer">
+                        </div>
+
+                        <div class="pagos-item">
+                            <img class="item-img" src="./img/logos/PayPal_logo.png" alt="Logo PayPal">
+                        </div>
+
+                        <div class="pagos-item">
+                            <img class="item-img" src="./img/logos/skrill_logo.png" alt="Logo Skrill">
+                        </div>
+
+                        <div class="pagos-item">
+                            <img class="item-img" src="./img/logos/zelle_logo.png" alt="Logo Zelle">
+                        </div>
+
+                        <div class="pagos-item">
+                            <img class="item-img" src="./img/logos/wise_logo.png" alt="Logo Wise">
+                        </div>
+
+                    </div>
                 </div>
-                <div class="card-envio">
-                    <i class="card-icon fa-solid fa-motorcycle"></i>
-                    <p class="card-p">Hacemos delivery privado si residís en el área local de <b>CABA</b> / <b>GBA</b>.</p>
-                </div>
-                <div class="card-envio">
-                    <i class="card-icon fa-solid fa-shop"></i>
-                    <p class="card-p">Disponemos de nuestras oficinas ubicadas en <b>CABA</b> para retiros.
-                    </p>
-                </div>
+            </section>
+
+            <div class="titulo-lineas" role="separator" aria-hidden="true">
+                <span>¿POR QUÉ ELEGIRNOS?</span>
             </div>
-        </section>
+            <section class="motivos" aria-labelledby="motivos-title">
+                <h2 id="motivos-title" class="sr-only" style="position:absolute;clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;border:0;margin:0;padding:0;">
+                    Por qué elegir Import Tech
+                </h2>
+                <div class="motivos-div">
+                    <div class="card-motivo">
+                        <i class="card-icon fa-regular fa-handshake" aria-hidden="true"></i>
+                        <p class="card-p">Contamos con <b>garantía oficial</b> del fabricante. Cada producto cuenta con su
+                            documentación.</p>
+                    </div>
+                    <div class="card-motivo">
+                        <i class="card-icon fa-solid fa-ranking-star" aria-hidden="true"></i>
+                        <p class="card-p">Los <b>mejores precios</b> al día. Aseguramos ofrecer la mejores tarifas del
+                            mercado.</p>
+                    </div>
+                    <div class="card-motivo">
+                        <i class="card-icon fa-solid fa-cart-flatbed" aria-hidden="true"></i>
+                        <p class="card-p">Productos <b>originales</b>, <b>importados</b>, y <b>sellados</b>. Accesorios
+                            originales para cada dispositivo.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-        <footer class="footer">
+            <div class="titulo-lineas" role="separator" aria-hidden="true">
+                <span>ENVÍOS Y ENTREGAS</span>
+            </div>
+            <section class="envios" aria-labelledby="envios-title">
+                <h2 id="envios-title" class="sr-only" style="position:absolute;clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;border:0;margin:0;padding:0;">
+                    Envíos y entregas
+                </h2>
+                <div class="envios-div">
+                    <div class="card-envio">
+                        <i class="card-icon fa-solid fa-truck-fast" aria-hidden="true"></i>
+                        <p class="card-p">Envíos a todo el país usando <b>Correo Argentino</b> o <b>Correo Andreani</b>.</p>
+                    </div>
+                    <div class="card-envio">
+                        <i class="card-icon fa-solid fa-motorcycle" aria-hidden="true"></i>
+                        <p class="card-p">Hacemos delivery privado si residís en el área local de <b>CABA</b> / <b>GBA</b>.</p>
+                    </div>
+                    <div class="card-envio">
+                        <i class="card-icon fa-solid fa-shop" aria-hidden="true"></i>
+                        <p class="card-p">Disponemos de nuestras oficinas ubicadas en <b>CABA</b> para retiros.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
             <div class="footer-row row-1">
                 <div class="footer-col col-1">
                     <div class="footer-redes">
-                        <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/importech.ba" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <!--<a href="" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </a>-->
                     </div>
                     <h4>Import Tech · BA</h4>
                     <p>Tu tienda de confianza en tecnología.</p>
@@ -295,7 +396,7 @@
                         <div class="item">
                             <img class="item-img" src="./img/logos/ars_logo.png" alt="Logo ARS">
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="footer-col col-3">
@@ -326,6 +427,12 @@
             </div>
         </footer>
     </div>
+
+    <noscript>
+        <div style="background:#fff;padding:1rem;text-align:center;">
+            Este sitio funciona mejor con JavaScript activado. Si no ves productos, activá JavaScript en tu navegador.
+        </div>
+    </noscript>
 
     <script src="./js/global.js"></script>
     <script src="./js/index.js?v=2"></script>
