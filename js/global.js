@@ -1,5 +1,28 @@
+// RECARGAR PAGINA => TOP: 0
 
-//   TEXTO PARPADEANTE, pestaña inactiva
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+});
+
+// ANIMACIONES INTERSECTION OBSERVER
+
+const elementosAnimados = document.querySelectorAll(
+  '.animado-up, .animado-down, .animado-left, .animado-right'
+);
+
+let observer = new IntersectionObserver(
+  observados => {
+      for (let o of observados) {
+          if (o.isIntersecting) {
+            o.target.style["animation-play-state"]="running";
+          }
+      }
+  },{ threshold:0.25} // Crea un IntersectionObserver que se activa cuando el 25% (0.25) del elemento es visible (threshold: 0.25).
+);
+
+elementosAnimados.forEach(elemento =>observer.observe(elemento));
+
+// TEXTO PARPADEANTE, pestaña inactiva
 
 let intervalId;
 let originalTitle = window.tituloProducto; // Guardamos el título real

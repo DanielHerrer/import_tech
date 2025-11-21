@@ -1,3 +1,67 @@
+.animado-right {
+  animation: show-right 0.3s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.animado-left {
+  animation: show-left 0.3s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.animado-up {
+  animation: show-up 0.3s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.animado-down {
+  animation: show-down 0.3s ease-out forwards;
+  animation-play-state: paused;
+}
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translateX(-75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes show-left {
+  from {
+    opacity: 0;
+    transform: translateX(75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translateY(-75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translateY(75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* GRID GENERATOR */
 
 .galeria {
@@ -17,6 +81,7 @@
 }
 
 .galeria-div {
+  text-decoration: none;
   border-radius: 10px;
   background-color: #333;
   background-size: cover;
@@ -287,7 +352,7 @@
   padding: 7px 25px;
   border-radius: 15px;
   border: none;
-  background-color: #dcc3e0;
+  background-color: #e5b2ec;
   cursor: pointer;
   font-size: 0.85rem;
 }
@@ -305,20 +370,21 @@
 
 .productos-ver .btn-productos {
   text-decoration: none;
-  background-color: #fff;
-  color: #000;
+  background-color: #cd7fec;
+  color: #ffffff;
   padding: 15px 50px;
   font-size: 1rem;
-  font-weight: bold;
   margin: 3em 0 0 0;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid white;
+  border-radius: 50px;
 }
 
 .productos-ver .btn-productos:hover {
-  background-color: #d68fe0;
-  color: #fff;
   transition: 0.2s;
+  font-weight: bold;
+  background-color: #cd47df;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 /* TITULOS CON LINEAS _____________________________ */
