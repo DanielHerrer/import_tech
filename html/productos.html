@@ -90,6 +90,7 @@
         </div>
 
         <!-- BÚSQUEDA: usa GET para que las consultas sean indexables y compartibles -->
+        <!-- 
         <form class="busqueda" action="" method="GET" role="search" aria-label="Buscar productos">
             <div class="div-busqueda">
                 <label for="categoria" class="sr-only">Categoría</label>
@@ -102,13 +103,15 @@
                     <option value="Videojuegos">Videojuegos</option>
                 </select>
 
+                
                 <label for="orden" class="sr-only">Ordenar por</label>
                 <select name="orden" id="orden" aria-label="Ordenar resultados">
                     <option value="">Ordenar por</option>
                     <option value="fecha_asc">Más antiguos</option>
                     <option value="fecha_desc">Más nuevos</option>
                 </select>
-
+                
+                
                 <label for="texto" class="sr-only">Texto de búsqueda</label>
                 <input type="text" name="busqueda" id="texto" placeholder="Buscar producto..."
                     aria-label="Buscar producto">
@@ -118,6 +121,30 @@
                 <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             </button>
         </form>
+        -->
+
+        <form class="busqueda" action="" method="GET" role="search" aria-label="Buscar productos">
+            <div class="div-busqueda">
+                <div class="busqueda-input">
+                    <input type="text" name="busqueda" id="texto" placeholder="Buscar producto..." aria-label="Buscar producto">
+                    <span id="clearInput" class="clear-btn">×</span>
+                </div>
+
+                <button id="btnBuscar" class="btn-buscar" type="submit" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+            </div>
+            <!-- CATEGORÍAS COMO BOTONES / CHIPS -->
+            <div class="categoria-chips">
+                <button type="submit" name="categoria" id="categoria" value="" class="chip">Todos</button>
+                <button type="submit" name="categoria" id="categoria" value="Celular" class="chip">Celulares</button>
+                <button type="submit" name="categoria" id="categoria" value="Tablet" class="chip">Tablets</button>
+                <button type="submit" name="categoria" id="categoria" value="Laptop" class="chip">Laptops</button>
+                <button type="submit" name="categoria" id="categoria" value="Accesorio" class="chip">Accesorios</button>
+                <button type="submit" name="categoria" id="categoria" value="Videojuegos" class="chip">Videojuegos</button>
+            </div>
+        </form>
+
 
         <!-- MAIN: contenedor semántico principal -->
         <main id="main" role="main" aria-labelledby="productos-heading">

@@ -3,21 +3,28 @@
 .busqueda {
     padding: 0 0em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
 }
 
 .div-busqueda {
-    background-color: #fff;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
-
-    border-radius: 5px;
-    padding: 10px 30px;
     margin: 20px 0;
 }
 
+.busqueda-input {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px 15px;
+    
+    position: relative;
+}
+
+/*
 #categoria {
     border-radius: 3px;
 
@@ -31,13 +38,39 @@
     padding: 2px 5px;
     border: 1px solid #4e4e4e;
 }
+*/
+
+.clear-btn {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-57.5%);
+    font-size: 22px;
+    color: #d3d3d3;
+    cursor: pointer;
+    display: none; /* Oculto por defecto */
+    user-select: none;
+}
+
+#texto::placeholder {
+    color: #dddddd;   /* color del texto */
+    opacity: 1;    /* Safari necesita esto */
+}
 
 #texto {
-    border-radius: 3px;
+    width: 400px;
+    padding-right: 35px; /* espacio para la X */
 
-    padding: 2px 5px;
+    font-size: 0.9rem;
+    border-radius: 25px;
+
+    padding: 6px 15px;
 
     border: 1px solid #4e4e4e;
+    background-color: #5f5f5f;
+    color: white;
+
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.35);
 }
 
 .btn-buscar {
@@ -58,6 +91,36 @@
     background-color: #cf55ff;
     box-shadow: 0 0 10px rgba(239, 118, 255, 0.75);
     color: #ffffff;
+}
+
+.categoria-chips {
+    background-color: #222;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.chip:hover {
+    background: #616161;
+}
+
+.chip.activa {
+    color: rgb(255, 208, 0);
+    font-weight: bolder;
 }
 
 /* MENSAJE SIN PRODUCTOS */
@@ -176,58 +239,53 @@
 
 @media (max-width: 575px) {
     /* BUSQUEDA ___________________________________________ */
-
     .busqueda {
-        padding: 0 0 1em 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0.75em;
+        padding: 0 0em;
     }
 
     .div-busqueda {
-        border-radius: 0;
-        padding: 0.9em 0.75em 0.75em 0.75em;
-        margin: 0 1em;
-        width: 100%;
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        gap: 0.75em;
+        margin: 15px 0;
 
-        gap: 0.35em;
+        flex-direction: column;
     }
 
-    #categoria {
-        width: 100%;
-        border-radius: 3px;
-        padding: 2px 5px;
+    .busqueda-input {
+        border-radius: 25px;
+        padding: 10px 15px;
     }
 
-    #orden {
-        width: 100%;
-        border-radius: 3px;
-
-        padding: 2px 5px;
+    .clear-btn {
+        right: 25px;
+        top: 50%;
+        transform: translateY(-57.5%);
+        font-size: 22px;
     }
 
     #texto {
-        border-radius: 3px;
+        width: 300px;
+        padding-right: 35px; /* espacio para la X */
+        font-size: 0.9rem;
+        border-radius: 25px;
+        padding: 6px 15px;
+    }
 
-        width: 100%;
-        padding: 2px 5px;
-
-        /* grid-column-start: 1; */
-        grid-column-end: span 2;
+    .categoria-chips {
+        padding: 5px;
+        gap: 10px;
     }
 
     .btn-buscar {
-        border-radius: 15px;
+        font-weight: bold;
+        border-radius: 25px;
         width: auto;
         height: auto;
-        gap: 0.5em;
-        padding: 10px 20px;
+        padding: 15px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
     }
 
     /* MENSAJE SIN PRODUCTOS */
@@ -312,62 +370,49 @@
 @media (min-width: 576px) and (max-width: 767px) {
 
     /* BUSQUEDA ___________________________________________ */
-
     .busqueda {
-        padding: 0 0 1em 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0.75em;
+        padding: 0 0em;
     }
 
     .div-busqueda {
-        border-radius: 0;
-        padding: 1.25em 2em 1em 2em;
-        margin: 0 1em;
-        width: 100%;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-
-        gap: 0.35em;
+        gap: 1em;
+        margin: 20px 0;
     }
 
-    #categoria {
-        width: 100%;
-        border-radius: 3px;
-        padding: 2px 5px;
+    .busqueda-input {
+        border-radius: 25px;
+        padding: 10px 15px;
     }
 
-    #orden {
-        width: 100%;
-        border-radius: 3px;
-
-        padding: 2px 5px;
+    .clear-btn {
+        right: 25px;
+        top: 50%;
+        transform: translateY(-57.5%);
+        font-size: 22px;
     }
 
     #texto {
-        border-radius: 3px;
+        width: 400px;
+        padding-right: 35px; /* espacio para la X */
+        font-size: 0.9rem;
+        border-radius: 25px;
+        padding: 6px 15px;
+    }
 
-        width: 100%;
-        padding: 2px 5px;
-
-        /* grid-column-start: 1; */
-        grid-column-end: span 2;
+    .categoria-chips {
+        padding: 5px;
+        gap: 10px;
     }
 
     .btn-buscar {
-        border-radius: 10px;
+        border-radius: 25px;
         width: auto;
         height: auto;
-        padding: 10px 20px;
+        padding: 15px 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
-
     }
 
     /* MENSAJE SIN PRODUCTOS */
@@ -453,65 +498,49 @@
 
 /* Estilos para tablets grandes */
 @media (min-width: 768px) and (max-width: 991px) {
-
+    
     /* BUSQUEDA ___________________________________________ */
-
     .busqueda {
-        padding: 1em 1em 1.25em 0;
-        display: flex;
-        /* flex-direction: column; */
-        align-items: center;
-        gap: 0.75em;
+        padding: 0 0em;
     }
 
     .div-busqueda {
-        border-radius: 0 8px 8px 0;
-        padding: 1.25em 2em 1em 2em;
-        margin: 0 1em 0 0;
-        width: 100%;
-        justify-content: center;
-
-        /* display: grid; */
-        /* grid-template-columns: 1fr 1fr; */
-        /* grid-template-rows: 1fr 1fr; */
-
-        gap: 0.7em;
+        gap: 1em;
+        margin: 20px 0;
     }
 
-    #categoria {
-        /* width: 100%; */
-        border-radius: 3px;
-        padding: 2px 5px;
+    .busqueda-input {
+        border-radius: 25px;
+        padding: 10px 15px;
     }
 
-    #orden {
-        /* width: 100%; */
-        border-radius: 3px;
-
-        padding: 2px 5px;
+    .clear-btn {
+        right: 25px;
+        top: 50%;
+        transform: translateY(-57.5%);
+        font-size: 22px;
     }
 
     #texto {
-        border-radius: 3px;
-        padding: 2px 5px;
-        /* grid-column-start: 1; */
-        /* grid-column-end: span 2; */
+        width: 400px;
+        padding-right: 35px; /* espacio para la X */
+        font-size: 0.9rem;
+        border-radius: 25px;
+        padding: 6px 15px;
     }
 
     .btn-buscar {
-        border-radius: 10px;
-        width: auto;
-        height: auto;
-        padding: 10px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
+        border-radius: 99px;
+        width: 45px;
+        height: 45px;
+    }
 
+    .categoria-chips {
+        padding: 5px;
+        gap: 10px;
     }
 
     /* MENSAJE SIN PRODUCTOS */
-
     .mensaje-productos {
         margin: 1.5em 0;
         font-size: 2rem;
@@ -592,4 +621,16 @@
 /* -------------------------------------------------------------------------------------------------------------------- */
 
 /* 6. Escritorio */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .productos-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* 7. Escritorio Quad HD 2k */
+@media (min-width: 1440px) {
+    .productos-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+

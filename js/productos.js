@@ -68,7 +68,22 @@ function mostrarProductos(productos) {
 
 }
 
+function mostrarCategoriaActiva() {
+    const params = new URLSearchParams(window.location.search);
+    const categoriaActiva = params.get("categoria");
+
+    // Marcar el botón activo según la URL
+    if (categoriaActiva !== null) {
+        document.querySelectorAll(".chip").forEach(chip => {
+            if (chip.value === categoriaActiva) {
+                chip.classList.add("activa");
+            }
+        });
+    }
+}
+
 function filtrarProductos(productos, { categoria, busqueda }) {
+
     return productos.filter(p => {
         const coincideCategoria = !categoria || p.categoria === categoria;
 
@@ -103,25 +118,28 @@ function ordenarProductos(productos, orden) {
 }
 
 function mantenerValoresFormulario() {
+    // CARGADO DE PRODUCTOS con FILTRADO por URL
     const params = new URLSearchParams(window.location.search);
 
-    const categoria = params.get("categoria");
-    const orden = params.get("orden");
-    const busqueda = params.get("busqueda");
+    const filtros = {
+        categoria: params.get("categoria"),
+        orden: params.get("orden"),
+        busqueda: params.get("busqueda")
+    };
 
-    if (categoria) {
-        document.getElementById("categoria").value = categoria;
+    /*
+    if (filtros.orden) {
+        document.getElementById("orden").value = filtros.orden;
+    }
+    */
+
+    if (filtros.busqueda) {
+        document.getElementById("texto").value = filtros.busqueda;
     }
 
-    if (orden) {
-        document.getElementById("orden").value = orden;
-    }
-
-    if (busqueda) {
-        document.getElementById("texto").value = busqueda;
-    }
 }
 
+// Cambia el CSS del boton de Busqueda segun el dispositivo (PC-Tablet-Celu)
 function actualizarBotonBuscar() {
     const btn = document.getElementById("btnBuscar");
 
@@ -136,7 +154,7 @@ function actualizarBotonBuscar() {
     }
 }
 
-// ⬇️ CARGADO DE PRODUCTOS con FILTRADO por URL
+// CARGADO DE PRODUCTOS con FILTRADO por URL
 const params = new URLSearchParams(window.location.search);
 
 const filtros = {
@@ -151,6 +169,21 @@ cargarProductos().then(productos => {
     mostrarProductos(resultado);
 });
 
+const input = document.getElementById("texto");
+const clearBtn = document.getElementById("clearInput");
+
+// Mostrar/ocultar la X
+input.addEventListener("input", () => {
+    clearBtn.style.display = input.value.length > 0 ? "block" : "none";
+});
+
+// Al hacer click, limpiar
+clearBtn.addEventListener("click", () => {
+    input.value = "";
+    clearBtn.style.display = "none";
+    input.focus();
+});
+
 
 // ⬇️ PROCESO PRINCIPAL
 document.addEventListener("DOMContentLoaded", () => {
@@ -158,10 +191,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Si el usuario busco con filtros recientemente, que los valores se mantengan para visualizar
     mantenerValoresFormulario();
 
-    // Llamar cuando se carga la página
+    // Cambia el CSS del boton de Busqueda
     actualizarBotonBuscar();
+
+    mostrarCategoriaActiva();
 
     // Llamar cuando se cambia el tamaño de la ventana
     window.addEventListener("resize", actualizarBotonBuscar);
+
+    // Mostrar/ocultar la X
+    clearBtn.style.display = input.value.length > 0 ? "block" : "none";
 
 });
