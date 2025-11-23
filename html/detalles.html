@@ -129,9 +129,17 @@
                 <!-- Artículo producto -->
                 <article id="producto" class="producto" itemscope itemtype="https://schema.org/Product" aria-labelledby="producto-title">
                     <meta itemprop="brand" content="Import Tech BA" />
+                    
                     <div class="titulo">
                         <h1 id="producto-title" class="title-producto" itemprop="name">Cargando título...</h1>
                         <h2 class="subtitle-producto" itemprop="alternateName">Cargando subtítulo...</h2>
+                    </div>
+
+                    <div class="versiones">
+                        <h5 class="title-versiones">Versiones</h5>
+                        <div class="div-versiones" id="versiones-list" role="list" aria-label="Versiones disponibles">
+                            <!-- versiones inyectadas por JS -->
+                        </div>
                     </div>
 
                     <div class="imgs" itemprop="image" aria-hidden="false">
@@ -153,13 +161,7 @@
                         </div>
                     </div>
 
-                    <div class="versiones">
-                        <h5 class="title-versiones">Versiones:</h5>
-                        <div class="div-versiones" id="versiones-list" role="list" aria-label="Versiones disponibles">
-                            <!-- versiones inyectadas por JS -->
-                        </div>
-                    </div>
-
+                    
                     <div class="descripcion">
                         <p class="description-producto" itemprop="description">Cargando descripción...</p>
                         <button class="toggle-descripcion" aria-expanded="false">Ver descripción completa</button>
