@@ -2,47 +2,63 @@
 <html lang="es">
 
 <head>
+    <!-- Charset & responsive -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="../img/it_logo2.png">
 
-    <!-- SEO básico -->
-    <title>Detalles · Import Tech BA | Venta de Tecnología en Argentina</title>
-    <meta name="description" content="Detalles del producto en Import Tech BA — tu tienda de confianza en tecnología. Métodos de pago seguros, envíos a todo el país y atención personalizada.">
-    <meta name="keywords" content="Import Tech BA, tecnología, computación, accesorios, ventas online, envío nacional, CABA">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://www.importechba.com.ar/html/detalles.html">
+    <!-- Title & SEO -->
+    <title>Detalles · Import Tech BA | Celulares y Tecnología en Argentina</title>
+    <meta name="description" content="Detalles del producto en Import Tech BA — tu tienda de confianza en tecnología. Métodos de pago seguros, envíos a todo el país y atención personalizada." />
+    <meta name="keywords" content="Import Tech, tecnología, celulares, accesorios, ventas online, envío a todo el país" />
+    <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph (mejora previews en redes) -->
-    <meta property="og:locale" content="es_AR" />
-    <meta property="og:type" content="product" />
-    <meta property="og:title" content="Detalles · Import Tech BA" />
-    <meta property="og:description" content="Detalles del producto en Import Tech BA — Tu tienda de confianza en tecnología." />
-    <meta property="og:url" content="https://www.importechba.com.ar/html/detalles.html" />
-    <meta property="og:site_name" content="Import Tech BA" />
-    <meta property="og:image" content="https://www.importechba.com.ar/img/og-image.png" />
-    <meta property="og:image:alt" content="Import Tech BA - Tecnología y accesorios" />
-    <meta property="og:image:width" content="726" />
-    <meta property="og:image:height" content="726" />
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://www.importechba.com.ar/html/detalles.html" />
+    <link rel="alternate" hreflang="es-AR" href="https://www.importechba.com.ar/html/detalles.html">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Detalles · Import Tech BA">
-    <meta name="twitter:description" content="Detalles del producto en Import Tech BA — tu tienda de confianza en tecnología.">
-    <meta name="twitter:image" content="https://www.importechba.com.ar/img/og-image.png">
+    <!-- Favicon (RealFaviconGenerator) -->
+    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Import Tech BA" />
+    <link rel="manifest" href="../site.webmanifest" />
 
-    <!-- Performance / fonts -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/detalles.css?v=1" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Import Tech BA" />
+    <meta property="og:type" content="product" />
+    <meta property="og:title" content="Detalles del Producto · Import Tech BA" />
+    <meta property="og:description" content="Detalles del producto en Import Tech BA — tu tienda de tecnología en Argentina." />
+    <meta property="og:url" content="https://www.importechba.com.ar/html/detalles.html" />
+    <meta property="og:image" content="https://www.importechba.com.ar/img/og-image.png" />
 
-    <!-- Structured data base (se completará con JS) -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Detalles del Producto · Import Tech BA" />
+    <meta name="twitter:description" content="Detalles del producto en Import Tech BA — tu tienda de confianza en tecnología." />
+    <meta name="twitter:image" content="https://www.importechba.com.ar/img/og-image.png" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="../sitemap.xml" />
+
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="9tONQyHOdNFWzKTlXMvuUal6cx7jnMgmGxlv-NAbVuA" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/detalles.css?v=2" />
+
+    <!-- Icons / fonts -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JSON-LD (Product, dinámico por JS) -->
     <script type="application/ld+json" id="product-jsonld">
     {
       "@context": "https://schema.org/",
@@ -60,12 +76,6 @@
       }
     }
     </script>
-
-    <style>
-      /* Pequeño estilo inline solo para que breadcrumb no rompa el diseño. No cambia tu CSS. */
-      .breadcrumb { font-size: 0.95rem; margin-bottom: 0.6rem; }
-      .breadcrumb a { text-decoration: none; color: inherit; }
-    </style>
 </head>
 
 <body>

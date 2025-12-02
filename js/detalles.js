@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             // 1. Datos generales del producto
             document.querySelector(".title-producto").textContent = producto.nombre + " " + version.nombre_version;
             document.querySelector(".subtitle-producto").textContent = `${producto.marca} · ${producto.categoria}`;
-            document.title = `${producto.nombre + " " + version.nombre_version} · Import Tech BA | Venta de Tecnología en Argentina`;
+            document.title = `${producto.nombre + " " + version.nombre_version} · Import Tech BA | Celulares y Tecnología en Argentina`;
             window.tituloProducto = document.title;
 
             // --- Imagen principal

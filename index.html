@@ -1,62 +1,68 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 
 <head>
+    <!-- Charset & responsive -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Basic SEO -->
-    <title>Inicio · Import Tech BA | Venta de Tecnología en Argentina</title>
-    
-    <meta name="description"
-        content="Import Tech · Tienda de tecnología en Argentina. Celulares, laptops, tablets y accesorios originales con garantía oficial, envíos a todo el país y múltiples métodos de pago." />
-    <meta name="keywords" content="import tech, tecnología, celulares, laptops, tablets, accesorios, Argentina, compra online" />
+    <!-- Title & SEO -->
+    <title>Inicio · Import Tech BA | Celulares y Tecnología en Argentina</title>
+    <meta name="description" content="Import Tech · Tienda de tecnología en Argentina. Celulares, laptops, tablets y accesorios originales con garantía oficial." />
+    <meta name="keywords" content="import tech, tecnología, celulares, laptops, tablets, accesorios, Argentina" />
     <meta name="robots" content="index, follow" />
+
+    <!-- Canonical & hreflang -->
     <link rel="canonical" href="https://www.importechba.com.ar/index.html" />
-    <link rel="alternate" hreflang="es-AR" href="https://www.importechba.com.ar/index.html" />
+    <link rel="alternate" hreflang="es-AR" href="https://www.importechba.com.ar/index.html">
 
-    <!-- Performance: preload font (si tu font Google lo permite) -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-        as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    </noscript>
+    <!-- Favicon (RealFaviconGenerator) -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Import Tech BA" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./img/it_logo2.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Social / Open Graph -->
+    <!-- Open Graph -->
     <meta property="og:site_name" content="Import Tech BA" />
-    <meta property="og:title" content="Import Tech BA · Tu tienda de tecnología en Argentina" />
-    <meta property="og:description"
-        content="Celulares, laptops, tablets y accesorios originales con garantía oficial. Envíos a todo el país." />
     <meta property="og:type" content="website" />
+    <meta property="og:title" content="Import Tech BA · Tu tienda de tecnología en Argentina" />
+    <meta property="og:description" content="Celulares, laptops y accesorios originales." />
     <meta property="og:url" content="https://www.importechba.com.ar/index.html" />
-    <!-- image para OG : -->
     <meta property="og:image" content="https://www.importechba.com.ar/img/og-image.png" />
-    <meta property="og:image:alt" content="Import Tech BA - Tecnología y accesorios" />
-    <meta property="og:image:width" content="726" />
-    <meta property="og:image:height" content="726" />
-    <meta property="og:locale" content="es_AR" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Import Tech BA · Tu tienda de tecnología en Argentina" />
-    <meta name="twitter:description"
-        content="Celulares, laptops, tablets y accesorios originales con garantía oficial. Envíos a todo el país." />
-    <meta name="twitter:image" content="https://www.importechba.com.ar/img/og-image.jpg" />
+    <meta name="twitter:title" content="Import Tech BA · Tecnología en Argentina" />
+    <meta name="twitter:description" content="Celulares, laptops y accesorios originales." />
+    <meta name="twitter:image" content="https://www.importechba.com.ar/img/og-image.png" />
 
-    <!-- Sitemap (ayuda a los crawlers) -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-    <!-- Structured Data (WebSite + Organization + LocalBusiness minimal) -->
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="9tONQyHOdNFWzKTlXMvuUal6cx7jnMgmGxlv-NAbVuA" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/index.css?v=3">
+
+    <!-- Icons / fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "WebSite",
-          "@id": "https://www.importechba.com.ar/#website",
           "url": "https://www.importechba.com.ar/",
           "name": "Import Tech BA",
           "potentialAction": {
@@ -67,42 +73,18 @@
         },
         {
           "@type": "Organization",
-          "@id": "https://www.importechba.com.ar/#org",
           "name": "Import Tech BA",
           "url": "https://www.importechba.com.ar/",
-          "logo": "https://www.importechba.com.ar/img/it_logo.png",
+          "logo": "https://www.importechba.com.ar/img/og-image.png",
           "sameAs": [
             "https://www.instagram.com/importech.ba",
             "https://wa.me/5491165835895"
           ]
-        },
-        {
-          "@type": "LocalBusiness",
-          "name": "Import Tech BA",
-          "image": "https://www.importechba.com.ar/img/it_logo.png",
-          "description": "Tienda de tecnología en Argentina. Envíos a todo el país.",
-          "url": "https://www.importechba.com.ar/",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "AR"
-          }
         }
       ]
     }
     </script>
 
-    <!-- Google Search Console - Verificacion -->
-    <meta name="google-site-verification" content="9tONQyHOdNFWzKTlXMvuUal6cx7jnMgmGxlv-NAbVuA" />
-
-    <!-- Stylesheets (sin cambios) -->
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/index.css?v=3" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- meta de compatibilidad y móvil -->
-    <meta name="theme-color" content="#0a0a0a" />
 </head>
 
 <body>
