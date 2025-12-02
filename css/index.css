@@ -157,7 +157,7 @@ html, body {
 .galeria-grid .div1 {
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
-  background-image: url(../img/img_samsung.jpg);
+  background-image: url(../img/img_iphone.jpg);
 }
 
 .galeria-grid .div2 {
@@ -195,7 +195,7 @@ html, body {
   grid-row: span 3 / span 3;
   grid-column-start: 6;
   grid-row-start: 5;
-  background-image: url(../img/img_iphone.jpg);
+  background-image: url(../img/img_samsung.jpg);
 }
 
 .div-detalle {
