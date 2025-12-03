@@ -51,7 +51,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/productos.css?v=6">
+    <link rel="stylesheet" href="../css/productos.css?v=7">
 
     <!-- Icons / fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -157,41 +157,59 @@
         </form>
         -->
 
-        <form class="busqueda" action="" method="GET" role="search" aria-label="Buscar productos">
-            <div class="div-busqueda">
-                <div class="busqueda-input">
-                    <input type="text" name="busqueda" id="texto" placeholder="Buscar producto..." aria-label="Buscar producto">
-                    <span id="clearInput" class="clear-btn">×</span>
-                </div>
-
-                <button id="btnBuscar" class="btn-buscar" type="submit" aria-label="Buscar">
-                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                </button>
-            </div>
-            <!-- CATEGORÍAS COMO BOTONES / CHIPS -->
-            <div class="categoria-chips">
-                <button type="submit" name="categoria" id="categoria" value="" class="chip">Todos</button>
-                <button type="submit" name="categoria" id="categoria" value="Celular" class="chip">Celulares</button>
-                <button type="submit" name="categoria" id="categoria" value="Tablet" class="chip">Tablets</button>
-                <button type="submit" name="categoria" id="categoria" value="Laptop" class="chip">Laptops</button>
-                <button type="submit" name="categoria" id="categoria" value="Accesorio" class="chip">Accesorios</button>
-                <button type="submit" name="categoria" id="categoria" value="Videojuegos" class="chip">Videojuegos</button>
-            </div>
-        </form>
-
-
         <!-- MAIN: contenedor semántico principal -->
         <main id="main" role="main" aria-labelledby="productos-heading">
-            <div class="container">
-                <!--  <h1 id="productos-heading">Productos - Import Tech BA</h1>
 
-                Breadcrumb visible para usuarios y buscadores (puedes ocultarlo con CSS si ya tienes otro breadcrumb)
-                <nav aria-label="Breadcrumb" class="breadcrumb">
-                    <ul style="display: flex; gap: 2em; margin-left: 2em;">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li aria-current="page">Productos</li>
-                    </ul>
-                </nav> -->
+            <form class="busqueda" action="" method="GET" role="search" aria-label="Buscar productos">
+                <div class="div-busqueda">
+                    <div class="busqueda-input">
+                        <input type="text" name="busqueda" id="texto" placeholder="Buscar producto..." aria-label="Buscar producto">
+                        <span id="clearInput" class="clear-btn">×</span>
+                    </div>
+
+                    <button id="btnBuscar" class="btn-buscar" type="submit" aria-label="Buscar">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <!-- CATEGORÍAS COMO BOTONES / CHIPS -->
+                <div class="categoria-chips">
+                    <button type="submit" name="categoria" id="categoria" value="" class="chip">Todos</button>
+                    <button type="submit" name="categoria" id="categoria" value="Celular" class="chip">Celulares</button>
+                    <button type="submit" name="categoria" id="categoria" value="Tablet" class="chip">Tablets</button>
+                    <button type="submit" name="categoria" id="categoria" value="Laptop" class="chip">Laptops</button>
+                    <button type="submit" name="categoria" id="categoria" value="Accesorio" class="chip">Accesorios</button>
+                    <button type="submit" name="categoria" id="categoria" value="Videojuegos" class="chip">Videojuegos</button>
+                </div>
+            
+                <div class="productos-head">
+                    <h1 id="productos-heading">Catálogo - Import Tech BA</h1>
+
+                    <!--  Breadcrumb visible para usuarios y buscadores -->
+                    <nav aria-label="Breadcrumb" class="breadcrumb">
+                        <ul class="breadcrumb-ul">
+                            <li class="breadcrumb-li "><a href="../index.html">Inicio</a></li>
+                            <li class="breadcrumb-li active" aria-current="page">Productos</li>
+                        </ul>
+                    </nav>
+                </div>
+                
+
+                <div class="productos-cant" aria-label="Opciones de listado">
+                    <p id="resultado-cant" aria-live="polite"></p>
+
+                    <select name="orden" id="orden">
+                        <option value="" disabled selected hidden>Ordenar por</option>
+                        <option value="fecha_desc">Ordenar por más reciente</option>
+                        <option value="fecha_asc">Ordenar por más antiguo</option>
+                    </select>
+                </div>
+
+            </form>
+
+            <div class="container">
+
+                <!-- mensaje en caso de no haber productos para mostrar, por defecto oculto -->
+                <h1 id="mensaje-productos" class="mensaje-productos"></h1>
 
                 <!-- SECTION de productos -->
                 <section class="productos" aria-label="Listado de productos">
@@ -205,6 +223,7 @@
                         <p>No se encontraron productos que coincidan con tu búsqueda.</p>
                     </div> -->
                 </section>
+                
             </div>
         </main>
 

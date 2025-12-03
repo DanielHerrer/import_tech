@@ -4,24 +4,46 @@ async function cargarProductos() {
     // Filtrar los que estén activos
     const productosActivos = productos.filter(p => p.activo === true);
 
-    // Asegurarte de que están ordenados por fecha (Mas reciente a Mas antiguo)
-    productosActivos.sort((a, b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+    // CARGADO DE PRODUCTOS con FILTRADO por URL
+    //const params = new URLSearchParams(window.location.search);
 
-    return productosActivos;
+    const texto = document.getElementById("texto").value.trim();
+    const categoria = new URLSearchParams(window.location.search).get("categoria") || "";
+    const orden = document.getElementById("orden").value;
+
+    const filtros = {
+        categoria: categoria,
+        //categoria: params.get("categoria"),
+        orden: orden,
+        //orden: params.get("orden"),
+        busqueda: texto
+        //busqueda: params.get("busqueda")
+    };
+
+    let resultado = filtrarProductos(productosActivos, filtros);
+    mostrarProductos(resultado);
 }
 
+function actualizarCantidad(productos) {
+    let contenedor = document.getElementById("resultado-cant");
+    contenedor.innerHTML = "";
+    contenedor.textContent = `Se han encontrado ${productos.length} resultados`;
+}  
+
 function mostrarProductos(productos) {
+
     let contenedor = document.getElementById("contenedor-productos");
     contenedor.innerHTML = "";
 
+    actualizarCantidad(productos);
+
+    let msjProductos = document.getElementById("mensaje-productos");
+    msjProductos.textContent = '';
+
     // Si no hay productos para mostrar
     if (productos.length === 0) {
-        contenedor = document.querySelector(".productos");
-
-        const mensaje = document.createElement('h1');
-        mensaje.classList.add('mensaje-productos');
-        mensaje.textContent = 'No hay productos para mostrar...';
-        contenedor.appendChild(mensaje);
+        msjProductos.textContent = 'No hay productos para mostrar...';
+        msjProductos.style.display = "block";
         return;
     }
 
@@ -33,10 +55,10 @@ function mostrarProductos(productos) {
         div.setAttribute("itemtype", "https://schema.org/Product");
 
         div.innerHTML = `
-        <img class="img-card" src="${prod.versiones[0].imagenes[0]}" alt="${prod.nombre}" itemprop="image">
-        <h3 class="title-card" itemprop="name">${prod.nombre}</h3>
-        <a href="detalles.html?id=${prod.id}" class="btn-card" itemprop="url">Ver más</a>
-    `;
+            <img class="img-card" src="${prod.versiones[0].imagenes[0]}" alt="${prod.nombre}" itemprop="image">
+            <h3 class="title-card" itemprop="name">${prod.nombre}</h3>
+            <a href="detalles.html?id=${prod.id}" class="btn-card" itemprop="url">Ver más</a>
+        `;
 
         // Si el producto tiene precio:
         // if (prod.precio) {
@@ -65,7 +87,6 @@ function mostrarProductos(productos) {
         contenedor.appendChild(div);
     });
 
-
 }
 
 function mostrarCategoriaActiva() {
@@ -82,9 +103,9 @@ function mostrarCategoriaActiva() {
     }
 }
 
-function filtrarProductos(productos, { categoria, busqueda }) {
+function filtrarProductos(productos, { categoria, orden, busqueda }) {
 
-    return productos.filter(p => {
+    const productosFiltrados = productos.filter(p => {
         const coincideCategoria = !categoria || p.categoria === categoria;
 
         const coincideBusqueda = !busqueda || (
@@ -98,22 +119,19 @@ function filtrarProductos(productos, { categoria, busqueda }) {
 
         return coincideCategoria && coincideBusqueda;
     });
-}
 
-
-function ordenarProductos(productos, orden) {
     switch (orden) {
         case "fecha_asc":
-            return productos.sort((a, b) => new Date(a.fecha_publicacion) - new Date(b.fecha_publicacion));
+            return productosFiltrados.sort((a, b) => new Date(a.fecha_publicacion) - new Date(b.fecha_publicacion));
         case "fecha_desc":
-            return productos.sort((a, b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+            return productosFiltrados.sort((a, b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
         // Si en el futuro agregás precios:
         // case "precio_asc":
         //   return productos.sort((a, b) => a.precio - b.precio);
         // case "precio_desc":
         //   return productos.sort((a, b) => b.precio - a.precio);
         default:
-            return productos;
+            return productosFiltrados;
     }
 }
 
@@ -127,16 +145,13 @@ function mantenerValoresFormulario() {
         busqueda: params.get("busqueda")
     };
 
-    /*
     if (filtros.orden) {
         document.getElementById("orden").value = filtros.orden;
     }
-    */
 
     if (filtros.busqueda) {
         document.getElementById("texto").value = filtros.busqueda;
     }
-
 }
 
 // Cambia el CSS del boton de Busqueda segun el dispositivo (PC-Tablet-Celu)
@@ -154,21 +169,15 @@ function actualizarBotonBuscar() {
     }
 }
 
-// CARGADO DE PRODUCTOS con FILTRADO por URL
-const params = new URLSearchParams(window.location.search);
+// Funcion que carga por primera vez los productos
+cargarProductos();
 
-const filtros = {
-    categoria: params.get("categoria"),
-    orden: params.get("orden"),
-    busqueda: params.get("busqueda")
-};
-
-cargarProductos().then(productos => {
-    let resultado = filtrarProductos(productos, filtros);
-    resultado = ordenarProductos(resultado, filtros.orden);
-    mostrarProductos(resultado);
+// SELECT DE ORDEN _______________________________
+document.getElementById("orden").addEventListener("change", () => {
+    cargarProductos();
 });
 
+// INPUT DE BUSQUEDA _______________________________
 const input = document.getElementById("texto");
 const clearBtn = document.getElementById("clearInput");
 

@@ -24,22 +24,6 @@
     position: relative;
 }
 
-/*
-#categoria {
-    border-radius: 3px;
-
-    padding: 2px 5px;
-    border: 1px solid #4e4e4e;
-}
-
-#orden {
-    border-radius: 3px;
-
-    padding: 2px 5px;
-    border: 1px solid #4e4e4e;
-}
-*/
-
 .clear-btn {
     position: absolute;
     right: 25px;
@@ -123,24 +107,94 @@
     font-weight: bolder;
 }
 
-/* MENSAJE SIN PRODUCTOS */
+/* HEAD PRODUCTOS Catalogo */
+.productos-head {
+    width: 100%;
+    background-color: #fff;
+}
 
+#productos-heading {
+    padding: 10px 10px 2px 15px;
+    font-size: 1.25rem;
+}
+
+.breadcrumb {
+    padding: 2px 10px;
+}
+
+.breadcrumb-ul {
+    display: flex; 
+    gap: 1em; 
+    margin-left: 1em;
+
+    list-style: none;
+    padding: 0;
+}
+
+.breadcrumb-li {
+    position: relative;
+    padding-left: 1.2em; /* espacio para el símbolo */
+    font-size: 1rem;
+}
+
+.breadcrumb-li a {
+    text-decoration: none;
+    color: #4e4e4e;
+}
+
+.breadcrumb-li.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #222;
+}
+
+.breadcrumb-li::before {
+    content: ">";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    color: #693767;
+    font-weight: bold;
+}
+
+.productos-cant {
+    width: 100%;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px 2.5em;
+    color: #757575;
+    font-size: 0.9rem;
+}
+
+#orden {
+    border-radius: 3px;
+    padding: 1px 3px;
+    border: 1px solid #4e4e4e;
+}
+
+/* PRODUCTOS CONTAINER __________________________________ */
+
+/* MENSAJE SIN PRODUCTOS */
 .mensaje-productos {
-    margin: 1.5em 0;
+    padding: 1.5em 0;
     font-size: 2rem;
     font-weight: lighter;
     color: #5f5f5f;
     text-align: center;
+
+    display: none;
 }
 
-/* PRODUCTOS _______________________________________________ */
 .container {
+    background-color: #fff;
 }
 
 .productos {
-    background-color: #fff;
     margin: 0 0 10em 0;
-    padding: 40px 40px 60px 40px;
+    padding: 20px 40px 60px 40px;
 }
 
 .productos-grid {
@@ -273,7 +327,7 @@
 
     .categoria-chips {
         padding: 5px;
-        gap: 10px;
+        gap: 1px 10px;
     }
 
     .btn-buscar {
@@ -285,6 +339,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 10px;
+    }
+
+    .productos-cant {
+        flex-direction: column;
         gap: 10px;
     }
 
