@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // BUSCAR PRODUCTO por ID
     try {
         // 2. Cargar el archivo productos.txt (debe estar en el mismo servidor)
-        const response = await fetch("../data/productos_v4.json");
+        const response = await fetch("../data/productos_v12.json");
         const productos = await response.json();
 
         // 3. Buscar el producto por id
@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             };
 
             // --- Colores
+            /*
             const coloresDiv = document.querySelector(".div-colores");
             coloresDiv.innerHTML = "";
             version.colores.forEach(([hex, nombre]) => {
@@ -152,6 +153,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 colorDiv.title = nombre;
                 coloresDiv.appendChild(colorDiv);
             });
+            */
 
             // --- Tags
             const tags = document.querySelector(".tags");
@@ -229,7 +231,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const versionesDiv = document.querySelector(".div-versiones");
         versionesDiv.innerHTML = ""; // limpiar previas
 
-        producto.versiones.forEach((version, index) => {
+        producto.versiones.reverse().forEach((version, index) => {
             const versionDiv = document.createElement("div");
             versionDiv.classList.add("version");
             if (index === 0) versionDiv.classList.add("v-on"); // primera versión default
@@ -299,7 +301,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             card.setAttribute("role", "listitem");
 
             card.innerHTML = `
-                <img class="img-card" src="${prod.versiones[0].imagenes[0] || 'placeholder.jpg'}" alt="${prod.nombre}"></img>
+                <img class="img-card" src="${prod.versiones[prod.versiones.length - 1].imagenes[0] || 'placeholder.jpg'}" alt="${prod.nombre}"></img>
                 
                 <div class="producto-info">
                     <h3 class="title-card">${prod.nombre}</h3>

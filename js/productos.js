@@ -1,5 +1,5 @@
 async function cargarProductos() {
-    const response = await fetch("../data/productos_v4.json");
+    const response = await fetch("../data/productos_v12.json");
     const productos = await response.json();
     // Filtrar los que estén activos
     const productosActivos = productos.filter(p => p.activo === true);
@@ -47,6 +47,11 @@ function mostrarProductos(productos) {
         return;
     }
 
+    // Ordenar por mas recientes primero
+    productos.sort((a, b) =>
+        new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion)
+    );
+
     productos.forEach(prod => {
         const div = document.createElement("div");
         div.className = "producto-card";
@@ -55,7 +60,7 @@ function mostrarProductos(productos) {
         div.setAttribute("itemtype", "https://schema.org/Product");
 
         div.innerHTML = `
-            <img class="img-card" src="${prod.versiones[0].imagenes[0]}" alt="${prod.nombre}" itemprop="image">
+            <img class="img-card" src="${prod.versiones[prod.versiones.length - 1].imagenes[0]}" alt="${prod.nombre}" itemprop="image">
             <h3 class="title-card" itemprop="name">${prod.nombre}</h3>
             <a href="detalles.html?id=${prod.id}" class="btn-card" itemprop="url">Ver más</a>
         `;
