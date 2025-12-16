@@ -1,6 +1,8 @@
+const jsonProductos = "../data/productos_2025-12-16_20-22-57.json";
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch("../data/productos_v12.json");
+    const response = await fetch( jsonProductos );
     const productos = await response.json();
 
     // Filtrar los que estén activos

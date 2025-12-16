@@ -1,8 +1,15 @@
+const jsonProductos = "../data/productos_2025-12-16_20-22-57.json?v=2";
+
 async function cargarProductos() {
-    const response = await fetch("../data/productos_v12.json");
+    const response = await fetch( jsonProductos );
     const productos = await response.json();
     // Filtrar los que estén activos
     const productosActivos = productos.filter(p => p.activo === true);
+
+    // Ordenar por mas recientes primero
+    productosActivos.sort((a, b) =>
+        new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion)
+    );
 
     // CARGADO DE PRODUCTOS con FILTRADO por URL
     //const params = new URLSearchParams(window.location.search);
@@ -46,11 +53,6 @@ function mostrarProductos(productos) {
         msjProductos.style.display = "block";
         return;
     }
-
-    // Ordenar por mas recientes primero
-    productos.sort((a, b) =>
-        new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion)
-    );
 
     productos.forEach(prod => {
         const div = document.createElement("div");

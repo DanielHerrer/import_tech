@@ -1,4 +1,5 @@
 // LOGICA DE global.js
+const jsonProductos = "../data/productos_2025-12-16_20-22-57.json";
 
 // DOMContentLoaded __________________________________________________________________________________________________
 document.addEventListener("DOMContentLoaded", async () => {
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // BUSCAR PRODUCTO por ID
     try {
         // 2. Cargar el archivo productos.txt (debe estar en el mismo servidor)
-        const response = await fetch("../data/productos_v12.json");
+        const response = await fetch( jsonProductos );
         const productos = await response.json();
 
         // 3. Buscar el producto por id

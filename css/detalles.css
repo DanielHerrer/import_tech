@@ -228,6 +228,11 @@
   border-bottom: 1px solid #979797;
 }
 
+.ad-color {
+  color: #a1a1a1;
+  font-size: 0.75em;
+}
+
 .title-colores {
   color: #4d4d4d;
   font-size: 1rem;
@@ -266,7 +271,7 @@
 
 .description-producto {
   font-size: 1rem;
-  color: #929292;
+  color: #707070;
   margin-bottom: 1.5em;
 
   /* border-top: 1px solid #929292; */
@@ -319,7 +324,7 @@
   /* margin-top: 5px; */
   z-index: 1;
   position: absolute;
-  bottom: 1em;
+  bottom: 1.3em;
 }
 
 /* PAGOS - COMPRAR ________________________________ */
@@ -697,6 +702,10 @@
     border-bottom: 1px solid #979797;
   }
 
+  .ad-color {
+    font-size: 0.55em;
+  }
+
   .title-colores {
     color: #4d4d4d;
     font-size: 0.75rem;
@@ -850,6 +859,10 @@
     border-bottom: 1px solid #979797;
   }
 
+  .ad-color {
+    font-size: 0.6em;
+  }
+
   .title-colores {
     color: #4d4d4d;
     font-size: 0.9rem;
@@ -993,6 +1006,10 @@
     padding: 0.75em 0 0.75em 0;
     margin: 0 2em;
     border-bottom: 1px solid #979797;
+  }
+
+  .ad-color {
+    font-size: 0.6em;
   }
 
   .title-colores {
