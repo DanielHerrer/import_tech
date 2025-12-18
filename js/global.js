@@ -98,10 +98,10 @@ const rutaActual = window.location.pathname;
 // Verifico si estoy en index o en otra página
 if (rutaActual.endsWith("index.html") || rutaActual.endsWith("/")) {
     // Estamos en index
-    imgModal.src = "./img/banner_3.png";
+    imgModal.src = "./img/banner_navidad.jpg";
 } else {
     // Estamos en otra página
-    imgModal.src = "../img/banner_3.png";
+    imgModal.src = "../img/banner_navidad.jpg";
 }
 
 // Función para saber si ya se mostró hoy
