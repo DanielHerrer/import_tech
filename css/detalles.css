@@ -29,7 +29,7 @@
   transform: translateY(-50%);
   background: none;
   border: none;
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
   cursor: pointer;
   padding: 0 10px;
@@ -100,6 +100,62 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 0em;
+}
+
+/* HEAD DETALLES Catalogo Navegacion Activa ____________________________________________ */
+.detalles-head {
+  width: 100%;
+  background-color: #fff;
+}
+
+#detalles-heading {
+  padding: 10px 10px 2px 15px;
+  font-size: 1.25rem;
+}
+
+.breadcrumb {
+  padding: 0.5em 1.5em 0 0 ;
+}
+
+.breadcrumb-ul {
+  display: flex;
+  gap: 1em;
+
+  list-style: none;
+  padding: 0;
+}
+
+.breadcrumb-li {
+  position: relative;
+  padding-left: 1.2em;
+  /* espacio para el símbolo */
+  font-size: 0.85rem;
+}
+
+.breadcrumb-li a {
+  text-decoration: none;
+  color: #757575;
+  text-decoration: underline;
+}
+
+.breadcrumb-li a:hover {
+    color: #dd03ff;
+}
+
+.breadcrumb-li.breadcrumb-active {
+  font-weight: bold;
+  color: #6a6a6a;
+  text-decoration: none;
+
+}
+
+.breadcrumb-li::before {
+  content: ">";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  color: #693767;
+  font-weight: bold;
 }
 
 /* TITULO _________________________________________ */
@@ -637,6 +693,7 @@
   .modal-galeria {
     height: auto;
   }
+
   /* ________________________________ */
 
   .detalles {
@@ -869,6 +926,7 @@
   .modal-galeria {
     height: auto;
   }
+
   /* ________________________________ */
 
   .detalles {

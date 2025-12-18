@@ -123,40 +123,6 @@
             </a>
         </div>
 
-        <!-- BÚSQUEDA: usa GET para que las consultas sean indexables y compartibles -->
-        <!-- 
-        <form class="busqueda" action="" method="GET" role="search" aria-label="Buscar productos">
-            <div class="div-busqueda">
-                <label for="categoria" class="sr-only">Categoría</label>
-                <select name="categoria" id="categoria" aria-label="Seleccionar categoría">
-                    <option value="">Todas las categorías</option>
-                    <option value="Celular">Celulares</option>
-                    <option value="Tablet">Tablets</option>
-                    <option value="Ordenador">Ordenadores</option>
-                    <option value="Accesorio">Accesorios</option>
-                    <option value="Videojuegos">Videojuegos</option>
-                </select>
-
-                
-                <label for="orden" class="sr-only">Ordenar por</label>
-                <select name="orden" id="orden" aria-label="Ordenar resultados">
-                    <option value="">Ordenar por</option>
-                    <option value="fecha_asc">Más antiguos</option>
-                    <option value="fecha_desc">Más nuevos</option>
-                </select>
-                
-                
-                <label for="texto" class="sr-only">Texto de búsqueda</label>
-                <input type="text" name="busqueda" id="texto" placeholder="Buscar producto..."
-                    aria-label="Buscar producto">
-            </div>
-
-            <button id="btnBuscar" class="btn-buscar" type="submit" aria-label="Buscar">
-                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            </button>
-        </form>
-        -->
-
         <!-- MAIN: contenedor semántico principal -->
         <main id="main" role="main" aria-labelledby="productos-heading">
 
@@ -188,7 +154,7 @@
                     <nav aria-label="Breadcrumb" class="breadcrumb">
                         <ul class="breadcrumb-ul">
                             <li class="breadcrumb-li "><a href="../index.html">Inicio</a></li>
-                            <li class="breadcrumb-li active" aria-current="page">Productos</li>
+                            <li class="breadcrumb-li breadcrumb-active" aria-current="page">Productos</li>
                         </ul>
                     </nav>
                 </div>
@@ -215,13 +181,10 @@
                 <section class="productos" aria-label="Listado de productos">
                     <!-- Contenedor con role=list para accesibilidad; los items que inyectes por JS deberían ser role=listitem -->
                     <div class="productos-grid" id="contenedor-productos" role="list" aria-live="polite">
-                        <!-- ACA SE AÑADEN LOS PRODUCTOS dinámicamente desde productos.js -->
-                    </div>
 
-                    <!-- Mensaje que se muestra cuando no hay resultados; manejalo desde JS
-                    <div id="sin-resultados" class="sin-resultados" aria-hidden="true" style="display:none;">
-                        <p>No se encontraron productos que coincidan con tu búsqueda.</p>
-                    </div> -->
+                        <!-- ACA SE AÑADEN LOS PRODUCTOS dinámicamente desde productos.js -->
+
+                    </div>
                 </section>
                 
             </div>

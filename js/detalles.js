@@ -173,6 +173,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         function mostrarVersion(version) {
 
             // 1. Datos generales del producto
+            document.querySelector(".breadcrumb-active").textContent = producto.nombre;
             document.querySelector(".title-producto").textContent = producto.nombre + " " + version.nombre_version;
             document.querySelector(".subtitle-producto").textContent = `${producto.marca} · ${producto.categoria}`;
             document.title = `${producto.nombre + " " + version.nombre_version} · Import Tech BA | Celulares y Tecnología en Argentina`;
@@ -308,12 +309,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         }
 
-        // 1. Datos generales del producto
-        // document.querySelector(".title-producto").textContent = producto.nombre;
-        // document.querySelector(".subtitle-producto").textContent = `${producto.marca} · ${producto.categoria}`;
-        // document.title = `${producto.nombre} · Import Tech`;
-        // window.tituloProducto = document.title;
-
         // 2. Renderizar versiones
         const versionesDiv = document.querySelector(".div-versiones");
         versionesDiv.innerHTML = ""; // limpiar previas
@@ -322,8 +317,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             const versionDiv = document.createElement("div");
             versionDiv.classList.add("version");
             if (index === 0) versionDiv.classList.add("v-on"); // primera versión default
-            versionDiv.textContent = version.nombre_version;
-            versionDiv.title = version.nombre_version;
+            versionDiv.textContent =  version.nombre_version;
+            versionDiv.title = producto.nombre +" "+ version.nombre_version;
 
             versionDiv.addEventListener("click", () => {
                 // Quitar v-on de todas

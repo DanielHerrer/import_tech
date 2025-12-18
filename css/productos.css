@@ -107,7 +107,7 @@
     font-weight: bolder;
 }
 
-/* HEAD PRODUCTOS Catalogo */
+/* HEAD PRODUCTOS Catalogo Navegacion Activa ____________________________________________ */
 .productos-head {
     width: 100%;
     background-color: #fff;
@@ -115,7 +115,7 @@
 
 #productos-heading {
     padding: 10px 10px 2px 15px;
-    font-size: 1.25rem;
+    font-size: 0.95rem;
 }
 
 .breadcrumb {
@@ -134,18 +134,24 @@
 .breadcrumb-li {
     position: relative;
     padding-left: 1.2em; /* espacio para el símbolo */
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 .breadcrumb-li a {
-    text-decoration: none;
-    color: #4e4e4e;
+  text-decoration: none;
+  color: #757575;
+  text-decoration: underline;
 }
 
-.breadcrumb-li.active {
-    font-weight: bold;
-    text-decoration: underline;
-    color: #222;
+.breadcrumb-li a:hover {
+    color: #dd03ff;
+}
+
+.breadcrumb-li.breadcrumb-active {
+  font-weight: bold;
+  color: #6a6a6a;
+  text-decoration: none;
+
 }
 
 .breadcrumb-li::before {
@@ -156,6 +162,8 @@
     color: #693767;
     font-weight: bold;
 }
+
+/* CANTIDAD PRODUCTOS ____________________________________ */
 
 .productos-cant {
     width: 100%;
