@@ -1,5 +1,6 @@
 // LOGICA DE global.js
 const jsonProductos = "../data/productos_2025-12-16_20-22-57.json";
+const nombresNovedad = ["Macbook Pro 14\" M5", "iPad Pro 11\" M5", "iPad Pro 13\" M5"];
 
 // DOMContentLoaded __________________________________________________________________________________________________
 document.addEventListener("DOMContentLoaded", async () => {
@@ -402,6 +403,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                 card.appendChild(badge);
             }
 
+            // Si el nombre del producto coincide con las NOVEDADES entonces lo remarca
+            if (nombresNovedad.includes(prod.nombre)) {
+                const badge = document.createElement("div");
+                badge.classList.add("producto-nuevo");
+                badge.textContent = "Novedad";
+                card.appendChild(badge);
+            }
 
             // Al hacer clic → ir a la página de detalles
             card.addEventListener("click", () => {

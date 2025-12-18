@@ -1,7 +1,8 @@
 const jsonProductos = "../data/productos_2025-12-16_20-22-57.json?v=2";
+const nombresNovedad = ["Macbook Pro 14\" M5", "iPad Pro 11\" M5", "iPad Pro 13\" M5"];
 
 async function cargarProductos() {
-    const response = await fetch( jsonProductos );
+    const response = await fetch(jsonProductos);
     const productos = await response.json();
     // Filtrar los que estén activos
     const productosActivos = productos.filter(p => p.activo === true);
@@ -35,7 +36,7 @@ function actualizarCantidad(productos) {
     let contenedor = document.getElementById("resultado-cant");
     contenedor.innerHTML = "";
     contenedor.textContent = `Se han encontrado ${productos.length} resultados`;
-}  
+}
 
 function mostrarProductos(productos) {
 
@@ -80,10 +81,19 @@ function mostrarProductos(productos) {
         //     div.appendChild(price);
         // }
 
+        // Agregar badge si hay varias versiones
         if (prod.versiones.length > 1) {
             const badge = document.createElement("div");
             badge.classList.add('producto-versiones');
             badge.textContent = "Varias versiones";
+            div.appendChild(badge);
+        }
+
+        // Si el nombre del producto coincide con las NOVEDADES entonces lo remarca
+        if (nombresNovedad.includes(prod.nombre)) {
+            const badge = document.createElement("div");
+            badge.classList.add("producto-nuevo");
+            badge.textContent = "Novedad";
             div.appendChild(badge);
         }
 

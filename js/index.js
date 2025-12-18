@@ -1,8 +1,9 @@
 const jsonProductos = "../data/productos_2025-12-16_20-22-57.json";
+const nombresNovedad = ["Macbook Pro 14\" M5", "iPad Pro 11\" M5", "iPad Pro 13\" M5"];
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch( jsonProductos );
+    const response = await fetch(jsonProductos);
     const productos = await response.json();
 
     // Filtrar los que estén activos
@@ -54,6 +55,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         badge.textContent = "Varias versiones";
 
         // div.style.position = "relative"; // para que el badge quede dentro del div
+        card.appendChild(badge);
+      }
+
+      // Si el nombre del producto coincide con las NOVEDADES entonces lo remarca
+      if (nombresNovedad.includes(prod.nombre)) {
+        const badge = document.createElement("div");
+        badge.classList.add("producto-nuevo");
+        badge.textContent = "Novedad";
         card.appendChild(badge);
       }
 

@@ -1,5 +1,7 @@
-html, body {
-  overflow-x: hidden; /* solucion a bug animaciones en X */
+html,
+body {
+  overflow-x: hidden;
+  /* solucion a bug animaciones en X */
 }
 
 /* ANIMACIONES _____________________________________*/
@@ -35,6 +37,7 @@ html, body {
     opacity: 0;
     transform: translateX(-75px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -46,6 +49,7 @@ html, body {
     opacity: 0;
     transform: translateX(75px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -57,6 +61,7 @@ html, body {
     opacity: 0;
     transform: translateY(-75px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -68,6 +73,7 @@ html, body {
     opacity: 0;
     transform: translateY(75px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -317,6 +323,21 @@ html, body {
   transform: scale(1.03);
   /* se agranda un 5% */
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.producto-nuevo {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  /* background-color: rgb(235, 77, 77); */
+  background-color: rgb(255, 75, 75);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  border: 2px solid white;
+  color: rgb(255, 255, 255);
+  padding: 3px 11px;
+  font-size: 11px;
+  border-radius: 99px;
+  z-index: 10;
 }
 
 .producto-versiones {
