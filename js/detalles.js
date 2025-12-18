@@ -4,6 +4,88 @@ const jsonProductos = "../data/productos_2025-12-16_20-22-57.json";
 // DOMContentLoaded __________________________________________________________________________________________________
 document.addEventListener("DOMContentLoaded", async () => {
 
+    //----------- Modal Galeria fotos
+    let imagenesActuales = [];
+    let imgIndex = 0;
+
+    const imgOverlay = document.getElementById("imgOverlay");
+    const modalImg = document.getElementById("modalImg");
+    const closeImgModal = document.getElementById("closeImgModal");
+    const btnPrev = imgOverlay.querySelector(".prev");
+    const btnNext = imgOverlay.querySelector(".next");
+
+    function abrirModalImagenes(imagenes, index = 0) {
+        imgOverlay.style.display = "block";
+        
+        imagenesActuales = imagenes.filter(Boolean).slice(0, 4);
+        imgIndex = index;
+
+        modalImg.src = imagenesActuales[imgIndex];
+
+        btnPrev.style.display = imagenesActuales.length > 1 ? "block" : "none";
+        btnNext.style.display = imagenesActuales.length > 1 ? "block" : "none";
+    }
+
+    function cambiarImagen(dir) {
+        modalImg.classList.add("fade");
+
+        setTimeout(() => {
+            imgIndex += dir;
+            if (imgIndex < 0) imgIndex = imagenesActuales.length - 1;
+            if (imgIndex >= imagenesActuales.length) imgIndex = 0;
+            modalImg.src = imagenesActuales[imgIndex];
+            modalImg.classList.remove("fade");
+        }, 150);
+    }
+
+    btnPrev.addEventListener("click", e => {
+        e.stopPropagation();
+        cambiarImagen(-1);
+    });
+
+    btnNext.addEventListener("click", e => {
+        e.stopPropagation();
+        cambiarImagen(1);
+    });
+
+    closeImgModal.addEventListener("click", () => {
+        imgOverlay.style.display = "none";
+    });
+
+    imgOverlay.addEventListener("click", e => {
+        if (e.target === imgOverlay) {
+            imgOverlay.hidden = true;
+            imgOverlay.style.display = "none";
+        }
+    });
+
+    // Swipe en MOBILE (arrastrar)
+    let startX = 0;
+
+    modalImg.addEventListener("touchstart", e => {
+        startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    modalImg.addEventListener("touchend", e => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > 50) {
+            cambiarImagen(diff > 0 ? 1 : -1);
+        }
+    });
+
+    // Teclado (← → ESC)
+    document.addEventListener("keydown", e => {
+        if (imgOverlay.hidden) return;
+
+        if (e.key === "ArrowRight") cambiarImagen(1);
+        if (e.key === "ArrowLeft") cambiarImagen(-1);
+        if (e.key === "Escape") imgOverlay.hidden = true;
+    });
+
+    //-----------
+
     const img1 = document.querySelector(".img-1");
     const mainImg = img1.querySelector("img");
 
@@ -76,7 +158,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // BUSCAR PRODUCTO por ID
     try {
         // 2. Cargar el archivo productos.txt (debe estar en el mismo servidor)
-        const response = await fetch( jsonProductos );
+        const response = await fetch(jsonProductos);
         const productos = await response.json();
 
         // 3. Buscar el producto por id
@@ -101,6 +183,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (version.imagenes[0]) {
                 mainImg.src = version.imagenes[0];
             }
+
+            mainImg.addEventListener("click", () => {
+                abrirModalImagenes(version.imagenes, 0);
+            });
 
             // --- Sub-imágenes
             const imgsContainer = document.querySelector(".imgs");
@@ -191,7 +277,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     const node = document.getElementById('product-jsonld');
                     if (!node) return;
                     const base = JSON.parse(node.textContent);
-                    if (product.nombre && version.nombre_version) base.name = product.nombre+" "+version.nombre_version;
+                    if (product.nombre && version.nombre_version) base.name = product.nombre + " " + version.nombre_version;
                     if (version.descripcion) base.description = version.descripcion;
                     if (version.imagenes && version.imagenes.length) base.image = version.imagenes;
 
@@ -216,8 +302,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Intento inicial de llenar JSON-LD si los datos ya están presentes tras detalles.js
             try {
                 if (producto) updateProductJsonLd(producto);
-            } catch (e) { 
-                console.log("Error en JSON-LD: "+e);
+            } catch (e) {
+                console.log("Error en JSON-LD: " + e);
             }
 
         }

@@ -91,12 +91,25 @@
             </nav>
         </header>
 
-        <!-- Overlay + Modal -->
+        <!-- Modal Noticias y Novedades -->
         <div class="overlay" id="overlay" hidden>
             <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
                 <button class="close-btn" id="closeBtn" aria-label="Cerrar">&times;</button>
                 <p id="modal-title" class="title-modal"></p>
                 <img src="." alt="Imagen del producto en modal">
+            </div>
+        </div>
+
+        <!-- Modal Galería Producto Fotos -->
+        <div class="overlay" id="imgOverlay" hidden>
+            <div class="modal modal-galeria" role="dialog" aria-modal="true">
+                <button class="close-btn" id="closeImgModal" aria-label="Cerrar">&times;</button>
+
+                <button class="nav prev" aria-label="Imagen anterior">&#10094;</button>
+
+                <img id="modalImg" src="" alt="Imagen del producto ampliada">
+
+                <button class="nav next" aria-label="Imagen siguiente">&#10095;</button>
             </div>
         </div>
 
