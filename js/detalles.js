@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let imgIndex = 0;
 
     const divOverlay = document.getElementById("divOverlay");
+    const imgOverlay = document.getElementById("imgOverlay");
     const modalImg = document.getElementById("modalImg");
     const closeImgModal = document.getElementById("closeImgModal");
     const btnPrev = divOverlay.querySelector(".prev");
@@ -49,12 +50,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         cambiarImagen(1);
     });
 
+    // Cerrar el modal si se hace click en la X
     closeImgModal.addEventListener("click", () => {
         divOverlay.style.display = "none";
     });
 
-    divOverlay.addEventListener("click", e => {
-        if (e.target === divOverlay) {
+    // Cerrar el modal si se hace click fuera de la imagen
+    imgOverlay.addEventListener("click", e => {
+        if (e.target === imgOverlay) {
             divOverlay.style.display = "none";
         }
     });
