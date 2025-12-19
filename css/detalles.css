@@ -1,20 +1,47 @@
 /* MODAL FOTOS GALERIA ______________________________________________________*/
-.modal-galeria {
+.divOverlay {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.imgOverlay {
+  width: 100%;
+  height: 100%;
   position: relative;
-  width: fit-content;
-  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-galeria {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  z-index: 1000;
 }
 
 .modal-galeria img {
-  width: 100%;
-  height: 100%;
   display: block;
+  max-width: 100vw;
+  max-height: 90vh;
   border-radius: 8px;
   transition: opacity .25s ease, transform .25s ease;
+
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Animación */
@@ -23,7 +50,7 @@
   transform: scale(.98);
 }
 
-.modal-galeria .nav {
+.nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -40,11 +67,11 @@
   border-radius: 6px;
 }
 
-.modal-galeria .prev {
+.prev {
   left: 10px;
 }
 
-.modal-galeria .next {
+.next {
   right: 10px;
 }
 
@@ -55,13 +82,14 @@
 
 .close-btn {
   position: absolute;
-  top: -40px;
-  right: 0;
+  top: 15px;
+  right: 15px;
   font-size: 2rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
+  z-index: 10000;
 }
 
 /*________________________________________________________________________________*/
@@ -100,6 +128,25 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 0em;
+}
+
+/* TITULO _________________________________________ */
+
+.producto .titulo {
+  padding: 0.75em 1.5em 0.75em 1.5em;
+  border-bottom: 1px solid #979797;
+  margin: 0;
+}
+
+.title-producto {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+.subtitle-producto {
+  font-size: 1.15rem;
+  color: #4d4d4d;
+  margin-bottom: 0;
 }
 
 /* HEAD DETALLES Catalogo Navegacion Activa ____________________________________________ */
@@ -158,25 +205,6 @@
   font-weight: bold;
 }
 
-/* TITULO _________________________________________ */
-
-.producto .titulo {
-  padding: 0.75em 1.5em 0.75em 1.5em;
-  border-bottom: 1px solid #979797;
-  margin: 0;
-}
-
-.title-producto {
-  font-size: 1.8rem;
-  margin-bottom: 0;
-}
-
-.subtitle-producto {
-  font-size: 1.15rem;
-  color: #4d4d4d;
-  margin-bottom: 0;
-}
-
 /* VERSIONES _________________________________________________ */
 
 .versiones {
@@ -226,7 +254,7 @@
 
 .v-on {
   background-color: rgb(32, 32, 32);
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   color: rgb(255, 216, 42);
 }
 
@@ -729,25 +757,28 @@
   /* TITULO _________________________________________ */
 
   .producto .titulo {
-    padding: 0.5em 3em 0.5em 1.5em;
-    border-bottom: 1px solid #979797;
-    margin: 0;
-  }
-
-  .producto .titulo {
     padding: 0.75em 1em 0.75em 1em;
     border-bottom: 1px solid #979797;
     margin: 0;
   }
 
   .title-producto {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin-bottom: 0.1em;
   }
 
   .subtitle-producto {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 0;
+  }
+
+  /* HEAD DETALLES Catalogo Navegacion Activa ____________________________________________ */
+  .breadcrumb {
+    padding: 0.25em 1.5em 0 0;
+  }
+
+  .breadcrumb-li {
+    font-size: 0.6rem;
   }
 
   /* VERSIONES _________________________________________________ */
@@ -769,8 +800,8 @@
 
     padding: 7px;
 
-    row-gap: 0.5em;
-    column-gap: 1.2em;
+    row-gap: 0.3em;
+    column-gap: 0.3em;
   }
 
   .version {
@@ -968,14 +999,18 @@
   }
 
   .title-producto {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 0.1em;
   }
 
   .subtitle-producto {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #666666;
     margin-bottom: 0;
+  }
+
+  .breadcrumb-li {
+    font-size: 0.7rem;
   }
 
   /* VERSIONES _________________________________________________ */
@@ -998,7 +1033,7 @@
     padding: 7px;
 
     row-gap: 0.3em;
-    column-gap: 0.5em;
+    column-gap: 0.4em;
   }
 
   .version {
@@ -1125,15 +1160,20 @@
   }
 
   .title-producto {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 0.1em;
   }
 
   .subtitle-producto {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #666666;
     margin-bottom: 0;
   }
+
+  .breadcrumb-li {
+    font-size: 0.7rem;
+  }
+
 
   /* VERSIONES _________________________________________________ */
 
@@ -1152,8 +1192,8 @@
 
     padding: 7px;
 
-    row-gap: 0.5em;
-    column-gap: 1em;
+    row-gap: 0.4em;
+    column-gap: 0.4em;
   }
 
   .version {

@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     let imagenesActuales = [];
     let imgIndex = 0;
 
-    const imgOverlay = document.getElementById("imgOverlay");
+    const divOverlay = document.getElementById("divOverlay");
     const modalImg = document.getElementById("modalImg");
     const closeImgModal = document.getElementById("closeImgModal");
-    const btnPrev = imgOverlay.querySelector(".prev");
-    const btnNext = imgOverlay.querySelector(".next");
+    const btnPrev = divOverlay.querySelector(".prev");
+    const btnNext = divOverlay.querySelector(".next");
 
     function abrirModalImagenes(imagenes, index = 0) {
-        imgOverlay.style.display = "block";
-        
+        divOverlay.style.display = "block";
+
         imagenesActuales = imagenes.filter(Boolean).slice(0, 4);
         imgIndex = index;
 
@@ -50,13 +50,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     closeImgModal.addEventListener("click", () => {
-        imgOverlay.style.display = "none";
+        divOverlay.style.display = "none";
     });
 
-    imgOverlay.addEventListener("click", e => {
-        if (e.target === imgOverlay) {
-            imgOverlay.hidden = true;
-            imgOverlay.style.display = "none";
+    divOverlay.addEventListener("click", e => {
+        if (e.target === divOverlay) {
+            divOverlay.style.display = "none";
         }
     });
 
@@ -78,11 +77,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Teclado (← → ESC)
     document.addEventListener("keydown", e => {
-        if (imgOverlay.hidden) return;
+        // Si el modal NO está abierto, no hacer nada
+        if (divOverlay.style.display !== 'block') return;
 
         if (e.key === "ArrowRight") cambiarImagen(1);
         if (e.key === "ArrowLeft") cambiarImagen(-1);
-        if (e.key === "Escape") imgOverlay.hidden = true;
+        if (e.key === "Escape") divOverlay.style.display = "none";
     });
 
     //-----------
@@ -318,8 +318,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             const versionDiv = document.createElement("div");
             versionDiv.classList.add("version");
             if (index === 0) versionDiv.classList.add("v-on"); // primera versión default
-            versionDiv.textContent =  version.nombre_version;
-            versionDiv.title = producto.nombre +" "+ version.nombre_version;
+            versionDiv.textContent = version.nombre_version;
+            versionDiv.title = producto.nombre + " " + version.nombre_version;
 
             versionDiv.addEventListener("click", () => {
                 // Quitar v-on de todas
