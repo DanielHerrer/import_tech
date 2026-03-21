@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (nombresNovedad.includes(prod.nombre)) {
         const badge = document.createElement("div");
         badge.classList.add("producto-nuevo");
-        badge.textContent = "Novedad";
+        badge.textContent = "Nuevo ingreso";
         card.appendChild(badge);
       }
 

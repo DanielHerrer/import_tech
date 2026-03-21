@@ -93,7 +93,7 @@ function mostrarProductos(productos) {
         if (nombresNovedad.includes(prod.nombre)) {
             const badge = document.createElement("div");
             badge.classList.add("producto-nuevo");
-            badge.textContent = "Novedad";
+            badge.textContent = "Nuevo ingreso";
             div.appendChild(badge);
         }
 
