@@ -41,8 +41,8 @@ class Particle {
         }
 
         //movimiento de particula
-        this.x += this.directionX;
-        this.y += this.directionY;
+        this.x += (this.directionX * 0.25 );
+        this.y += (this.directionY * 0.25 );
 
         //dibujado de particula
         this.draw();
