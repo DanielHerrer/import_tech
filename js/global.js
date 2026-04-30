@@ -199,7 +199,7 @@ const closeBtn = document.getElementById("closeBtn");
 
 // ACTUALIZAR TITULO
 const titleModal = document.querySelector(".title-modal");
-titleModal.innerHTML = "<b>Novedades</b> · Promos y ofertas <b>todos</b> los días. 😄";
+titleModal.innerHTML = "<b>Novedades</b> · Estamos teniendo inconvenientes con Instagram. 😔"; // "<b>Novedades</b> · Promos y ofertas <b>todos</b> los días. 😄";
 // ACTUALIZAR IMAGEN PRINCIPAL
 const imgModal = document.querySelector(".modal img");
 // Obtengo la ruta actual (sin dominio)
@@ -207,10 +207,10 @@ const rutaActual = window.location.pathname;
 // Verifico si estoy en index o en otra página
 if (rutaActual.endsWith("index.html") || rutaActual.endsWith("/")) {
     // Estamos en index
-    imgModal.src = "./img/banner_3.png";
+    imgModal.src = "./img/banner_error_ig.jpeg"; // "../img/banner_3.png"
 } else {
     // Estamos en otra página
-    imgModal.src = "../img/banner_3.png";
+    imgModal.src = "../img/banner_error_ig.jpeg"; // "../img/banner_3.png"
 }
 
 // Función para saber si ya se mostró hoy
