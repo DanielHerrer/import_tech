@@ -1,4 +1,4 @@
-const jsonProductos = "../data/productos_2026-06-10_13-07-50.json?v=3";
+const jsonProductos = "../data/productos_2026-06-10_13-41-30.json?v=3";
 const nombresNovedad = ["Samsung Galaxy A57", "Samsung Galaxy S26", "Samsung Galaxy S26 Plus", "Samsung Galaxy S26 Ultra"];
 
 async function cargarProductos() {
