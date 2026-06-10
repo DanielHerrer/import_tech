@@ -199,7 +199,7 @@ const closeBtn = document.getElementById("closeBtn");
 
 // ACTUALIZAR TITULO
 const titleModal = document.querySelector(".title-modal");
-titleModal.innerHTML = "<b>Novedades</b> · Volvimos! Promos y ofertas <b>todos</b> los días. 😄";
+titleModal.innerHTML = "<b>Estamos teniendo inconvenientes con Instagram</b> · Gracias por su comprensión"; // "<b>Novedades</b> · Volvimos! Promos y ofertas <b>todos</b> los días. 😄"
 
 // ACTUALIZAR IMAGEN PRINCIPAL
 const imgModal = document.querySelector(".modal img");
@@ -212,9 +212,9 @@ const rutaActual = window.location.pathname;
 
 // Verifico si estoy en index o en otra página
 if (rutaActual.endsWith("index.html") || rutaActual.endsWith("/")) {
-    imgModal.src = esCelular ? "../img/banner_4_vertical.png" : "../img/banner_4.png";
+    imgModal.src = esCelular ? "../img/banner_error_ig_vertical.png" : "../img/banner_error_ig.jpeg";
 } else {
-    imgModal.src = esCelular ? "../img/banner_4_vertical.png" : "../img/banner_4.png";
+    imgModal.src = esCelular ? "../img/banner_error_ig_vertical.png" : "../img/banner_error_ig.jpeg";
 }
 
 // Función para saber si ya se mostró hoy
