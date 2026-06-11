@@ -1,4 +1,4 @@
-const jsonProductos = "../data/productos_2026-06-10_13-41-30.json?v=1";
+const jsonProductos = "../data/productos_2026-06-11_16-33-39.json?v=1";
 const nombresNovedad = ["Samsung Galaxy A57", "Samsung Galaxy S26", "Samsung Galaxy S26 Plus", "Samsung Galaxy S26 Ultra"];
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -13,6 +13,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     const productosOrdenados = productosActivos.sort((a, b) =>
       new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion)
     );
+
+    // Priorizar NOVEDADES al frente, respetando el orden por fecha dentro de cada grupo
+    productosOrdenados.sort((a, b) => {
+      const aEsNovedad = nombresNovedad.includes(a.nombre);
+      const bEsNovedad = nombresNovedad.includes(b.nombre);
+      if (aEsNovedad !== bEsNovedad) return aEsNovedad ? -1 : 1;
+      return 0; // empate: mantiene el orden por fecha
+    });
 
     // Detectar cuántos productos mostrar
     let cantidad;

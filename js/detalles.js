@@ -1,5 +1,5 @@
 // LOGICA DE global.js
-const jsonProductos = "../data/productos_2026-06-10_13-41-30.json?v=1";
+const jsonProductos = "../data/productos_2026-06-11_16-33-39.json?v=1";
 const nombresNovedad = ["Samsung Galaxy A57", "Samsung Galaxy S26", "Samsung Galaxy S26 Plus", "Samsung Galaxy S26 Ultra"];
 
 // DOMContentLoaded __________________________________________________________________________________________________
@@ -358,9 +358,19 @@ document.addEventListener("DOMContentLoaded", async () => {
             p.id !== producto.id &&               // distinto id
             p.activo === true                     // debe estar activo
         );
-        const productosOrdenados = productosRelacionados.sort((a, b) =>
-            new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion)
-        );
+        
+        const productosOrdenados = productosRelacionados.sort((a, b) => {
+            const aEsNovedad = nombresNovedad.includes(a.nombre);
+            const bEsNovedad = nombresNovedad.includes(b.nombre);
+
+            // Si uno es novedad y el otro no, la novedad va primero
+            if (aEsNovedad !== bEsNovedad) {
+                return aEsNovedad ? -1 : 1;
+            }
+
+            // Si ambos están en el mismo grupo, ordenar por fecha (más reciente primero)
+            return new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion);
+        });
 
         // Detectar cuántos productos mostrar
         let cantidad;

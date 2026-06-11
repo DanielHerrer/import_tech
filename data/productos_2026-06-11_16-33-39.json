@@ -2,7 +2,7 @@
   {
     "id": "1",
     "nombre": "AirPods 4",
-    "categoria": "Accesorio",
+    "categoria": "Audio",
     "marca": "Apple",
     "fecha_publicacion": "2025-12-11T01:55:31.998Z",
     "activo": true,
@@ -24,7 +24,7 @@
   {
     "id": "2",
     "nombre": "AirPods Max",
-    "categoria": "Accesorio",
+    "categoria": "Audio",
     "marca": "Apple",
     "fecha_publicacion": "2025-12-11T01:55:43.646Z",
     "activo": true,
@@ -46,7 +46,7 @@
   {
     "id": "3",
     "nombre": "AirPods Pro",
-    "categoria": "Accesorio",
+    "categoria": "Audio",
     "marca": "Apple",
     "fecha_publicacion": "2025-12-11T01:55:56.894Z",
     "activo": true,
@@ -2891,7 +2891,7 @@
           "https://http2.mlstatic.com/D_NQ_NP_2X_830904-MLA99968779133_112025-F.webp"
         ],
         "descripcion": "Fotografía profesional en tu bolsillo\nDescubre infinitas posibilidades para tus fotos con las 3 cámaras principales de tu equipo. Pon a prueba tu creatividad y juega con la iluminación, diferentes planos y efectos para obtener grandes resultados.\n\nPerfecta para los amantes del plano detalle. Su zoom óptico te ofrecerá la posibilidad de realizar acercamientos sin que tus capturas pierdan calidad.\n\nExperiencia visual increíble\nMira tus series y películas favoritas con la mejor definición a través de su pantalla Dynamic AMOLED 2X de 6.7\". Disfruta de colores brillantes y detalles precisos en todos tus contenidos.\n\nCapacidad y eficiencia\nCon su potente procesador y memoria RAM de 12 GB tu equipo alcanzará un alto rendimiento con gran velocidad de transmisión de contenidos y ejecutará múltiples aplicaciones a la vez sin demoras.\n\nDesbloqueo facial y dactilar\nMáxima seguridad para que solo tú puedas acceder al equipo. Podrás elegir entre el sensor de huella dactilar para habilitar el teléfono en un toque, o el reconocimiento facial que permite un desbloqueo hasta un 30% más rápido.\n\nBatería de duración superior\n¡Desenchúfate! Con la súper batería de 4900 mAh tendrás energía por mucho más tiempo para jugar, ver series o trabajar sin necesidad de realizar recargas.",
-        "stock": false,
+        "stock": true,
         "colores": []
       },
       {
@@ -2902,7 +2902,7 @@
           "https://http2.mlstatic.com/D_NQ_NP_2X_830904-MLA99968779133_112025-F.webp"
         ],
         "descripcion": "Capacidad y eficiencia\nCon su potente procesador y memoria RAM de 12 GB tu equipo alcanzará un alto rendimiento con gran velocidad de transmisión de contenidos y ejecutará múltiples aplicaciones a la vez sin demoras.\n\nCapacidad de almacenamiento ilimitada\nOlvídate de borrar. Con su memoria interna de 512 GB podrás descargar todos los archivos y aplicaciones que necesites, guardar fotos y almacenar tus películas, series y videos favoritos para reproducirlos cuando quieras.",
-        "stock": false,
+        "stock": true,
         "colores": []
       }
     ]
@@ -5362,6 +5362,355 @@
           "https://http2.mlstatic.com/D_NQ_NP_2X_930117-MLA108577664447_032026-F.webp"
         ],
         "descripcion": "📱 Samsung Galaxy S26 Ultra – El Tope de Gama – Pantalla 6.9\" QHD+ 120Hz con Privacy Display – Cámara 200MP f/1.4 – S Pen – Snapdragon 8 Elite Gen 5\n\nEl smartphone más potente y completo de Samsung. El Galaxy S26 Ultra es el buque insignia absoluto: la pantalla más grande y nítida, el sistema de cámaras más avanzado liderado por un sensor de 200MP con apertura f/1.4, el procesador más rápido y el S Pen integrado. Estrena el Privacy Display, una primicia mundial que oculta tu pantalla de miradas ajenas en público. Para creadores, profesionales y usuarios que quieren, sin discusión, lo mejor de lo mejor.\n\n✅ Características principales:\n\nPantalla LTPO AMOLED de 6.9\" QHD+ (3120×1440) con 120Hz adaptativo y Gorilla Armor 2 antirreflejo — la mejor pantalla de Samsung, nítida y brillante.\nPrivacy Display (primicia mundial) — oscurece los ángulos laterales para que nadie vea tu pantalla en público.\nProcesador Snapdragon 8 Elite Gen 5 for Galaxy (3 nm) — el chip más potente, exclusivo de la Ultra en todas las regiones, con GPU Adreno 840 y cámara de vapor mejorada.\n12GB o 16GB de RAM + almacenamiento de 1TB (sin ranura microSD).\nCuádruple cámara liderada por sensor de 200MP con apertura f/1.4 (con OIS) — fotos excepcionales día y noche, con teleobjetivos para zoom óptico (3x y periscopio) y video 8K. Frontal de 12MP con ángulo amplio.\nGalaxy AI completo — Audio Eraser, Now Brief, Photo Assist, Circle to Search, edición generativa y más.\nS Pen integrado — para escribir, dibujar y controlar el equipo.\nBatería de 5000mAh con carga rápida mejorada (por cable e inalámbrica).\nMarco de aluminio (Armor Aluminum) con esquinas ergonómicas, resistencia IP68.\n5G, Wi-Fi 7, Bluetooth, NFC y eSIM.\nAndroid 16 con One UI 8.5 — hasta 7 años de actualizaciones.\nColores Black, Cobalt Violet, Sky Blue y White (y exclusivos online) según stock.\n\n⚠️ Variante de 1TB.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "172",
+    "nombre": "JBL Go",
+    "categoria": "Audio",
+    "marca": "JBL",
+    "fecha_publicacion": "2026-06-11T18:25:10.629Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "3",
+        "imagenes": [
+          "https://i5.walmartimages.com/seo/JBL-Go-3-Speaker-for-portable-use-wireless-Bluetooth-4-2-Watt-black_4dc96644-b923-40ab-ade7-64d9a4b012cb.3d34d3591c03edaf95898db063627260.jpeg",
+          "https://www.harmanaudio.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwa40f75ec/JBL_GO_3_DETAIL_2_BLACK_0060.png",
+          "https://i5.walmartimages.com/seo/JBL-Go-3-Portable-Waterproof-Bluetooth-Speaker-Squad_50778fc7-b447-4bfc-8c66-3db1eec305f3.cc4c479194d0968a582961f3cba117de.png"
+        ],
+        "descripcion": "🔊 JBL Go 3 – Parlante Bluetooth Portátil – Ultracompacto – Sumergible IP67\n\nEl parlante de bolsillo para llevar a todos lados. El JBL Go 3 ofrece el potente sonido JBL Pro Sound en un diseño diminuto, colorido y resistente. Ideal para quien quiere música en cualquier lado sin ocupar espacio: cabe en la palma de la mano, se cuelga de la mochila y aguanta agua, polvo y golpes.\n\nJBL Pro Sound con 4.2W — sonido sorprendente para su tamaño, con graves definidos.\nSumergible y a prueba de polvo (IP67) — resiste salpicaduras, lluvia e inmersión.\nHasta 5 horas de reproducción con una carga (vía USB-C).\nDiseño ultracompacto y liviano con lazo integrado para colgarlo.\nBluetooth — conexión simple con tu celular o tablet.\nDisponible en varios colores según stock.",
+        "stock": true,
+        "colores": []
+      },
+      {
+        "nombre_version": "4",
+        "imagenes": [
+          "https://uk.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw1cede57c/JBL_GO_4_3_4_LEFT_BLACK_48178_x1.png?sw=680&sh=680",
+          "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6583/6583088ld.jpg",
+          "https://www.gizmochina.com/wp-content/uploads/2024/03/519909-JBL-Go-4-Group-b870bd-large-1704370653.jpg",
+          "https://i5.walmartimages.com/seo/JBL-Go-4-Portable-Bluetooth-Speaker-Camo_b564c9bc-4ba2-4ea1-98bf-dc5118061285.39510044757b2efed3358fe6c6630d62.png"
+        ],
+        "descripcion": "🔊 JBL Go 4 – Parlante Bluetooth Portátil – Ultracompacto – Sumergible IP67 – AI Sound Boost + Auracast\n\nLa evolución del pequeño favorito de JBL. El Go 4 mantiene el tamaño de bolsillo y la resistencia del Go 3, pero suma la tecnología AI Sound Boost para más potencia sin distorsión y Auracast para conectar varios parlantes JBL. Música potente, en cualquier lado, con la última tecnología.\n\nJBL Pro Sound con AI Sound Boost — analiza la música en tiempo real para un sonido más potente y limpio, sin distorsión.\nSumergible y a prueba de polvo (IP67) — listo para la pileta, la playa o la lluvia.\nHasta 7 horas de reproducción (con Playtime Boost), vía USB-C.\nAuracast — conectá múltiples parlantes JBL compatibles para un sonido más grande.\nBluetooth 5.3 con multipunto — alterná entre dos dispositivos.\nUltracompacto con lazo integrado; también dispara el sonido hacia arriba apoyado.\nDisponible en varios colores según stock.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "173",
+    "nombre": "JBL Clip",
+    "categoria": "Audio",
+    "marca": "JBL",
+    "fecha_publicacion": "2026-06-11T18:25:21.762Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "4",
+        "imagenes": [
+          "https://brain-images-ssl.cdn.dixons.com/6/7/10217076/u_10217076.jpg",
+          "https://www.jbl.com.au/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwf41c8c37/JBL_CLIP4_3_4_LEFT_BLACK_ORANGE_0480_x1.png",
+          "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfeb73a23/JBL_CLIP_4_ECO_3_4_LEFT_GREEN_39727_x2.png?sw=1605&sh=1605"
+        ],
+        "descripcion": "🔊 JBL Clip 4 – Parlante Bluetooth Portátil con Mosquetón Integrado – Sumergible IP67\n\nEngánchalo y llevá la música contigo. El JBL Clip 4 trae un mosquetón integrado que te permite colgarlo de la mochila, el cinturón o la bici para tener sonido potente donde vayas. Compacto, colorido y resistente, con el inconfundible JBL Pro Sound.\n\nJBL Pro Sound con 5W — sonido nítido y graves potentes para su tamaño.\nMosquetón integrado — enganchalo fácilmente a la mochila, presilla o manija.\nSumergible y a prueba de polvo (IP67) — resiste agua, polvo y salpicaduras.\nHasta 10 horas de reproducción con una carga (vía USB-C).\nBluetooth — conexión simple y estable.\nDisponible en varios colores según stock.",
+        "stock": true,
+        "colores": []
+      },
+      {
+        "nombre_version": "5",
+        "imagenes": [
+          "https://belk.scene7.com/is/image/Belk?layer=0&src=8100743_JBLCLIP5WHTAM_B_100&layer=comp&wid=3000&fit=wrap",
+          "https://hnsfpau.imgix.net/5/images/detailed/415/6081317_2.jpg?fit=fill&bg=0FFF&w=1500&h=844&auto=format,compress",
+          "https://hnsfpau.imgix.net/5/images/detailed/416/6081274_10.jpg?fit=fill&bg=0FFF&w=1500&h=844&auto=format,compress",
+          "https://microless.com/cdn/products/4e8a134a1fe99f53eadad64978408ead-hi.jpg"
+        ],
+        "descripcion": "🔊 JBL Clip 5 – Parlante Bluetooth Portátil con Mosquetón Rediseñado – Sumergible IP67 – Auracast\n\nEl clip favorito, ahora más potente y con más batería. El JBL Clip 5 mejora a su antecesor con un mosquetón rediseñado de apertura más amplia, más horas de música y conectividad Auracast. Perfecto para aventuras, viajes y uso diario: lo enganchás donde quieras y suena increíble.\n\nJBL Pro Sound con 7W — más potencia y mejores graves que el Clip 4.\nMosquetón integrado rediseñado — apertura más ancha, más fácil de enganchar a mochilas, presillas o ramas.\nSumergible y a prueba de polvo (IP67) — listo para cualquier aventura.\nHasta 12 horas de reproducción (+3 con Playtime Boost), vía USB-C.\nAuracast — conectá múltiples parlantes JBL compatibles, o emparejá dos Clip 5 en estéreo.\nBluetooth 5.3 con multipunto.\nDisponible en varios colores según stock.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "174",
+    "nombre": "JBL Flip",
+    "categoria": "Audio",
+    "marca": "JBL",
+    "fecha_publicacion": "2026-06-11T18:25:34.366Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "6",
+        "imagenes": [
+          "https://i5.walmartimages.com/seo/JBL-Flip-6-Portable-Waterproof-Speaker-Gray_933cb9f0-be73-49f6-995d-44368a5f9805.b239787c0018a4da642119e16678bf7b.jpeg",
+          "https://cdn.mos.cms.futurecdn.net/synrXBeZ28h8fEwmfWAVUX.jpg"
+        ],
+        "descripcion": "🔊 JBL Flip 6 – Parlante Bluetooth Portátil – Sonido Potente – Sumergible IP67 – PartyBoost\n\nEl equilibrio perfecto entre potencia y portabilidad. El JBL Flip 6 entrega un sonido sorprendentemente potente y nítido en un cuerpo cilíndrico que entra en cualquier mochila. Su diseño de dos vías (woofer + tweeter) mejora la claridad, y su resistencia lo hace ideal para llevar a todos lados.\n\nJBL Pro Sound de 30W — sonido potente, graves profundos y agudos nítidos gracias a su diseño de dos vías (woofer + tweeter).\nSumergible y a prueba de polvo (IP67) — resiste agua, polvo y salpicaduras.\nHasta 12 horas de reproducción con una carga (vía USB-C).\nPartyBoost — conectá dos parlantes en estéreo o varios parlantes JBL compatibles con PartyBoost.\nBluetooth y diseño compacto con correa para colgar.\nDisponible en varios colores según stock.",
+        "stock": true,
+        "colores": []
+      },
+      {
+        "nombre_version": "7",
+        "imagenes": [
+          "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwebdee576/JBL_FLIP_7_3_4_RIGHT_BLUE_108_x1.png?sw=1605&sh=1605",
+          "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwa20ad160/JBL_Flip_7_Blue_Box_Image_1605x1605px.png?sw=1605&sh=1605",
+          "https://media-www.sportchek.ca/product/div-01-hardgoods/dpt-48-electronics/sdpt-24-audio/334641781/jbl-flip-7-black-c72517b7-a1c2-4873-8445-c420e6855eda-jpgrendition.jpg?imdensity=1&imwidth=640&impolicy=gZoom",
+          "https://media.sweetwater.com/m/products/image/3068b2753cFBPkHkIkFRr3Lwsp6LBGtbL5PI8xfa.png?quality=1&ha=3068b2753c7a7a3a"
+        ],
+        "descripcion": "🔊 JBL Flip 7 – Parlante Bluetooth Portátil – Sumergible y Antigolpes IP68 – AI Sound Boost + Auracast – Audio Lossless USB-C\n\nEl mejor Flip de la historia. El JBL Flip 7 sube la vara: más potencia, mejor resistencia (ahora también antigolpes), AI Sound Boost para subir el volumen sin distorsión, Auracast y hasta audio sin pérdidas (lossless) por USB-C. Más completo y capaz que nunca, en el mismo formato portátil de siempre.\n\nJBL Pro Sound de 35W con AI Sound Boost — analiza la música en tiempo real para más potencia y claridad, sin distorsión.\nSumergible, a prueba de polvo y antigolpes (IP68) — resiste inmersión hasta 1.5m y caídas desde 1m sobre concreto.\nHasta 14 horas de reproducción (16 con Playtime Boost), vía USB-C.\nAuracast — conectá múltiples parlantes JBL compatibles o emparejá dos Flip 7 en estéreo.\nBluetooth 5.4 + audio lossless por USB-C — calidad de audio superior con fuente compatible.\nSistema de enganche (loop y carabiner según versión) para llevarlo fácil.\nDisponible en varios colores según stock.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "175",
+    "nombre": "JBL Charge",
+    "categoria": "Audio",
+    "marca": "JBL",
+    "fecha_publicacion": "2026-06-11T18:30:28.422Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "5",
+        "imagenes": [
+          "https://www.bhphotovideo.com/images/images1500x1500/jbl_jblcharge5bluam_charge_5_portable_speaker_1622606.jpg",
+          "https://www.bhphotovideo.com/images/images1500x1500/jbl_jblcharge5gryam_charge_5_portable_speaker_1622607.jpg",
+          "https://in.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw587e6c00/PA_JBL_CHARGE5_Wi-Fi_Product_Image_Black_1605x1605px.png?sw=1605&sh=1605",
+          "https://ro.harmanaudio.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw8abda6fb/pdp/JBL_CHARGE5_BLACK_Box_Image_1605x1605px.png"
+        ],
+        "descripcion": "🔊 JBL Charge 5 – Parlante Bluetooth Portátil con Powerbank – Sonido Potente – Sumergible IP67 – 20h de Batería\n\nSonido potente y batería que carga tu celular. El JBL Charge 5 combina un sonido más grande y profundo con una autonomía de hasta 20 horas y un powerbank integrado para cargar tu teléfono. Es el \"todoterreno\" de JBL: potente para fiestas y reuniones, pero portátil para llevarlo a cualquier lado.\n\nJBL Pro Sound de 40W — sonido potente y graves profundos, ideal para reuniones y exteriores.\nPowerbank integrado (USB-A) — cargá tu celular u otros dispositivos desde el parlante.\nHasta 20 horas de reproducción con una carga (vía USB-C).\nSumergible y a prueba de polvo (IP67) — resiste agua, polvo y salpicaduras.\nPartyBoost — conectá dos en estéreo o varios parlantes JBL compatibles con PartyBoost.\nBluetooth y diseño cilíndrico resistente.\nDisponible en varios colores según stock.\n\n⚠️ Nota: al usar el powerbank para cargar otros dispositivos, la reproducción de audio se pausa.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "176",
+    "nombre": "JBL Grip",
+    "categoria": "Audio",
+    "marca": "JBL",
+    "fecha_publicacion": "2026-06-11T18:47:17.577Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Pro Sound",
+        "imagenes": [
+          "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw0c280270/LS_JBL_GRIP_RED_HERO_0026_x3.png?sw=1605&sh=1605",
+          "https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw0c8e9a68/LS_JBL_GRIP_RED_LIGHT_0056_x2.png?sw=1605&sh=1605",
+          "https://i5.walmartimages.com/seo/JBL-Grip-Compact-Portable-Bluetooth-Speaker-Bundle-with-gSport-Case-Black_cdda5beb-67d4-41b3-8d29-7904630f6a40.853fb02bc63f8463048572d7535e5e10.jpeg",
+          "https://gagadget.com/media/uploads/jblgriplifestyle02904x560px.webp"
+        ],
+        "descripcion": "🔊 JBL Grip – Parlante Bluetooth Portátil – Diseño Tipo Lata – Sumergible y Antigolpes IP68 – AI Sound Boost + Iluminación\n\nEl nuevo integrante de la familia portátil de JBL. Inspirado en la forma de una lata, el JBL Grip es compacto, agarrable y listo para la aventura. Se ubica entre el Clip 5 y el Flip 7: más sonido que el primero, más portátil que el segundo, y con un plus de personalidad gracias a su iluminación ambiental personalizable.\n\nJBL Pro Sound con 16W y AI Sound Boost — sonido potente y graves profundos sin distorsión, gracias al análisis de la música en tiempo real.\nSumergible, a prueba de polvo y antigolpes (IP68) — resiste agua, polvo y caídas, listo para cualquier salida.\nIluminación ambiental personalizable — ajustá el color y los efectos desde la app JBL Portable.\nHasta 12 horas de reproducción (+2 con Playtime Boost), vía USB-C.\nAuracast — conectá varios parlantes JBL compatibles o emparejá dos en estéreo.\nLazo/cuerda integrado y controles táctiles — fácil de agarrar, colgar y manejar.\nBluetooth y diseño ergonómico tipo lata, para llevar en una mano.\nDisponible en varios colores según stock.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "177",
+    "nombre": "JBL PartyLight Beam",
+    "categoria": "Audio",
+    "marca": "JBL",
+    "fecha_publicacion": "2026-06-11T18:51:08.231Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "LED/BIV",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_987208-MLA99935954375_112025-F.webp",
+          "https://uk.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw4099e001/JBL_PartyLight_Beam_Box_Image_SKU_1605x1605px.png?sw=680&sh=680",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_794703-MLA80517695550_112024-F.webp"
+        ],
+        "descripcion": "💡 JBL PartyLight Beam – Luz de Fiesta por Bluetooth – Proyección Sincronizada con la Música – Auracast\n\n⚠️ Importante: Es una luz de fiesta (proyector), no un parlante. Funciona junto a parlantes JBL PartyBox (Auracast) o de forma independiente sincronizando con la música del ambiente.\n\nTu fiesta no solo tiene que sonar increíble: también tiene que verse increíble. El JBL PartyLight Beam proyecta un juego de luces colorido y dinámico sobre cualquier pared o techo, sincronizado automáticamente con tu música. Se conecta con tus parlantes JBL PartyBox o funciona solo, detectando la música del ambiente con su micrófono integrado. Convierte cualquier espacio en una pista de baile.\n\nProyección de luces de 20W — llena una habitación de hasta ~40 m² (400 ft²) con un juego de luces inmersivo sobre pared o techo.\nSincronización automática con la música — micrófono y algoritmo de detección integrados que identifican y siguen cualquier música que esté sonando.\nConexión con JBL PartyBox vía Auracast — sincroniza luces y sonido para una experiencia completa.\nMúltiples unidades coordinadas — conectá varios Beam (y Sticks) para un espectáculo de luces grupal y coreografiado en menos de un minuto.\nAjustes personalizables — movimiento, velocidad, colores, patrones e intensidad desde la app JBL ONE o JBL PartyBox.\nEncendido simple — girá el Beam para encenderlo y apagarlo, y ajustá el ángulo del haz.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "178",
+    "nombre": "JBL PartyLight Stick",
+    "categoria": "Audio",
+    "marca": "JBL",
+    "fecha_publicacion": "2026-06-11T18:53:37.998Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "C/BT",
+        "imagenes": [
+          "https://www.jbl.com.br/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwfb5ecd3c/BUNDLE/combo-partylight-beam-stick-luzes-jbl.png?sw=535&sh=535",
+          "https://img.av-connection.com/2/AVimg_50459.jpg",
+          "https://uk.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw48a33ff2/pdp/JBL_PartyLight_Stick_LIfestyle_02_904x560px.png?sw=904&sh=560",
+          "https://http2.mlstatic.com/D_NQ_NP_726391-MLA82425934739_022025-O.webp"
+        ],
+        "descripcion": "💡 JBL PartyLight Stick – Luz de Fiesta LED 360° por Bluetooth – Sincronizada con la Música – Batería Recargable\n\n⚠️ Importante: Es una luz de fiesta (lámpara de pie LED), no un parlante. Funciona junto a parlantes JBL PartyBox o de forma independiente sincronizando con la música del ambiente.\n\nIluminá tu fiesta desde todos los ángulos. El JBL PartyLight Stick es una luz de pie con LED de 360° que pulsa y cambia al ritmo de tu música, llenando incluso una habitación grande con su show de luces. Se sincroniza con tus parlantes JBL PartyBox o funciona solo gracias a su micrófono integrado. Tus invitados se van a sentir dentro de un videoclip futurista.\n\nLED 360° — luz colorida y envolvente que ilumina todo el espacio desde cualquier ángulo.\nSincronización automática con la música — micrófono y algoritmo de detección integrados que siguen cualquier música que esté sonando.\nBatería recargable inalámbrica de hasta 8 horas — para que dure tanto como la fiesta.\nSplashproof (IPX4) — resiste salpicaduras desde cualquier dirección, ideal para usar también al aire libre.\nConexión con JBL PartyBox — sincroniza luces y sonido para una experiencia completa.\nMúltiples unidades coordinadas — conectá varios Sticks para un espectáculo grupal desde la app JBL PartyBox.\nAjustes personalizables — movimiento, velocidad, colores, patrones e intensidad desde la app.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "179",
+    "nombre": "JBL Boombox",
+    "categoria": "Audio",
+    "marca": "JBL",
+    "fecha_publicacion": "2026-06-11T19:10:29.909Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "4",
+        "imagenes": [
+          "https://m.media-amazon.com/images/I/81Wwx8n42KL._AC_SL1500_.jpg",
+          "https://microless.com/cdn/products/29843b9604191dd4e7b1267e0c18f778-hi.jpg",
+          "https://www.pcrichard.com/dw/image/v2/BFXM_PRD/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dw5ffd30e9/images/hires/Z_JBLBOOMBOX4L.jpg?sw=800&sh=800&sm=fit"
+        ],
+        "descripcion": "🔊 JBL Boombox 4 – El Parlante Portátil Más Potente de JBL – Sumergible IP68 – AI Sound Boost – Batería Reemplazable – 34h\n\nCuando la fiesta necesita sonido en serio. El JBL Boombox 4 es el parlante portátil más potente de JBL: entrega casi un 50% más de potencia que su antecesor, con graves profundos y un volumen que llena cualquier espacio. Y a pesar de su sonido masivo, es más liviano que el Boombox 3, así que lo llevás a la playa, el patio o donde sea. El rey de las fiestas al aire libre.\n\nJBL Pro Sound masivo con AI Sound Boost — potencia de hasta 2x65W RMS (woofer) + 2x40W RMS (tweeter) en modo AC, con sonido optimizado en tiempo real para más volumen sin distorsión.\nSistema de altavoces potente — 2 woofers, 2 tweeters y 3 radiadores pasivos para graves profundos y precisos.\nDos modos de graves (Bass Boost) — Deep (profundo) y Punchy (enérgico), según el momento.\nHasta 34 horas de reproducción (con Playtime Boost); carga rápida (10 min dan ~2 h extra).\nBatería reemplazable — cambiala en 3 pasos y seguí la fiesta.\nSumergible y a prueba de polvo (IP68) — resiste agua, polvo y exteriores.\nAuracast — emparejá dos Boombox 4 en estéreo o conectá varios parlantes JBL compatibles.\nAudio lossless por USB-C + powerbank para cargar tu celular.\nDiseño más liviano que generaciones anteriores, con base firme para terrenos irregulares.\nDisponible en varios colores según stock.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "180",
+    "nombre": "Drone DJI Air 3S",
+    "categoria": "Dron",
+    "marca": "DJI",
+    "fecha_publicacion": "2026-06-11T19:13:04.314Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "RC2 Fly More Combo",
+        "imagenes": [
+          "https://www.bhphotovideo.com/images/fb/dji_cp_ma_00000816_01_air_3s_drone_with_1856232.jpg",
+          "https://www.studiosport.fr/upload/image/dji-air-3s-fly-more-combo-avec-radiocommande-dji-rc-2-p-image-268193-grande.jpg",
+          "https://djichile.cl/325-large_default/dji-air-3s-fly-more-combo-rc2.jpg",
+          "https://droneplacebd.com/wp-content/uploads/2025/10/Picsart_24-10-27_22-56-43-816.jpg"
+        ],
+        "descripcion": "🚁 DJI Air 3S – RC 2 Fly More Combo – Drone con Doble Cámara (1\" + Teleobjetivo) – Video 4K HDR – 45 min de Vuelo\n\nEl drone definitivo para fotografía y video de viajes. El DJI Air 3S combina un sistema de doble cámara (gran angular de 1 pulgada + teleobjetivo medio) con detección de obstáculos omnidireccional —incluso de noche, gracias a su LiDAR frontal—, 45 minutos de vuelo y transmisión de hasta 20 km. Esta configuración RC 2 Fly More Combo es la más completa: incluye el control con pantalla incorporada, baterías extra y accesorios para volar más tiempo y con todo listo desde el primer día. Ideal para creadores de contenido, viajeros y fotógrafos aéreos.\n\n✅ Características principales:\n\nSistema de doble cámara: principal de 1\" CMOS de 50MP (24mm) + teleobjetivo medio de 1/1.3\" CMOS de 48MP (70mm, zoom óptico 3x) — versatilidad total para paisajes, retratos y tomas cinematográficas.\nVideo 4K/60fps HDR (y 4K/120fps para cámara lenta), con 14 pasos de rango dinámico, color de 10 bits y D-Log M para edición profesional.\nDetección de obstáculos omnidireccional nocturna — primer drone DJI con LiDAR frontal, más sensores infrarrojos y 6 sensores de visión: esquiva obstáculos y edificios incluso de noche.\nSmart RTH de nueva generación — regreso al punto de despegue inteligente, eligiendo la mejor ruta incluso con señal GPS débil.\nHasta 45 minutos de vuelo y transmisión de video O4 de hasta 20 km.\nActiveTrack 360° y trayectorias de vuelo automáticas — seguimiento preciso del sujeto, ideal para creadores.\nFree Panorama y grabación vertical 2.7K — contenido listo para redes.\nDiseño plegable y compacto — fácil de transportar a cualquier lado.\n\n🎁 La configuración RC 2 Fly More Combo incluye:\n\nDrone DJI Air 3S\nControl remoto DJI RC 2 (con pantalla de 5.5\" incorporada — no necesitás celular)\n3 baterías en total (2 extra, hasta ~90 min más de vuelo)\nHub de carga de baterías\nSet de filtros ND (ND8/ND32/ND128)\nPares de hélices de repuesto y bolso de transporte",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "181",
+    "nombre": "Drone DJI Avata",
+    "categoria": "Dron",
+    "marca": "DJI",
+    "fecha_publicacion": "2026-06-11T19:15:25.575Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Pro-View (Solo Drone)",
+        "imagenes": [
+          "https://dji-official-fe.djicdn.com/cms/uploads/a7157704665bc40ef41f2da73806a55f.png",
+          "https://dronevex.in/wp-content/uploads/2025/08/imgi_6_1-31.png",
+          "https://img-new.cgtrader.com/items/3966939/49f32d2247/fpv-drone-dji-avata-3d-model-3d-model-49f32d2247.jpg",
+          "https://dji-official-fe.djicdn.com/dps/bc1098bb8a8799e829b95046bdf297b2.jpg"
+        ],
+        "descripcion": "🚁 DJI Avata – Drone FPV (Solo Aeronave) – Video 4K Estabilizado – FOV Ultra Amplio 155° – Protección de Hélices Integrada\n\nLa experiencia de vuelo inmersivo de DJI, ágil y resistente. El DJI Avata es un drone FPV (vista en primera persona) compacto y robusto, diseñado para volar a través de espacios cerrados, cerca del suelo y por aberturas estrechas con una agilidad que un drone tradicional no tiene. Su protección de hélices integrada le permite rebotar y seguir volando ante pequeños contactos, y su cámara captura video 4K ultra-estabilizado con un campo de visión envolvente de 155°. Ideal para creadores que buscan tomas dinámicas e inmersivas.\n\n✅ Características principales:\n\nCámara con sensor de 1/1.7\" CMOS (f/2.8) y lente ultra gran angular de 155° de campo de visión — tomas envolventes y dramáticas.\nVideo 4K hasta 60fps (y cámara lenta 2.7K/100fps), con estabilización RockSteady y HorizonSteady para imágenes suaves y niveladas; fotos de 48MP.\nModo de color D-Cinelike — mayor flexibilidad para corrección de color en postproducción.\nProtección de hélices integrada (diseño ducted) — vuela seguro en interiores, cerca de personas y por espacios reducidos; resiste pequeños golpes.\nTransmisión de video DJI O3+ de hasta 10 km — señal estable y de baja latencia.\nHasta 18 minutos de vuelo y resistencia al viento de nivel 5.\n3 modos de velocidad — Normal, Sport y Manual (hasta ~97 km/h en manual).\nModo Turtle (tortuga) — si cae boca arriba, se da vuelta solo para retomar el vuelo.\nFrenado de emergencia y RTH (regreso al punto de despegue) y sensores de obstáculos inferiores.\nDiseño compacto, liviano y portátil, compatible con DJI Virtual Flight para practicar.\n\n⚠️ Importante: Esta publicación es por el drone solo (aeronave). Para volarlo se necesitan, por separado, unas gafas FPV (DJI Goggles 2, Goggles Integra o FPV Goggles V2) y un control (DJI RC Motion 2, Motion Controller o FPV Remote Controller 2), que no están incluidos.",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "182",
+    "nombre": "Drone DJI Avata 2",
+    "categoria": "Dron",
+    "marca": "DJI",
+    "fecha_publicacion": "2026-06-11T19:19:27.089Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Fly More Combo",
+        "imagenes": [
+          "https://www.floridadronesupply.com/cdn/shop/files/DJIAvata2FloridaDroneSupply.png?v=1712766221&width=2000",
+          "https://www.pinoyfpv.com/store/images/DJIAvata2_3batts.jpg",
+          "https://djichile.cl/1109-large_default/dji-avata-2-fly-smart-combothree-batteries.jpg"
+        ],
+        "descripcion": "🚁 DJI Avata 2 – Fly More Combo (3 Baterías) – Drone FPV con Gafas Goggles 3 y RC Motion 3 – Video 4K/60fps HDR – FOV 155°\n\nLa experiencia FPV inmersiva más completa, lista para volar. El DJI Avata 2 te pone en la cabina del drone: con las gafas Goggles 3 ves en primera persona lo que ve la aeronave, y con el control de movimiento RC Motion 3 volás de forma natural con simples gestos de la muñeca, incluso acrobacias con un solo botón. Este Fly More Combo de 3 baterías trae todo lo necesario para empezar a volar desde el primer día y disfrutar de hasta ~69 minutos de vuelo entre las tres baterías. Ideal para creadores que buscan tomas dinámicas, inmersivas y cinematográficas.\n\n✅ El drone — Avata 2:\n\nCámara con sensor de 1/1.3\" CMOS (12MP) y lente ultra gran angular de 155° de campo de visión (f/2.8) — más rango dinámico y mejor desempeño en poca luz que el Avata original.\nVideo 4K/60fps HDR (y cámara lenta 2.7K/120fps), con color 10-bit D-Log M para edición profesional.\nEstabilización RockSteady y HorizonSteady — imágenes suaves y niveladas incluso a alta velocidad o con viento.\nEasy ACRO — acrobacias con un solo botón: flips, rolls y derrapes de 180°, fáciles hasta para principiantes.\nHasta 23 minutos de vuelo por batería, con carga rápida PD.\nProtección de hélices integrada + sensores ojo de pez binoculares (posicionamiento visual hacia abajo y atrás), RTH automático y modo Turtle.\nTransmisión DJI O4 — hasta 13 km de alcance, latencia tan baja como 24 ms y feed 1080p/100fps; 46GB de almacenamiento interno.\n\n✅ Las gafas — DJI Goggles 3:\nPantallas micro-OLED HD con baja latencia y Real View PiP (ves tu entorno sin sacarte las gafas), batería integrada de ~3 horas.\n\n✅ El control — DJI RC Motion 3:\nControl con una sola mano mediante gestos de muñeca, con acceso a las acrobacias y al menú de las gafas.\n\n🎁 El Fly More Combo (3 baterías) incluye:\nDrone DJI Avata 2\nGafas DJI Goggles 3\nControl DJI RC Motion 3\n3 baterías de vuelo\nHub de carga bidireccional (con acumulación de energía entre baterías)\nBolso de transporte (sling bag)",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "183",
+    "nombre": "Drone DJI Mini 5 Pro",
+    "categoria": "Dron",
+    "marca": "DJI",
+    "fecha_publicacion": "2026-06-11T19:26:02.032Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "(RC 2) – Fly More Combo",
+        "imagenes": [
+          "https://se-cdn.djiits.com/stormsend/uploads/8334aeee4516f76d50dd9ab717696f66.png?h=576&thumb=FgiCBQASSbSLdWcLpvZ3a3%2B3OIeHd3CLuA%3D%3D&w=576",
+          "https://dji-retail.co.uk/cdn/shop/files/dji-mini-5-pro-fly-more-combo-rc2-1.webp?v=1760073908&width=2000",
+          "https://www.shoppingchina.com.py/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM3lERmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--14603cc1fa7b2d314efae8cde2c639fe8117bee5/1010195.jpg",
+          "https://dji-retail.co.uk/cdn/shop/files/dji-mini-5-pro-4.webp?v=1760073908&width=2000"
+        ],
+        "descripcion": "🚁 DJI Mini 5 Pro – Fly More Combo (RC 2) – Drone Ultraligero (menos de 249g) – Sensor 1\" 50MP – Video 4K – LiDAR Nocturno\n\nEl primer mini drone del mundo con sensor de 1 pulgada. El DJI Mini 5 Pro rompe los límites de su categoría: pesa menos de 249 gramos (lo que en muchos países evita el registro obligatorio) pero monta un sensor de 1 pulgada y 50MP, antes reservado a drones mucho más grandes. El resultado es calidad de imagen profesional, excelente desempeño en poca luz y video 4K, en un cuerpo plegable que cabe en la palma de la mano. Esta versión Fly More Combo trae todo lo necesario —incluido el control RC 2 con pantalla incorporada— para volar y crear desde el primer día. Ideal para viajes, creación de contenido y fotografía aérea.\n\n✅ Características principales:\nSensor de 1\" CMOS de 50MP (f/1.8) — primer mini drone con sensor de 1 pulgada; gran detalle y rendimiento sobresaliente en poca luz.\nVideo 4K/60fps HDR (y cámara lenta 4K/120fps), con color 10-bit D-Log M y HLG.\nGimbal mecánico de 3 ejes con rotación de 225° — permite grabación vertical real para redes sociales.\nMenos de 249g — peso que en muchas regiones evita el registro (con la batería estándar).\nDetección de obstáculos omnidireccional con LiDAR frontal — funciona incluso de noche (Nightscape, hasta 1 lux).\nSmart RTH con memoria de trayectoria y regreso nocturno inteligente.\nTransmisión DJI O4 de largo alcance y baja latencia; 42GB de almacenamiento interno + microSD.\nModos inteligentes — FocusTrack, MasterShots, QuickShots, Hyperlapse y Panorama.\nHasta 36 minutos de vuelo por batería (batería estándar).\n\n🎁 El Fly More Combo (RC 2) incluye:\nDrone DJI Mini 5 Pro\nControl DJI RC 2 (con pantalla de 5.5\" incorporada — no necesitás celular)\n3 baterías estándar (Intelligent Flight Battery)\nHub de carga, set de filtros ND, hélices de repuesto y bolso de transporte",
+        "stock": true,
+        "colores": []
+      },
+      {
+        "nombre_version": "(RC 2) – Fly More Combo Plus",
+        "imagenes": [
+          "https://se-cdn.djiits.com/stormsend/uploads/8334aeee4516f76d50dd9ab717696f66.png?h=576&thumb=FgiCBQASSbSLdWcLpvZ3a3%2B3OIeHd3CLuA%3D%3D&w=576",
+          "https://dji-retail.co.uk/cdn/shop/files/dji-mini-5-pro-fly-more-combo-rc2-1.webp?v=1760073908&width=2000",
+          "https://www.shoppingchina.com.py/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM3lERmc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--14603cc1fa7b2d314efae8cde2c639fe8117bee5/1010195.jpg",
+          "https://dji-retail.co.uk/cdn/shop/files/dji-mini-5-pro-4.webp?v=1760073908&width=2000"
+        ],
+        "descripcion": "🚁 DJI Mini 5 Pro – Fly More Combo PLUS (RC 2) – Sensor 1\" 50MP – Video 4K – Hasta 52 min de Vuelo – LiDAR Nocturno\n\nEl primer mini drone del mundo con sensor de 1 pulgada, en su versión de máxima autonomía. El DJI Mini 5 Pro combina un sensor de 1 pulgada y 50MP con un cuerpo ultraligero y plegable, para calidad de imagen profesional en cualquier lado. Esta versión Fly More Combo Plus incluye las baterías Plus de mayor capacidad, que extienden el vuelo hasta 52 minutos por carga (la mayor autonomía de cualquier mini drone), más el control RC 2 con pantalla incorporada. La opción ideal para quien quiere volar más tiempo en cada salida y aprovechar al máximo cada sesión.\n\n✅ Características principales:\nSensor de 1\" CMOS de 50MP (f/1.8) — gran detalle y rendimiento sobresaliente en poca luz.\nVideo 4K/60fps HDR (y cámara lenta 4K/120fps), con color 10-bit D-Log M y HLG.\nGimbal mecánico de 3 ejes con rotación de 225° — grabación vertical real para redes.\nDetección de obstáculos omnidireccional con LiDAR frontal — funciona incluso de noche (Nightscape).\nSmart RTH con memoria de trayectoria y regreso nocturno inteligente.\nTransmisión DJI O4 de largo alcance y baja latencia; 42GB de almacenamiento interno + microSD.\nModos inteligentes — FocusTrack, MasterShots, QuickShots, Hyperlapse y Panorama.\nHasta 52 minutos de vuelo por batería (batería Plus de mayor capacidad).\n\n🎁 El Fly More Combo Plus (RC 2) incluye:\nDrone DJI Mini 5 Pro\nControl DJI RC 2 (con pantalla de 5.5\" incorporada)\n3 baterías Plus (Intelligent Flight Battery Plus, de mayor capacidad)\nHub de carga bidireccional, set de filtros ND, hélices de repuesto y bolso de transporte",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "184",
+    "nombre": "Drone DJI Neo 2",
+    "categoria": "Dron",
+    "marca": "DJI",
+    "fecha_publicacion": "2026-06-11T19:28:20.618Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Motion Fly More Combo",
+        "imagenes": [
+          "https://http2.mlstatic.com/D_NQ_NP_992340-MLA110469877517_042026-O.webp",
+          "https://cdn.idealo.com/folder/Product/208415/4/208415497/s4_produktbild_max/dji-neo-2-fly-more-combo-goggles-n3-rc-motion-3.jpg",
+          "https://image.coolblue.be/max/700xauto/products/2234637",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_724333-MLA102612584696_122025-F.webp"
+        ],
+        "descripcion": "🚁 DJI Neo 2 – Motion Fly More Combo – Drone Selfie Ultraligero (151g) con Gafas FPV Goggles N3 y RC Motion 3 – Video 4K – 3 Baterías\n\nEl drone más divertido y accesible de DJI, ahora también en FPV. El DJI Neo 2 es un drone ultraligero (apenas 151 gramos) que despega y aterriza desde la palma de tu mano, te sigue solo mientras corrés, andás en bici o caminás, y captura selfies aéreas sin necesidad de control remoto. Este Motion Fly More Combo suma las gafas Goggles N3 y el control RC Motion 3 para una experiencia de vuelo en primera persona (FPV) inmersiva e intuitiva, más 3 baterías para volar mucho más tiempo. Ideal para principiantes, creadores de contenido y para quien quiere diversión y tomas dinámicas sin complicarse.\n\n✅ El drone — Neo 2:\nCámara con sensor de 12MP 1/2\" CMOS (f/2.2) y procesador de imagen de alto rendimiento — video más claro y con menos ruido.\nVideo 4K/60fps (y cámara lenta 4K/100fps y 2.7K/120fps), más grabación 2.7K vertical lista para redes.\nUltraligero: 151g — por debajo del límite de 250g, fácil de transportar.\nDespegue y aterrizaje desde la palma y control por gestos — sin necesidad de control remoto.\nDetección de obstáculos omnidireccional con LiDAR frontal — esquiva obstáculos al seguirte, ideal para principiantes.\nSeguimiento inteligente del sujeto — modos Follow, SelfieShot, Dronie, Circle, Boomerang, Spotlight, Helix y más, para correr, andar en bici, esquiar, etc.\nProtección de hélices de cobertura total + resistencia al viento de nivel 5 — vuelo seguro y estable.\n49GB de almacenamiento interno (+ microSD) y transferencia rápida a tu celular.\nHasta ~19 minutos de vuelo por batería.\n\n✅ Las gafas — DJI Goggles N3:\nVista en primera persona (FPV) inmersiva con transmisión estable y baja latencia.\n\n✅ El control — DJI RC Motion 3:\nControl intuitivo con gestos de muñeca, sin necesidad de palancas tradicionales.\n\n🎁 El Motion Fly More Combo incluye:\nDrone DJI Neo 2\nGafas DJI Goggles N3\nControl DJI RC Motion 3\n3 baterías de vuelo (hasta ~57 min en total)\nHub de carga, protectores de hélices, hélices de repuesto, protector de gimbal, tornillos, herramientas y cable USB-C",
+        "stock": true,
+        "colores": []
+      }
+    ]
+  },
+  {
+    "id": "185",
+    "nombre": "Drone DJI Mavic 4 Pro",
+    "categoria": "Dron",
+    "marca": "DJI",
+    "fecha_publicacion": "2026-06-11T19:31:36.110Z",
+    "activo": true,
+    "versiones": [
+      {
+        "nombre_version": "Fly More Combo (RC 2)",
+        "imagenes": [
+          "http://www.ormsdirect.co.za/cdn/shop/files/dji-mavic-4-pro-drone-with-512gb-creator-combo-with-rc-pro-2-remote-controller.webp?v=1747142320&width=1024",
+          "https://drdrone.ca/cdn/shop/files/dji-mavic-4-pro-512gb-creator-combo-dji-rc-pro-2-cpma0000084701-drdroneca-461807_2048x.jpg?v=1747214846",
+          "https://www.calumet.de/media/6d/13/0a/1746689885/DJIMAVIC4PROFMC_0.jpg?format=png&auto=webp",
+          "http://droneworksuk.co.uk/cdn/shop/files/55529f05e3348cc7622e9e30c4ea6a3a_origin.jpg?v=1747220853"
+        ],
+        "descripcion": "🚁 DJI Mavic 4 Pro – Fly More Combo (RC 2) – Drone Insignia con Triple Cámara Hasselblad (100MP) – Video 6K HDR – Gimbal Infinity 360° – 51 min de Vuelo\n\nEl drone definitivo para creadores profesionales. El DJI Mavic 4 Pro es la insignia de DJI: un sistema de triple cámara Hasselblad liderado por un sensor principal de 100MP (4/3), sumado a dos teleobjetivos, un revolucionario gimbal Infinity de 360° y hasta 51 minutos de vuelo. Captura imágenes y video de nivel cinematográfico, de día o de noche, con una versatilidad que ningún otro drone de su clase ofrece. Esta configuración Fly More Combo con RC 2 trae todo lo necesario —incluido el control con pantalla incorporada y 3 baterías— para producir al máximo nivel desde el primer día. Para fotógrafos y videógrafos aéreos que no aceptan compromisos.\n\n✅ Características principales:\nTriple sistema de cámara Hasselblad:\n- Principal: 100MP CMOS 4/3 con apertura ajustable, video 6K/60fps HDR (y 4K/120fps) y 15.5 pasos de rango dinámico.\n- Tele medio: 48MP (70mm) — perspectiva comprimida ideal para retratos y detalles.\n- Teleobjetivo: 50MP (168mm) — alcance largo con gran nitidez.\nGimbal Infinity de 3 ejes — diseño esférico con rotación de 360° y tomas hacia arriba de hasta 70°, para movimientos de cámara creativos imposibles en otros drones.\nDetección de obstáculos omnidireccional nocturna (0.1 lux) con LiDAR frontal — vuelo seguro incluso en condiciones de muy poca luz.\nDual Native ISO Fusion — más detalle y limpieza en escenas de alto contraste y poca luz.\nHasta 51 minutos de vuelo (batería de 95Wh) y velocidad de hasta 90 km/h.\nTransmisión DJI O4+ — hasta 30 km de alcance de video, estable y de baja latencia.\nColor 10-bit D-Log M, ActiveTrack 360, Free Panorama y modos inteligentes — flujo de trabajo profesional.\n\n🎁 El Fly More Combo (RC 2) incluye:\nDrone DJI Mavic 4 Pro (64GB)\nControl DJI RC 2 (con pantalla incorporada — no necesitás celular)\n3 baterías de vuelo inteligentes\nHub de carga en paralelo\n4 pares de hélices de repuesto, adaptador de carga USB-C de 100W, cables, cubierta de almacenamiento y bolso de transporte",
         "stock": true,
         "colores": []
       }

@@ -1,4 +1,4 @@
-const jsonProductos = "../data/productos_2026-06-10_13-41-30.json?v=3";
+const jsonProductos = "../data/productos_2026-06-11_16-33-39.json?v=3";
 const nombresNovedad = ["Samsung Galaxy A57", "Samsung Galaxy S26", "Samsung Galaxy S26 Plus", "Samsung Galaxy S26 Ultra"];
 
 async function cargarProductos() {
@@ -137,19 +137,34 @@ function filtrarProductos(productos, { categoria, orden, busqueda }) {
         return coincideCategoria && coincideBusqueda;
     });
 
+    let ordenados;
     switch (orden) {
         case "fecha_asc":
-            return productosFiltrados.sort((a, b) => new Date(a.fecha_publicacion) - new Date(b.fecha_publicacion));
+            ordenados = productosFiltrados.sort((a, b) => new Date(a.fecha_publicacion) - new Date(b.fecha_publicacion));
+            break;
         case "fecha_desc":
-            return productosFiltrados.sort((a, b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+            ordenados = productosFiltrados.sort((a, b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
+            break;
         // Si en el futuro agregás precios:
         // case "precio_asc":
-        //   return productos.sort((a, b) => a.precio - b.precio);
+        //   ordenados = productosFiltrados.sort((a, b) => a.precio - b.precio);
+        //   break;
         // case "precio_desc":
-        //   return productos.sort((a, b) => b.precio - a.precio);
+        //   ordenados = productosFiltrados.sort((a, b) => b.precio - a.precio);
+        //   break;
         default:
-            return productosFiltrados;
+            ordenados = productosFiltrados;
     }
+
+    // Priorizar NOVEDADES al frente, respetando el orden ya aplicado dentro de cada grupo
+    ordenados.sort((a, b) => {
+        const aEsNovedad = nombresNovedad.includes(a.nombre);
+        const bEsNovedad = nombresNovedad.includes(b.nombre);
+        if (aEsNovedad !== bEsNovedad) return aEsNovedad ? -1 : 1;
+        return 0; // empate: mantiene el orden previo
+    });
+
+    return ordenados;
 }
 
 function mantenerValoresFormulario() {
