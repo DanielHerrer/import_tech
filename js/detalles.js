@@ -1,5 +1,5 @@
 // LOGICA DE global.js
-const jsonProductos = "../data/productos_2026-06-11_16-33-39.json?v=1";
+const jsonProductos = "../data/productos_2026-06-15_20-23-03.json";
 const nombresNovedad = ["Samsung Galaxy A57", "Samsung Galaxy S26", "Samsung Galaxy S26 Plus", "Samsung Galaxy S26 Ultra"];
 
 // DOMContentLoaded __________________________________________________________________________________________________
