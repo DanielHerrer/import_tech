@@ -30,10 +30,11 @@
     function coincideBusqueda(producto, termino) {
         if (!termino) return true;
 
-        const campos = [producto.nombre, producto.marca];
+        // Buscar en nombre, marca, categoría y el nombre de cada versión (no en la descripción)
+        const campos = [producto.nombre, producto.marca, producto.categoria];
         if (Array.isArray(producto.versiones)) {
             for (const v of producto.versiones) {
-                campos.push(v.nombre_version, v.descripcion);
+                campos.push(v.nombre_version);
             }
         }
         return campos.some((campo) => IT.normalizar(campo).includes(termino));
