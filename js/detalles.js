@@ -1,443 +1,351 @@
-// LOGICA DE global.js
-const jsonProductos = "../data/productos_2026-06-15_20-23-03.json";
-const nombresNovedad = ["Samsung Galaxy A57", "Samsung Galaxy S26", "Samsung Galaxy S26 Plus", "Samsung Galaxy S26 Ultra"];
+/* =====================================================================
+   detalles.js — Página de detalle de producto
+   (galería con modal, zoom, swipe, versiones, JSON-LD, relacionados)
 
-// DOMContentLoaded __________________________________________________________________________________________________
-document.addEventListener("DOMContentLoaded", async () => {
+   Requiere config.js cargado antes (usa el objeto IT).
+   ===================================================================== */
 
-    //----------- Modal Galeria fotos
-    let imagenesActuales = [];
-    let imgIndex = 0;
+(() => {
+    "use strict";
 
-    const divOverlay = document.getElementById("divOverlay");
-    const imgOverlay = document.getElementById("imgOverlay");
-    const modalImg = document.getElementById("modalImg");
-    const closeImgModal = document.getElementById("closeImgModal");
-    const btnPrev = divOverlay.querySelector(".prev");
-    const btnNext = divOverlay.querySelector(".next");
+    document.addEventListener("DOMContentLoaded", async () => {
 
-    function abrirModalImagenes(imagenes, index = 0) {
-        divOverlay.style.display = "block";
+        /* ===========================================================
+           MODAL GALERÍA DE FOTOS
+           =========================================================== */
+        let imagenesActuales = [];
+        let imgIndex = 0;
 
-        imagenesActuales = imagenes.filter(Boolean).slice(0, 4);
-        imgIndex = index;
+        const divOverlay = document.getElementById("divOverlay");
+        const imgOverlay = document.getElementById("imgOverlay");
+        const modalImg = document.getElementById("modalImg");
+        const closeImgModal = document.getElementById("closeImgModal");
+        const btnPrev = divOverlay.querySelector(".prev");
+        const btnNext = divOverlay.querySelector(".next");
 
-        modalImg.src = imagenesActuales[imgIndex];
-
-        btnPrev.style.display = imagenesActuales.length > 1 ? "block" : "none";
-        btnNext.style.display = imagenesActuales.length > 1 ? "block" : "none";
-    }
-
-    function cambiarImagen(dir) {
-        modalImg.classList.add("fade");
-
-        setTimeout(() => {
-            imgIndex += dir;
-            if (imgIndex < 0) imgIndex = imagenesActuales.length - 1;
-            if (imgIndex >= imagenesActuales.length) imgIndex = 0;
+        function abrirModalImagenes(imagenes, index = 0) {
+            divOverlay.style.display = "block";
+            imagenesActuales = imagenes.filter(Boolean).slice(0, 4);
+            imgIndex = index;
             modalImg.src = imagenesActuales[imgIndex];
-            modalImg.classList.remove("fade");
-        }, 150);
-    }
 
-    btnPrev.addEventListener("click", e => {
-        e.stopPropagation();
-        cambiarImagen(-1);
-    });
+            const mostrarFlechas = imagenesActuales.length > 1 ? "block" : "none";
+            btnPrev.style.display = mostrarFlechas;
+            btnNext.style.display = mostrarFlechas;
+        }
 
-    btnNext.addEventListener("click", e => {
-        e.stopPropagation();
-        cambiarImagen(1);
-    });
+        function cambiarImagen(dir) {
+            modalImg.classList.add("fade");
+            setTimeout(() => {
+                imgIndex += dir;
+                if (imgIndex < 0) imgIndex = imagenesActuales.length - 1;
+                if (imgIndex >= imagenesActuales.length) imgIndex = 0;
+                modalImg.src = imagenesActuales[imgIndex];
+                modalImg.classList.remove("fade");
+            }, 150);
+        }
 
-    // Cerrar el modal si se hace click en la X
-    closeImgModal.addEventListener("click", () => {
-        divOverlay.style.display = "none";
-    });
+        btnPrev.addEventListener("click", (e) => {
+            e.stopPropagation();
+            cambiarImagen(-1);
+        });
 
-    // Cerrar el modal si se hace click fuera de la imagen
-    imgOverlay.addEventListener("click", e => {
-        if (e.target === imgOverlay) {
+        btnNext.addEventListener("click", (e) => {
+            e.stopPropagation();
+            cambiarImagen(1);
+        });
+
+        closeImgModal.addEventListener("click", () => {
             divOverlay.style.display = "none";
-        }
-    });
+        });
 
-    // Swipe en MOBILE (arrastrar)
-    let startX = 0;
+        imgOverlay.addEventListener("click", (e) => {
+            if (e.target === imgOverlay) divOverlay.style.display = "none";
+        });
 
-    modalImg.addEventListener("touchstart", e => {
-        startX = e.touches[0].clientX;
-    }, { passive: true });
+        // Swipe en mobile
+        let startX = 0;
+        modalImg.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
 
-    modalImg.addEventListener("touchend", e => {
-        const endX = e.changedTouches[0].clientX;
-        const diff = startX - endX;
+        modalImg.addEventListener("touchend", (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+            if (Math.abs(diff) > 50) cambiarImagen(diff > 0 ? 1 : -1);
+        });
 
-        if (Math.abs(diff) > 50) {
-            cambiarImagen(diff > 0 ? 1 : -1);
-        }
-    });
+        // Teclado (← → ESC)
+        document.addEventListener("keydown", (e) => {
+            if (divOverlay.style.display !== "block") return;
+            if (e.key === "ArrowRight") cambiarImagen(1);
+            if (e.key === "ArrowLeft") cambiarImagen(-1);
+            if (e.key === "Escape") divOverlay.style.display = "none";
+        });
 
-    // Teclado (← → ESC)
-    document.addEventListener("keydown", e => {
-        // Si el modal NO está abierto, no hacer nada
-        if (divOverlay.style.display !== 'block') return;
+        /* ===========================================================
+           ZOOM DE LA IMAGEN PRINCIPAL (sigue el puntero / pinch)
+           =========================================================== */
+        const img1 = document.querySelector(".img-1");
+        const mainImg = img1.querySelector("img");
 
-        if (e.key === "ArrowRight") cambiarImagen(1);
-        if (e.key === "ArrowLeft") cambiarImagen(-1);
-        if (e.key === "Escape") divOverlay.style.display = "none";
-    });
+        // Estado del pinch (antes eran globales implícitas: bug con "use strict")
+        let initialDistance = 0;
+        let currentScale = 1;
 
-    //-----------
+        const getDistance = (touch1, touch2) =>
+            Math.hypot(touch1.clientX - touch2.clientX, touch1.clientY - touch2.clientY);
 
-    const img1 = document.querySelector(".img-1");
-    const mainImg = img1.querySelector("img");
-
-    // ZOOM IMAGEN PRINCIPAL siga el puntero
-
-    // --------- DESKTOP (mouse) ----------
-    img1.addEventListener("mousemove", e => {
-        const rect = img1.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        mainImg.style.transformOrigin = `${x}% ${y}%`;
-        mainImg.style.transform = "scale(2)";
-    });
-
-    img1.addEventListener("mouseleave", () => {
-        mainImg.style.transformOrigin = "center";
-        mainImg.style.transform = "scale(1)";
-    });
-
-    // --------- MOBILE (pinch con 2 dedos) ----------
-    img1.addEventListener("touchstart", e => {
-        if (e.touches.length === 2) {
-            e.preventDefault();
-            initialDistance = getDistance(e.touches[0], e.touches[1]);
-        }
-    }, { passive: false });
-
-    img1.addEventListener("touchmove", e => {
-        if (e.touches.length === 2) {
-            e.preventDefault();
-            const newDistance = getDistance(e.touches[0], e.touches[1]);
-
-            // calcular escala según la diferencia
-            const scaleChange = newDistance / initialDistance;
-            currentScale = Math.min(Math.max(1, scaleChange), 3); // entre 1x y 3x
-
-            // punto medio de los dos dedos
+        // Desktop (mouse)
+        img1.addEventListener("mousemove", (e) => {
             const rect = img1.getBoundingClientRect();
-            const midX = ((e.touches[0].clientX + e.touches[1].clientX) / 2 - rect.left) / rect.width * 100;
-            const midY = ((e.touches[0].clientY + e.touches[1].clientY) / 2 - rect.top) / rect.height * 100;
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            mainImg.style.transformOrigin = `${x}% ${y}%`;
+            mainImg.style.transform = "scale(2)";
+        });
 
-            mainImg.style.transformOrigin = `${midX}% ${midY}%`;
-            mainImg.style.transform = `scale(${currentScale})`;
-        }
-    }, { passive: false });
-
-    img1.addEventListener("touchend", e => {
-        if (e.touches.length < 2) {
+        img1.addEventListener("mouseleave", () => {
             mainImg.style.transformOrigin = "center";
             mainImg.style.transform = "scale(1)";
-        }
-    });
+        });
 
-    // función para calcular distancia entre dos dedos
-    function getDistance(touch1, touch2) {
-        const dx = touch1.clientX - touch2.clientX;
-        const dy = touch1.clientY - touch2.clientY;
-        return Math.hypot(dx, dy);
-    }
+        // Mobile (pinch con 2 dedos)
+        img1.addEventListener("touchstart", (e) => {
+            if (e.touches.length === 2) {
+                e.preventDefault();
+                initialDistance = getDistance(e.touches[0], e.touches[1]);
+            }
+        }, { passive: false });
 
-    // ____________________________________________________________________________________________________________
-    // 1. Obtener el id de la URL
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get("id");
+        img1.addEventListener("touchmove", (e) => {
+            if (e.touches.length === 2) {
+                e.preventDefault();
+                const newDistance = getDistance(e.touches[0], e.touches[1]);
+                const scaleChange = newDistance / initialDistance;
+                currentScale = Math.min(Math.max(1, scaleChange), 3); // entre 1x y 3x
 
-    let producto = null;
+                const rect = img1.getBoundingClientRect();
+                const midX = ((e.touches[0].clientX + e.touches[1].clientX) / 2 - rect.left) / rect.width * 100;
+                const midY = ((e.touches[0].clientY + e.touches[1].clientY) / 2 - rect.top) / rect.height * 100;
 
-    if (!productId) return; // si no hay id, no hacemos nada
+                mainImg.style.transformOrigin = `${midX}% ${midY}%`;
+                mainImg.style.transform = `scale(${currentScale})`;
+            }
+        }, { passive: false });
 
-    // BUSCAR PRODUCTO por ID
-    try {
-        // 2. Cargar el archivo productos.txt (debe estar en el mismo servidor)
-        const response = await fetch(jsonProductos);
-        const productos = await response.json();
+        img1.addEventListener("touchend", (e) => {
+            if (e.touches.length < 2) {
+                mainImg.style.transformOrigin = "center";
+                mainImg.style.transform = "scale(1)";
+            }
+        });
 
-        // 3. Buscar el producto por id
-        producto = productos.find(p => p.id === productId);
+        /* ===========================================================
+           CARGA DEL PRODUCTO SEGÚN EL ID DE LA URL
+           =========================================================== */
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get("id");
+        if (!productId) return; // sin id, no hay nada que mostrar
 
-        if (!producto) {
-            console.error("Producto no encontrado");
-            return;
-        }
+        let producto = null;
 
-        // Función que actualiza la vista según la versión seleccionada
-        function mostrarVersion(version) {
+        try {
+            const productos = await IT.cargarCatalogo();
+            producto = productos.find((p) => p.id === productId);
 
-            // 1. Datos generales del producto
-            document.querySelector(".breadcrumb-active").textContent = producto.nombre;
-            document.querySelector(".title-producto").textContent = producto.nombre + " " + version.nombre_version;
-            document.querySelector(".subtitle-producto").textContent = `${producto.marca} · ${producto.categoria}`;
-            document.title = `${producto.nombre + " " + version.nombre_version} · Import Tech BA | Celulares y Tecnología en Argentina`;
-            window.tituloProducto = document.title;
-
-            // --- Imagen principal
-            const mainImg = document.querySelector(".img-1 img");
-            if (version.imagenes[0]) {
-                mainImg.src = version.imagenes[0];
+            if (!producto) {
+                console.error("Producto no encontrado");
+                return;
             }
 
-            mainImg.addEventListener("click", () => {
-                abrirModalImagenes(version.imagenes, 0);
-            });
+            /* ----------- Actualiza la vista según la versión elegida ----------- */
+            function mostrarVersion(version) {
+                // Datos generales
+                document.querySelector(".breadcrumb-active").textContent = producto.nombre;
+                document.querySelector(".title-producto").textContent =
+                    `${producto.nombre} ${version.nombre_version}`;
+                document.querySelector(".subtitle-producto").textContent =
+                    `${producto.marca} · ${producto.categoria}`;
+                document.title =
+                    `${producto.nombre} ${version.nombre_version} · Import Tech BA | Celulares y Tecnología en Argentina`;
+                window.tituloProducto = document.title;
 
-            // --- Sub-imágenes
-            const imgsContainer = document.querySelector(".imgs");
-            imgsContainer.querySelectorAll(".sub-img").forEach(el => el.remove());
-            version.imagenes.slice(0, 4).forEach((url, i) => {
-                if (!url) return;
-                const thumbDiv = document.createElement("div");
-                thumbDiv.className = `img-${i + 2} sub-img`;
-                const img = document.createElement("img");
-                img.src = url;
-                thumbDiv.appendChild(img);
+                // Imagen principal
+                const imgPrincipal = document.querySelector(".img-1 img");
+                if (version.imagenes[0]) imgPrincipal.src = version.imagenes[0];
+                imgPrincipal.onclick = () => abrirModalImagenes(version.imagenes, 0);
 
-                // evento de click en cada miniatura
-                thumbDiv.addEventListener("click", () => {
-                    mainImg.src = img.src;
+                // Sub-imágenes
+                const imgsContainer = document.querySelector(".imgs");
+                imgsContainer.querySelectorAll(".sub-img").forEach((el) => el.remove());
+                version.imagenes.slice(0, 4).forEach((url, i) => {
+                    if (!url) return;
+                    const thumbDiv = document.createElement("div");
+                    thumbDiv.className = `img-${i + 2} sub-img`;
+                    const img = document.createElement("img");
+                    img.src = url;
+                    thumbDiv.appendChild(img);
+                    thumbDiv.addEventListener("click", () => {
+                        imgPrincipal.src = img.src;
+                    });
+                    imgsContainer.appendChild(thumbDiv);
                 });
 
-                imgsContainer.appendChild(thumbDiv);
-            });
+                // Descripción
+                const descContainer = document.querySelector(".descripcion");
+                const descP = document.querySelector(".description-producto");
+                const toggleBtn = document.querySelector(".toggle-descripcion");
 
-            // --- Descripción
-            let descripcion = version.descripcion.replace(/\n/g, "<br>");
-            const descContainer = document.querySelector(".descripcion");
-            const descP = document.querySelector(".description-producto");
-            const toggleBtn = document.querySelector(".toggle-descripcion");
+                descP.innerHTML = version.descripcion.replace(/\n/g, "<br>");
+                descContainer.classList.remove("expandida");
+                toggleBtn.innerHTML = `Ver descripción completa <i class="fa-regular fa-square-caret-down"></i>`;
+                toggleBtn.onclick = () => {
+                    const expandida = descContainer.classList.toggle("expandida");
+                    toggleBtn.innerHTML = expandida
+                        ? `Ver menos <i class="fa-regular fa-square-caret-up"></i>`
+                        : `Ver descripción completa <i class="fa-regular fa-square-caret-down"></i>`;
+                };
 
-            descP.innerHTML = descripcion;
+                // Tags (stock + colores)
+                const tags = document.querySelector(".tags");
+                tags.innerHTML = "";
 
-            // Reset estado
-            descContainer.classList.remove("expandida");
-            toggleBtn.innerHTML = `Ver descripción completa <i class="fa-regular fa-square-caret-down"></i>`;
+                const tagStock = document.createElement("div");
+                tagStock.classList.add("tag");
+                if (version.stock) {
+                    tagStock.innerText = "En stock";
+                    tagStock.style.background = "#75b5ff";
+                    tagStock.style.color = "#073972";
+                } else {
+                    tagStock.innerText = "Sin stock";
+                    tagStock.style.background = "#ff7575";
+                    tagStock.style.color = "#720707";
+                }
+                tags.appendChild(tagStock);
 
-            // Detectar click para expandir
-            toggleBtn.onclick = () => {
-                const expandida = descContainer.classList.toggle("expandida");
-                toggleBtn.innerHTML = expandida
-                    ? `Ver menos <i class="fa-regular fa-square-caret-up"></i>`
-                    : `Ver descripción completa <i class="fa-regular fa-square-caret-down"></i>`;
-            };
+                if (version.colores.length > 1) {
+                    const tagColores = document.createElement("div");
+                    tagColores.classList.add("tag");
+                    tagColores.innerText = "Varios colores";
+                    tagColores.style.background = "#97ff94";
+                    tagColores.style.color = "#0c3b06";
+                    tags.appendChild(tagColores);
+                }
 
-            // --- Colores
-            /*
-            const coloresDiv = document.querySelector(".div-colores");
-            coloresDiv.innerHTML = "";
-            version.colores.forEach(([hex, nombre]) => {
-                const colorDiv = document.createElement("div");
-                colorDiv.classList.add("color");
-                colorDiv.setAttribute("role", "listitem");
-                colorDiv.ariaLabel = "Color disponible";
-                colorDiv.style.background = hex;
-                colorDiv.title = nombre;
-                coloresDiv.appendChild(colorDiv);
-            });
-            */
-
-            // --- Tags
-            const tags = document.querySelector(".tags");
-            tags.innerHTML = ""; // limpiar antes de renderizar
-
-            // Stock
-            const tagStock = document.createElement("div");
-            tagStock.classList.add("tag");
-            if (version.stock) {
-                tagStock.innerText = "En stock";
-                tagStock.style.background = "#75b5ff";
-                tagStock.style.color = "#073972";
-            } else {
-                tagStock.innerText = "Sin stock";
-                tagStock.style.background = "#ff7575";
-                tagStock.style.color = "#720707";
-            }
-            tags.appendChild(tagStock);
-
-            // Colores (solo si hay 2 o más)
-            if (version.colores.length > 1) {
-                const tagColores = document.createElement("div");
-                tagColores.classList.add("tag");
-                tagColores.innerText = "Varios colores";
-                tagColores.style.background = "#97ff94";
-                tagColores.style.color = "#0c3b06";
-                tags.appendChild(tagColores);
+                // JSON-LD del producto
+                actualizarJsonLd(producto, version);
             }
 
-            // --------------------- completar JSON-LD
-            // 1) completar JSON-LD
-            function updateProductJsonLd(product) {
+            /* ----------- Actualiza el JSON-LD para SEO ----------- */
+            function actualizarJsonLd(product, version) {
                 try {
-                    const node = document.getElementById('product-jsonld');
+                    const node = document.getElementById("product-jsonld");
                     if (!node) return;
                     const base = JSON.parse(node.textContent);
-                    if (product.nombre && version.nombre_version) base.name = product.nombre + " " + version.nombre_version;
+                    if (product.nombre && version.nombre_version) {
+                        base.name = `${product.nombre} ${version.nombre_version}`;
+                    }
                     if (version.descripcion) base.description = version.descripcion;
                     if (version.imagenes && version.imagenes.length) base.image = version.imagenes;
-
-                    // Reemplazamos el script en el DOM para que los bots cojan la versión actualizada
                     node.textContent = JSON.stringify(base, null, 2);
                 } catch (e) {
-                    // no bloquear ejecución
-                    console.warn('No se pudo actualizar JSON-LD del producto', e);
+                    console.warn("No se pudo actualizar JSON-LD del producto", e);
                 }
             }
 
-            // 2) Observador: 
-            const observer = new MutationObserver((mutations) => {
-                try {
-                    if (producto) updateProductJsonLd(producto);
-                } catch (e) { }
+            /* ----------- Render de versiones ----------- */
+            const versionesDiv = document.querySelector(".div-versiones");
+            versionesDiv.innerHTML = "";
+
+            producto.versiones.reverse().forEach((version, index) => {
+                const versionDiv = document.createElement("div");
+                versionDiv.classList.add("version");
+                if (index === 0) versionDiv.classList.add("v-on"); // primera por defecto
+                versionDiv.textContent = version.nombre_version;
+                versionDiv.title = `${producto.nombre} ${version.nombre_version}`;
+
+                versionDiv.addEventListener("click", () => {
+                    versionesDiv.querySelectorAll(".version").forEach((v) => v.classList.remove("v-on"));
+                    versionDiv.classList.add("v-on");
+                    mostrarVersion(version);
+                });
+
+                versionesDiv.appendChild(versionDiv);
             });
 
-            // arranca el observer sobre el contenedor para detectar inyecciones dinámicas
-            const grid = document.getElementById('contenedor-productos');
-            if (grid) observer.observe(grid, { childList: true, subtree: false });
-            // Intento inicial de llenar JSON-LD si los datos ya están presentes tras detalles.js
-            try {
-                if (producto) updateProductJsonLd(producto);
-            } catch (e) {
-                console.log("Error en JSON-LD: " + e);
+            if (producto.versiones.length > 0) {
+                mostrarVersion(producto.versiones[0]);
             }
 
-        }
-
-        // 2. Renderizar versiones
-        const versionesDiv = document.querySelector(".div-versiones");
-        versionesDiv.innerHTML = ""; // limpiar previas
-
-        producto.versiones.reverse().forEach((version, index) => {
-            const versionDiv = document.createElement("div");
-            versionDiv.classList.add("version");
-            if (index === 0) versionDiv.classList.add("v-on"); // primera versión default
-            versionDiv.textContent = version.nombre_version;
-            versionDiv.title = producto.nombre + " " + version.nombre_version;
-
-            versionDiv.addEventListener("click", () => {
-                // Quitar v-on de todas
-                versionesDiv.querySelectorAll(".version").forEach(v => v.classList.remove("v-on"));
-                // Poner v-on a la seleccionada
-                versionDiv.classList.add("v-on");
-                // Mostrar la versión elegida
-                mostrarVersion(version);
+            /* ----------- Botón de Comprar ----------- */
+            document.getElementById("btn-comprar").addEventListener("click", () => {
+                const versionSeleccionada = document.querySelector(".div-versiones .v-on").textContent;
+                const mensaje =
+                    `¡Hola!\nQuisiera realizar una orden de compra.\n*${producto.nombre} ${versionSeleccionada}*.\nPor favor, necesito más detalles.`;
+                window.open(IT.urlWhatsApp(mensaje), "_blank");
             });
 
-            versionesDiv.appendChild(versionDiv);
-        });
+            /* ----------- Productos relacionados ----------- */
+            const relacionados = productos
+                .filter((p) =>
+                    (p.marca === producto.marca || p.categoria === producto.categoria) &&
+                    p.id !== producto.id &&
+                    p.activo === true
+                )
+                .sort(IT.comparadorNovedadFecha)
+                .slice(0, IT.cantidadDestacados());
 
-        // 3. Mostrar por defecto la primera versión
-        if (producto.versiones.length > 0) {
-            mostrarVersion(producto.versiones[0]);
-        }
+            const contenedor = document.querySelector(".productos-grid");
+            contenedor.innerHTML = "";
 
-        // 4. Botón de Comprar
-        document.getElementById("btn-comprar").addEventListener("click", () => {
-            const phoneNumber = "5491165835895";
-            const versionSeleccionada = document.querySelector(".div-versiones .v-on").textContent;
-            const message = `¡Hola!\nQuisiera realizar una orden de compra.\n*${producto.nombre} ${versionSeleccionada}*.\nPor favor, necesito más detalles.`;
-            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(url, "_blank");
-        });
-
-
-        // PRODUCTOS RELACIONADOS ----------------------------------------------------------------------------
-        // Buscar relacionados y Ordenar por fecha_publicacion (más reciente primero)
-        const productosRelacionados = productos.filter(p =>
-            (p.marca === producto.marca || p.categoria === producto.categoria) && // misma marca o misma categoría
-            p.id !== producto.id &&               // distinto id
-            p.activo === true                     // debe estar activo
-        );
-        
-        const productosOrdenados = productosRelacionados.sort((a, b) => {
-            const aEsNovedad = nombresNovedad.includes(a.nombre);
-            const bEsNovedad = nombresNovedad.includes(b.nombre);
-
-            // Si uno es novedad y el otro no, la novedad va primero
-            if (aEsNovedad !== bEsNovedad) {
-                return aEsNovedad ? -1 : 1;
-            }
-
-            // Si ambos están en el mismo grupo, ordenar por fecha (más reciente primero)
-            return new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion);
-        });
-
-        // Detectar cuántos productos mostrar
-        let cantidad;
-        const ancho = window.innerWidth;
-        if (ancho >= 992) {
-            cantidad = 8; // PC
-        } else if (ancho >= 576) {
-            cantidad = 6; // Tablet
-        } else {
-            cantidad = 4; // Celular
-        }
-
-        // Tomar los más recientes
-        const destacados = productosOrdenados.slice(0, cantidad);
-
-        // Seleccionar contenedor donde van los productos destacados
-        const contenedor = document.querySelector(".productos-grid");
-        contenedor.innerHTML = ""; // limpiar por si acaso
-
-        // Generar las tarjetas
-        destacados.forEach(prod => {
-            const card = document.createElement("div");
-            card.classList.add("producto-card");
-            card.setAttribute("role", "listitem");
-
-            card.innerHTML = `
-                <img class="img-card" src="${prod.versiones[prod.versiones.length - 1].imagenes[0] || 'placeholder.jpg'}" alt="${prod.nombre}"></img>
-                
-                <div class="producto-info">
-                    <h3 class="title-card">${prod.nombre}</h3>
-                    <p class="subtitle-card">${prod.marca} · ${prod.categoria}</p>
-                    <button class="btn-card">Ver más</button>
-                </div>
-            `;
-
-            // Agregar badge si hay varias versiones
-            if (prod.versiones.length > 1) {
-                const badge = document.createElement("div");
-                badge.classList.add('producto-versiones');
-                badge.textContent = "Varias versiones";
-
-                // card.style.position = "relative"; // para que el badge quede dentro del div
-                card.appendChild(badge);
-            }
-
-            // Si el nombre del producto coincide con las NOVEDADES entonces lo remarca
-            if (nombresNovedad.includes(prod.nombre)) {
-                const badge = document.createElement("div");
-                badge.classList.add("producto-nuevo");
-                badge.textContent = "Nuevo ingreso";
-                card.appendChild(badge);
-            }
-
-            // Al hacer clic → ir a la página de detalles
-            card.addEventListener("click", () => {
-                window.location.href = `./detalles.html?id=${prod.id}`;
+            relacionados.forEach((prod) => {
+                contenedor.appendChild(crearCardRelacionada(prod));
             });
 
-            contenedor.appendChild(card);
-        });
+        } catch (error) {
+            console.error("Error cargando productos:", error);
+        }
 
+        // Mostrar el bloque del producto
+        document.getElementById("producto").style.display = "block";
+    });
 
-
-    } catch (error) {
-        console.error("Error cargando productos:", error);
+    /* ----------- Helpers de tarjetas relacionadas ----------- */
+    function crearBadge(clase, texto) {
+        const badge = document.createElement("div");
+        badge.classList.add(clase);
+        badge.textContent = texto;
+        return badge;
     }
 
-    // Esperar a que la página cargue por completo (incluye imágenes)
-    document.getElementById("producto").style.display = "block";
-});
+    function crearCardRelacionada(prod) {
+        const imagen =
+            prod.versiones[prod.versiones.length - 1].imagenes[0] || "placeholder.jpg";
+
+        const card = document.createElement("div");
+        card.classList.add("producto-card");
+        card.setAttribute("role", "listitem");
+        card.innerHTML = `
+            <img class="img-card" src="${imagen}" alt="${prod.nombre}">
+            <div class="producto-info">
+                <h3 class="title-card">${prod.nombre}</h3>
+                <p class="subtitle-card">${prod.marca} · ${prod.categoria}</p>
+                <button class="btn-card">Ver más</button>
+            </div>
+        `;
+
+        if (prod.versiones.length > 1) {
+            card.appendChild(crearBadge("producto-versiones", "Varias versiones"));
+        }
+        if (IT.esNovedad(prod)) {
+            card.appendChild(crearBadge("producto-nuevo", "Nuevo ingreso"));
+        }
+
+        card.addEventListener("click", () => {
+            window.location.href = `./detalles.html?id=${prod.id}`;
+        });
+
+        return card;
+    }
+})();

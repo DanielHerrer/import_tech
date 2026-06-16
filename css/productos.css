@@ -57,26 +57,6 @@
     box-shadow: inset 0 0 6px rgba(0,0,0,0.35);
 }
 
-.btn-buscar {
-    border-radius: 99px;
-    width: 45px;
-    height: 45px;
-
-    border: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s;
-}
-
-.btn-buscar:hover {
-    cursor: pointer;
-    background-color: #cf55ff;
-    box-shadow: 0 0 10px rgba(239, 118, 255, 0.75);
-    color: #ffffff;
-}
-
 .categoria-chips {
     background-color: #222;
     width: 100%;
@@ -311,6 +291,70 @@
     border-radius: 5px;
 }
 
+/* CANTIDAD POR PÁGINA + RANGO ____________________________________ */
+#porPagina {
+    border-radius: 3px;
+    padding: 2px 6px;
+    border: 1px solid #4e4e4e;
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+}
+
+#rango-info {
+    margin: 0;
+}
+
+/* PAGINACIÓN ____________________________________ */
+.paginacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 2.5em;
+}
+
+.pagina-btn {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #444;
+    font-size: 0.95rem;
+
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.pagina-btn:hover:not(:disabled):not(.activa) {
+    background-color: #ececec;
+    border-color: #b0b0b0;
+}
+
+.pagina-btn.activa {
+    background-color: #222;
+    border-color: #222;
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+}
+
+.pagina-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagina-elipsis {
+    padding: 0 4px;
+    color: #999;
+    user-select: none;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------------------------------------------------------------------------- */
 
@@ -351,18 +395,6 @@
     .categoria-chips {
         padding: 5px;
         gap: 1px 10px;
-    }
-
-    .btn-buscar {
-        font-weight: bold;
-        border-radius: 25px;
-        width: auto;
-        height: auto;
-        padding: 15px 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
     }
 
     .productos-cant {
@@ -486,17 +518,6 @@
         gap: 10px;
     }
 
-    .btn-buscar {
-        border-radius: 25px;
-        width: auto;
-        height: auto;
-        padding: 15px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-    }
-
     /* MENSAJE SIN PRODUCTOS */
 
     .mensaje-productos {
@@ -611,12 +632,6 @@
         padding: 6px 15px;
     }
 
-    .btn-buscar {
-        border-radius: 99px;
-        width: 45px;
-        height: 45px;
-    }
-
     .categoria-chips {
         padding: 5px;
         gap: 10px;
@@ -699,7 +714,6 @@
 
 }
 
-
 /* -------------------------------------------------------------------------------------------------------------------- */
 
 /* 6. Escritorio */
@@ -715,4 +729,3 @@
         grid-template-columns: repeat(6, 1fr);
     }
 }
-

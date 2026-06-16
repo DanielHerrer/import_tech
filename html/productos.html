@@ -134,24 +134,20 @@
                         <input type="text" name="busqueda" id="texto" placeholder="Buscar producto..." aria-label="Buscar producto">
                         <span id="clearInput" class="clear-btn">×</span>
                     </div>
-
-                    <button id="btnBuscar" class="btn-buscar" type="submit" aria-label="Buscar">
-                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                    </button>
                 </div>
                 <!-- CATEGORÍAS COMO BOTONES / CHIPS -->
                 <div class="categoria-chips">
-                    <button type="submit" name="categoria" id="categoria" value="" class="chip">Todos</button>
-                    <button type="submit" name="categoria" id="categoria" value="Accesorio" class="chip">Accesorio</button>
-                    <button type="submit" name="categoria" id="categoria" value="Audio" class="chip">Audio</button>
-                    <button type="submit" name="categoria" id="categoria" value="Celular" class="chip">Celular</button>
-                    <button type="submit" name="categoria" id="categoria" value="Dron" class="chip">Dron</button>
-                    <button type="submit" name="categoria" id="categoria" value="Fotografía" class="chip">Fotografía</button>
-                    <button type="submit" name="categoria" id="categoria" value="Hogar" class="chip">Hogar</button>
-                    <button type="submit" name="categoria" id="categoria" value="Lentes" class="chip">Lentes</button>
-                    <button type="submit" name="categoria" id="categoria" value="Ordenador" class="chip">Ordenador</button>
-                    <button type="submit" name="categoria" id="categoria" value="Tablet" class="chip">Tablet</button>
-                    <button type="submit" name="categoria" id="categoria" value="Videojuegos" class="chip">Videojuegos</button>
+                    <button type="button" name="categoria" value="" class="chip">Todos</button>
+                    <button type="button" name="categoria" value="Accesorio" class="chip">Accesorio</button>
+                    <button type="button" name="categoria" value="Audio" class="chip">Audio</button>
+                    <button type="button" name="categoria" value="Celular" class="chip">Celular</button>
+                    <button type="button" name="categoria" value="Dron" class="chip">Dron</button>
+                    <button type="button" name="categoria" value="Fotografía" class="chip">Fotografía</button>
+                    <button type="button" name="categoria" value="Hogar" class="chip">Hogar</button>
+                    <button type="button" name="categoria" value="Lentes" class="chip">Lentes</button>
+                    <button type="button" name="categoria" value="Ordenador" class="chip">Ordenador</button>
+                    <button type="button" name="categoria" value="Tablet" class="chip">Tablet</button>
+                    <button type="button" name="categoria" value="Videojuegos" class="chip">Videojuegos</button>
                 </div>
             
                 <div class="productos-head">
@@ -168,13 +164,14 @@
                 
 
                 <div class="productos-cant" aria-label="Opciones de listado">
-                    <p id="resultado-cant" aria-live="polite"></p>
-
-                    <select name="orden" id="orden">
-                        <option value="" disabled selected hidden>Ordenar por</option>
-                        <option value="fecha_desc">Ordenar por más reciente</option>
-                        <option value="fecha_asc">Ordenar por más antiguo</option>
+                    <select name="porPagina" id="porPagina" aria-label="Cantidad de productos por página">
+                        <option value="10" selected>10 por página</option>
+                        <option value="20">20 por página</option>
+                        <option value="30">30 por página</option>
+                        <option value="40">40 por página</option>
                     </select>
+
+                    <p id="rango-info" aria-live="polite"></p>
                 </div>
 
             </form>
@@ -192,6 +189,9 @@
                         <!-- ACA SE AÑADEN LOS PRODUCTOS dinámicamente desde productos.js -->
 
                     </div>
+
+                    <!-- PAGINACIÓN (se rellena dinámicamente desde productos.js) -->
+                    <nav class="paginacion" id="paginacion" role="navigation" aria-label="Paginación de productos"></nav>
                 </section>
                 
             </div>
@@ -246,7 +246,7 @@
                     <p class="atencion">Defensa de las y los consumidores. Para reclamos <a href=""
                             class="link-atencion" target="_blank" rel="noopener noreferrer">ingresá acá</a>.</p>
                     <p class="copyright">Copyright Import Tech BA · 2025. Todos los derechos reservados.</p>
-                    <p>Creado por <a href="https://danielherrer.github.io/me" class="link-creador" target="_blank"
+                    <p>Sitio web desarrollado por <a href="https://danielherrer.github.io/me" class="link-creador" target="_blank"
                             rel="noopener noreferrer">Daniel Herrera</a>.</p>
                 </div>
             </div>
@@ -263,6 +263,7 @@
         </noscript>
 
         <!-- SCRIPTS -->
+        <script src="../js/config.js?v=1" defer></script>
         <script src="../js/productos.js?v=13" defer></script>
         <script src="../js/global.js?v=4" defer></script>
     <!-- </div> -->

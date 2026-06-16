@@ -1,246 +1,333 @@
-const jsonProductos = "../data/productos_2026-06-15_20-23-03.json";
-const nombresNovedad = ["Samsung Galaxy A57", "Samsung Galaxy S26", "Samsung Galaxy S26 Plus", "Samsung Galaxy S26 Ultra"];
+/* =====================================================================
+   productos.js — Catálogo Import Tech BA
+   Buscador en memoria, instantáneo, con paginación. Sin recargas.
 
-async function cargarProductos() {
-    const response = await fetch(jsonProductos);
-    const productos = await response.json();
-    // Filtrar los que estén activos
-    const productosActivos = productos.filter(p => p.activo === true);
+   Requiere config.js cargado antes (usa el objeto IT).
+   ===================================================================== */
 
-    // Ordenar por mas recientes primero
-    productosActivos.sort((a, b) =>
-        new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion)
-    );
+(() => {
+    "use strict";
 
-    // CARGADO DE PRODUCTOS con FILTRADO por URL
-    //const params = new URLSearchParams(window.location.search);
+    /* ------------------------- Configuración ------------------------- */
+    const DEBOUNCE_MS = 180;
+    const OPCIONES_POR_PAGINA = [10, 20, 30, 40];
+    const POR_PAGINA_DEFAULT = 10;
 
-    const texto = document.getElementById("texto").value.trim();
-    const categoria = new URLSearchParams(window.location.search).get("categoria") || "";
-    const orden = document.getElementById("orden").value;
-
-    const filtros = {
-        categoria: categoria,
-        //categoria: params.get("categoria"),
-        orden: orden,
-        //orden: params.get("orden"),
-        busqueda: texto
-        //busqueda: params.get("busqueda")
+    /* ----------------------------- Estado ---------------------------- */
+    const estado = {
+        productos: [],            // catálogo completo (cargado una sola vez)
+        busqueda: "",
+        categoria: "",
+        porPagina: POR_PAGINA_DEFAULT,
+        paginaActual: 1
     };
 
-    let resultado = filtrarProductos(productosActivos, filtros);
-    mostrarProductos(resultado);
-}
+    /* ----------- Referencias al DOM (se llenan en init) -------------- */
+    const dom = {};
 
-function actualizarCantidad(productos) {
-    let contenedor = document.getElementById("resultado-cant");
-    contenedor.innerHTML = "";
-    contenedor.textContent = `Se han encontrado ${productos.length} resultados`;
-}
+    /* ----------- Lógica de filtrado (pura: no muta, no toca DOM) ------ */
 
-function mostrarProductos(productos) {
+    function coincideBusqueda(producto, termino) {
+        if (!termino) return true;
 
-    let contenedor = document.getElementById("contenedor-productos");
-    contenedor.innerHTML = "";
-
-    actualizarCantidad(productos);
-
-    let msjProductos = document.getElementById("mensaje-productos");
-    msjProductos.textContent = '';
-
-    // Si no hay productos para mostrar
-    if (productos.length === 0) {
-        msjProductos.textContent = 'No hay productos para mostrar...';
-        msjProductos.style.display = "block";
-        return;
+        const campos = [producto.nombre, producto.marca];
+        if (Array.isArray(producto.versiones)) {
+            for (const v of producto.versiones) {
+                campos.push(v.nombre_version, v.descripcion);
+            }
+        }
+        return campos.some((campo) => IT.normalizar(campo).includes(termino));
     }
 
-    productos.forEach(prod => {
-        const div = document.createElement("div");
-        div.className = "producto-card";
-        div.setAttribute("role", "listitem");
-        div.setAttribute("itemscope", "");
-        div.setAttribute("itemtype", "https://schema.org/Product");
+    function filtrar({ productos, busqueda, categoria }) {
+        const termino = IT.normalizar(busqueda);
 
-        div.innerHTML = `
-            <img class="img-card" src="${prod.versiones[prod.versiones.length - 1].imagenes[0]}" alt="${prod.nombre}" itemprop="image">
+        // copia para no mutar el catálogo original al ordenar
+        const resultado = productos.filter(
+            (p) =>
+                (!categoria || p.categoria === categoria) &&
+                coincideBusqueda(p, termino)
+        );
+
+        // Orden único del sitio: novedades primero, luego más recientes
+        return resultado.sort(IT.comparadorNovedadFecha);
+    }
+
+    /* -------------------------- Paginación --------------------------- */
+
+    // Ventana de páginas a mostrar, con elipsis (…) en los huecos.
+    // Ej: total 18, actual 9 -> [1, "…", 8, 9, 10, "…", 18]
+    function rangoPaginas(actual, total) {
+        const delta = 1;
+        const paginas = [];
+        const izq = Math.max(2, actual - delta);
+        const der = Math.min(total - 1, actual + delta);
+
+        paginas.push(1);
+        if (izq > 2) paginas.push("…");
+        for (let i = izq; i <= der; i++) paginas.push(i);
+        if (der < total - 1) paginas.push("…");
+        if (total > 1) paginas.push(total);
+
+        return paginas;
+    }
+
+    /* ------------------------------ Render --------------------------- */
+
+    function crearBadge(clase, texto) {
+        const badge = document.createElement("div");
+        badge.classList.add(clase);
+        badge.textContent = texto;
+        return badge;
+    }
+
+    function crearCard(prod) {
+        const ultimaVersion = prod.versiones[prod.versiones.length - 1];
+
+        const card = document.createElement("div");
+        card.className = "producto-card";
+        card.setAttribute("role", "listitem");
+        card.setAttribute("itemscope", "");
+        card.setAttribute("itemtype", "https://schema.org/Product");
+
+        card.innerHTML = `
+            <img class="img-card" src="${ultimaVersion.imagenes[0]}" alt="${prod.nombre}" itemprop="image">
             <h3 class="title-card" itemprop="name">${prod.nombre}</h3>
             <a href="detalles.html?id=${prod.id}" class="btn-card" itemprop="url">Ver más</a>
         `;
 
-        // Si el producto tiene precio:
-        // if (prod.precio) {
-        //     const price = document.createElement("span");
-        //     price.setAttribute("itemprop", "offers");
-        //     price.setAttribute("itemscope", "");
-        //     price.setAttribute("itemtype", "https://schema.org/Offer");
-        //     price.innerHTML = `
-        //         <meta itemprop="priceCurrency" content="ARS">
-        //         <span itemprop="price">${prod.precio}</span>
-        //     `;
-        //     div.appendChild(price);
-        // }
-
-        // Agregar badge si hay varias versiones
         if (prod.versiones.length > 1) {
-            const badge = document.createElement("div");
-            badge.classList.add('producto-versiones');
-            badge.textContent = "Varias versiones";
-            div.appendChild(badge);
+            card.appendChild(crearBadge("producto-versiones", "Varias versiones"));
+        }
+        if (IT.esNovedad(prod)) {
+            card.appendChild(crearBadge("producto-nuevo", "Nuevo ingreso"));
         }
 
-        // Si el nombre del producto coincide con las NOVEDADES entonces lo remarca
-        if (nombresNovedad.includes(prod.nombre)) {
-            const badge = document.createElement("div");
-            badge.classList.add("producto-nuevo");
-            badge.textContent = "Nuevo ingreso";
-            div.appendChild(badge);
-        }
-
-        div.addEventListener("click", () => {
+        card.addEventListener("click", () => {
             window.location.href = `detalles.html?id=${prod.id}`;
         });
 
-        contenedor.appendChild(div);
-    });
-
-}
-
-function mostrarCategoriaActiva() {
-    const params = new URLSearchParams(window.location.search);
-    const categoriaActiva = params.get("categoria");
-
-    // Marcar el botón activo según la URL
-    if (categoriaActiva !== null) {
-        document.querySelectorAll(".chip").forEach(chip => {
-            if (chip.value === categoriaActiva) {
-                chip.classList.add("activa");
-            }
-        });
+        return card;
     }
-}
 
-function filtrarProductos(productos, { categoria, orden, busqueda }) {
+    function renderCards(productos) {
+        dom.contenedor.innerHTML = "";
 
-    const productosFiltrados = productos.filter(p => {
-        const coincideCategoria = !categoria || p.categoria === categoria;
+        if (productos.length === 0) {
+            dom.mensaje.textContent = "No hay productos para mostrar...";
+            dom.mensaje.style.display = "block";
+            return;
+        }
+        dom.mensaje.textContent = "";
+        dom.mensaje.style.display = "none";
 
-        const coincideBusqueda = !busqueda || (
-            p.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
-            p.marca.toLowerCase().includes(busqueda.toLowerCase()) ||
-            (p.versiones && p.versiones.some(v =>
-                (v.nombre_version && v.nombre_version.toLowerCase().includes(busqueda.toLowerCase())) ||
-                (v.descripcion && v.descripcion.toLowerCase().includes(busqueda.toLowerCase()))
-            ))
+        const fragment = document.createDocumentFragment();
+        productos.forEach((prod) => fragment.appendChild(crearCard(prod)));
+        dom.contenedor.appendChild(fragment);
+    }
+
+    // Indicador de rango: "1–12 de 216 productos"
+    function renderRangoInfo(total, inicio, fin) {
+        dom.rangoInfo.textContent =
+            total === 0 ? "0 productos" : `${inicio}–${fin} de ${total} productos`;
+    }
+
+    function renderPaginacion(totalPaginas) {
+        dom.paginacion.innerHTML = "";
+        if (totalPaginas <= 1) return;
+
+        const irA = (pagina) => {
+            estado.paginaActual = pagina;
+            aplicarFiltros();
+            scrollAlCatalogo();
+        };
+
+        dom.paginacion.appendChild(
+            crearBotonPagina("‹", estado.paginaActual - 1, {
+                deshabilitado: estado.paginaActual === 1,
+                aria: "Página anterior",
+                onClick: irA
+            })
         );
 
-        return coincideCategoria && coincideBusqueda;
-    });
+        for (const item of rangoPaginas(estado.paginaActual, totalPaginas)) {
+            if (item === "…") {
+                const span = document.createElement("span");
+                span.className = "pagina-elipsis";
+                span.textContent = "…";
+                dom.paginacion.appendChild(span);
+            } else {
+                dom.paginacion.appendChild(
+                    crearBotonPagina(item, item, {
+                        activa: item === estado.paginaActual,
+                        aria: `Página ${item}`,
+                        onClick: irA
+                    })
+                );
+            }
+        }
 
-    let ordenados;
-    switch (orden) {
-        case "fecha_asc":
-            ordenados = productosFiltrados.sort((a, b) => new Date(a.fecha_publicacion) - new Date(b.fecha_publicacion));
-            break;
-        case "fecha_desc":
-            ordenados = productosFiltrados.sort((a, b) => new Date(b.fecha_publicacion) - new Date(a.fecha_publicacion));
-            break;
-        // Si en el futuro agregás precios:
-        // case "precio_asc":
-        //   ordenados = productosFiltrados.sort((a, b) => a.precio - b.precio);
-        //   break;
-        // case "precio_desc":
-        //   ordenados = productosFiltrados.sort((a, b) => b.precio - a.precio);
-        //   break;
-        default:
-            ordenados = productosFiltrados;
+        dom.paginacion.appendChild(
+            crearBotonPagina("›", estado.paginaActual + 1, {
+                deshabilitado: estado.paginaActual === totalPaginas,
+                aria: "Página siguiente",
+                onClick: irA
+            })
+        );
     }
 
-    // Priorizar NOVEDADES al frente, respetando el orden ya aplicado dentro de cada grupo
-    ordenados.sort((a, b) => {
-        const aEsNovedad = nombresNovedad.includes(a.nombre);
-        const bEsNovedad = nombresNovedad.includes(b.nombre);
-        if (aEsNovedad !== bEsNovedad) return aEsNovedad ? -1 : 1;
-        return 0; // empate: mantiene el orden previo
-    });
+    function crearBotonPagina(texto, pagina, { activa, deshabilitado, aria, onClick }) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "pagina-btn";
+        btn.textContent = texto;
+        if (aria) btn.setAttribute("aria-label", aria);
 
-    return ordenados;
-}
-
-function mantenerValoresFormulario() {
-    // CARGADO DE PRODUCTOS con FILTRADO por URL
-    const params = new URLSearchParams(window.location.search);
-
-    const filtros = {
-        categoria: params.get("categoria"),
-        orden: params.get("orden"),
-        busqueda: params.get("busqueda")
-    };
-
-    if (filtros.orden) {
-        document.getElementById("orden").value = filtros.orden;
+        if (activa) {
+            btn.classList.add("activa");
+            btn.setAttribute("aria-current", "page");
+        }
+        if (deshabilitado) {
+            btn.disabled = true;
+        } else {
+            btn.addEventListener("click", () => onClick(pagina));
+        }
+        return btn;
     }
 
-    if (filtros.busqueda) {
-        document.getElementById("texto").value = filtros.busqueda;
+    /* --------------------------- Orquestación ------------------------ */
+
+    function aplicarFiltros() {
+        const filtrados = filtrar(estado);
+        const total = filtrados.length;
+        const totalPaginas = Math.max(1, Math.ceil(total / estado.porPagina));
+
+        estado.paginaActual = Math.min(Math.max(1, estado.paginaActual), totalPaginas);
+
+        const desde = (estado.paginaActual - 1) * estado.porPagina;
+        const hasta = desde + estado.porPagina;
+        const pagina = filtrados.slice(desde, hasta);
+
+        renderCards(pagina);
+        renderRangoInfo(total, desde + 1, Math.min(hasta, total));
+        renderPaginacion(totalPaginas);
+        sincronizarURL();
     }
-}
 
-// Cambia el CSS del boton de Busqueda segun el dispositivo (PC-Tablet-Celu)
-function actualizarBotonBuscar() {
-    const btn = document.getElementById("btnBuscar");
+    function scrollAlCatalogo() {
+        const top = dom.contenedor.getBoundingClientRect().top + window.scrollY - 120;
+        window.scrollTo({ top, behavior: "smooth" });
+    }
 
-    if (window.innerWidth > 767) {
-        // Solo el ícono
-        btn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
-        btn.style.borderRadius = '50%';
-        btn.style.padding = '17px';
+    function sincronizarURL() {
+        const params = new URLSearchParams();
+        if (estado.busqueda) params.set("busqueda", estado.busqueda);
+        if (estado.categoria) params.set("categoria", estado.categoria);
+        if (estado.porPagina !== POR_PAGINA_DEFAULT) params.set("porPagina", estado.porPagina);
+        if (estado.paginaActual > 1) params.set("pagina", estado.paginaActual);
+
+        const query = params.toString();
+        history.replaceState(null, "", query ? `?${query}` : location.pathname);
+    }
+
+    function marcarChipActiva() {
+        dom.chips.forEach((chip) =>
+            chip.classList.toggle("activa", chip.value === estado.categoria)
+        );
+    }
+
+    function mostrarClearBtn() {
+        dom.clearBtn.style.display = dom.input.value.length > 0 ? "block" : "none";
+    }
+
+    /* --------- Estado inicial desde la URL (deep-links / SEO) -------- */
+    function leerEstadoInicial() {
+        const params = new URLSearchParams(location.search);
+        estado.busqueda = params.get("busqueda") || "";
+        estado.categoria = params.get("categoria") || "";
+
+        const pp = parseInt(params.get("porPagina"), 10);
+        estado.porPagina = OPCIONES_POR_PAGINA.includes(pp) ? pp : POR_PAGINA_DEFAULT;
+
+        const pag = parseInt(params.get("pagina"), 10);
+        estado.paginaActual = Number.isInteger(pag) && pag > 0 ? pag : 1;
+
+        dom.input.value = estado.busqueda;
+        dom.porPagina.value = String(estado.porPagina);
+    }
+
+    /* ----------------------------- Eventos --------------------------- */
+    function conectarEventos() {
+        dom.form.addEventListener("submit", (e) => e.preventDefault());
+
+        const buscarDebounced = IT.debounce(() => {
+            estado.busqueda = dom.input.value.trim();
+            estado.paginaActual = 1;
+            aplicarFiltros();
+        }, DEBOUNCE_MS);
+
+        dom.input.addEventListener("input", () => {
+            mostrarClearBtn();
+            buscarDebounced();
+        });
+
+        dom.clearBtn.addEventListener("click", () => {
+            dom.input.value = "";
+            estado.busqueda = "";
+            estado.paginaActual = 1;
+            mostrarClearBtn();
+            dom.input.focus();
+            aplicarFiltros();
+        });
+
+        dom.chips.forEach((chip) => {
+            chip.addEventListener("click", () => {
+                estado.categoria = chip.value;
+                estado.paginaActual = 1;
+                marcarChipActiva();
+                aplicarFiltros();
+            });
+        });
+
+        dom.porPagina.addEventListener("change", () => {
+            estado.porPagina = parseInt(dom.porPagina.value, 10) || POR_PAGINA_DEFAULT;
+            estado.paginaActual = 1;
+            aplicarFiltros();
+        });
+    }
+
+    /* ------------------------------- Init ---------------------------- */
+    async function init() {
+        dom.input = document.getElementById("texto");
+        dom.clearBtn = document.getElementById("clearInput");
+        dom.porPagina = document.getElementById("porPagina");
+        dom.chips = Array.from(document.querySelectorAll(".chip"));
+        dom.contenedor = document.getElementById("contenedor-productos");
+        dom.rangoInfo = document.getElementById("rango-info");
+        dom.paginacion = document.getElementById("paginacion");
+        dom.mensaje = document.getElementById("mensaje-productos");
+        dom.form = document.querySelector("form.busqueda");
+
+        leerEstadoInicial();
+        mostrarClearBtn();
+        marcarChipActiva();
+        conectarEventos();
+
+        try {
+            const data = await IT.cargarCatalogo();
+            estado.productos = data.filter((p) => p.activo === true);
+            aplicarFiltros();
+        } catch (err) {
+            console.error("Error al cargar productos:", err);
+            dom.mensaje.textContent =
+                "No se pudieron cargar los productos. Intentá de nuevo más tarde.";
+            dom.mensaje.style.display = "block";
+        }
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
     } else {
-        // Ícono + texto
-        btn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i> Buscar';
+        init();
     }
-}
-
-// Funcion que carga por primera vez los productos
-cargarProductos();
-
-// SELECT DE ORDEN _______________________________
-document.getElementById("orden").addEventListener("change", () => {
-    cargarProductos();
-});
-
-// INPUT DE BUSQUEDA _______________________________
-const input = document.getElementById("texto");
-const clearBtn = document.getElementById("clearInput");
-
-// Mostrar/ocultar la X
-input.addEventListener("input", () => {
-    clearBtn.style.display = input.value.length > 0 ? "block" : "none";
-});
-
-// Al hacer click, limpiar
-clearBtn.addEventListener("click", () => {
-    input.value = "";
-    clearBtn.style.display = "none";
-    input.focus();
-});
-
-
-// ⬇️ PROCESO PRINCIPAL
-document.addEventListener("DOMContentLoaded", () => {
-
-    // Si el usuario busco con filtros recientemente, que los valores se mantengan para visualizar
-    mantenerValoresFormulario();
-
-    // Cambia el CSS del boton de Busqueda
-    actualizarBotonBuscar();
-
-    mostrarCategoriaActiva();
-
-    // Llamar cuando se cambia el tamaño de la ventana
-    window.addEventListener("resize", actualizarBotonBuscar);
-
-    // Mostrar/ocultar la X
-    clearBtn.style.display = input.value.length > 0 ? "block" : "none";
-
-});
+})();
