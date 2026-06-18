@@ -133,14 +133,14 @@ body {
   transform: translate(-50%, -50%);
   /* width: auto; */
   /* justify-content: center; */
-  padding: 7px 30px;
+  padding: 7px 20px;
   width: 50%;
-  background-color: #d68fe0;
+  background-color: rgba(0, 0, 0, 0); /* #d68fe0 */
   color: #fff;
   margin: 2.5em auto;
 
   border-radius: 25px;
-  border: none;
+  border: 1px solid white;
 
   font-size: 0.65em;
   text-decoration: none;
@@ -156,28 +156,28 @@ body {
 }
 
 .galeria-div .btn-detalle:hover {
-  background-color: #ba4fe4;
+  background-color: rgba(255, 255, 255, 0.25); /* #ba4fe4 */
   transition: 0.3s ease;
 }
 
 .galeria-grid .div1 {
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
-  background-image: url(../img/img_iphone.jpg);
+  background-image: url(../img/img_iphone2.jpg);
 }
 
 .galeria-grid .div2 {
   grid-column: span 3 / span 3;
   grid-row: span 5 / span 5;
   grid-column-start: 3;
-  background-image: url(../img/img_app.jpg);
+  background-image: url(../img/img_app2.jpg);
 }
 
 .galeria-grid .div3 {
   grid-column: span 2 / span 2;
   grid-row: span 4 / span 4;
   grid-column-start: 6;
-  background-image: url(../img/img_ipad.jpg);
+  background-image: url(../img/img_dron.jpg);
 
 }
 
@@ -185,7 +185,7 @@ body {
   grid-column: span 2 / span 2;
   grid-row: span 4 / span 4;
   grid-row-start: 4;
-  background-image: url(../img/img_macbook.jpg);
+  background-image: url(../img/img_macbook2.jpg);
 }
 
 .galeria-grid .div5 {
@@ -193,7 +193,7 @@ body {
   grid-row: span 2 / span 2;
   grid-column-start: 3;
   grid-row-start: 6;
-  background-image: url(../img/img_videogames.jpg);
+  background-image: url(../img/img_videogames2.png);
 }
 
 .galeria-grid .div6 {
@@ -201,7 +201,7 @@ body {
   grid-row: span 3 / span 3;
   grid-column-start: 6;
   grid-row-start: 5;
-  background-image: url(../img/img_samsung.jpg);
+  background-image: url(../img/img_samsung2.png);
 }
 
 .div-detalle {
