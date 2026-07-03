@@ -25,7 +25,6 @@ const IT = (() => {
     const WHATSAPP = "5491165835895";
 
     /* ----------------------------- Utilidades ----------------------------- */
-
     const esNovedad = (producto) => NOMBRES_NOVEDAD.includes(producto.nombre);
 
     // Texto normalizado: minúsculas + sin acentos (búsqueda tolerante).
