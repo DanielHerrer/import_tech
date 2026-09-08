@@ -184,7 +184,8 @@
         const titleModal = document.querySelector(".title-modal");
         if (titleModal) {
             titleModal.innerHTML =
-                "<b>Estamos teniendo inconvenientes con Instagram</b> · Gracias por su comprensión";
+                "<b>Novedades</b> · Ofertas todos los días!";
+                // "<b>Estamos teniendo inconvenientes con Instagram</b> · Gracias por su comprensión";
         }
 
         const imgModal = document.querySelector(".modal img");
@@ -193,8 +194,8 @@
                 /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
                 window.innerWidth <= 768;
             imgModal.src = esCelular
-                ? "../img/banner_error_ig_vertical.png"
-                : "../img/banner_error_ig.jpeg";
+                ? "../img/banner_4_vertical.png" //"../img/banner_error_ig_vertical.png"
+                : "../img/banner_4.png"; //"../img/banner_error_ig.jpeg"
         }
 
         const yaSeMostroHoy = () =>
