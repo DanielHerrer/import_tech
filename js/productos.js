@@ -11,7 +11,7 @@
     /* ------------------------- Configuración ------------------------- */
     const DEBOUNCE_MS = 180;
     const OPCIONES_POR_PAGINA = [10, 20, 30, 40];
-    const POR_PAGINA_DEFAULT = 10;
+    const POR_PAGINA_DEFAULT = 20;
 
     /* ----------------------------- Estado ---------------------------- */
     const estado = {

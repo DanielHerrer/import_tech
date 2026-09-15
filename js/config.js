@@ -13,13 +13,13 @@ const IT = (() => {
     "use strict";
 
     /* ----------------------------- Constantes ----------------------------- */
-    const RUTA_JSON = "../data/productos_2026-06-18_14-31-25.json";
+    const RUTA_JSON = "../data/productos_2026-09-15_14-48-26.json";
 
     const NOMBRES_NOVEDAD = [
-        "Samsung Galaxy A57",
-        "Samsung Galaxy S26",
-        "Samsung Galaxy S26 Plus",
-        "Samsung Galaxy S26 Ultra"
+        "Samsung Galaxy Z Fold8 Ultra",
+        "Samsung Galaxy Z Fold8",
+        "Samsung Galaxy Z Flip8",
+        "DJI Osmo Pocket 4 Pro"
     ];
 
     const WHATSAPP = "5491165835895";
