@@ -148,6 +148,27 @@
         const productId = params.get("id");
         if (!productId) return; // sin id, no hay nada que mostrar
 
+        // Canonical dinámico según el producto
+        const urlProducto =
+            `${window.location.origin}${window.location.pathname}?id=${encodeURIComponent(productId)}`;
+
+        let canonical = document.querySelector('link[rel="canonical"]');
+
+        if (!canonical) {
+            canonical = document.createElement("link");
+            canonical.rel = "canonical";
+            document.head.appendChild(canonical);
+        }
+
+        canonical.href = urlProducto;
+
+        // Open Graph
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+
+        if (ogUrl) {
+            ogUrl.setAttribute("content", urlProducto);
+        }
+
         let producto = null;
 
         try {
