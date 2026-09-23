@@ -13,11 +13,11 @@ const IT = (() => {
     "use strict";
 
     /* ----------------------------- Constantes ----------------------------- */
-    const RUTA_JSON = "../data/productos_2026-09-15_14-48-26.json";
+    const RUTA_JSON = "../data/productos_2026-09-23_14-18-33.json";
 
     const NOMBRES_NOVEDAD = [
+        "iPhone 18",
         "Samsung Galaxy Z Fold8 Ultra",
-        "Samsung Galaxy Z Fold8",
         "Samsung Galaxy Z Flip8",
         "DJI Osmo Pocket 4 Pro"
     ];
