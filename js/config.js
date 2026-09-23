@@ -13,7 +13,7 @@ const IT = (() => {
     "use strict";
 
     /* ----------------------------- Constantes ----------------------------- */
-    const RUTA_JSON = "../data/productos_2026-09-23_14-18-33.json";
+    const RUTA_JSON = "../data/productos_2026-09-23_17-45-01.json";
 
     const NOMBRES_NOVEDAD = [
         "iPhone 18",
