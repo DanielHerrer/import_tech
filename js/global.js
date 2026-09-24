@@ -189,21 +189,36 @@
         }
 
         const imgModal = document.querySelector(".modal img");
-        if (imgModal) {
-            const esCelular =
-                /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
-                window.innerWidth <= 768;
-            imgModal.src = esCelular
-                ? "../img/banner_4_vertical.png" //"../img/banner_error_ig_vertical.png"
-                : "../img/banner_4.png"; //"../img/banner_error_ig.jpeg"
-        }
 
         const yaSeMostroHoy = () =>
             localStorage.getItem("popupFecha") === new Date().toDateString();
 
-        if (!yaSeMostroHoy()) {
+        const mostrarModal = () => {
             overlay.style.display = "block";
             localStorage.setItem("popupFecha", new Date().toDateString());
+        };
+
+        if (!yaSeMostroHoy()) {
+            if (imgModal) {
+                const esCelular =
+                    /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+                    window.innerWidth <= 768;
+                const rutaImg = esCelular
+                    ? "../img/banner_4_vertical.png" //"../img/banner_error_ig_vertical.png"
+                    : "../img/banner_4.png"; //"../img/banner_error_ig.jpeg"
+
+                // Se precarga la imagen en segundo plano y recién cuando está
+                // completamente cargada se muestra el modal (evita el cuadro vacío).
+                // Si falla la carga, no se muestra y se reintenta en la próxima visita.
+                const precarga = new Image();
+                precarga.onload = () => {
+                    imgModal.src = rutaImg;
+                    mostrarModal();
+                };
+                precarga.src = rutaImg;
+            } else {
+                mostrarModal();
+            }
         }
 
         closeBtn.addEventListener("click", () => {
