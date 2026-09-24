@@ -13,7 +13,9 @@
     /* ------- Recargar página => volver arriba ------- */
     window.addEventListener("beforeunload", () => window.scrollTo(0, 0));
 
-    /* ------- Imágenes de producto rotas => ícono "sin imagen" ------- */
+    /* ------- Imágenes de producto rotas => siguiente foto o ícono ------- */
+    // Si la imagen tiene fotos de respaldo (data-respaldo), prueba la
+    // siguiente; si no quedan, muestra el ícono "sin imagen".
     // El evento "error" de <img> no burbujea, por eso se escucha en fase de
     // captura: así cubre también las imágenes que se crean después con JS.
     const SELECTOR_IMG_PRODUCTO = ".img-card, .img-1 img, .sub-img img, #modalImg";
@@ -23,7 +25,14 @@
         if (!img.matches(SELECTOR_IMG_PRODUCTO)) return;
         if (!img.getAttribute("src")) return; // aún sin cargar (src="")
         if (img.src === IT.IMG_NO_DISPONIBLE) return; // evita bucles
-        img.src = IT.IMG_NO_DISPONIBLE;
+
+        const [siguiente, ...resto] = (img.dataset.respaldo || "").split(" ").filter(Boolean);
+        if (siguiente) {
+            img.dataset.respaldo = resto.join(" ");
+            img.src = decodeURIComponent(siguiente);
+        } else {
+            img.src = IT.IMG_NO_DISPONIBLE;
+        }
     }, true);
 
     /* ===================================================================

@@ -14,14 +14,13 @@
     }
 
     function crearCardDestacada(prod) {
-        const imagen =
-            prod.versiones[prod.versiones.length - 1].imagenes[0] || IT.IMG_NO_DISPONIBLE;
+        const imagenes = prod.versiones[prod.versiones.length - 1].imagenes;
 
         const card = document.createElement("div");
         card.classList.add("producto-card");
         card.innerHTML = `
             <div class="producto-img">
-                <img class="img-card" src="${imagen}" alt="${prod.nombre}">
+                <img class="img-card" src="${IT.primeraImagen(imagenes)}" data-respaldo="${IT.respaldoImagenes(imagenes)}" alt="${prod.nombre}">
             </div>
             <div class="producto-info">
                 <h3 class="title-card">${prod.nombre}</h3>

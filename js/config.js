@@ -85,6 +85,17 @@ const IT = (() => {
         return resp.json();
     };
 
+    // Imagen principal de un producto: la primera de sus (hasta 4) fotos,
+    // o el ícono "sin imagen" si no tiene ninguna.
+    const fotosProducto = (imagenes) => (imagenes || []).filter(Boolean).slice(0, 4);
+    const primeraImagen = (imagenes) => fotosProducto(imagenes)[0] || IMG_NO_DISPONIBLE;
+
+    // Fotos de respaldo (2da, 3ra y 4ta) para el atributo data-respaldo.
+    // Si la principal está rota, global.js prueba estas en orden.
+    // Se codifican y se separan con espacios (una URL codificada no los tiene).
+    const respaldoImagenes = (imagenes) =>
+        fotosProducto(imagenes).slice(1).map(encodeURIComponent).join(" ");
+
     // Arma una URL de WhatsApp con el mensaje ya codificado.
     const urlWhatsApp = (texto) =>
         `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
@@ -94,6 +105,8 @@ const IT = (() => {
         NOMBRES_NOVEDAD,
         WHATSAPP,
         IMG_NO_DISPONIBLE,
+        primeraImagen,
+        respaldoImagenes,
         esNovedad,
         normalizar,
         debounce,

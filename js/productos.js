@@ -92,7 +92,7 @@
         card.setAttribute("itemtype", "https://schema.org/Product");
 
         card.innerHTML = `
-            <img class="img-card" src="${ultimaVersion.imagenes[0] || IT.IMG_NO_DISPONIBLE}" alt="${prod.nombre}" itemprop="image">
+            <img class="img-card" src="${IT.primeraImagen(ultimaVersion.imagenes)}" data-respaldo="${IT.respaldoImagenes(ultimaVersion.imagenes)}" alt="${prod.nombre}" itemprop="image">
             <h3 class="title-card" itemprop="name">${prod.nombre}</h3>
             <a href="detalles.html?id=${prod.id}" class="btn-card" itemprop="url">Ver más</a>
         `;

@@ -194,7 +194,8 @@
 
                 // Imagen principal
                 const imgPrincipal = document.querySelector(".img-1 img");
-                imgPrincipal.src = version.imagenes[0] || IT.IMG_NO_DISPONIBLE;
+                imgPrincipal.dataset.respaldo = IT.respaldoImagenes(version.imagenes);
+                imgPrincipal.src = IT.primeraImagen(version.imagenes);
                 imgPrincipal.onclick = () => abrirModalImagenes(version.imagenes, 0);
 
                 // Sub-imágenes
@@ -341,14 +342,13 @@
     }
 
     function crearCardRelacionada(prod) {
-        const imagen =
-            prod.versiones[prod.versiones.length - 1].imagenes[0] || IT.IMG_NO_DISPONIBLE;
+        const imagenes = prod.versiones[prod.versiones.length - 1].imagenes;
 
         const card = document.createElement("div");
         card.classList.add("producto-card");
         card.setAttribute("role", "listitem");
         card.innerHTML = `
-            <img class="img-card" src="${imagen}" alt="${prod.nombre}">
+            <img class="img-card" src="${IT.primeraImagen(imagenes)}" data-respaldo="${IT.respaldoImagenes(imagenes)}" alt="${prod.nombre}">
             <div class="producto-info">
                 <h3 class="title-card">${prod.nombre}</h3>
                 <p class="subtitle-card">${prod.marca} · ${prod.categoria}</p>
