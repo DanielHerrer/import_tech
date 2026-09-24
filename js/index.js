@@ -15,7 +15,7 @@
 
     function crearCardDestacada(prod) {
         const imagen =
-            prod.versiones[prod.versiones.length - 1].imagenes[0] || "placeholder.jpg";
+            prod.versiones[prod.versiones.length - 1].imagenes[0] || IT.IMG_NO_DISPONIBLE;
 
         const card = document.createElement("div");
         card.classList.add("producto-card");

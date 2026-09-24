@@ -194,7 +194,7 @@
 
                 // Imagen principal
                 const imgPrincipal = document.querySelector(".img-1 img");
-                if (version.imagenes[0]) imgPrincipal.src = version.imagenes[0];
+                imgPrincipal.src = version.imagenes[0] || IT.IMG_NO_DISPONIBLE;
                 imgPrincipal.onclick = () => abrirModalImagenes(version.imagenes, 0);
 
                 // Sub-imágenes
@@ -342,7 +342,7 @@
 
     function crearCardRelacionada(prod) {
         const imagen =
-            prod.versiones[prod.versiones.length - 1].imagenes[0] || "placeholder.jpg";
+            prod.versiones[prod.versiones.length - 1].imagenes[0] || IT.IMG_NO_DISPONIBLE;
 
         const card = document.createElement("div");
         card.classList.add("producto-card");

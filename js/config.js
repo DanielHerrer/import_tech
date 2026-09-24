@@ -24,6 +24,19 @@ const IT = (() => {
 
     const WHATSAPP = "5491165835895";
 
+    // Imagen de reemplazo (ícono de cámara gris) para productos sin foto
+    // o con el link de la imagen roto. Es un SVG embebido: no depende de rutas.
+    const IMG_NO_DISPONIBLE =
+        "data:image/svg+xml;charset=utf-8," +
+        encodeURIComponent(
+            "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>" +
+            "<rect width='200' height='200' fill='#f0f0f0'/>" +
+            "<g fill='none' stroke='#b4b4b4' stroke-width='6' stroke-linejoin='round'>" +
+            "<path d='M62 82h18l8-12h24l8 12h18a6 6 0 0 1 6 6v44a6 6 0 0 1-6 6H62a6 6 0 0 1-6-6V88a6 6 0 0 1 6-6z'/>" +
+            "<circle cx='100' cy='109' r='16'/>" +
+            "</g></svg>"
+        );
+
     /* ----------------------------- Utilidades ----------------------------- */
     const esNovedad = (producto) => NOMBRES_NOVEDAD.includes(producto.nombre);
 
@@ -80,6 +93,7 @@ const IT = (() => {
         RUTA_JSON,
         NOMBRES_NOVEDAD,
         WHATSAPP,
+        IMG_NO_DISPONIBLE,
         esNovedad,
         normalizar,
         debounce,
